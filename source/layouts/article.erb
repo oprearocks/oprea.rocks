@@ -9,11 +9,12 @@
     <title><%= current_page.data.title || "oprea.rocks - Improve your team's productivity making the right technical choices" %></title>
 
     <%= stylesheet_link_tag :site %>
-    <%= javascript_include_tag :all %>
   </head>
 
   <body class="<%= page_classes %>">
     <h1>Article Template</h1>
     <%= yield %>
+
+    <%= javascript_include_tag :all %>
   </body>
 </html>
