@@ -4,6 +4,7 @@
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta charset="utf-8">
     <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0" name="viewport">
+    <%= partial "partials/article_meta" %>
 
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "oprea.rocks - Improve your team's productivity making the right technical choices" %></title>
@@ -13,8 +14,9 @@
 
   <body class="<%= page_classes %>">
     <h1>Article Template</h1>
+    <%= partial "partials/header" %>
     <%= yield %>
-
     <%= javascript_include_tag :all %>
+    <%= partial "partials/footer" %>
   </body>
 </html>
