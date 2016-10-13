@@ -1,0 +1,67 @@
+
+// Mixins
+//------------------------------------------------------------------------------
+
+/* BREAKPOINTS (em Value = 1 / 16 x Pixel Width Value) */
+
+/* 320px */
+@mixin bp-small {
+  @media only screen and (min-width: 20em) {
+    @content;
+  }
+}
+
+/* 768px */
+@mixin bp-medium {
+  @media only screen and (min-width: 48em) {
+    @content;
+  }
+}
+
+/* 1024px */
+@mixin bp-large {
+  @media only screen and (min-width: 64em) {
+    @content;
+  }
+}
+
+/* 1200px */
+@mixin bp-large2 {
+  @media only screen and (min-width: 75em) {
+    @content;
+  }
+}
+
+/* 1600px */
+@mixin bp-full {
+  @media only screen and (min-width: 100em) {
+    @content;
+  }
+}
+
+/* 1760px */
+@mixin bp-full2 {
+  @media only screen and (min-width: 110em) {
+    @content;
+  }
+}
+
+%absolute-centered-cover {
+  height: auto;
+  left: 50%;
+  min-height: 100%;
+  min-width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+}
+
+@mixin btn-reset {
+  appearance: none;
+  box-shadow: none;
+  border: none;
+  background: none;
+  outline: none;
+  padding: 0;
+}
