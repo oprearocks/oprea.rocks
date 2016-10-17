@@ -38,6 +38,9 @@ activate :directory_indexes
 
 # Build-specific configuration
 configure :build do
+
+  # Prefix everything
+  activate :autoprefixer
   # Minify CSS on build
   activate :minify_css
 
