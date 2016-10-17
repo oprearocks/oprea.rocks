@@ -1,5 +1,9 @@
-<header role="banner">
-  <h1>Header</h1>
-  <%= partial "partials/brand" %>
+<header role="banner" class="c-header u-full-width">
+  <div class="o-table u-full-width">
+    <%= partial "partials/brand" %>
+    <div class="o-table-cell c-main-menu-toggle-wrapper">
+      <button id="mainMenuToggle" class="c-main-menu-toggle-button">Menu</button>
+    </div>
+  </div>
   <%= partial "partials/navigation" %>
 </header>
