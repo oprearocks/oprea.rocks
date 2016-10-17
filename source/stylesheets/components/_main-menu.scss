@@ -1,0 +1,31 @@
+.c-main-menu-items {
+  max-height: 0;
+  background-color: #d3d3d3;
+  overflow: hidden;
+  transition: max-height .4s ease-in-out;
+}
+
+.c-main-menu-item {
+  width: 100%;
+  text-align: center;
+}
+
+.c-main-menu-item-link {
+  display: inline-block;
+  width: 100%;
+  padding: 20px;
+}
+
+.c-main-menu-items__visible {
+  max-height: 500px;
+}
+
+.c-main-menu-toggle-wrapper {
+  text-align: right;
+}
+
+.c-main-menu-toggle-button {
+  background: none;
+  border: 1px solid #ccc;
+  text-transform: uppercase;
+}
