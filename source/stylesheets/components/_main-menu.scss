@@ -1,7 +1,7 @@
 .c-main-menu-items {
   max-height: 0;
-  background-color: #d3d3d3;
   overflow: hidden;
+  background-color: #d3d3d3;
   transition: max-height .4s ease-in-out;
 }
 
@@ -28,4 +28,5 @@
   background: none;
   border: 1px solid #ccc;
   text-transform: uppercase;
+  cursor: pointer;
 }
