@@ -1,3 +1,8 @@
-<div>
-  <h2>Main call to action</h2>
-</div>
+<section class="c-section u-full-width c-cta">
+  <img class="c-cta-image" src="/images/cta.jpg" alt="Full baner image">
+  <% if campaign.type == 'link' %>
+    <%= partial "partials/cta_with_link", locals: { campaign: campaign } %>
+  <% else %>
+    <%= partial "partials/cta_with_form", locals: { campaign: campaign } %>
+  <% end %>
+</section>
