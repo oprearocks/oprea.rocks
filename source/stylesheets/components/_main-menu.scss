@@ -2,7 +2,7 @@
   max-height: 0;
   overflow: hidden;
   background-color: #d3d3d3;
-  transition: max-height .4s ease-in-out;
+  transition: max-height .3s ease-in-out;
 }
 
 .c-main-menu-item {
@@ -25,7 +25,6 @@
 }
 
 .c-main-menu-toggle-button {
-  background: none;
   border: 1px solid #ccc;
   text-transform: uppercase;
   cursor: pointer;
