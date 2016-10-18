@@ -1,4 +1,5 @@
-<div>
+<section class="c-section c-section-wrapper">
+  <h2 class="c-section-heading">Latest articles</h2>
   <% articles.each do |article| %>
     <article itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
       <meta itemprop="dateCreated" content="<%= article[:date_created_on] %>">
@@ -41,4 +42,4 @@
       </footer>
     </article>
   <% end %>
-</div>
+</section>
