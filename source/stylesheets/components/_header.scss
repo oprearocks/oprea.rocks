@@ -1,3 +1,7 @@
 .c-header {
   @extend %clearfix;
 }
+
+.c-header__spaced {
+  padding: $global-padding;
+}
