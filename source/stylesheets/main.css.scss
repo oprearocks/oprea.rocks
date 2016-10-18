@@ -16,6 +16,7 @@
 @import "elements/nav";
 
 // Objects
+@import "objects/button-bare";
 @import "objects/list-bare";
 @import "objects/link-bare";
 @import "objects/layout";
@@ -24,6 +25,8 @@
 @import "components/header";
 @import "components/main-menu";
 @import "components/branding";
+@import "components/main_call_to_action";
+@import "components/section";
 
 // Trumps (overrides)
 @import "trumps/clearfix";
