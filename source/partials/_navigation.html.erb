@@ -1,8 +1,8 @@
 <nav class="u-full-width">
   <ul id="mainMenu" class="o-list-bare c-main-menu-items">
-    <li class="c-main-menu-item"><a class="o-link-bare c-main-menu-item-link" href="/">home</a></li>
-    <li class="c-main-menu-item"><a class="o-link-bare c-main-menu-item-link" href="/team">the team</a></li>
-    <li class="c-main-menu-item"><a class="o-link-bare c-main-menu-item-link" href="/blog">blog</a></li>
-    <li class="c-main-menu-item"><a class="o-link-bare c-main-menu-item-link" href="/contact">contact</a></li>
+    <li class="c-main-menu-item <%= is_page_active '/' %>"><a class="o-link-bare c-main-menu-item-link" href="/">home</a></li>
+    <li class="c-main-menu-item <%= is_page_active '/team' %>"><a class="o-link-bare c-main-menu-item-link" href="/team">the team</a></li>
+    <li class="c-main-menu-item <%= is_page_active '/blog' %>"><a class="o-link-bare c-main-menu-item-link" href="/blog">blog</a></li>
+    <li class="c-main-menu-item <%= is_page_active '/contact' %>"><a class="o-link-bare c-main-menu-item-link" href="/contact">contact</a></li>
   </ul>
 </nav>
