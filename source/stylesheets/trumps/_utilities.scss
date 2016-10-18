@@ -1,3 +1,15 @@
 .u-full-width {
   width: 100% !important;
 }
+
+.u-swap-order {
+  display: flex !important;
+
+  & > :first-child {
+    order: 2 !important;
+  }
+
+  & > :last-child {
+    order: 1 !important;
+  }
+}
