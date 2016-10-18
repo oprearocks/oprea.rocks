@@ -24,23 +24,26 @@ configure :development do
 end
 
 activate :directory_indexes
+activate :autoprefixer
 
 ###
 # Helpers
 ###
 
 # Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+helpers do
+  def is_page_active(slug)
+    if current_page.url == slug
+      'c-main-menu-item__active'
+    elsif
+      ''
+    end
+  end
+end
 
 # Build-specific configuration
 configure :build do
 
-  # Prefix everything
-  activate :autoprefixer
   # Minify CSS on build
   activate :minify_css
 
