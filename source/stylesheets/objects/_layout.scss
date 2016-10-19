@@ -1,5 +1,27 @@
+.o-table {
+  display: table;
+}
+
+.o-table-row {
+  display: table-row;
+}
+
+.o-table-cell {
+  display: table-cell;
+}
+
+.o-table-cell__reverse {
+  direction: rtl;
+}
+
+.o-table-cell-full {
+  @extend .o-table-cell;
+  width: 100%;
+}
+
 .o-flexbox {
   display: flex;
+  box-sizing: border-box;
 }
 
 .o-flexbox__aligned {
@@ -14,21 +36,4 @@
 .o-half-width {
   width: 50%;
   max-width: 50%;
-}
-
-.o-table {
-  display: table;
-}
-
-.o-table-row {
-  display: table-row;
-}
-
-.o-table-cell {
-  display: table-cell;
-}
-
-.o-table-cell-full {
-  @extend .o-table-cell;
-  width: 100%;
 }
