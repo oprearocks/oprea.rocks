@@ -10,21 +10,21 @@
   text-align: center;
 }
 
-.c-main-menu-item-link {
+.c-main-menu-item__link {
   display: inline-block;
   width: 100%;
   padding: 20px;
 }
 
-.c-main-menu-items__visible {
+.c-main-menu-items--visible {
   max-height: 500px;
 }
 
-.c-main-menu-toggle-wrapper {
+.c-main-menu-toggle__wrapper {
   text-align: right;
 }
 
-.c-main-menu-toggle-button {
+.c-main-menu-toggle__button {
   border: 1px solid #ccc;
   text-transform: uppercase;
   cursor: pointer;

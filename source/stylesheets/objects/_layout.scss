@@ -10,11 +10,11 @@
   display: table-cell;
 }
 
-.o-table-cell__reverse {
+.o-table-cell--reverse {
   direction: rtl;
 }
 
-.o-table-cell-full {
+.o-table-cell--full {
   @extend .o-table-cell;
   width: 100%;
 }
@@ -24,16 +24,16 @@
   box-sizing: border-box;
 }
 
-.o-flexbox__aligned {
+.o-flexbox--aligned {
   justify-content: space-between;
 }
 
-.o-flexbox__wrap {
+.o-flexbox--wrap {
   flex-wrap: wrap;
   align-items: center;
 }
 
-.o-half-width {
+.o--half-width {
   width: 50%;
   max-width: 50%;
 }
