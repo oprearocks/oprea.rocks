@@ -22,10 +22,12 @@
 
 // Components
 @import "components/header";
+@import "components/footer";
 @import "components/main-menu";
 @import "components/branding";
-@import "components/main_call_to_action";
+@import "components/call_to_action";
 @import "components/section";
+@import "components/featured_article";
 
 // Trumps (overrides)
 @import "trumps/clearfix";

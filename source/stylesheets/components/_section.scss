@@ -2,7 +2,7 @@
   line-height: $global-line-height;
 }
 
-.c-section-heading {
+.c-section__heading {
   text-align: center;
   text-transform: uppercase;
 }
@@ -12,6 +12,6 @@
   max-width: 48em;
 }
 
-.c-section-wrapper__narrow {
+.c-section-wrapper--narrow {
   padding: $global-padding;
 }
