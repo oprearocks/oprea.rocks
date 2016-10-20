@@ -1,14 +1,16 @@
 .c-section {
   line-height: $global-line-height;
   margin: auto;
-}
 
-.c-section__heading {
-  text-align: center;
-  text-transform: uppercase;
-}
+  // Elements
+  &__heading {
+    text-align: center;
+    text-transform: uppercase;
+  }
 
-.c-section--narrow {
-  padding: $global-padding;
-  max-width: 48em;
+  // Modifiers
+  &--narrow {
+    padding: $global-padding;
+    max-width: 48em;
+  }
 }
