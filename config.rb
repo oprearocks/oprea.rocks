@@ -33,11 +33,12 @@ activate :autoprefixer
 # Methods defined in the helpers block are available in templates
 helpers do
   def is_page_active(slug)
+    active_class = ''
     if current_page.url == slug
-      'c-main-menu-item__active'
-    elsif
-      ''
+      active_class = 'c-main-menu-item__active'
     end
+
+    active_class
   end
 end
 
