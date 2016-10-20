@@ -16,27 +16,30 @@
     pointer-events: none;
     background: rgba(0,0,0,0.4)
   }
-}
 
-.c-cta-content {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.c-cta-image {
-}
-
-.c-cta-action {
-  &-button {
-
+  &__content {
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 
-  &-form {
-
+  &__image {
+    // Empty
   }
-}
 
-.c-cta__secondary {
-  background-color: hotpink;
+  &__action {
+    // Empty
+    &__button {
+
+    }
+
+    &__form {
+
+    }
+  }
+
+  &-secondary {
+    background-color: hotpink;
+  }
+
 }
