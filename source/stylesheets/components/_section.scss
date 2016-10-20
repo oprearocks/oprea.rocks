@@ -1,5 +1,6 @@
 .c-section {
   line-height: $global-line-height;
+  margin: auto;
 }
 
 .c-section__heading {
@@ -7,11 +8,7 @@
   text-transform: uppercase;
 }
 
-.c-section-wrapper {
-  margin: auto;
-  max-width: 48em;
-}
-
-.c-section-wrapper--narrow {
+.c-section--narrow {
   padding: $global-padding;
+  max-width: 48em;
 }
