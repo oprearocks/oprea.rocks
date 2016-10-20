@@ -1,7 +1,7 @@
-<section class="c-section c-section-wrapper">
-  <h2 class="c-section-heading">Latest articles</h2>
+<section class="c-section c-section-wrapper c-section-wrapper--narrow">
+  <h2 class="c-section__heading">Latest articles</h2>
   <% articles.each do |article| %>
-    <article itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article class="c-featured-article" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
       <meta itemprop="dateCreated" content="<%= article[:date_created_on] %>">
       <meta itemprop="datePublished" content="<%= article[:date_published_on] %>">
       <meta itemprop="dateModified" content="<%= article[:date_modified_on] %>">
@@ -19,17 +19,21 @@
           <meta itemprop="gender" content="any">
       </span>
 
-        <header>
-          <h2 itemprop="headline">
-            <a href="<%= article[:url] %>" title="<%= article[:title] %>">
-              <%= article[:title] %>
-            </a>
-          </h2>
-        </header>
+      <% if article[:image] %>
+        <img class="c-featured-article__image" src="<%= article[:image] %>" alt="<%= article[:image_alt] %>">
+      <% end %>
 
-      <section itemprop="articleBody">
+      <header>
+        <h2 itemprop="headline" class="c-featured-article__title">
+          <a href="<%= article[:url] %>" title="<%= article[:title] %>">
+            <%= article[:title] %>
+          </a>
+        </h2>
+      </header>
+
+<!--       <section itemprop="articleBody" class="c-featured-article__excerpt">
         <%= article[:excerpt] %>
-      </section>
+      </section> -->
 
       <footer itemprop="author" itemscope itemtype="https://schema.org/Person">
           By <a rel="author" href="/about" itemprop="name" title="<%= article[:author] %>">
@@ -42,4 +46,7 @@
       </footer>
     </article>
   <% end %>
+
+  <a class="o-link--bare" href="/blog">Go to the blog</a>
+
 </section>
