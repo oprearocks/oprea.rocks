@@ -34,7 +34,9 @@ activate :autoprefixer
 helpers do
   def is_page_active(slug)
     active_class = ''
-    if current_page.url == slug
+    current_page_url = current_page.url
+
+    if current_page_url == slug
       active_class = 'c-main-menu-item__active'
     end
 
