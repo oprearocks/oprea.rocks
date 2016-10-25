@@ -1,0 +1,35 @@
+articles:
+  - {
+      date_created_on: "11 OCT 2016",
+      date_published_on: "11 OCT 2016",
+      date_modified_on: "11 OCT 2016",
+      lang: "ro_RO",
+      image: "images/cta.jpg",
+      image_alt: "Businessman talking on the phone.",
+      url: "https://oprea.rocks/blog/article-1",
+      title: "Building websites with middleman",
+      excerpt: "This is an awesome article on Middleman and other static site generators...",
+      author: "Adrian Oprea"
+    }
+  - {
+      date_created_on: "10 OCT 2016",
+      date_published_on: "10 OCT 2016",
+      date_modified_on: "11 OCT 2016",
+      image: "images/cta.jpg",
+      image_alt: "Businessman talking on the phone.",
+      url: "https://oprea.rocks/blog/article-2",
+      title: "Middleman is so awesome",
+      excerpt: "Lorem ipsum awesome site generators Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum autem illo, esse veritatis odio, minima, quod mollitia iste nobis molestiae ea saepe quaerat deleniti velit voluptates iure consequuntur expedita at.",
+      author: "Adrian Oprea"
+    }
+  - {
+      date_created_on: "9 OCT 2016",
+      date_published_on: "9 OCT 2016",
+      date_modified_on: "14 OCT 2016",
+      image: "images/cta.jpg",
+      image_alt: "Different alt text.",
+      url: "https://oprea.rocks/blog/article-3",
+      title: "Flexible middleman very is!",
+      excerpt: "Lorem ipsum awesome site generators Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum autem illo, esse veritatis odio, minima, quod mollitia iste nobis molestiae ea saepe quaerat deleniti velit voluptates iure consequuntur expedita at.",
+      author: "Adrian Oprea"
+    }
