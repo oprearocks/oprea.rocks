@@ -4,10 +4,26 @@
   box-sizing: border-box;
   min-height: $component-min-height;
   max-height: $component-max-height;
-  margin: $global-padding 0;
+  max-width: 30em;
+  flex-basis: 100%;
+  flex-grow: 1;
+  width: 100%;
+  margin: $global-padding / 2;
   padding: 0 $global-padding;
 
-  &__title {}
+  @include bp-medium {
+    flex-basis: 33%;
+    width: 33%;
+  }
+
+  @include bp-large {
+    flex-basis: 25%;
+    width: 25%;
+  }
+
+  &__title {
+
+  }
 
   &__subtitle {}
 
