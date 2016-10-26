@@ -1,6 +1,6 @@
 .c-section {
   line-height: $global-line-height;
-  margin: 0 auto $global-padding;;
+  margin: 0 auto $global-padding * 2;
 
   // Elements
   &__heading {
