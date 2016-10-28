@@ -11,8 +11,10 @@
 @import "generic/normalize";
 @import "generic/box-sizing";
 @import "generic/shared";
+@import "generic/fonts";
 
 // Elements
+@import "elements/headings";
 
 // Objects
 @import "objects/button-bare";
@@ -28,6 +30,7 @@
 @import "components/call_to_action";
 @import "components/section";
 @import "components/featured_article";
+@import "components/team_member_card";
 
 // Trumps (overrides)
 @import "trumps/clearfix";

@@ -8,8 +8,8 @@
   flex-basis: 100%;
   flex-grow: 1;
   width: 100%;
-  margin: $global-padding / 2;
-  padding: 0 $global-padding;
+  margin: $global-line-height / 2;
+  padding: 0 $global-line-height;
 
   @include bp-medium {
     flex-basis: 33%;

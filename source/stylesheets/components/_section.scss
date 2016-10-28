@@ -1,17 +1,18 @@
 .c-section {
   line-height: $global-line-height;
-  margin: 0 auto $global-padding * 2;
+  margin: 0 auto 4 * $global-line-height;
 
   // Elements
   &__heading {
+    margin-bottom: $global-line-height;
+    line-height: 2 * $global-line-height;
     text-align: center;
-    text-transform: uppercase;
-    margin-top: 0;
+    font-size: 3em;
   }
 
   // Modifiers
   &--narrow {
-    padding: 0 $global-padding;
+    padding: 0 $global-line-height;
     max-width: 48em;
   }
 }
