@@ -1,0 +1,36 @@
+.c-team-member-card {
+  margin-bottom: 4 * $global-line-height;
+
+  &__heading {
+    margin-bottom: $global-line-height;
+  }
+
+  &:nth-child(even) {
+    .c-team-member-card__image {
+      float: left;
+      margin: 0 $global-line-height/2 $global-line-height/2 0;
+
+      @include bp-large {
+        margin-left: -100px;
+      }
+    }
+  }
+
+
+  &:nth-child(odd) {
+    .c-team-member-card__image {
+      float: right;
+      margin: 0 0 $global-line-height/2 $global-line-height/2;
+
+      @include bp-large {
+        margin-right: -100px;
+      }
+    }
+  }
+
+  &__image {
+    max-width: 200px;
+    height: 200px;
+    background: tomato;
+  }
+}
