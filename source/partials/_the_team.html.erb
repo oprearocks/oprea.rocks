@@ -2,13 +2,16 @@
   <h2 class="c-section__heading">The team</h2>
 
   <% data.team.members.each do |member|  %>
-    <article itemscope itemtype="https://schema.org/Person">
+    <article class="c-team-member-card" itemscope itemtype="https://schema.org/Person">
         <meta itemprop="brand" itemscope itemtype="https://schema.org/Brand" content="Oprea.Rocks">
         <meta itemprop="gender" itemscope itemtype="https://schema.org/Male">
 
-        <h3 itemprop="name"><%= member.name %></h3>
-        <span itemprop="jobTitle"><%= member.job_title %></span>
-        <p itemprop="description"><%= member.description %></p>
+        <img class="c-team-member-card__image" src="<%= member.image %>" alt="Photo of <%= member.name %>">
+        <h3 class="c-team-member-card__heading" itemprop="name"><%= member.name %></h3>
+        <span itemprop="jobTitle">&mdash; <%= member.job_title %></span>
+        <p itemprop="description">
+          <%= member.description %>
+        </p>
     </article>
   <% end %>
 </section>
