@@ -1,8 +1,22 @@
 .c-cta {
   position: relative;
   overflow: hidden;
+  max-height: 600px;
+  margin: 0 auto 4 * $global-line-height;
+  padding: 0;
   color: white;
   text-align: center;
+
+  &__message,
+  &__message-secondary {
+    color: inherit;
+  }
+
+  &__message {
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+  }
 
   &--vignette {
     &:before {
@@ -15,24 +29,32 @@
       left: 0;
       overflow: hidden;
       pointer-events: none;
-      background: rgba(0,0,0,0.4)
+      background: rgba(23 ,195, 123, 0.7)
     }
   }
 
   &__content {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   &__image {
-    // Empty
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
   }
 
   &__button {
-    background: hotpink;
     display: inline-block;
     padding: $global-line-height;
+    text-transform: uppercase;
+    background: transparent;
+    border: 1px solid #ccc;
+    color: #ccc;
+    font-family: $sans-serif-font;
   }
 
   &__button--icon {

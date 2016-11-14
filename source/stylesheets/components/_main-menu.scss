@@ -1,18 +1,18 @@
 .c-main-menu-items {
   max-height: 0;
   overflow: hidden;
-  background-color: #EF3E4A;
+  background-color: #202B30;
   transition: max-height .3s ease-in-out;
 }
 
 .c-main-menu-item {
   width: 100%;
   text-align: center;
-  color: #D3E8E1;
+  color: $primary-accent-color;
 
   &:hover {
-    background-color: #D3E8E1;
-    color: #EF3E4A;
+    background-color: #eee;
+    // color: #202B30;
   }
 }
 
@@ -20,9 +20,8 @@
   display: inline-block;
   width: 100%;
   padding: 20px;
-  font-weight: 600;
-  font-size: 2em;
   color: inherit;
+  text-transform: lowercase;
 }
 
 .c-main-menu-items--visible {
@@ -35,8 +34,11 @@
 
 .c-main-menu-toggle__button {
   border: 0;
-  text-transform: uppercase;
+  text-transform: lowercase;
   cursor: pointer;
-  font-weight: 600;
-  color: #EF3E4A;
+  color: $primary-accent-color;
+
+  &:focus {
+    outline: 2px solid $primary-accent-color;
+  }
 }

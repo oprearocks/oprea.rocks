@@ -3,9 +3,9 @@
 const menuButtonToggle = document.querySelector('#mainMenuToggle');
 const mainMenu = document.querySelector('#mainMenu');
 
-menuButtonToggle.addEventListener('click', () => (
+menuButtonToggle.addEventListener('click', function() {
   mainMenu.classList.toggle('c-main-menu-items--visible')
-), false);
+}, false);
 
 // let lCounter = 0;
 // let rCounter = 0;

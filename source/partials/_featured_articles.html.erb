@@ -27,7 +27,7 @@
 
           <header>
             <h2 itemprop="headline" class="c-featured-article__title">
-              <a href="<%= article[:url] %>" title="<%= article[:title] %>">
+              <a class="e-link--dotted" href="<%= article[:url] %>" title="<%= article[:title] %>">
                 <%= article[:title] %>
               </a>
             </h2>
@@ -37,15 +37,15 @@
             <%= article[:excerpt] %>
           </section> -->
 
-          <footer itemprop="author" itemscope itemtype="https://schema.org/Person">
-              By <a rel="author" href="/about" itemprop="name" title="<%= article[:author] %>">
-                <%= article[:author] %>
-              </a>
-              on
-              <time datetime="<%= article[:date_published_on] %>">
-                  <%= article[:date_published_on] %>
-              </time>
-          </footer>
+          <!-- <footer itemprop="author" itemscope itemtype="https://schema.org/Person"> -->
+          <!--     By <a rel="author" href="/about" itemprop="name" title="<%= article[:author] %>"> -->
+          <!--       <%= article[:author] %> -->
+          <!--     </a> -->
+          <!--     on -->
+          <!--     <time datetime="<%= article[:date_published_on] %>"> -->
+          <!--         <%= article[:date_published_on] %> -->
+          <!--     </time> -->
+          <!-- </footer> -->
         </article>
       <% end %>
     </div>
