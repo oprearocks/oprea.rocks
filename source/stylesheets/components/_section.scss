@@ -2,13 +2,29 @@
   line-height: $global-line-height;
   padding: 2 * $global-line-height $global-line-height;
   margin: 0 auto;
+  transition: all .3s ease-in-out;
 
   // Elements
   &__heading {
-    margin-bottom: 4 * $global-line-height;
-    line-height: 2 * $global-line-height;
+    margin-bottom: 2 * $global-line-height;    
+    line-height: $global-line-height;  
     text-align: center;
-    font-size: 4.5em;
+    font-size: 3em;
+    transition: all .3s ease-in-out;
+    
+    @include bp-medium {
+      font-size: 4em;
+      margin-bottom: 4 * $global-line-height;    
+      line-height: 2 * $global-line-height;      
+    }
+
+    @include bp-large {
+      font-size: 4.5em;      
+    }
+    
+    @include bp-large2 {
+      font-size: 5em;      
+    }
   }
 
   // Modifiers
