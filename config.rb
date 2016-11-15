@@ -26,6 +26,10 @@ end
 activate :directory_indexes
 activate :autoprefixer
 
+activate :blog do |blog|
+  blog.prefix = "blog"
+end
+
 ###
 # Helpers
 ###
