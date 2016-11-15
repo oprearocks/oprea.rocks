@@ -37,7 +37,7 @@ helpers do
     current_page_url = current_page.url
 
     if current_page_url == slug
-      active_class = 'c-main-menu-item__active'
+      active_class = 'c-main-menu-item--active'
     end
 
     active_class
