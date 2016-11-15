@@ -9,10 +9,11 @@
   width: 100%;
   text-align: center;
   color: $primary-accent-color;
+  border-bottom: 1px solid #ccc;
 
-  &:hover {
-    background-color: #eee;
-    // color: #202B30;
+  &--active &__link,
+  &:hover &__link {
+    text-decoration: underline;
   }
 }
 
