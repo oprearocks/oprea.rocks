@@ -19,3 +19,6 @@
 
 # Ignore Npm related stuff
 node_modules
+
+# Ignore Visual Studio Code files
+.vscode
