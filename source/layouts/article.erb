@@ -1,22 +1,58 @@
-<!doctype html>
-<html>
-  <head>
-    <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <meta charset="utf-8">
-    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0" name="viewport">
-    <%= partial "partials/article_meta" %>
+<% wrap_layout :layout do %>
+  <section class="c-section">
+    <h2 class="c-section__heading">Latest articles</h2>
+    <div class="o-flexbox o-flexbox--wrap o-flexbox--center">
+        <article class="c-featured-article" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+          <meta itemprop="dateCreated" content="<%= current_article.metadata[:page][:date_created_on] %>">
+          <meta itemprop="datePublished" content="<%= current_article.metadata[:page][:date_published_on] %>">
+          <meta itemprop="dateModified" content="<%= current_article.metadata[:page][:date_modified_on] %>">
+          <meta itemprop="keywords" content="<%= current_article.metadata[:page][:keywords] %>">
+          <meta itemprop="publisher" content="<%= current_article.metadata[:page][:author] %>">
 
-    <!-- Use title if it's in the page YAML frontmatter -->
-    <title><%= current_page.data.title || "oprea.rocks - Improve your team's productivity making the right technical choices" %></title>
+          <% if current_article.metadata[:page][:lang] %>
+            <meta itemprop="inLanguage" content="<%= current_article.metadata[:page][:lang] %>">
+          <% else %>
+            <meta itemprop="inLanguage" content="en_US">
+          <% end %>
 
-    <%= stylesheet_link_tag :main %>
-  </head>
+          <!-- DIVERSITY IS KEY -->
+          <span itemprop="audience" itemscope itemtype="http://schema.org/PeopleAudience">
+              <meta itemprop="gender" content="any">
+          </span>
 
-  <body class="<%= page_classes %>">
-    <h1>Article Template</h1>
-    <%= partial "partials/header" %>
-    <%= yield %>
-    <%= javascript_include_tag :all %>
-    <%= partial "partials/footer" %>
-  </body>
-</html>
+          <% if current_article.metadata[:page][:image] %>
+            <img class="c-featured-article__image" src="<%= current_article.metadata[:page][:image] %>" alt="<%= current_article.metadata[:page][:image_alt] %>">
+          <% end %>
+
+          <header>
+            <h2 itemprop="headline" class="c-featured-article__title">
+              <a class="e-link--dotted" href="<%= current_article.metadata[:page][:url] %>" title="<%= current_article.metadata[:page][:title] %>">
+                <%= current_article.metadata[:page][:title] %>
+              </a>
+            </h2>
+          </header>
+          
+          <section itemprop="articleBody" class="c-featured-article__excerpt">
+            <%= yield %>
+          </section> 
+
+           <footer itemprop="author" itemscope itemtype="https://schema.org/Person"> 
+               By <a rel="author" href="/about" itemprop="name" title="<%= current_article.metadata[:page][:author] %>"> 
+                 <%= current_article.metadata[:page][:author] %> 
+               </a> 
+               on 
+               <time datetime="<%= current_article.metadata[:page][:date_published_on] %>"> 
+                   <%= current_article.metadata[:page][:date_published_on] %> 
+               </time> 
+           </footer> 
+        </article>
+    </div>
+    <% if current_article.previous_article %>
+      <%= current_article.previous_article.url %>            
+    <% end %>
+
+    <% if current_article.next_article %>
+      <%= current_article.next_article.url %>            
+    <% end %>
+  </section>
+<% end %>
