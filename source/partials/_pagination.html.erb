@@ -1,0 +1,12 @@
+<nav class="c-pagination">
+  <span class="c-pagination__location">Page <%= page_number %> of <%= num_pages %></span>
+  <ul class="c-pagination__links">
+    <% if prev_page %>
+      <li><%= link_to 'Previous page', prev_page, class: "c-pagination__links-previous o-link--bare", title: 'Previous 10 articles' %></li>
+    <% end %>
+
+    <% if next_page %>
+      <li><%= link_to 'Next page', next_page, class: "c-pagination__links-next o-link--bare", title: 'Next 10 articles' %></li>
+    <% end %>
+  </ul>
+</nav>
