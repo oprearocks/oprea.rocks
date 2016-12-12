@@ -23,10 +23,14 @@ configure :development do
   activate :livereload
 end
 
+set :markdown_engine, :kramdown
+
 activate :directory_indexes
 activate :autoprefixer
+activate :syntax
 
 activate :blog do |blog|
+  Time.zone = "Bucharest"
   # This will add a prefix to all links, template references and source paths
   # blog.prefix = "blog"
 
@@ -67,6 +71,11 @@ helpers do
 
     active_class
   end
+
+  def date_to_string(date) 
+    date.strftime('%B %d, %Y')
+  end
+
 end
 
 # Build-specific configuration
