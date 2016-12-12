@@ -4,24 +4,58 @@ layout: blog
 per_page: 10
 ---
 
-<section class="c-section c-section--narrow">
-  <% if paginate && num_pages > 1 %>
-    <p>Page <%= page_number %> of <%= num_pages %></p>
+<section class="c-section c-section--narrow c-blog">
+  <% page_articles.each_with_index do |article, i| %>
+    <article class="c-article" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+      <meta itemprop="dateCreated" content="<%= article.metadata[:page][:date_created_on] %>">
+      <meta itemprop="datePublished" content="<%= article.metadata[:page][:date_published_on] %>">
+      <meta itemprop="dateModified" content="<%= article.metadata[:page][:date_modified_on] %>">
+      <meta itemprop="keywords" content="<%= article.metadata[:page][:keywords] %>">
+      <meta itemprop="publisher" content="<%= article.metadata[:page][:author] %>">
 
-    <% if prev_page %>
-      <p><%= link_to 'Previous page', prev_page %></p>
-    <% end %>
+      <% if article.metadata[:page][:lang] %>
+        <meta itemprop="inLanguage" content="<%= article.metadata[:page][:lang] %>">
+      <% else %>
+        <meta itemprop="inLanguage" content="en_US">
+      <% end %>
 
-    <% if next_page %>
-      <p><%= link_to 'Next page', next_page %></p>
-    <% end %>
+      <!-- DIVERSITY IS KEY -->
+      <span itemprop="audience" itemscope itemtype="http://schema.org/PeopleAudience">
+          <meta itemprop="gender" content="any">
+      </span>
 
+      <header>
+        <h2 itemprop="headline" class="c-article__title">
+          <a class="o-link--bare" href="<%= article.url %>" title="<%= article.title %>">
+            <%= article.title %>
+          </a>
+        </h2>
+
+        <% if article.metadata[:page][:image] %>
+          <div class="c-article__image-wrapper--restrained">
+            <img class="c-article__image" src="<%= article.metadata[:page][:image] %>" alt="<%= article.metadata[:page][:image_alt] %>">
+          </div>
+        <% end %>
+      </header>
+
+      <section itemprop="articleBody" class="c-article__excerpt">
+        <%= article.summary %>
+      </section>
+
+       <footer class="c-article__footer" itemprop="author" itemscope itemtype="https://schema.org/Person">
+           <!-- By <a rel="author" href="/about" itemprop="name" title="<%= article.metadata[:page][:author] %>">
+             <%= article.metadata[:page][:author] %>
+           </a>
+           on
+           <time datetime="<%= article.metadata[:page][:date_published_on] %>">
+               <%= article.metadata[:page][:date_published_on] %>
+           </time> -->
+           Published in <%= article.metadata[:page][:tags] %>
+       </footer>
+    </article>
   <% end %>
 
-  <% page_articles.each_with_index do |article, i| %>
-    <h2><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></h2>
-    <!-- use article.summary(250) if you have Nokogiri available to show just
-        the first 250 characters -->
-    <%= article.body %>
+  <% if paginate && num_pages > 1 %>
+    <%= partial "partials/pagination" %>
   <% end %>
 </section>
