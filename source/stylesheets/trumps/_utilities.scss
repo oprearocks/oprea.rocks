@@ -21,3 +21,11 @@
 .u-align-middle {
   vertical-align: middle;
 }
+
+.u-fullBleed {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  transform: translateX(-50%);
+  max-height: 400px;
+}

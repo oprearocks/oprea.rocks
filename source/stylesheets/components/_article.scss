@@ -1,0 +1,61 @@
+.c-article {
+  margin-bottom: 4 * $global-line-height;
+
+  a:active {
+    background-color: $primary-accent-color;
+    color: white;
+  }
+
+  &__title {
+    margin: 2 * $global-line-height 0;
+    font-weight: 600;
+    font-size: 2em;
+    line-height: 1.2;
+    // color: $primary-accent-color;
+    transition: all .3s ease-in-out;
+    
+    @include bp-medium {
+      font-size: 2.5em;
+    }
+
+    @include bp-large {
+      font-size: 3em;
+    }
+
+    @include bp-large2 {
+      font-size: 4em;
+    }
+  }
+  
+  &__image-wrapper {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  &__image {
+    width: 100%;
+  }
+
+  &__image-wrapper--restrained {
+    @extend .c-article__image-wrapper;
+    height: 200px;
+  
+    .c-article__image {
+      display: block;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%)  
+    }
+  }
+
+  &__body,
+  &__excerpt,
+  &__footer {
+    a {
+      @extend .e-link--dotted;
+      color: $primary-accent-color;
+    }
+  }
+
+  &__footer {}
+}
