@@ -1,8 +1,7 @@
 <% wrap_layout :layout do %>
-  <section class="c-section">
-    <h2 class="c-section__heading">Latest articles</h2>
+  <section class="c-section c-section--narrow">
     <div class="o-flexbox o-flexbox--wrap o-flexbox--center">
-        <article class="c-featured-article" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <article class="c-article" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
           <meta itemprop="dateCreated" content="<%= current_article.metadata[:page][:date_created_on] %>">
           <meta itemprop="datePublished" content="<%= current_article.metadata[:page][:date_published_on] %>">
           <meta itemprop="dateModified" content="<%= current_article.metadata[:page][:date_modified_on] %>">
@@ -20,39 +19,44 @@
               <meta itemprop="gender" content="any">
           </span>
 
-          <% if current_article.metadata[:page][:image] %>
-            <img class="c-featured-article__image" src="<%= current_article.metadata[:page][:image] %>" alt="<%= current_article.metadata[:page][:image_alt] %>">
-          <% end %>
-
           <header>
-            <h2 itemprop="headline" class="c-featured-article__title">
-              <a class="e-link--dotted" href="<%= current_article.metadata[:page][:url] %>" title="<%= current_article.metadata[:page][:title] %>">
+            <% if current_article.metadata[:page][:image] %>
+              <div class="c-article__image-wrapper">
+                <img class="c-article__image" src="<%= current_article.metadata[:page][:image] %>" alt="<%= current_article.metadata[:page][:image_alt] %>">
+              </div>
+            <% end %>
+            <h2 itemprop="headline" class="c-article__title">
+              <a class="o-link--bare" href="<%= current_article.url %>" title="<%= current_article.title %>">
                 <%= current_article.metadata[:page][:title] %>
               </a>
             </h2>
           </header>
-          
-          <section itemprop="articleBody" class="c-featured-article__excerpt">
-            <%= yield %>
-          </section> 
 
-           <footer itemprop="author" itemscope itemtype="https://schema.org/Person"> 
-               By <a rel="author" href="/about" itemprop="name" title="<%= current_article.metadata[:page][:author] %>"> 
-                 <%= current_article.metadata[:page][:author] %> 
-               </a> 
-               on 
-               <time datetime="<%= current_article.metadata[:page][:date_published_on] %>"> 
-                   <%= current_article.metadata[:page][:date_published_on] %> 
-               </time> 
-           </footer> 
+          <section itemprop="articleBody" class="c-article__body">
+            <%= yield %>
+          </section>
+
+           <footer  class="c-article__footer" itemprop="author" itemscope itemtype="https://schema.org/Person">
+               Published under 
+                 <%= current_article.metadata[:page][:categories] %>
+               on
+               <time datetime="<%= current_article.metadata[:page][:date_published_on] %>">
+                   <%= current_article.metadata[:page][:date_published_on] %>
+               </time>
+           </footer>
         </article>
     </div>
-    <% if current_article.previous_article %>
-      <%= current_article.previous_article.url %>            
-    <% end %>
+    
+    <div class="c-pagination o-flexbox o-flexbox--aligned">
+      <% if current_article.previous_article %>
+        <a class="c-pagination__links-previous o-link--bare" href="<%= current_article.previous_article.url %>">&larr; <%= current_article.previous_article.title %></a>
+      <% end %>
 
-    <% if current_article.next_article %>
-      <%= current_article.next_article.url %>            
-    <% end %>
+      <% if current_article.next_article %>
+        <a class="c-pagination__links-previous o-link--bare" href="<%= current_article.next_article.url %>"><%= current_article.next_article.title %> &rarr;</a>
+      <% end %>
+    </div>
+
+    <%= partial "partials/disqus" %>
   </section>
 <% end %>
