@@ -2,16 +2,16 @@
   <section class="c-section">
     <h2 class="c-section__heading">Latest articles</h2>
     <div class="o-flexbox o-flexbox--wrap o-flexbox--center">
-      <% articles.each do |article| %>
+      <% articles[0...3].each do |article| %>
         <article class="c-featured-article" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-          <meta itemprop="dateCreated" content="<%= article[:date_created_on] %>">
-          <meta itemprop="datePublished" content="<%= article[:date_published_on] %>">
-          <meta itemprop="dateModified" content="<%= article[:date_modified_on] %>">
-          <meta itemprop="keywords" content="<%= article[:keywords] %>">
-          <meta itemprop="publisher" content="<%= article[:author] %>">
+          <meta itemprop="dateCreated" content="<%= article.metadata[:page][:date_created_on] %>">
+          <meta itemprop="datePublished" content="<%= article.metadata[:page][:date_published_on] %>">
+          <meta itemprop="dateModified" content="<%= article.metadata[:page][:date_modified_on] %>">
+          <meta itemprop="keywords" content="<%= article.metadata[:page][:keywords] %>">
+          <meta itemprop="publisher" content="<%= article.metadata[:page][:author] %>">
 
-          <% if article[:lang] %>
-            <meta itemprop="inLanguage" content="<%= article[:lang] %>">
+          <% if article.lang %>
+            <meta itemprop="inLanguage" content="<%= article.lang %>">
           <% else %>
             <meta itemprop="inLanguage" content="en_US">
           <% end %>
@@ -21,29 +21,29 @@
               <meta itemprop="gender" content="any">
           </span>
 
-          <% if article[:image] %>
-            <img class="c-featured-article__image" src="<%= article[:image] %>" alt="<%= article[:image_alt] %>">
+          <% if article.metadata[:page][:image] %>
+            <img class="c-featured-article__image" src="<%= article.metadata[:page][:image] %>" alt="<%= article.metadata[:page][:image_alt] %>">
           <% end %>
 
           <header>
             <h2 itemprop="headline" class="c-featured-article__title">
-              <a class="e-link--dotted" href="<%= article[:url] %>" title="<%= article[:title] %>">
-                <%= article[:title] %>
+              <a class="e-link--dotted" href="<%= article.url %>" title="<%= article.title %>">
+                <%= article.title %>
               </a>
             </h2>
           </header>
 
       <!--       <section itemprop="articleBody" class="c-featured-article__excerpt">
-            <%= article[:excerpt] %>
+            <%= article.metadata[:page][:excerpt] %>
           </section> -->
 
           <!-- <footer itemprop="author" itemscope itemtype="https://schema.org/Person"> -->
-          <!--     By <a rel="author" href="/about" itemprop="name" title="<%= article[:author] %>"> -->
-          <!--       <%= article[:author] %> -->
+          <!--     By <a rel="author" href="/about" itemprop="name" title="<%= article.metadata[:page][:author] %>"> -->
+          <!--       <%= article.metadata[:page][:author] %> -->
           <!--     </a> -->
           <!--     on -->
-          <!--     <time datetime="<%= article[:date_published_on] %>"> -->
-          <!--         <%= article[:date_published_on] %> -->
+          <!--     <time datetime="<%= article.metadata[:page][:date_published_on] %>"> -->
+          <!--         <%= article.metadata[:page][:date_published_on] %> -->
           <!--     </time> -->
           <!-- </footer> -->
         </article>

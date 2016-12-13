@@ -32,28 +32,34 @@
             </h2>
           </header>
 
+        <% if current_article.metadata[:page][:tags] %>
+          <footer  class="c-article__footer" itemprop="author" itemscope itemtype="https://schema.org/Person">
+            Published under 
+            <% current_article.metadata[:page][:tags].each do |tag| %> 
+              <a class="c-article__tag e-link--dotted" href="/blog/tags/<%= tag %>/">#<%= tag %></a> 
+            <% end %>
+          </footer>
+        <% end %>
+
           <section itemprop="articleBody" class="c-article__body">
             <%= yield %>
           </section>
-
-           <footer  class="c-article__footer" itemprop="author" itemscope itemtype="https://schema.org/Person">
-               Published under 
-                 <%= current_article.metadata[:page][:categories] %>
-               on
-               <time datetime="<%= current_article.metadata[:page][:date_published_on] %>">
-                   <%= current_article.metadata[:page][:date_published_on] %>
-               </time>
-           </footer>
         </article>
     </div>
     
     <div class="c-pagination o-flexbox o-flexbox--aligned">
       <% if current_article.previous_article %>
-        <a class="c-pagination__links-previous o-link--bare" href="<%= current_article.previous_article.url %>">&larr; <%= current_article.previous_article.title %></a>
+        <a class="c-pagination__links-previous o-link--bare" href="<%= current_article.previous_article.url %>">
+          <p>Previous Article: </p>        
+          <%= current_article.previous_article.title %>
+        </a>
       <% end %>
 
       <% if current_article.next_article %>
-        <a class="c-pagination__links-previous o-link--bare" href="<%= current_article.next_article.url %>"><%= current_article.next_article.title %> &rarr;</a>
+        <a class="c-pagination__links-next o-link--bare" href="<%= current_article.next_article.url %>">
+          <p>Next Article: </p>                
+          <%= current_article.next_article.title %>
+        </a>
       <% end %>
     </div>
 

@@ -4,6 +4,7 @@ layout: blog
 per_page: 10
 ---
 
+<main>
 <section class="c-section c-section--narrow c-blog">
   <% page_articles.each_with_index do |article, i| %>
     <article class="c-article" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
@@ -38,20 +39,18 @@ per_page: 10
         <% end %>
       </header>
 
+      <% if article.metadata[:page][:tags] %>
+        <footer  class="c-article__footer" itemprop="author" itemscope itemtype="https://schema.org/Person">
+          Published under 
+          <% article.metadata[:page][:tags].each do |tag| %> 
+            <a class="c-article__tag e-link--dotted" href="/blog/tags/<%= tag %>/">#<%= tag %></a> 
+          <% end %>
+        </footer>
+      <% end %>
+
       <section itemprop="articleBody" class="c-article__excerpt">
         <%= article.summary %>
       </section>
-
-       <footer class="c-article__footer" itemprop="author" itemscope itemtype="https://schema.org/Person">
-           <!-- By <a rel="author" href="/about" itemprop="name" title="<%= article.metadata[:page][:author] %>">
-             <%= article.metadata[:page][:author] %>
-           </a>
-           on
-           <time datetime="<%= article.metadata[:page][:date_published_on] %>">
-               <%= article.metadata[:page][:date_published_on] %>
-           </time> -->
-           Published in <%= article.metadata[:page][:tags] %>
-       </footer>
     </article>
   <% end %>
 
@@ -59,3 +58,4 @@ per_page: 10
     <%= partial "partials/pagination" %>
   <% end %>
 </section>
+</main>
