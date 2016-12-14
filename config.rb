@@ -37,13 +37,13 @@ activate :blog do |blog|
   blog.sources = "posts/{year}-{month}-{day}-{title}.html"
   blog.permalink = "blog/{year}/{month}/{day}/{title}.html"
   # Matcher for blog source files
-  blog.taglink = "blog/tags/{tag}.html"
+  blog.taglink = "blog/{tag}.html"
   blog.layout = "article"
   # blog.summary_separator = /(READMORE)/
   # blog.summary_length = 250
   blog.year_link = "blog/{year}.html"
   blog.month_link = "blog/{year}/{month}.html"
-  # blog.day_link = "{year}/{month}/{day}.html"
+  blog.day_link = "blog/{year}/{month}/{day}.html"
   blog.default_extension = ".md"
 
   blog.tag_template = "tag.html"
