@@ -47,17 +47,6 @@
     overflow: hidden;
   }
 
-  &__button {
-    display: inline-block;
-    padding: $global-line-height;
-    margin: $global-line-height;
-    text-transform: uppercase;
-    background: transparent;
-    border: 1px solid #ccc;
-    color: inherit;
-    font-family: $sans-serif-font;
-  }
-
   &__button--icon {
 
   }
@@ -67,6 +56,13 @@
   }
 
   &__secondary {
+    padding: 2 * $global-line-height $global-line-height;
+    background-color: $body-copy-color;
+    margin-bottom: 0;
+
+    @include bp_medium {
+      padding: 4 * $global-line-height $global-line-height;
+    }
   }
 
 }

@@ -1,33 +1,74 @@
 ---
 pageable: true
 ---
-<h1>Archive for
-  <% case page_type
+<h1>
+</h1>
+
+<main>
+<section class="c-section c-section--narrow c-blog">
+  <h1>
+  Archive for
+  <a class="e-link--dotted c-article__tag" href=""><% case page_type
      when 'day' %>
     <%= Date.new(year, month, day).strftime('%b %e %Y') %>
   <% when 'month' %>
     <%= Date.new(year, month, 1).strftime('%b %Y') %>
   <% when 'year' %>
     <%= year %>
-  <% end %>
-</h1>
+  <% end %></a></h1>
 
-<% if paginate && num_pages > 1 %>
-  <p>Page <%= page_number %> of <%= num_pages %></p>
-
-  <% if prev_page %>
-    <p><%= link_to 'Previous page', prev_page %></p>
-  <% end %>
-<% end %>
-
-<ul>
   <% page_articles.each_with_index do |article, i| %>
-    <li><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></li>
-  <% end %>
-</ul>
+    <article class="c-article" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+      <meta itemprop="dateCreated" content="<%= article.metadata[:page][:date_created_on] %>">
+      <meta itemprop="datePublished" content="<%= article.metadata[:page][:date_published_on] %>">
+      <meta itemprop="dateModified" content="<%= article.metadata[:page][:date_modified_on] %>">
+      <meta itemprop="keywords" content="<%= article.metadata[:page][:keywords] %>">
+      <meta itemprop="publisher" content="<%= article.metadata[:page][:author] %>">
 
-<% if paginate %>
-  <% if next_page %>
-    <p><%= link_to 'Next page', next_page %></p>
+      <% if article.metadata[:page][:lang] %>
+        <meta itemprop="inLanguage" content="<%= article.metadata[:page][:lang] %>">
+      <% else %>
+        <meta itemprop="inLanguage" content="en_US">
+      <% end %>
+
+      <!-- DIVERSITY IS KEY -->
+      <span itemprop="audience" itemscope itemtype="http://schema.org/PeopleAudience">
+          <meta itemprop="gender" content="any">
+      </span>
+
+      <header>
+        <h2 itemprop="headline" class="c-article__title">
+          <a class="o-link--bare" href="<%= article.url %>" title="<%= article.title %>">
+            <%= article.title %>
+          </a>
+        </h2>
+
+        <% if article.metadata[:page][:image] %>
+          <div class="c-article__image-wrapper--restrained">
+            <img class="c-article__image" src="<%= article.metadata[:page][:image] %>" alt="<%= article.metadata[:page][:image_alt] %>">
+          </div>
+        <% end %>
+      </header>
+
+      <% if article.metadata[:page][:tags] %>
+        <footer  class="c-article__footer" itemprop="author" itemscope itemtype="https://schema.org/Person">
+          Published under 
+          <% article.metadata[:page][:tags].each do |tag| %> 
+            <a class="c-article__tag e-link--dotted" href="/blog/<%= tag %>/">#<%= tag %></a> 
+          <% end %>
+        </footer>
+      <% end %>
+
+      <section itemprop="articleBody" class="c-article__excerpt">
+        <%= article.summary %>
+      </section>
+
+        <a class="o-link--bare o-button u-no-margin" href="<%= article.url %>">Read more &rarr;</a>      
+    </article>
   <% end %>
-<% end %>
+
+  <% if paginate && num_pages > 1 %>
+    <%= partial "partials/pagination" %>
+  <% end %>
+</section>
+</main>

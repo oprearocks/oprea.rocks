@@ -1,10 +1,10 @@
 <nav class="c-pagination">
   <ul class="c-pagination__links">
-        <% if prev_page %>      
-          <li class="c-pagination__links-previous"><%= link_to 'Newer', prev_page, class: "o-link--bare", title: 'Previous 10 articles' %></li>
-        <% else %>
-          <li disabled></li>
-        <% end %>        
+      <% if prev_page %>      
+        <li class="c-pagination__links-previous"><%= link_to 'Newer', prev_page, class: "o-link--bare", title: 'Previous 10 articles' %></li>
+      <% else %>
+        <li disabled></li>
+      <% end %>        
     
       <li class="c-pagination__links-status">Page <%= page_number %> of <%= num_pages %></li>
 

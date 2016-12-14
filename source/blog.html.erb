@@ -43,7 +43,7 @@ per_page: 10
         <footer  class="c-article__footer" itemprop="author" itemscope itemtype="https://schema.org/Person">
           Published under 
           <% article.metadata[:page][:tags].each do |tag| %> 
-            <a class="c-article__tag e-link--dotted" href="/blog/tags/<%= tag %>/">#<%= tag %></a> 
+            <a class="c-article__tag e-link--dotted" href="/blog/<%= tag %>/">#<%= tag %></a> 
           <% end %>
         </footer>
       <% end %>
@@ -52,7 +52,7 @@ per_page: 10
         <%= article.summary %>
       </section>
 
-        <a class="o-link--bare c-cta__button" href="<%= article.url %>">Read more &rarr;</a>      
+        <a class="o-link--bare o-button u-no-margin" href="<%= article.url %>">Read more &rarr;</a>      
     </article>
   <% end %>
 

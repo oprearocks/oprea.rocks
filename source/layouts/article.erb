@@ -36,7 +36,7 @@
           <footer  class="c-article__footer" itemprop="author" itemscope itemtype="https://schema.org/Person">
             Published under 
             <% current_article.metadata[:page][:tags].each do |tag| %> 
-              <a class="c-article__tag e-link--dotted" href="/blog/tags/<%= tag %>/">#<%= tag %></a> 
+              <a class="c-article__tag e-link--dotted" href="/blog/<%= tag %>/">#<%= tag %></a> 
             <% end %>
           </footer>
         <% end %>

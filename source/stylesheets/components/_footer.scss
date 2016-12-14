@@ -1,3 +1,13 @@
 .c-footer {
-  background-color: $body-copy-color;
+  
+  .c-copyright {
+    padding: 2 * $global-line-height;
+    text-align: center;
+  }
+
+  .c-social-icons__icon {
+    display: inline-block;
+    width: 2 * $global-line-height;
+  }
+
 }
