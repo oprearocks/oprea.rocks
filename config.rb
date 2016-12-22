@@ -35,7 +35,7 @@ activate :blog do |blog|
   # blog.prefix = "blog"
 
   blog.sources = "posts/{year}-{month}-{day}-{title}.html"
-  blog.permalink = "blog/{year}/{month}/{day}/{title}.html"
+  blog.permalink = "blog/{title}.html"
   # Matcher for blog source files
   blog.taglink = "blog/{tag}.html"
   blog.layout = "article"
@@ -72,7 +72,7 @@ helpers do
     active_class
   end
 
-  def date_to_string(date) 
+  def date_to_string(date)
     date.strftime('%B %d, %Y')
   end
 
