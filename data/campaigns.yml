@@ -1,0 +1,17 @@
+home:
+    main:
+        image: staring_at_code.jpg
+        type: link
+        headline: |
+            <strong class="u-text--thin">Put an</strong> <u>end</u>
+            <span class="u-text--thin"> to<br> <i>"It works on my machine."</i></span>
+        message: Let me help you <u class="u-text--extra-bold">migrate to Docker</u>!
+        callout: Find out how!
+        link_to: https://calendly.com/neuron01/30-minute-meeting
+
+    secondary:
+        headline: Have a project?
+        message: Let me help you <u class="u-text--extra-bold">migrate to Docker</u>!
+        callout: Request a quote
+        link_to: /contact
+
