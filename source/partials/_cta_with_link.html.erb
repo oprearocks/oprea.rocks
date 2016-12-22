@@ -1,5 +1,5 @@
 <div class="c-cta__content u-full-width">
   <h1 class="c-section__heading c-cta__message"><%= campaign.headline %></h1>
   <p class="c-cta__message-secondary"><%= campaign.message %></p>
-  <a class="o-link--bare o-button" href="<%= campaign.link_to %>"><%= campaign.callout %></a>
+  <a class="o-link--bare o-button <%= campaign.button_classes %>" href="<%= campaign.link_to %>"><%= campaign.callout %></a>
 </div>
