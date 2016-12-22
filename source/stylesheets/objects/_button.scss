@@ -4,8 +4,16 @@
     margin: $global-line-height;
     text-transform: uppercase;
     background: transparent;
-    border: 1px solid #ccc;
+    border: 1px solid;
     color: inherit;
     font-family: $sans-serif-font;
     letter-spacing: .2em;
+
+    &::after {
+      content: "\02192";
+      padding-left: $global-line-height;
+      font-size: $global-line-height;
+      vertical-align: middle;
+      line-height: 1;
+    }
   }
