@@ -1,0 +1,39 @@
+.c-featured-article {
+  position: relative;
+  box-sizing: border-box;
+  min-height: $component-min-height;
+  max-height: $component-max-height;
+  max-width: 30em;
+  flex-basis: 100%;
+  flex-grow: 1;
+  width: 100%;
+  margin: $global-line-height / 2;
+  padding: 0 $global-line-height;
+
+  @include bp-medium {
+    flex-basis: 33%;
+    width: 33%;
+  }
+
+  @include bp-large {
+    flex-basis: 25%;
+    width: 25%;
+  }
+
+  &__title {
+    line-height: 1.2;
+    color: $primary-accent-color;
+  }
+
+  &__subtitle {}
+
+  &__more {}
+
+  &__image {
+    width: 100%;
+    object-fit: cover;
+    // Nasty IE hack
+    font-family: 'object-fit: cover;';
+  }
+
+}

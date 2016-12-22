@@ -1,0 +1,68 @@
+.c-team-member-card {
+  margin-bottom: 4 * $global-line-height;
+  text-align: center;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__description {
+    text-align: left;
+    a {
+      font-weight: 400;
+      color: inherit;
+      text-decoration: none;
+      border: none;
+      border-bottom: 1px dotted $primary-accent-color;
+
+      &:hover {
+        border-bottom-style: solid;
+      }
+    }
+  }
+  
+  &__image {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background: $primary-accent-color;
+  }
+  
+  @include bp-large {
+  
+    &:nth-child(even) {
+      .c-team-member-card__image {
+        float: left;
+        margin: 0 $global-line-height/2 $global-line-height/2 0; 
+      }
+    }
+
+
+    &:nth-child(odd) {
+      .c-team-member-card__image {
+        float: right;
+        margin: 0 0 $global-line-height/2 $global-line-height/2;                
+      }
+    }
+  }
+
+  @include bp-large2 {
+  
+    &:nth-child(even) {
+      .c-team-member-card__image {
+        margin: 0 $global-line-height/2 $global-line-height/2 -30%;
+      }
+    }
+
+
+    &:nth-child(odd) {
+      .c-team-member-card__image {
+        margin: 0 -30% $global-line-height/2 $global-line-height/2;
+      }
+    }
+  }
+
+  * {
+    transition: all .6s ease-in-out;    
+  }
+}

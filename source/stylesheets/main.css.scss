@@ -11,24 +11,36 @@
 @import "generic/normalize";
 @import "generic/box-sizing";
 @import "generic/shared";
+@import "generic/fonts";
 
 // Elements
-@import "elements/nav";
+@import "elements/headings";
+@import "elements/paragraphs";
+@import "elements/links";
 
 // Objects
 @import "objects/button-bare";
+@import "objects/button";
 @import "objects/list-bare";
 @import "objects/link-bare";
 @import "objects/layout";
 
 // Components
 @import "components/header";
+@import "components/footer";
 @import "components/main-menu";
 @import "components/branding";
-@import "components/main_call_to_action";
 @import "components/section";
+@import "components/call_to_action";
+@import "components/featured_article";
+@import "components/team_member_card";
+@import "components/blog";
+@import "components/article";
+@import "components/contact";
+@import "components/pagination";
 
 // Trumps (overrides)
 @import "trumps/clearfix";
 @import "trumps/healthcheck";
 @import "trumps/utilities";
+@import "trumps/theme_text_dark";

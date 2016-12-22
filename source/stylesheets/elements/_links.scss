@@ -1,0 +1,9 @@
+.e-link--dotted {
+  text-decoration: none;
+  border-bottom: 1px dotted $primary-accent-color;
+  color: inherit;
+
+  &:hover {
+    border-bottom-style: solid; 
+  }
+}

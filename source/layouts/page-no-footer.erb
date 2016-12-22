@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0" name="viewport">
+
+    <%= partial "partials/page_meta" %>
+
+    <title><%= current_page.data.title || "oprea.rocks - Improve your team's productivity making the right technical choices" %></title>
+
+    <%= stylesheet_link_tag :main %>
+  </head>
+
+  <body class="<%= page_classes %>">
+    <%= partial "partials/header" %>
+    <%= yield %>
+    <%= javascript_include_tag :all %>
+  </body>
+</html>

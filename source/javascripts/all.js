@@ -3,9 +3,9 @@
 const menuButtonToggle = document.querySelector('#mainMenuToggle');
 const mainMenu = document.querySelector('#mainMenu');
 
-menuButtonToggle.addEventListener('click', () => (
-  mainMenu.classList.toggle('c-main-menu-items__visible')
-), false);
+menuButtonToggle.addEventListener('click', function() {
+  mainMenu.classList.toggle('c-main-menu-items--visible')
+}, false);
 
 // let lCounter = 0;
 // let rCounter = 0;
@@ -24,7 +24,7 @@ menuButtonToggle.addEventListener('click', () => (
 //   if (times > 3) {
 //     let cond = prompt("Are you left handed?");
 //     if (cond) {
-//       document.querySelector('.c-header__spaced').classList.add('u-swap-order');
+//       document.querySelector('.c-header--spaced').classList.add('u-swap-order');
 //     }
 //   }
 // }, false);

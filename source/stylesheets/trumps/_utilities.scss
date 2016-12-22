@@ -13,3 +13,43 @@
     order: 1 !important;
   }
 }
+
+.u-text-center {
+  text-align: center !important;
+}
+
+.u-align-middle {
+  vertical-align: middle;
+}
+
+.u-fullBleed {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  transform: translateX(-50%);
+  max-height: 400px;
+}
+
+.u-no-margin {
+  margin: 0 !important;
+}
+
+.u-text {
+  &--thin {
+    font-weight: 100 !important;
+  }
+  &--normal {
+    font-weight: 300 !important;
+  }
+  &--bold {
+    font-weight: 600 !important;
+  }
+
+  &--extra-bold {
+    font-weight: 700 !important;
+  }
+}
+
+.u-color--main-accent {
+  color: $primary-accent-color !important;
+}

@@ -23,8 +23,37 @@ configure :development do
   activate :livereload
 end
 
+set :markdown_engine, :kramdown
+
 activate :directory_indexes
 activate :autoprefixer
+activate :syntax
+
+activate :blog do |blog|
+  Time.zone = "Bucharest"
+  # This will add a prefix to all links, template references and source paths
+  # blog.prefix = "blog"
+
+  blog.sources = "posts/{year}-{month}-{day}-{title}.html"
+  blog.permalink = "blog/{title}.html"
+  # Matcher for blog source files
+  blog.taglink = "blog/{tag}.html"
+  blog.layout = "article"
+  # blog.summary_separator = /(READMORE)/
+  # blog.summary_length = 250
+  blog.year_link = "blog/{year}.html"
+  blog.month_link = "blog/{year}/{month}.html"
+  blog.day_link = "blog/{year}/{month}/{day}.html"
+  blog.default_extension = ".md"
+
+  blog.tag_template = "tag.html"
+  blog.calendar_template = "calendar.html"
+
+  # Enable pagination
+  blog.paginate = true
+  blog.per_page = 10
+  blog.page_link = "page/{num}"
+end
 
 ###
 # Helpers
@@ -33,12 +62,20 @@ activate :autoprefixer
 # Methods defined in the helpers block are available in templates
 helpers do
   def is_page_active(slug)
-    if current_page.url == slug
-      'c-main-menu-item__active'
-    elsif
-      ''
+    active_class = ''
+    current_page_url = current_page.url
+
+    if current_page_url == slug
+      active_class = 'c-main-menu-item--active'
     end
+
+    active_class
   end
+
+  def date_to_string(date)
+    date.strftime('%B %d, %Y')
+  end
+
 end
 
 # Build-specific configuration

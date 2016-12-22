@@ -1,0 +1,73 @@
+.c-cta {
+  font-family: $sans-serif-font;
+  position: relative;
+  overflow: hidden;
+  max-height: 600px;
+  margin: 0 auto 4 * $global-line-height;
+  padding: 0;
+  color: white;
+  text-align: center;
+
+  &__message,
+  &__message-secondary {
+    color: inherit;
+  }
+
+  &__message {
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__message-secondary {
+    letter-spacing: 0.1em;
+  }
+
+  &--vignette {
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      overflow: hidden;
+      pointer-events: none;
+      background-color: rgba($body-copy-color, .7);
+    }
+  }
+
+  &__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+
+  &__button--icon {
+
+  }
+
+  &__form {
+
+  }
+
+  &__secondary {
+    padding: 2 * $global-line-height $global-line-height;
+    background-color: $body-copy-color;
+    margin-bottom: 0;
+
+    @include bp_medium {
+      padding: 4 * $global-line-height $global-line-height;
+    }
+  }
+
+}

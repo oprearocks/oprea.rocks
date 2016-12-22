@@ -1,0 +1,20 @@
+html {
+  height: 100%;  
+}
+
+body {
+  font-family: $serif-font;
+  font-weight: 300;
+  padding-top: $nav-height;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  & > main {
+    flex: 1;
+  }
+}
+
+img {
+  color: $primary-accent-color;
+}

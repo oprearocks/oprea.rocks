@@ -1,5 +1,5 @@
-<section class="c-section u-full-width c-cta">
-  <img class="c-cta-image" src="/images/cta.jpg" alt="Full baner image">
+<section class="c-section c-cta c-cta--vignette">
+  <img class="c-cta__image" src="images/cta/<%= campaign.image %>" alt="Full baner image">
   <% if campaign.type == 'link' %>
     <%= partial "partials/cta_with_link", locals: { campaign: campaign } %>
   <% else %>

@@ -1,0 +1,65 @@
+---
+pageable: true
+per_page: 12
+layout: blog
+---
+
+<main>
+<section class="c-section c-section--narrow c-blog">
+  <h1>Articles tagged with <a class="e-link--dotted c-article__tag" href="">#<%= tagname %></a></h1>
+
+  <% page_articles.each_with_index do |article, i| %>
+    <article class="c-article" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+      <meta itemprop="dateCreated" content="<%= article.metadata[:page][:date_created_on] %>">
+      <meta itemprop="datePublished" content="<%= article.metadata[:page][:date_published_on] %>">
+      <meta itemprop="dateModified" content="<%= article.metadata[:page][:date_modified_on] %>">
+      <meta itemprop="keywords" content="<%= article.metadata[:page][:keywords] %>">
+      <meta itemprop="publisher" content="<%= article.metadata[:page][:author] %>">
+
+      <% if article.metadata[:page][:lang] %>
+        <meta itemprop="inLanguage" content="<%= article.metadata[:page][:lang] %>">
+      <% else %>
+        <meta itemprop="inLanguage" content="en_US">
+      <% end %>
+
+      <!-- DIVERSITY IS KEY -->
+      <span itemprop="audience" itemscope itemtype="http://schema.org/PeopleAudience">
+          <meta itemprop="gender" content="any">
+      </span>
+
+      <header>
+        <h2 itemprop="headline" class="c-article__title">
+          <a class="o-link--bare" href="<%= article.url %>" title="<%= article.title %>">
+            <%= article.title %>
+          </a>
+        </h2>
+
+        <% if article.metadata[:page][:image] %>
+          <div class="c-article__image-wrapper--restrained">
+            <img class="c-article__image" src="<%= article.metadata[:page][:image] %>" alt="<%= article.metadata[:page][:image_alt] %>">
+          </div>
+        <% end %>
+      </header>
+
+      <% if article.metadata[:page][:tags] %>
+        <footer  class="c-article__footer" itemprop="author" itemscope itemtype="https://schema.org/Person">
+          Published under 
+          <% article.metadata[:page][:tags].each do |tag| %> 
+            <a class="c-article__tag e-link--dotted" href="/blog/<%= tag %>/">#<%= tag %></a> 
+          <% end %>
+        </footer>
+      <% end %>
+
+      <section itemprop="articleBody" class="c-article__excerpt">
+        <%= article.summary %>
+      </section>
+
+        <a class="o-link--bare o-button u-no-margin" href="<%= article.url %>">Read more</a>      
+    </article>
+  <% end %>
+
+  <% if paginate && num_pages > 1 %>
+    <%= partial "partials/pagination" %>
+  <% end %>
+</section>
+</main>

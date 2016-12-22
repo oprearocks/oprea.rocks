@@ -1,11 +1,5 @@
-<section class="c-section c-section-wrapper c-section-wrapper__narrow">
-  <h2 class="c-section-heading">Join the newsletter</h2>
-  <div>
-    <div>Want useful information for your business?</div>
-    <label for="name">Name</label>
-    <input id="name" name="firstname" type="text">
-
-    <label for="email">Email</label>
-    <input id="email" name="email" type="email">
-  </div>
+<section class="c-cta c-cta__secondary c-section">
+  <h2 class="c-section__heading c-cta__message"><%= campaign.headline %></h2>
+  <p class="c-cta__message-secondary"><%= campaign.message %></p>
+  <a class="o-link--bare o-button <%= campaign.button_classes %>" href="<%= campaign.link_to %>"><%= campaign.callout %></a>
 </section>

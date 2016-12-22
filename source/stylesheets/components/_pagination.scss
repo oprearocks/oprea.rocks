@@ -1,0 +1,60 @@
+.c-pagination {
+  width: 100%;
+  text-align: center;
+  color: $primary-accent-color;
+  font-weight: bold;
+  font-family: $sans-serif-font;
+
+  &__links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    // margin: 0;
+    padding: 0;
+    
+    &-previous,
+    &-next,
+    &-status {
+      display: inline-block;
+      padding: $global-line-height;
+      vertical-align: middle;
+    }
+
+    &-previous,
+    &-next {
+      max-width: 45%;
+      border: 2px solid $primary-accent-color;
+
+      &:active {
+        background-color: $primary-accent-color;
+        color: white;
+      }
+
+      p {
+        color: $body-copy-color;
+      }
+    }
+
+    &-previous {
+      text-align: left;
+    }
+
+    &-next {
+      text-align: right;
+    }
+
+    // &-previous::before,
+    // &-next::after {
+    //   vertical-align: middle;
+    // }
+
+    // &-previous::before {
+    //   content: "\2190\00A0";
+    // }
+
+    // &-next::after {
+    //   content: "\00A0\2192";
+    // }
+  }
+}

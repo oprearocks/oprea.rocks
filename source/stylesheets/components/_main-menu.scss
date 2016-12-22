@@ -1,31 +1,47 @@
 .c-main-menu-items {
   max-height: 0;
   overflow: hidden;
-  background-color: #d3d3d3;
+  background-color: $body-copy-color;
   transition: max-height .3s ease-in-out;
+  box-shadow: 0 6px 12px rgba($body-copy-color, 0.4);
 }
 
 .c-main-menu-item {
   width: 100%;
   text-align: center;
+  color: white;
+
+  &--active &__link,
+  &:hover &__link {
+    text-decoration: underline;
+    color: $primary-accent-color;
+  }
 }
 
-.c-main-menu-item-link {
+.c-main-menu-item__link {
   display: inline-block;
   width: 100%;
   padding: 20px;
+  color: inherit;
+  text-transform: lowercase;
+  transition: all .2s ease-in-out;
 }
 
-.c-main-menu-items__visible {
+.c-main-menu-items--visible {
   max-height: 500px;
 }
 
-.c-main-menu-toggle-wrapper {
+.c-main-menu-toggle__wrapper {
   text-align: right;
 }
 
-.c-main-menu-toggle-button {
-  border: 1px solid #ccc;
-  text-transform: uppercase;
+.c-main-menu-toggle__button {
+  border: 0;
+  text-transform: lowercase;
   cursor: pointer;
+  color: $primary-accent-color;
+
+  &:focus {
+    outline: 2px solid $primary-accent-color;
+  }
 }
