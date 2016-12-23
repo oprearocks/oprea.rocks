@@ -22,12 +22,12 @@ page '/*.txt', layout: false
 configure :development do
   activate :livereload
 end
-
-set :markdown_engine, :kramdown
-
 activate :directory_indexes
 activate :autoprefixer
 activate :syntax
+
+set :markdown_engine, :kramdown
+set :markdown, :input => "GFM"
 
 activate :blog do |blog|
   Time.zone = "Bucharest"
