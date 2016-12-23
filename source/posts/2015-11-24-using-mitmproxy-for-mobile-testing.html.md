@@ -126,9 +126,9 @@ setup should look like the image below.
 </figure>
 
 Once you're done performing the steps above, you should try and visit any web page, and you will
-see some activity in the terminal window where you started `mitmproxy`.
+see some activity in the terminal window where you started `mitmproxy`. 
 This means that the proxy is working correctly and that your phone's connection is routed through
-your laptop.
+your laptop.  
 Now, you can start your application on your machine, add an entry to your `/etc/hosts` file, that
 makes `myapp.dev` point to your local machine's IP, and visit `http://myapp.dev:<port>` from your
 phone.
