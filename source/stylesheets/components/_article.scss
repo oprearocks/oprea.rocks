@@ -12,7 +12,7 @@
     font-size: 2em;
     line-height: 1.2;
     transition: all .3s ease-in-out;
-    
+
     @include bp-medium {
       font-size: 2.5em;
     }
@@ -25,12 +25,12 @@
       font-size: 4em;
     }
   }
-  
+
   &__image-wrapper {
     width: 100%;
     overflow: hidden;
   }
-  
+
   &__image {
     width: 100%;
   }
@@ -38,21 +38,23 @@
   &__image-wrapper--restrained {
     @extend .c-article__image-wrapper;
     height: 200px;
-  
+
     .c-article__image {
       display: block;
       position: relative;
       top: 50%;
-      transform: translateY(-50%)  
+      transform: translateY(-50%);
     }
   }
 
   &__body {
+    line-height: 2;
+
     blockquote {
       margin: 0;
       padding: $global-line-height;
       font-style: italic;
-      border-left: $global-line-height solid darken($color: $body-background-color, $amount: 20);      
+      border-left: $global-line-height solid darken($color: $body-background-color, $amount: 20);
       background-color: $body-background-color;
     }
   }
@@ -61,7 +63,7 @@
   &__excerpt {
     a {
       @extend .e-link--dotted;
-      color: $primary-accent-color;      
+      color: $primary-accent-color;
     }
   }
 
@@ -71,16 +73,8 @@
     font-size: (12/14) * 1em;
     letter-spacing: .2em;
     color: $body-copy-color;
-
-    &::after {
-      content: ",\00A0";
-    }
-
-    &:last-child::after {
-      content: "";
-    }
   }
-  
+
   &__footer {
     font-family: $sans-serif-font;
     text-align: center;
@@ -92,7 +86,7 @@
       display: block;
       width: 2 * $global-line-height;
       margin: $global-line-height auto;
-      border-top: 2px solid $body-background-color; 
+      border-top: 2px solid $body-background-color;
     }
   }
 

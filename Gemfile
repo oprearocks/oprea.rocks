@@ -14,8 +14,7 @@ gem 'middleman-blog'
 gem 'middleman-livereload'
 gem 'middleman-autoprefixer'
 gem 'middleman-syntax'
-
-gem 'redcarpet', '~> 3.3', '>= 3.3.3'
+gem 'redcarpet'
 
 # For feed.xml.builder
 gem "builder", "~> 3.0"

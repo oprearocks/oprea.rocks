@@ -6,6 +6,20 @@
     margin-bottom: 0;
   }
 
+  &__heading {
+    text-transform: uppercase;
+    letter-spacing: .1em;
+  }
+
+  &__job-title {
+    font-family: $sans-serif-font;
+
+    &::before {
+      content: "\02014";
+      padding-right: $global-line-height / 2;
+    }
+  }
+
   &__description {
     text-align: left;
     a {
@@ -20,20 +34,20 @@
       }
     }
   }
-  
+
   &__image {
     position: relative;
     width: 200px;
     height: 200px;
     background: $primary-accent-color;
   }
-  
+
   @include bp-large {
-  
+
     &:nth-child(even) {
       .c-team-member-card__image {
         float: left;
-        margin: 0 $global-line-height/2 $global-line-height/2 0; 
+        margin: 0 $global-line-height/2 $global-line-height/2 0;
       }
     }
 
@@ -41,13 +55,13 @@
     &:nth-child(odd) {
       .c-team-member-card__image {
         float: right;
-        margin: 0 0 $global-line-height/2 $global-line-height/2;                
+        margin: 0 0 $global-line-height/2 $global-line-height/2;
       }
     }
   }
 
   @include bp-large2 {
-  
+
     &:nth-child(even) {
       .c-team-member-card__image {
         margin: 0 $global-line-height/2 $global-line-height/2 -30%;
@@ -63,6 +77,6 @@
   }
 
   * {
-    transition: all .6s ease-in-out;    
+    transition: all .6s ease-in-out;
   }
 }

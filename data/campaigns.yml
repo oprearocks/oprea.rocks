@@ -10,8 +10,10 @@ home:
         link_to: https://calendly.com/neuron01/30-minute-meeting
 
     secondary:
-        headline: Have a project?
-        message: Let me help you <u class="u-text--extra-bold">migrate to Docker</u>!
-        callout: Request a quote
+        headline: Let's work together.
+        message: |
+            <span class="u-text--extra-bold"><u>Have a project</u> in mind?</span>
+            <span class="u-text--thin"> I'd love to hear more about it.</span>
+        callout: Contact me
         link_to: /contact
 

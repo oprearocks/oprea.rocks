@@ -1,5 +1,9 @@
 p {
   font-size: 1.125rem;
-  line-height: 1.125 * $global-line-height;
+  line-height: 2;
   color: $body-copy-color;
+
+  code {
+    @extend .u-text--bold;
+  }
 }

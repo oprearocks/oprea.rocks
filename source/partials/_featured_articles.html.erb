@@ -22,7 +22,9 @@
           </span>
 
           <% if article.metadata[:page][:image] %>
+          <div class="c-featured-article__image-wrapper">
             <img class="c-featured-article__image" src="<%= article.metadata[:page][:image] %>" alt="<%= article.metadata[:page][:image_alt] %>">
+          </div>
           <% end %>
 
           <header>
@@ -47,12 +49,12 @@
           <!--     </time> -->
           <!-- </footer> -->
         </article>
-      <% end %>      
+      <% end %>
     </div>
     <aside class="u-text-center">
       <nav>
         <a class="o-link--bare o-button" href="/blog">Go to the blog</a>
       </nav>
-    </aside>    
+    </aside>
   </section>
 <% end %>
