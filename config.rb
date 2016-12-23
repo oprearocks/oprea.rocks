@@ -27,7 +27,8 @@ activate :autoprefixer
 activate :syntax
 
 set :markdown_engine, :kramdown
-set :markdown, :input => "GFM"
+set :markdown, :input => "GFM",
+               :hard_wrap => false
 
 activate :blog do |blog|
   Time.zone = "Bucharest"
