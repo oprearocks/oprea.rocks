@@ -2,4 +2,8 @@ p {
   font-size: 1.125rem;
   line-height: 2;
   color: $body-copy-color;
+
+  code {
+    @extend .u-text--bold;
+  }
 }
