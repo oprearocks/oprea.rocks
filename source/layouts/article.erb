@@ -46,13 +46,18 @@
           <p>Previous Article: </p>
           <%= current_article.previous_article.title %>
         </a>
+      <% else %>
+      <span></span>
       <% end %>
+
 
       <% if current_article.next_article %>
         <a class="c-pagination__links-next o-link--bare" href="<%= current_article.next_article.url %>">
           <p>Next Article: </p>
           <%= current_article.next_article.title %>
         </a>
+      <% else %>
+      <span></span>
       <% end %>
     </div>
 

@@ -100,7 +100,10 @@ function checkWordOccurrenceInSentence(word, sentence) {
 
 
 ## Checking object properties
-> Object.property/Object['key']
+
+```javascript
+<Object>.<property> / <Object>['key']
+```
 
 Let's assume that you get a JSON object from an API, that returns error data from an error aggregator based on a certain query, and displays only certain errors. You will obviously need to validate if the error key exists, and display it's value.
 
@@ -128,8 +131,8 @@ if ('fatalErrorsCount' in errorData) {
 
 and now you are safe!
 
-EDIT 2015/03/08: As per [@jakobparker's tweet](https://twitter.com/jacobparker/status/568519846050205696) I promised I'll make an edit and put the information here, so here it goes.
-Use the `in` operator with caution, as it triggers prototype lookups, and you might get the property that you're looking for, from another object, further up the prototype chain.
+***EDIT 2015/03/08:** As per [@jakobparker's tweet](https://twitter.com/jacobparker/status/568519846050205696) I promised I'll make an edit and put the information here, so here it goes.
+Use the `in` operator with caution, as it triggers prototype lookups, and you might get the property that you're looking for, from another object, further up the prototype chain.*
 
 Let's say you have the following structure:
 
@@ -143,23 +146,23 @@ Let's say you have the following structure:
 
 If you do this: `var childHasTostringMethod = 'toString' in Child;` you will see that your variable will be set to `true` as this will trigger a prototype lookup, that in plain english looks like this:
 
-&mdash; *`Child` do you have a `toString` property?*
-
-&mdash; *No, I don't!*
-
-&mdash; *Okay, I'll ask your parents.* [.. walks up the `prototype`, to ask the child's `Parent`.]
-
-&mdash; *`Parent` do you have a `toString` property your child inherited?*
-
-&mdash; *No, I don't!*
-
-&mdash; *Okay, then I guess your parent should have it, otherwise I'll tell the people who told me to ask you, that it's `undefined`.*
-
-&mdash; *`Object` do you have a `toString` property?*
-
-&mdash; *Yes I do, here it is!*
-
-*[FIN...]*
+> &mdash; *`Child` do you have a `toString` property?*
+> 
+> &mdash; *No, I don't!*
+> 
+> &mdash; *Okay, I'll ask your parents.* [.. walks up the `prototype`, to ask the child's `Parent`.]
+> 
+> &mdash; *`Parent` do you have a `toString` property your child inherited?*
+> 
+> &mdash; *No, I don't!*
+> 
+> &mdash; *Okay, then I guess your parent should have it, otherwise I'll tell the people who told me to ask you, that it's `undefined`.*
+> 
+> &mdash; *`Object` do you have a `toString` property?*
+> 
+> &mdash; *Yes I do, here it is!*
+> 
+> *[FIN...]*
 
 Bottom line is that if you want to restrict your lookup to the current object and stay safe from prototype lookups, you should use the `hasOwnProperty()` method, to check if the key you're looking for is available on your object.
 
