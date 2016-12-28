@@ -57,6 +57,12 @@
       border-left: $global-line-height solid darken($color: $body-background-color, $amount: 20);
       background-color: $body-background-color;
     }
+
+    ol,
+    ul {
+        font-size: 1.125rem;
+        line-height: 2;
+    }
   }
 
   &__body,
