@@ -5,8 +5,7 @@ pub_date: 2016-09-05 8:00:00 PM
 last_modified: 2016-09-05 8:00:00 PM
 permalink: /blog/es6-arrow-functions-production/
 tags:
-  - javascript
-  - es6
+  - ecmascript
 published: true
 author: "Adrian Oprea"
 twitter: "@opreaadrian"
