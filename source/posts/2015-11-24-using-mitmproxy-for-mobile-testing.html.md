@@ -6,12 +6,8 @@ last_modified: 2015-11-24 12:00:00 PM
 categories: development
 author: "Adrian Oprea"
 twitter: "@opreaadrian"
-categories:
-  - tools
-  - mobile
 tags:
   - productivity
-  - testing
   - mobile
 keywords: mobile, testing, mitmproxy, hosts, hostfile, nodejs
 image: /images/posts/using-mitmproxy-for-mobile-testing/post.jpg

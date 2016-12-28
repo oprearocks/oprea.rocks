@@ -6,12 +6,9 @@ last_modified: 2015-05-05 02:00:00 AM
 categories: inspiration
 author: 'Adrian Oprea'
 twitter: '@opreaadrian'
-categories:
-    - self-development
-    - productivity
 tags:
     - productivity
-    - learning
+    - self-development
 keywords: inspiration, keeping current, tech, documentation, learning
 image: /images/posts/change_alley.jpg
 ---

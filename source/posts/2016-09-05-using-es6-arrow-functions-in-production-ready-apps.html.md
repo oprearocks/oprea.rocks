@@ -4,12 +4,9 @@ title: Using ES6 arrow functions in production-ready apps
 pub_date: 2016-09-05 8:00:00 PM
 last_modified: 2016-09-05 8:00:00 PM
 permalink: /blog/es6-arrow-functions-production/
-categories:
-  - javascript
 tags:
-  - productivity
-  - ECMAScript
-  - JavaScript
+  - javascript
+  - es6
 published: true
 author: "Adrian Oprea"
 twitter: "@opreaadrian"

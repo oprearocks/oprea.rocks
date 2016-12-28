@@ -6,13 +6,9 @@ last_modified: 2015-01-22 12:00:00 AM
 categories: javascript
 author: 'Adrian Oprea'
 twitter: '@opreaadrian'
-categories:
-    - javascript
-    - productivity
-    - tips
 tags:
-    - javascript
-    - tips
+    - productivity
+    - ecmascript
 keywords: javascript, validation, mistakes, beginner, code, programming, objects, indexOf, for-in, loops
 image: /images/posts/mistakes.jpg
 ---
