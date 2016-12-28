@@ -1,0 +1,42 @@
+productivity:
+    name: "Productivity"
+    description: |
+        While many of today's practices focus on delivering a higher volume of
+        work to clients, it would be wrong to think that all it takes is hard work.
+        This is where I write about the knowledge and the frameworks I use to structure
+        that knowledge, to aid me with project delivery.
+architecture:
+    name: "Software Architecture"
+    description: |
+        This is unavoidable in software development. The question is
+        "When are you going to work on architecture, and at what cost?". I'll
+        share insights on the pracitces I employ in architecting web applications
+        and the infrastructure they live on.
+mobile:
+    name: "Mobile"
+    description: |
+        I love mobile! This is where I share the tools I use for mobile development,
+        and testing.
+self-development:
+    name: "Self Development"
+    description: |
+        I'm self-taught in almost everything I do. Even thgough I received formal education,
+        I got it long after I started working as a developer. Under this category, you'll
+        find me talking about interesting articles, reviewing books I found useful for
+        me as an individual, not only as a professional.
+ecmascript:
+    name: "ECMAScript"
+    description: |
+        Having used JavaScript for the past 8 years, I've witnessed a lot of changes
+        in the landscape. From the MooTools/Prototype era to jQuery, from Backbone to
+        Angular, React and Ember. I had the time to make a lot of mistakes and also
+        learned a lot about the web platform. I'd like to share my war stories with you.
+devops:
+    name: "DevOps"
+    description: |
+        I'm lazy! There, I said it! In other words, I'm all about automating repetitive
+        tasks, and delegating many of my responsibilities to machines. If a computer can run
+        tests on a web application front-end, then I put the time in implement that. I love
+        being responsible for my application from development all the way to production so
+        in this section you will "see" me talk about virtualization platforms, cloud
+        providers and services, task runners and more.
