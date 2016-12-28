@@ -5,13 +5,9 @@ date_created_on: 2016-09-16 10:00:00 AM
 date_published_on: 2016-09-16 10:00:00 AM
 date_modified_on: 2016-09-16 10:00:00 AM
 permalink: /top-5-things-to-consider-when-choosing-a-new-technology/
-categories:
-  - prouctivity
 tags:
   - productivity
   - architecture
-  - libraries
-  - frameworks
 published: true
 author: "Adrian Oprea"
 twitter: "@opreaadrian"

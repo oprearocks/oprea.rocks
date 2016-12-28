@@ -6,13 +6,9 @@ last_modified: 2015-01-22 12:00:00 AM
 categories: javascript
 author: 'Adrian Oprea'
 twitter: '@opreaadrian'
-categories:
-    - javascript
-    - productivity
-    - tips
 tags:
-    - javascript
-    - tips
+    - productivity
+    - ecmascript
 keywords: javascript, validation, mistakes, beginner, code, programming, objects, indexOf, for-in, loops
 image: /images/posts/mistakes.jpg
 ---
@@ -148,13 +144,21 @@ Let's say you have the following structure:
 If you do this: `var childHasTostringMethod = 'toString' in Child;` you will see that your variable will be set to `true` as this will trigger a prototype lookup, that in plain english looks like this:
 
 &mdash; *`Child` do you have a `toString` property?*
+
 &mdash; *No, I don't!*
+
 &mdash; *Okay, I'll ask your parents.* [.. walks up the `prototype`, to ask the child's `Parent`.]
+
 &mdash; *`Parent` do you have a `toString` property your child inherited?*
+
 &mdash; *No, I don't!*
+
 &mdash; *Okay, then I guess your parent should have it, otherwise I'll tell the people who told me to ask you, that it's `undefined`.*
+
 &mdash; *`Object` do you have a `toString` property?*
+
 &mdash; *Yes I do, here it is!*
+
 *[FIN...]*
 
 Bottom line is that if you want to restrict your lookup to the current object and stay safe from prototype lookups, you should use the `hasOwnProperty()` method, to check if the key you're looking for is available on your object.

@@ -4,13 +4,9 @@ title: "Embrace the future of your infrastructure, with Docker."
 date_created_on: 2016-12-23 10:00 AM
 date_published_on: 2016-12-23 10:00 AM
 date_modified_on: 2016-12-23 10:00 AM
-categories:
-  - devops
-  - productivity
 tags:
   - infrastructure
   - devops
-  - docker
 published: false
 author: "Adrian Oprea"
 twitter: "@opreaadrian"

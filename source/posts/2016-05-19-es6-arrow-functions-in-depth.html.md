@@ -3,12 +3,8 @@ layout: article
 title: "ES6 arrow functions in depth"
 pub_date: 2016-05-19 4:40:00 PM
 last_modified: 2016-09-07 1:42:00 PM
-categories:
-  - javascript
-  - ES6
 tags:
-  - javascript
-  - es6
+  - ecmascript
 published: true
 author: "Adrian Oprea"
 twitter: "@opreaadrian"

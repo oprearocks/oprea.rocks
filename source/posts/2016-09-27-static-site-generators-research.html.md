@@ -5,12 +5,9 @@ date_created_on: 2016-09-27 10:00 AM
 date_published_on: 2016-09-27 10:00 AM
 date_modified_on: 2016-09-27 10:00 AM
 permalink: /analysing-static-site-generators/
-categories:
-  - prouctivity
 tags:
-  - productivity
   - research
-  - static-site-generators
+  - process
 published: false
 author: "Adrian Oprea"
 twitter: "@opreaadrian"
