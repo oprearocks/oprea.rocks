@@ -6,7 +6,17 @@ layout: blog
 
 <main>
 <section class="c-section c-section--narrow c-blog">
-  <h1>Articles tagged with <a class="e-link--dotted c-article__tag" href="">#<%= tagname %></a></h1>
+  <% if data.tags.key?(tagname) %>
+    <h1>
+      <span class="c-article__tag"><a href="/blog/<%= tagname %>" class="e-link--dotted"><%= data.tags[tagname.to_sym][:name] %></a> archive</span>
+    </h1>
+    <p><%= data.tags[tagname.to_sym][:description]%></p>
+    <hr>
+  <% else %>
+    <h1>
+      <span class="c-article__tag"><a href="/blog/<%= tagname %>" class="e-link--dotted"><%= tagname %></a> archive</span>
+    </h1>
+  <% end %>
 
   <% page_articles.each_with_index do |article, i| %>
     <article class="c-article" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
