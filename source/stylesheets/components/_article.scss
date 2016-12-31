@@ -1,5 +1,6 @@
 .c-article {
   margin-bottom: 4 * $global-line-height;
+  min-width: 0px;
 
   a:active {
     background-color: $primary-accent-color;
@@ -9,19 +10,11 @@
   &__title {
     margin: 2 * $global-line-height 0;
     font-weight: 600;
-    font-size: 2em;
+    font-size: 3.5em;
     line-height: 1.2;
     transition: all .3s ease-in-out;
 
     @include bp-medium {
-      font-size: 2.5em;
-    }
-
-    @include bp-large {
-      font-size: 3em;
-    }
-
-    @include bp-large2 {
       font-size: 4em;
     }
   }
@@ -63,6 +56,33 @@
         font-size: 1.125rem;
         line-height: 2;
     }
+
+    img {
+      width: 100%;
+    }
+
+    h2 {
+      font-size: 2.5em;
+      line-height: 1;
+
+      @include bp-medium {
+        font-size: 3em;
+      }
+    }
+
+    h3 {
+      font-size: 2em;
+      line-height: 1;
+
+      @include bp-medium {
+        font-size: 2.5em;
+      }
+    }
+
+    h2, h3 {
+      margin-top: 2* $global-line-height;
+    }
+
   }
 
   &__body,
