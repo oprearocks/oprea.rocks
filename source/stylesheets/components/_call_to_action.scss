@@ -70,4 +70,13 @@
     }
   }
 
+  &--theme-dark {
+
+  }
+
+  &--theme-light {
+    background-color: white !important;
+    color: $body-copy-color !important
+  }
+
 }

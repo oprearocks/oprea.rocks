@@ -25,10 +25,10 @@ end
 activate :directory_indexes
 activate :autoprefixer
 activate :syntax
-
 set :markdown_engine, :kramdown
 set :markdown, :input => "GFM",
                :hard_wrap => false
+
 
 activate :blog do |blog|
   Time.zone = "Bucharest"
@@ -77,6 +77,9 @@ helpers do
     date.strftime('%B %d, %Y')
   end
 
+  def gist(account, gist_hash)
+    '<script src="https://gist.github.com/' + account + '/' + gist_hash + '.js"></script>'
+  end
 end
 
 # Build-specific configuration

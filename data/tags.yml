@@ -10,7 +10,7 @@ architecture:
     description: |
         This is unavoidable in software development. The question is
         "When are you going to work on architecture, and at what cost?". I'll
-        share insights on the pracitces I employ in architecting web applications
+        share insights on the practices I employ in architecting web applications
         and the infrastructure they live on.
 mobile:
     name: "Mobile"
@@ -20,7 +20,7 @@ mobile:
 self-development:
     name: "Self Development"
     description: |
-        I'm self-taught in almost everything I do. Even thgough I received formal education,
+        I'm self-taught in almost everything I do. Even though I received formal education,
         I got it long after I started working as a developer. Under this category, you'll
         find me talking about interesting articles, reviewing books I found useful for
         me as an individual, not only as a professional.

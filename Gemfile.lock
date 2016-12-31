@@ -129,7 +129,7 @@ DEPENDENCIES
   middleman-autoprefixer
   middleman-blog
   middleman-livereload
-  middleman-syntax
+  middleman-syntax (= 3.0.0)
   nokogiri
   redcarpet
   tzinfo-data

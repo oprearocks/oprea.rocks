@@ -25,11 +25,11 @@
                 <img class="c-article__image" src="<%= current_article.metadata[:page][:image] %>" alt="<%= current_article.metadata[:page][:image_alt] %>">
               </div>
             <% end %>
-            <h2 itemprop="headline" class="c-article__title">
+            <h1 itemprop="headline" class="c-article__title">
               <a class="o-link--bare" href="<%= current_article.url %>" title="<%= current_article.title %>">
                 <%= current_article.metadata[:page][:title] %>
               </a>
-            </h2>
+            </h1>
           </header>
 
           <%= partial "partials/article_tags", locals: { tags: current_article.metadata[:page][:tags] }%>
@@ -37,6 +37,10 @@
           <section itemprop="articleBody" class="c-article__body">
             <%= yield %>
           </section>
+
+          <% if current_article.metadata[:page][:campaign] %>
+          <%= partial "partials/secondary_call_to_action", locals: { campaign: data.campaigns[(current_article.metadata[:page][:campaign]).to_sym]} %>
+          <% end %>
         </article>
     </div>
 

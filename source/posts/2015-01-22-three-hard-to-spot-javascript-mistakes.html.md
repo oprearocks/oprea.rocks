@@ -19,11 +19,13 @@ It was wonderful! The project was on track, the client was very satisfied and th
 
 All except one...
 
-&mdash; *It's backend's fault!* ... someone would mutter.  
+READMORE
 
-&mdash; *Yeah! They messed up the data, again!* ... goes another.  
-
-&mdash; *God doesn't love us today.*  ... I'd say to myself.  
+> &mdash; *It's backend's fault!* ... someone would mutter.  
+> 
+> &mdash; *Yeah! They messed up the data, again!* ... goes another.  
+> 
+> &mdash; *God doesn't love us today.*  ... I'd say to myself.  
 
 Some were using debuggers, others were littering the code with `console.log`s. 
 When nothing would work, we would simply relax, as this was something divine, 
@@ -31,8 +33,6 @@ something that us mortals would never understand.
 The next morning, I'd go back to work after a good night sleep(4-5 hours). 
 I'd take one last look at the divine piece of code, and the first *WTF?!* would suddenly find its way into the office.  
 This is an open-ended story and you can choose your version from the 3 options below. Enjoy!
-
-READMORE
 
 ## Table of contents
 {:.no_toc}
