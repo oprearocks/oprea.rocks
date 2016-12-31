@@ -1,7 +1,7 @@
 'use strict';
 
-const menuButtonToggle = document.querySelector('#mainMenuToggle');
-const mainMenu = document.querySelector('#mainMenu');
+var menuButtonToggle = document.querySelector('#mainMenuToggle');
+var mainMenu = document.querySelector('#mainMenu');
 
 menuButtonToggle.addEventListener('click', function() {
   mainMenu.classList.toggle('c-main-menu-items--visible')
