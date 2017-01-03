@@ -66,7 +66,7 @@ helpers do
     active_class = ''
     current_page_url = current_page.url
 
-    if current_page_url == slug
+    if current_page_url == slug || (current_page_url.include?(slug) && slug != '/')
       active_class = 'c-main-menu-item--active'
     end
 
