@@ -7,8 +7,11 @@
   flex-basis: 100%;
   flex-grow: 1;
   width: 100%;
-  margin: $global-line-height / 2;
-  padding: 0 $global-line-height;
+  margin: ($global-line-height / 2);
+
+  &:hover {
+    background-color: #fafafa;
+  }
 
   @include bp-medium {
     flex-basis: 33%;
@@ -21,6 +24,7 @@
   }
 
   &__title {
+    padding: $global-line-height 0;
     line-height: 1.2;
     color: $primary-accent-color;
   }
@@ -31,6 +35,7 @@
 
   &__image {
     min-width: 100%;
+    width: 100%;
     height: 100%;
     object-fit: cover;
     // Nasty IE hack
