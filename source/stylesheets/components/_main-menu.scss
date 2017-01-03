@@ -31,8 +31,7 @@
       color: $body-copy-color;
     }
 
-    &--active::after,
-    &:hover::after {
+    &--active::after {
       position: absolute;
       content: "";
       display: block;
