@@ -6,6 +6,8 @@
   &:after {
     clear: both;
     content: "";
+    flex-basis: 0;
+    order: 1;
     display: table;
   }
 }

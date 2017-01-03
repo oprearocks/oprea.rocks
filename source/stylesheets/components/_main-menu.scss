@@ -1,47 +1,54 @@
 .c-main-menu-items {
-  max-height: 0;
-  overflow: hidden;
+  padding: 2 * $global-line-height 0;
+  font-family: $sans-serif-font;
+  font-weight: 300;
+  width: 100%;
   background-color: $body-copy-color;
-  transition: max-height .3s ease-in-out;
-  box-shadow: 0 6px 12px rgba($body-copy-color, 0.4);
+  text-align: center;
+
+  @include bp_medium {
+    background: none;
+    width: auto;
+  }
 }
 
 .c-main-menu-item {
-  width: 100%;
-  text-align: center;
   color: white;
+  position: relative;
+  text-transform: uppercase;
 
-  &--active &__link,
-  &:hover &__link {
-    text-decoration: underline;
+  &--active,
+  &:hover {
     color: $primary-accent-color;
+  }
+
+  @include bp_medium {
+    display: inline-block;
+    color: $body-copy-color;
+
+    &--active,
+    &:hover {
+      color: $body-copy-color;
+    }
+
+    &--active::after,
+    &:hover::after {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 18px;
+      height: 2px;
+      bottom: 0;
+      left: 50%;
+      margin-left: -9px;
+      background-color: $primary-accent-color;
+    }
   }
 }
 
 .c-main-menu-item__link {
-  display: inline-block;
-  width: 100%;
-  padding: 20px;
+  display: block;
+  padding: $global-line-height / 2 $global-line-height ;
   color: inherit;
-  text-transform: lowercase;
-  transition: all .2s ease-in-out;
-}
-
-.c-main-menu-items--visible {
-  max-height: 500px;
-}
-
-.c-main-menu-toggle__wrapper {
-  text-align: right;
-}
-
-.c-main-menu-toggle__button {
-  border: 0;
-  text-transform: lowercase;
-  cursor: pointer;
-  color: $primary-accent-color;
-
-  &:focus {
-    outline: 2px solid $primary-accent-color;
-  }
+  letter-spacing: .2em;
 }
