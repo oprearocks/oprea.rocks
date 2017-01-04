@@ -1,4 +1,9 @@
 .c-contact {
     .c-section__heading {
+        font-size: 2em;
+
+        @include bp_medium {
+            font-size: 3em;
+        }
     }
 }
