@@ -1,0 +1,20 @@
+<!-- Page prefetch -->
+<% if defined?(prev_page) && prev_page %>
+<link rel="prefetch" href="<%= prev_page.url %>">
+<% end %>
+
+<% if defined?(next_page) && next_page %>
+<link rel="prefetch" href="<%= next_page.url %>">
+<% end %>
+
+<!-- Article prefetch -->
+
+
+<% if current_article && current_article.previous_article %>
+<link rel="prefetch" href="<%= current_article.previous_article.url %>">
+<% end %>
+
+
+<% if current_article && current_article.next_article %>
+<link rel="prefetch" href="<%= current_article.next_article.url %>">
+<% end %>
