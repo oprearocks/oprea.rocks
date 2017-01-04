@@ -18,7 +18,9 @@
   text-transform: uppercase;
 
   &--active,
-  &:hover {
+  &:hover,
+  a:focus {
+    outline: none;
     color: $primary-accent-color;
   }
 
