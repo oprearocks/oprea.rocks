@@ -10,6 +10,7 @@
     <title><%= current_page.data.title || "oprea.rocks - Improve your team's productivity making the right technical choices" %></title>
 
     <%= stylesheet_link_tag :main %>
+    <script> var host = "<%= data.global.host_name %>"; if ((host == window.location.host) && (window.location.protocol != "https:")) { window.location.protocol = "https"; } </script>
   </head>
 
   <body class="<%= page_classes %>">
