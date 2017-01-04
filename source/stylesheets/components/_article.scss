@@ -2,9 +2,11 @@
   margin-bottom: 4 * $global-line-height;
   min-width: 0px;
 
-  a:active {
+  a:active,
+  a:focus {
     background-color: $primary-accent-color;
     color: white;
+    outline: none;
   }
 
   &__title {

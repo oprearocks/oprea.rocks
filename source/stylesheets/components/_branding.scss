@@ -1,4 +1,15 @@
 .c-branding {
     width: 200px;
     text-align: center;
+
+    .logo-image {
+        fill: $body-copy-color;
+    }
+
+    a:focus {
+        outline: none;
+        .logo-image {
+            fill: $primary-accent-color;
+        }
+    }
 }

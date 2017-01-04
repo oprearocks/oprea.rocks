@@ -12,7 +12,9 @@
     svg {
       transition: all .3s ease-in-out;
     }
-    &:hover {
+    &:hover,
+    a:focus {
+      outline: none;
       svg {
         fill: white;
         background-color: $primary-accent-color;

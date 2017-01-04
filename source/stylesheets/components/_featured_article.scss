@@ -27,6 +27,12 @@
     padding: $global-line-height 0;
     line-height: 1.2;
     color: $primary-accent-color;
+
+    a:focus {
+      outline: none;
+      color: white;
+      background-color: $primary-accent-color;
+    }
   }
 
   &__subtitle {}
