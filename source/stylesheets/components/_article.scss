@@ -10,8 +10,8 @@
   &__title {
     margin: 2 * $global-line-height 0;
     font-weight: 600;
-    font-size: 3.5em;
-    line-height: 1.2;
+    font-size: 3em;
+    line-height: 1;
     transition: all .3s ease-in-out;
 
     @include bp-medium {
