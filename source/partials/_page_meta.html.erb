@@ -1,6 +1,17 @@
+<meta name="author" content="<%= data.global.site_author %>">
 <meta name="description" content="<%= data.global.site_description %>">
-<% if current_article && current_article.metadata[:page][:canonical_url] %>
-   <link rel="canonical" href="<%= current_article.metadata[:page][:canonical_url] %>">
+<link rel="alternate" type="application/rss+xml" title="Oprea.Rocks" href="https://<%= data.global.host_name %>/feed.xml">
+<% if current_article %>
+  <% if current_article.metadata[:page][:canonical_url] %>
+    <link rel="canonical" href="<%= current_article.metadata[:page][:canonical_url] %>">
+  <% end %>
+
+  <% if current_article.metadata[:page][:keywords] %>
+  <meta name="keywords" content="<%= current_article.metadata[:page][:keywords] %>">
+  <% end %>
+
 <% else %>
   <link rel="canonical" href="https://<%= data.global.host_name +  current_page.url %>">
+  <meta name="keywords" content="<%= data.global.site_keywords %>">
 <% end %>
+

@@ -1,6 +1,8 @@
+site_author: Adrian Oprea
 contact_email: adrian@oprea.rocks
 host_name: oprea.rocks
 google_analytics_tracking_code: UA-32468134-5
+site_keywords: docker, javascript, nodejs, devops, software, development, consultant, consulting, aws, jenkins
 site_description: >
     Adrian Oprea is a seasoned software developer turned consultant. He played key roles
     in the delivery large-scale applications, ranging from e-commerce applications for
