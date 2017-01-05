@@ -1,0 +1,36 @@
+.c-newsletter {
+    &__form {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__field {
+        @extend .o-button;
+        transition: border-color .2s ease-in-out;
+
+        &:focus {
+            outline: none;
+            border-color: $primary-accent-color;
+        }
+    }
+
+    &__button {
+        transition: all .2s ease-in-out;
+
+        &:hover {
+            background-color: $primary-accent-color;
+            color: white;
+        }
+    }
+
+    @include bp_medium {
+        &__form {
+            flex-direction: row;
+        }
+
+        &__field {
+            width: 60%;
+        }
+
+    }
+}
