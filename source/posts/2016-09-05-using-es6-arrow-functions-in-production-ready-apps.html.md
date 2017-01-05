@@ -10,6 +10,7 @@ tags:
 published: true
 author: "Adrian Oprea"
 twitter: "@opreaadrian"
+canonical_url: https://codesi.nz/es6-arrow-functions-production/
 keywords: javascript, es6, ecmascript, ecmascript 6, arrow functions, functions, production, apps, callbacks
 image: /images/posts/using-es6-arrown-functions-in-production-ready-apps/post.jpg
 ---
