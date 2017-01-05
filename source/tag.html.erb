@@ -8,15 +8,15 @@ title: "Oprea.Rocks - Blog category archive page"
 <main>
 <section class="c-section c-section--narrow c-blog">
   <% if data.tags.key?(tagname) %>
-    <h1>
+    <h2>
       <span class="c-article__tag"><a href="/blog/<%= tagname %>" class="e-link--dotted"><%= data.tags[tagname.to_sym][:name] %></a> archive</span>
-    </h1>
+    </h2>
     <p><%= data.tags[tagname.to_sym][:description]%></p>
     <hr>
   <% else %>
-    <h1>
+    <h2>
       <span class="c-article__tag"><a href="/blog/<%= tagname %>" class="e-link--dotted"><%= tagname %></a> archive</span>
-    </h1>
+    </h2>
   <% end %>
 
   <% page_articles.each_with_index do |article, i| %>
@@ -39,11 +39,11 @@ title: "Oprea.Rocks - Blog category archive page"
       </span>
 
       <header>
-        <h2 itemprop="headline" class="c-article__title">
+        <h1 itemprop="headline" class="c-article__title">
           <a class="o-link--bare" href="<%= article.url %>" title="<%= article.title %>">
             <%= article.title %>
           </a>
-        </h2>
+        </h1>
 
         <% if article.metadata[:page][:image] %>
           <div class="c-article__image-wrapper--restrained">

@@ -24,6 +24,8 @@
 
           <% if current_article.metadata[:page][:campaign] %>
           <%= partial "partials/secondary_call_to_action", locals: { campaign: data.campaigns[(current_article.metadata[:page][:campaign]).to_sym]} %>
+          <% else %>
+          <%= partial "partials/newsletter" %>
           <% end %>
         </article>
     </div>

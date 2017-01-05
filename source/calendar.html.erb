@@ -6,7 +6,7 @@ title: "Oprea.Rocks - Blog archive page"
 ---
 <main>
 <section class="c-section c-section--narrow c-blog">
-  <h1>
+  <h2>
   Archive for
   <a class="e-link--dotted c-article__tag" href=""><% case page_type
      when 'day' %>
@@ -15,7 +15,7 @@ title: "Oprea.Rocks - Blog archive page"
     <%= Date.new(year, month, 1).strftime('%b %Y') %>
   <% when 'year' %>
     <%= year %>
-  <% end %></a></h1>
+  <% end %></a></h2>
 
   <% page_articles.each_with_index do |article, i| %>
     <article class="c-article" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
@@ -37,11 +37,11 @@ title: "Oprea.Rocks - Blog archive page"
       </span>
 
       <header>
-        <h2 itemprop="headline" class="c-article__title">
+        <h1 itemprop="headline" class="c-article__title">
           <a class="o-link--bare" href="<%= article.url %>" title="<%= article.title %>">
             <%= article.title %>
           </a>
-        </h2>
+        </h1>
 
         <% if article.metadata[:page][:image] %>
           <div class="c-article__image-wrapper--restrained">
