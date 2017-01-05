@@ -1,11 +1,13 @@
 ---
 layout: article
 title: "Three hard to spot JavaScript mistakes"
-pub_date: 2015-01-22 12:00:00 AM
-last_modified: 2015-01-22 12:00:00 AM
+date_created_on: 2015-01-22 12:00:00 AM
+date_published_on: 2015-01-22 12:00:00 AM
+date_modified_on: 2015-01-22 12:00:00 AM
 categories: javascript
 author: 'Adrian Oprea'
 twitter: '@opreaadrian'
+canonical_url: https://codesi.nz/three-hard-to-spot-javascript-mistakes/
 tags:
     - productivity
     - ecmascript

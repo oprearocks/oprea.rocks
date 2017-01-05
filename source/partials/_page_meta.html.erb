@@ -1,2 +1,6 @@
 <meta name="description" content="Adrian Oprea - Software architecure consultant">
-<link rel="canonical" href="https://<%= data.global.host_name +  current_page.url %>">
+<% if current_article && current_article.metadata[:page][:canonical_url] %>
+   <link rel="canonical" href="<%= current_article.metadata[:page][:canonical_url] %>">
+<% else %>
+  <link rel="canonical" href="https://<%= data.global.host_name +  current_page.url %>">
+<% end %>

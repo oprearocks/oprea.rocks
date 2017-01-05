@@ -1,13 +1,15 @@
 ---
 layout: article
 title: "ES6 arrow functions in depth"
-pub_date: 2016-05-19 4:40:00 PM
-last_modified: 2016-09-07 1:42:00 PM
+date_created_on: 2016-05-19 4:40:00 PM
+date_published_on: 2016-05-19 4:40:00 PM
+date_modified_on: 2016-09-07 1:42:00 PM
 tags:
   - ecmascript
 published: true
 author: "Adrian Oprea"
 twitter: "@opreaadrian"
+canonical_url: https://codesi.nz/es6-arrow-functions-in-depth/
 keywords: JavaScript, ES6, ECMAScript6, arrows, functions, lambdas, anonymous functions, arrow functions, Babel
 image: /images/posts/es6-arrow-functions-in-depth/post.jpg
 ---

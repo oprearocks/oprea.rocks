@@ -1,0 +1,16 @@
+<meta itemprop="dateCreated" content="<%= current_article.metadata[:page][:date_created_on] %>">
+<meta itemprop="datePublished" content="<%= current_article.metadata[:page][:date_published_on] %>">
+<meta itemprop="dateModified" content="<%= current_article.metadata[:page][:date_modified_on] %>">
+<meta itemprop="keywords" content="<%= current_article.metadata[:page][:keywords] %>">
+<meta itemprop="publisher" content="<%= current_article.metadata[:page][:author] %>">
+
+<% if current_article.metadata[:page][:lang] %>
+<meta itemprop="inLanguage" content="<%= current_article.metadata[:page][:lang] %>">
+<% else %>
+<meta itemprop="inLanguage" content="en_US">
+<% end %>
+
+<!-- DIVERSITY IS KEY -->
+<span itemprop="audience" itemscope itemtype="http://schema.org/PeopleAudience">
+    <meta itemprop="gender" content="any">
+</span>

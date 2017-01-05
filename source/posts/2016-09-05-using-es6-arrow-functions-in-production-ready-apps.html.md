@@ -1,8 +1,9 @@
 ---
 layout: article
 title: Using ES6 arrow functions in production-ready apps
-pub_date: 2016-09-05 8:00:00 PM
-last_modified: 2016-09-05 8:00:00 PM
+date_created_on: 2016-09-05 8:00:00 PM
+date_published_on: 2016-09-05 8:00:00 PM
+date_modified_on: 2016-09-05 8:00:00 PM
 permalink: /blog/es6-arrow-functions-production/
 tags:
   - ecmascript
