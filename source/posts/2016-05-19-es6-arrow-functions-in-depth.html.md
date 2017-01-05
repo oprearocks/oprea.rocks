@@ -8,6 +8,7 @@ tags:
 published: true
 author: "Adrian Oprea"
 twitter: "@opreaadrian"
+canonical_url: https://codesi.nz/es6-arrow-functions-in-depth/
 keywords: JavaScript, ES6, ECMAScript6, arrows, functions, lambdas, anonymous functions, arrow functions, Babel
 image: /images/posts/es6-arrow-functions-in-depth/post.jpg
 ---

@@ -11,6 +11,7 @@ tags:
 published: true
 author: "Adrian Oprea"
 twitter: "@opreaadrian"
+canonical_url: https://codesi.nz/top-5-things-to-consider-when-choosing-a-new-technology/
 keywords: productivity, scalability, technologies, software development, recipes, javascript, reactjs, react, angular, angular2, aurelia, libraries, front-end
 image: /images/posts/top-5-things-to-consider-when-choosing-a-new-technology/post.jpg
 ---
