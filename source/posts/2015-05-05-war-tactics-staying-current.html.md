@@ -1,8 +1,9 @@
 ---
 layout: article
 title: "Development war tactics: staying current"
-pub_date: 2015-05-05 02:00:00 AM
-last_modified: 2015-05-05 02:00:00 AM
+date_created_on: 2015-05-05 02:00:00 AM
+date_published_on: 2015-05-05 02:00:00 AM
+date_modified_on: 2015-05-05 02:00:00 AM
 categories: inspiration
 author: 'Adrian Oprea'
 twitter: '@opreaadrian'
