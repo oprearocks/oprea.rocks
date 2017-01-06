@@ -199,10 +199,16 @@ I can't help recommending that you go through the [Mozilla Developer Network Jav
 there is an abundance of knowledge that will help you in the long run, in your web development career.
 Feel free to leave comments, suggest edits and especially share with your peers.
 
+## References
+
+- [The Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
+- [You Don't Know JS: ES6 & Beyond --- Kyle Simpson](http://amzn.to/2iQgfkx)
+
 ## Updates
 
-1. Added the [**Implicit return**](#implicit-return) section.
+1. Added the **[Implicit return](#implicit-return)** section.
 2. Published [Using ES6 arrow functions in production-ready apps](/using-es6-arrow-functions-in-production-ready-apps/ "Article link: Using ES6 arrow functions in production-ready apps") that is directly tied to this article.
+3. Add **[References](#references)** section
 
 Cheers!
 
