@@ -1,6 +1,7 @@
 site_author: Adrian Oprea
 contact_email: adrian@oprea.rocks
 host_name: oprea.rocks
+logo_path: /images/logo.svg
 google_analytics_tracking_code: UA-32468134-5
 site_keywords: docker, javascript, nodejs, devops, software, development, consultant, consulting, aws, jenkins
 site_description: >
