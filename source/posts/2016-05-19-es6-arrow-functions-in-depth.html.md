@@ -123,7 +123,9 @@ console.log(variadicAdderOf5(10, 11, 12));
 // ReferenceError: arguments is not defined
 ```
 
-There is no fix here, as there is nothing broken. What we can do is to return a plain function, rather than an arrow, from our `variadicAdder()`.
+<del>There is no fix here, as there is nothing broken.</del>
+<ins>There are ways to sidestep this issue.</ins> 
+One would be to return a plain function instead of an arrow function.
 This will give us the opportunity to access the `arguments` object without an issue. The updated code will look like the one below with the only difference
 that it will actually work and not throw an error.
 
@@ -142,6 +144,24 @@ const variadicAdderOf5 = variadicAdder(5);
 
 console.log(variadicAdderOf5(10, 11, 12));
 // 38
+```
+
+The more elegant solution, [suggested by somebody on reddit](https://www.reddit.com/r/javascript/comments/5mctwp/es6_arrow_functions_in_depth/dc2w6n6/),
+would be to use the [rest parameter syntax](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Functions/rest_parameters).
+
+```javascript
+const variadicAdder = (x) => {
+
+  return (...args) => {
+    return args.reduce((accumulator, current) => {
+      return accumulator + current;
+    }, x);
+  }
+}
+
+const variadicAdderOf5 = variadicAdder(5);
+
+variadicAdderOf5(1, 2);
 ```
 
 To find out more about `Array.prototype.reduce`, head to the [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce).
@@ -208,7 +228,8 @@ Feel free to leave comments, suggest edits and especially share with your peers.
 
 1. Added the **[Implicit return](#implicit-return)** section.
 2. Published [Using ES6 arrow functions in production-ready apps](/using-es6-arrow-functions-in-production-ready-apps/ "Article link: Using ES6 arrow functions in production-ready apps") that is directly tied to this article.
-3. Add **[References](#references)** section
+3. Added **[References](#references)** section.
+4. Added rest parameter syntax solution to **[Lexical arguments](#lexical-arguments)** section.
 
 Cheers!
 
