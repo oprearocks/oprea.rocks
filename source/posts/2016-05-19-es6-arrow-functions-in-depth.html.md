@@ -219,10 +219,15 @@ I can't help recommending that you go through the [Mozilla Developer Network Jav
 there is an abundance of knowledge that will help you in the long run, in your web development career.
 Feel free to leave comments, suggest edits and especially share with your peers.
 
-## References
+## Resources
 
+- [You Don't Know JS: ES6 & Beyond](http://amzn.to/2iQgfkx) --- Kyle Simpson
+- [Exploring ES6](http://exploringjs.com/es6/ch_arrow-functions.html) --- Axel Rauschmayer
 - [The Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
-- [You Don't Know JS: ES6 & Beyond --- Kyle Simpson](http://amzn.to/2iQgfkx)
+- [Understanding ECMAScript 6 arrow functions](https://www.nczonline.net/blog/2013/09/10/understanding-ecmascript-6-arrow-functions/)
+- [When 'not' to use arrow functions](https://rainsoft.io/when-not-to-use-arrow-functions-in-javascript/)
+- [Arrow functions vs. bind()](http://www.2ality.com/2016/02/arrow-functions-vs-bind.html)
+- [ES6 Arrow Functions: The New Fat & Concise Syntax in JavaScript](https://www.sitepoint.com/es6-arrow-functions-new-fat-concise-syntax-javascript/)
 
 ## Updates
 
@@ -230,6 +235,7 @@ Feel free to leave comments, suggest edits and especially share with your peers.
 2. Published [Using ES6 arrow functions in production-ready apps](/using-es6-arrow-functions-in-production-ready-apps/ "Article link: Using ES6 arrow functions in production-ready apps") that is directly tied to this article.
 3. Added **[References](#references)** section.
 4. Added rest parameter syntax solution to **[Lexical arguments](#lexical-arguments)** section.
+5. Updated **[Resources](#resources)** section with more articles (previously lost in my bookmarks).
 
 Cheers!
 
