@@ -10,6 +10,7 @@
   <meta name="keywords" content="<%= current_article.metadata[:page][:keywords] %>">
   <% end %>
 
+  <%= partial "partials/article_meta" %>
 <% else %>
   <link rel="canonical" href="https://<%= data.global.host_name +  current_page.url %>">
   <meta name="keywords" content="<%= data.global.site_keywords %>">

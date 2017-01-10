@@ -2,9 +2,8 @@
 <meta property="og:type" content="article" />
 <meta property="og:title" content="<%= current_article.title %>">
 <meta property="og:description" content="<%= strip_tags current_article.summary %>">
-<meta property="og:image" content="<%= data.global.host_name + current_article.metadata[:page][:image] %>">
-
-<meta property="og:url" content="<%= current_article.title %>" />
+<meta property="og:image" content="https://<%= data.global.host_name + current_article.metadata[:page][:image] %>">
+<meta property="og:url" content="https://<%= data.global.host_name + current_article.url %>">
 <% if current_article.metadata[:page][:lang] %>
 <meta property="og:locale" content="<%= current_article.metadata[:page][:lang] %>">
 <% else %>
@@ -16,10 +15,10 @@
 <!-- Twitter Card -->
 <meta name="”twitter:creator”" value="<%= current_article.metadata[:page][:twitter] %>">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="<%= current_article.url %>">
+<meta name="twitter:url" content="https://<%= data.global.host_name + current_article.url %>">
 <meta name="twitter:title" content="<%= current_article.title %>">
 <meta name="twitter:description" content="<%= strip_tags current_article.summary %>">
-<meta name="twitter:image" content="<%= data.global.host_name + current_article.metadata[:page][:image] %>">
+<meta name="twitter:image" content="https://<%= data.global.host_name + current_article.metadata[:page][:image] %>">
 
 <!-- Schema.org -->
 <meta itemprop="dateCreated" content="<%= current_article.metadata[:page][:date_created_on] %>">
