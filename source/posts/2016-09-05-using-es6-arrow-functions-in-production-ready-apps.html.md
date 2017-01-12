@@ -129,7 +129,7 @@ To work around this, all you need to do is to surround your whole object in pare
 
 ```javascript
 // This is perfectly valid
-const initialData = () => ({
+const getInitialData = () => ({
     id: 1,
     name: 'Jane Doe'
 });
