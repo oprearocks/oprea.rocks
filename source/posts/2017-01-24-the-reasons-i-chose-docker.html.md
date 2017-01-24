@@ -1,14 +1,14 @@
 ---
 layout: article
-title: "Step into the future with Docker"
-date_created_on: 2016-12-23 10:00 AM
-date_published_on: 2016-12-23 10:00 AM
-date_modified_on: 2016-12-23 10:00 AM
+title: "The reasons I chose Docker"
+date_created_on: 2016-01-20 10:00 AM
+date_published_on: 2017-01-24 2:00 PM
+date_modified_on: 2017-01-24 2:00 PM
 campaign: docker
 tags:
   - infrastructure
   - devops
-published: false
+published: true
 author: "Adrian Oprea"
 twitter: "@opreaadrian"
 keywords: productivity, infrastructure, devops, docker, containers
