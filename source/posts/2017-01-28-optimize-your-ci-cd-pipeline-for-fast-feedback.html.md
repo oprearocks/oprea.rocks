@@ -47,4 +47,4 @@ With the knowledge from the previous section, let's put some order and disciplin
 A conclusion of everything we discussed so far and a quick story about why I dropped Babel and went full NodeJS-compliant ES6 on a set of client services.
 
 > Photo credits:
-> [Dirk Haun](https://www.flickr.com/photos/dhaun/) &mdash; [I Broke The Buil](https://flic.kr/p/9zewGu)
+> [Dirk Haun](https://www.flickr.com/photos/dhaun/) &mdash; [I Broke The Build](https://flic.kr/p/9zewGu)
