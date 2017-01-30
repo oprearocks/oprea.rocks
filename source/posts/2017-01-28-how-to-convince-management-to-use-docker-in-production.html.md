@@ -2,8 +2,8 @@
 layout: article
 title: "[WIP] How to convince your manager to use Docker in production"
 date_created_on: 2016-01-28 10:00 PM
-date_published_on: 2017-01-28 10:00 PM
-date_modified_on: 2017-01-28 10:00 PM
+date_published_on: 2017-01-30 12:00 PM
+date_modified_on: 2017-01-30 12:00 PM
 campaign: docker
 tags:
   - productivity

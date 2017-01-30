@@ -2,8 +2,8 @@
 layout: article
 title: "[WIP] Optimize your CI/CD pipeline for fast feedback"
 date_created_on: 2016-01-28 10:00 PM
-date_published_on: 2017-01-28 10:00 PM
-date_modified_on: 2017-01-28 10:00 PM
+date_published_on: 2017-01-30 12:00 PM
+date_modified_on: 2017-01-30 12:30 PM
 campaign: docker
 tags:
   - productivity
@@ -21,6 +21,7 @@ If your pipeline is slow, then your feedback loop is slow.
 If your code takes 30 minutes to pass through the pipeline
 to get a build and watch it fail, you are wasting precious time.
 You may think you're going fast, but your're not.  
+
 Read on to find out how to optimize your pipeline for faster feedback.
 
 READMORE
