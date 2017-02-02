@@ -8,7 +8,7 @@ home:
         message: |
             <span class="u-text--extra-bold"><u>Let's get in touch</u> and see how I can help you.</span>
         callout: Contact me
-        link_to: mailto:adrian@oprea.rocks
+        link_to: /contact
         theme: dark
 
     secondary:
@@ -17,7 +17,7 @@ home:
             <span class="u-text--extra-bold"><u>Have a project</u> in mind?</span>
             <span class="u-text--thin"> I'd love to hear more about it.</span>
         callout: Contact me
-        link_to: mailto:adrian@oprea.rocks
+        link_to: /contact
         theme: dark
 docker:
     headline: |
@@ -26,5 +26,5 @@ docker:
     message: |
         <span class="u-text--extra-bold"><u>Let's get in touch</u> and see how I can help you.</span>
     callout: Contact me
-    link_to: mailto:adrian@oprea.rocks
+    link_to: /contact
     theme: light

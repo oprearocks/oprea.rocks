@@ -4,16 +4,6 @@
         justify-content: space-between;
     }
 
-    &__field {
-        @extend .o-button;
-        transition: border-color .2s ease-in-out;
-
-        &:focus {
-            outline: none;
-            border-color: $primary-accent-color;
-        }
-    }
-
     &__button {
         transition: all .2s ease-in-out;
 
