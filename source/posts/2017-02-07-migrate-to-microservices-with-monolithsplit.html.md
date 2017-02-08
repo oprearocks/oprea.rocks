@@ -7,7 +7,7 @@ date_modified_on: 2016-02-06 11:30 AM
 campaign: monolithsplit
 tags:
   - ecmascript
-published: false
+published: true
 author: "Adrian Oprea"
 twitter: "@opreaadrian"
 keywords: architecture, microservices, node.js, splitting the monolith, monolith, microservices architecture
