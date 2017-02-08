@@ -28,3 +28,12 @@ docker:
     callout: Contact me
     link_to: /contact
     theme: light
+
+monolithsplit:
+    headline: |
+            <strong class="u-text--thin">Join the <a class="o-link--bare" href="https://monolithsplit.com">MONOLITHSPL/T</a> pre-launch list!</span>
+    message: |
+        <span class="u-text--extra-bold">Be among the first to find out!</span>
+    callout: JOIN NOW!
+    link_to: https://monolithsplit.com
+    theme: light
