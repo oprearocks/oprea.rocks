@@ -31,9 +31,9 @@ docker:
 
 monolithsplit:
     headline: |
-            <strong class="u-text--thin">Join the <a class="o-link--bare" href="https://monolithsplit.com">MONOLITHSPL/T</a> pre-launch list!</span>
+            <strong class="u-text--thin">Join the <a class="o-link--bare" href="https://monolithsplit.com">MONOLITHSPL/T</a> pre-launch list.</span>
     message: |
         <span class="u-text--extra-bold">Be among the first to find out!</span>
-    callout: JOIN NOW!
+    callout: Join now
     link_to: https://monolithsplit.com
     theme: light
