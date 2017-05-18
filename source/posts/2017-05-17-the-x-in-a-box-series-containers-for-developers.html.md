@@ -23,6 +23,8 @@ It was like being thrown off a plane with an umbrella instead of a parachute. Th
 
 READMORE
 
+#### Initially published on Medium: [Should I create the “\<X\> in a box — containers for developers ” video series?](https://medium.com/@opreaadrian/should-i-create-the-x-in-a-box-containers-for-developers-series-faaaa87df6dd)
+
 Looking back, I now understand why developers find containers a bit daunting. In fact, it may seem like they have to take on a whole different set of skills, totally unrelated to their daily job. It’s not like they’re ever going to transition to a full Sysadmin / Operations / DevOps position.
 
 If you’re a JavaScript developer, that’s even worse, as you also have to deal with the [JavaScript fatigue](https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f) and having to learn new libraries and frameworks each year, to stay competitive.
