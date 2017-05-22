@@ -42,11 +42,11 @@ Whenever I talk to people about startup programming, I always hear a variation o
 
 I find this to be lacking in substance.
 
-## *Think-Do&#8482;* not *Do-Panic-Redo&#8482;*
+## Think-Do&#8482; not Do-Panic-Redo&#8482;
 
 Most of the times, the argument is that there's no time to think enough about the functionality you're implementing. I've also been told that writing clean code is pointless because it will be discarded in a couple of weeks when new ideas will need to be implemented.
 
-Actually, I believe that if you begin your startup's codebase by thinking about the architecture, you make every future decision easier. Integrate a *Think-Do&#8482;* process, instead of *Do-Panic-Redo&#8482;*.
+Actually, I believe that if you begin your startup's codebase by thinking about the architecture, you make every future decision easier. Integrate a **Think-Do&#8482;** process, instead of **Do-Panic-Redo&#8482;**.
 
 > Whatever you do, no matter if you're going to be successful or not, you will end up having to think and then act!
 > It's just a matter of when and at what cost.
