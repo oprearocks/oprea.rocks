@@ -9,7 +9,7 @@ tags:
   - nodejs
 published: true
 author: "Adrian Oprea"
-twitter: "@opreaadrian"
+twitter: "@oprearocks"
 keywords: javascript, nodejs, node.js, error, error handling, expressjs, express, mongoose, mongodb
 image: /images/posts/make-your-nodejs-code-easier-to-read/post.jpg
 ---

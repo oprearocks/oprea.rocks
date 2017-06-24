@@ -10,7 +10,7 @@ tags:
   - process
 published: false
 author: "Adrian Oprea"
-twitter: "@opreaadrian"
+twitter: "@oprearocks"
 keywords: productivity, analysis, research, jekyll, middleman, static site generators, blogs, freelancing, consulting, resources
 image: /images/posts/top-5-things-to-consider-when-choosing-a-new-technology/post.jpg
 ---

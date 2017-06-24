@@ -8,7 +8,7 @@ tags:
   - devops
 published: true
 author: "Adrian Oprea"
-twitter: "@opreaadrian"
+twitter: "@oprearocks"
 keywords: docker, devops, cloud, infrastructure as a service, productivity, software development, automation, continuous integration, continuous delivery, continuous deployment
 image: /images/posts/how-to-properly-override-the-entrypoint-using-docker-run/post.jpg
 ---
@@ -33,7 +33,7 @@ of passing the executable's arguments directly after it, like so (happy horizont
 docker run --entrypoint "/bin/ls -al /root" debian
 ```
 
-What is the problem here? Well the documentation clearly states that the `ENTRYPOINT` only specifies 
+What is the problem here? Well the documentation clearly states that the `ENTRYPOINT` only specifies
 **the executable** to run, when the container starts.
 
 So they get an error like below
@@ -45,7 +45,7 @@ ERRO[0001] error getting events from daemon: net/http: request canceled
 ```
 
 There is something a bit counter-intuitive here and if you take a good look at the example commands
-on [the documentation page](https://docs.docker.com/engine/reference/run/#entrypoint-default-command-to-execute-at-runtime), 
+on [the documentation page](https://docs.docker.com/engine/reference/run/#entrypoint-default-command-to-execute-at-runtime),
 you'll see that the arguments are being passed after the image name.
 
 ```shell

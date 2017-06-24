@@ -11,7 +11,7 @@ tags:
   - vuejs
 published: true
 author: "Adrian Oprea"
-twitter: "@opreaadrian"
+twitter: "@oprearocks"
 keywords: javascript, ecmascript, angularjs, angular, react, reactjs, vue, vuejs
 image: /images/posts/working-with-vuejs-after-react-and-angular/vue-logo.png
 ---
@@ -69,5 +69,5 @@ After wasting 1.5 hours trying to debug this, I finally decided to read TinyMCEâ
 * Splitting a Vue app in feature folders
 
 > Photo credits:
-> 
+>
 > [Vue Logo](https://vuejs.org/)

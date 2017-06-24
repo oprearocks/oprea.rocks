@@ -12,7 +12,7 @@ tags:
   - docker
 published: true
 author: "Adrian Oprea"
-twitter: "@opreaadrian"
+twitter: "@oprearocks"
 keywords: javascript, ecmascript, angularjs, angular, react, reactjs, vue, vuejs
 image: /images/posts/x-in-a-box-video-series/post.png
 ---
@@ -23,7 +23,7 @@ It was like being thrown off a plane with an umbrella instead of a parachute. Th
 
 READMORE
 
-#### Initially published on Medium: [Should I create the “\<X\> in a box — containers for developers ” video series?](https://medium.com/@opreaadrian/should-i-create-the-x-in-a-box-containers-for-developers-series-faaaa87df6dd)
+#### Initially published on Medium: [Should I create the “\<X\> in a box — containers for developers ” video series?](https://medium.com/@oprearocks/should-i-create-the-x-in-a-box-containers-for-developers-series-faaaa87df6dd)
 
 Looking back, I now understand why developers find containers a bit daunting. In fact, it may seem like they have to take on a whole different set of skills, totally unrelated to their daily job. It’s not like they’re ever going to transition to a full Sysadmin / Operations / DevOps position.
 

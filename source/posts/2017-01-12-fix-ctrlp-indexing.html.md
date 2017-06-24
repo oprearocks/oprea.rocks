@@ -8,7 +8,7 @@ tags:
   - productivity
 published: true
 author: "Adrian Oprea"
-twitter: "@opreaadrian"
+twitter: "@oprearocks"
 keywords: productivity, vim, neovim, nvim, gvim, vi, editor, ctrlp, ctrl-p, plugin, fuzzy finder
 image: /images/posts/fix-ctrlp-indexing/post.jpg
 ---
@@ -28,7 +28,7 @@ This was fuelled by the fact that [YouCompleteMe](https://valloric.github.io/You
 
 Finally, today I found [this comment of the original plugin author](https://github.com/kien/ctrlp.vim/issues/234#issuecomment-6926482), on an issue similar to mine.
 
-As far as my problem goes, all I had to do was to run `:CtrlPClearAllCaches` and allow the plugin to re-index the projects I was working on, at startup. 
+As far as my problem goes, all I had to do was to run `:CtrlPClearAllCaches` and allow the plugin to re-index the projects I was working on, at startup.
 
 Hope it helps!
 

@@ -8,7 +8,7 @@ tags:
   - ecmascript
 published: true
 author: "Adrian Oprea"
-twitter: "@opreaadrian"
+twitter: "@oprearocks"
 canonical_url: https://codesi.nz/es6-arrow-functions-in-depth/
 keywords: JavaScript, ES6, ECMAScript6, arrows, functions, lambdas, anonymous functions, arrow functions, Babel
 image: /images/posts/es6-arrow-functions-in-depth/post.jpg
@@ -124,7 +124,7 @@ console.log(variadicAdderOf5(10, 11, 12));
 ```
 
 <del>There is no fix here, as there is nothing broken.</del>
-<ins>There are ways to sidestep this issue.</ins> 
+<ins>There are ways to sidestep this issue.</ins>
 One would be to return a plain function instead of an arrow function.
 This will give us the opportunity to access the `arguments` object without an issue. The updated code will look like the one below with the only difference
 that it will actually work and not throw an error.

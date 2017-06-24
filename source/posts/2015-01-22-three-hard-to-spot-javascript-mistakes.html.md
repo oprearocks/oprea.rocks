@@ -6,7 +6,7 @@ date_published_on: 2015-01-22 12:00:00 AM
 date_modified_on: 2015-01-22 12:00:00 AM
 categories: javascript
 author: 'Adrian Oprea'
-twitter: '@opreaadrian'
+twitter: '@oprearocks'
 canonical_url: https://codesi.nz/three-hard-to-spot-javascript-mistakes/
 tags:
     - productivity
@@ -15,7 +15,7 @@ keywords: javascript, validation, mistakes, beginner, code, programming, objects
 image: /images/posts/mistakes.jpg
 ---
 
-Having worked on quite a number of large ecommerce projects for the past couple of years, 
+Having worked on quite a number of large ecommerce projects for the past couple of years,
 I often found myself in a situation where one component, or the whole application my team was working on, was working properly in all scenarios.
 It was wonderful! The project was on track, the client was very satisfied and the application worked in all cases.
 
@@ -23,17 +23,17 @@ All except one...
 
 READMORE
 
-> &mdash; *It's backend's fault!* ... someone would mutter.  
-> 
-> &mdash; *Yeah! They messed up the data, again!* ... goes another.  
-> 
-> &mdash; *God doesn't love us today.*  ... I'd say to myself.  
+> &mdash; *It's backend's fault!* ... someone would mutter.
+>
+> &mdash; *Yeah! They messed up the data, again!* ... goes another.
+>
+> &mdash; *God doesn't love us today.*  ... I'd say to myself.
 
-Some were using debuggers, others were littering the code with `console.log`s. 
-When nothing would work, we would simply relax, as this was something divine, 
+Some were using debuggers, others were littering the code with `console.log`s.
+When nothing would work, we would simply relax, as this was something divine,
 something that us mortals would never understand.
-The next morning, I'd go back to work after a good night sleep(4-5 hours). 
-I'd take one last look at the divine piece of code, and the first *WTF?!* would suddenly find its way into the office.  
+The next morning, I'd go back to work after a good night sleep(4-5 hours).
+I'd take one last look at the divine piece of code, and the first *WTF?!* would suddenly find its way into the office.
 This is an open-ended story and you can choose your version from the 3 options below. Enjoy!
 
 ## Table of contents
@@ -149,21 +149,21 @@ Let's say you have the following structure:
 If you do this: `var childHasTostringMethod = 'toString' in Child;` you will see that your variable will be set to `true` as this will trigger a prototype lookup, that in plain english looks like this:
 
 > &mdash; *`Child` do you have a `toString` property?*
-> 
+>
 > &mdash; *No, I don't!*
-> 
+>
 > &mdash; *Okay, I'll ask your parents.* [.. walks up the `prototype`, to ask the child's `Parent`.]
-> 
+>
 > &mdash; *`Parent` do you have a `toString` property your child inherited?*
-> 
+>
 > &mdash; *No, I don't!*
-> 
+>
 > &mdash; *Okay, then I guess your parent should have it, otherwise I'll tell the people who told me to ask you, that it's `undefined`.*
-> 
+>
 > &mdash; *`Object` do you have a `toString` property?*
-> 
+>
 > &mdash; *Yes I do, here it is!*
-> 
+>
 > *[FIN...]*
 
 Bottom line is that if you want to restrict your lookup to the current object and stay safe from prototype lookups, you should use the `hasOwnProperty()` method, to check if the key you're looking for is available on your object.

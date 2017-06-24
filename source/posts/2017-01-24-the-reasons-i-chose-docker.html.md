@@ -10,7 +10,7 @@ tags:
   - devops
 published: true
 author: "Adrian Oprea"
-twitter: "@opreaadrian"
+twitter: "@oprearocks"
 keywords: productivity, infrastructure, devops, docker, containers
 image: /images/posts/moving-to-the-future-with-docker/post.jpg
 ---

@@ -6,7 +6,7 @@ date_published_on: 2015-05-05 02:00:00 AM
 date_modified_on: 2015-05-05 02:00:00 AM
 categories: inspiration
 author: 'Adrian Oprea'
-twitter: '@opreaadrian'
+twitter: '@oprearocks'
 canonical_url: https://codesi.nz/war-tactics-staying-current/
 tags:
     - productivity

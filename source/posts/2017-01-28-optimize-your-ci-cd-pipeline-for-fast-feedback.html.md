@@ -10,13 +10,13 @@ tags:
   - devops
 published: true
 author: "Adrian Oprea"
-twitter: "@opreaadrian"
+twitter: "@oprearocks"
 keywords: continuous integration, continuous delivery, continuous deployment, microservices, productivity, infrastructure, devops, docker, docker containers
 image: /images/posts/optimize-your-ci-cd-pipeline-for-faster-feedback/post.jpg
 ---
 
 One of the biggest issues that plagues teams doing some form of Continuous Integration / Delivery / Deployment is **execution time**.
-If the pipeline is slow, then the feedback loop is slow.  
+If the pipeline is slow, then the feedback loop is slow.
 
 If the code takes 30 minutes to pass through the pipeline
 and build only to fail in UAT or even worse, production, precious time is wasted (and money).
@@ -58,9 +58,9 @@ For every developer pushing code to the repo, the system kicks off a process and
 
 What is slow here? It's the E2E test suite, of course!
 
-Running it at every code push is costly, not only in terms of resource utilization (machines, networks, servers) but also in terms of developer time.  
+Running it at every code push is costly, not only in terms of resource utilization (machines, networks, servers) but also in terms of developer time.
 Whenever the build breaks, all work should stop and the build should be fixed before introducing more features (and possibly more problems).
-The developer has to wait for the build to pass in order to move on. 
+The developer has to wait for the build to pass in order to move on.
 
 Imagine there are 2 or more developers working on that branch. They would have to push to version control only when they are sure the functionality is 100% ready.
 This leads to more problems. I remember when we used to work with SVN and we could only push when the feature was ready. Otherwise, we would break the application
@@ -74,7 +74,7 @@ For a more in-depth list of tests, check out the [resources](#resources) section
 ### Unit tests
 
 These tests are the fastest and also the most important. They provide fast feedback about the correctness of the code.
-If everything is green at this step, it means that your code is sound. Note that it doesn't mean it won't fail once it reaches production. 
+If everything is green at this step, it means that your code is sound. Note that it doesn't mean it won't fail once it reaches production.
 
 No project can do CD without a proper CI pipeline. The two pillars of CI pipelines are tests and code quality(standardization).
 Without coding standars, a static code analysis tool to automate the validation process and a lot of unit tests,
@@ -82,9 +82,9 @@ you can't even plan to implement Continuous Delivery.
 
 ### Integration tests
 
-These usually fall into 2 categories.  
+These usually fall into 2 categories.
 
-When talking about modules of the same application, the integration tests make sure that the new module being added, plays well with the already existing modules. 
+When talking about modules of the same application, the integration tests make sure that the new module being added, plays well with the already existing modules.
 
 The second category are the inter-service tests. In a microservices architecture you need to make sure that the updates you perform to one service,
 don't mess everything up for the other services.
@@ -92,7 +92,7 @@ don't mess everything up for the other services.
 ### End-to-end tests
 
 Although it can be done with microservices as well, end-to-end testing is very popular today with front-end applications. These tests assess that a specific workflow
-in your application, can be carried out successfully, without errors, under the conditions described by the specs. 
+in your application, can be carried out successfully, without errors, under the conditions described by the specs.
 
 A good end-to-end testing framework will allow you a bare minimum of interactions, outlined below:
 
@@ -114,7 +114,7 @@ This becomes a pain because you might not want to run the login screen test 15 t
 In the case of an SLA(Service Level Agreement) terms such as latency, response time and uptime may be required. In this situation, the code has to pass unit tests,
 integrate well with the rest of the functionalities and behave well with other parts of the larger system but it should do all of these in a performant way.
 
-This is where load and stress tests come in. They enable us to validate the boundaries to which the application behaves normally. 
+This is where load and stress tests come in. They enable us to validate the boundaries to which the application behaves normally.
 
 They offer a pretty clear view how the application will behave in production, under a specific load. This helps a lot with resource dimensioning,
 the number of application instances to have up under regular traffic conditions and a lot more. They can also provide a decent baseline for performance improvement
@@ -123,7 +123,7 @@ actions, during a project's lifecycle.
 ## Order and discipline
 
 Now that we know what each of the general testing strategies we have at our disposal, let's see how would a continuous delivery pipeline look.
-The order we are looking for is provided by the sequence in the image below. 
+The order we are looking for is provided by the sequence in the image below.
 
 ![Fast feedback](/images/posts/optimize-your-ci-cd-pipeline-for-faster-feedback/steps.jpg)
 
@@ -132,10 +132,10 @@ Let's go through the steps in sequence:
 ### 1. SCA --- Static Code Analysis
 
 If we have coding standards in place, and we should, this is the first thing we need to run. We don't need to create a build, or do anything of that nature.
-We only need to pass through our code and see if we introduced any syntactic errors. 
+We only need to pass through our code and see if we introduced any syntactic errors.
 
 If this step is fine, this means that our code adheres 100% to our style guide.
-You may have some rules in your style guide that you break intentionally. 
+You may have some rules in your style guide that you break intentionally.
 Configure the linter to issue a warning instead of an error. Whatever you do, don't disable them! You might want to revise the code 1 year from now and you won't know what's happening there.
 
 ### 2. UT --- Unit Tests
@@ -145,15 +145,15 @@ Make sure they run fast. You don't want to wait 15 minutes to get feedback after
 
 ### 3. IT --- Integration Tests
 
-Make sure you know if there's anything wrong with the functionality you developed, by now. At this stage, you find out if features the team developed get along. 
-For this to work properly, you need a separate environment. If you're a startup and don't have much to invest in 10 separate environments, you can use UAT (Staging). 
+Make sure you know if there's anything wrong with the functionality you developed, by now. At this stage, you find out if features the team developed get along.
+For this to work properly, you need a separate environment. If you're a startup and don't have much to invest in 10 separate environments, you can use UAT (Staging).
 
 There are tests that assess if and how modules get along with each other. These can run as a separate suite, with the service started in isolation.
 If you run microservices, the inter-service tests need to be performed while running the services on an environment such as UAT.
 
 ### 4. E2E --- End-to-End Tests
 
-After making sure the components integrate well, we run a series of tests that describe user flows. A user flow is the series of steps a user needs to take to accomplish a specific task. For example, if a user wants to update their profile picture, a E2E test for this would have the following steps: 
+After making sure the components integrate well, we run a series of tests that describe user flows. A user flow is the series of steps a user needs to take to accomplish a specific task. For example, if a user wants to update their profile picture, a E2E test for this would have the following steps:
 
 1. Open login page
 2. Fill username and password. Submit form
@@ -167,7 +167,7 @@ All the steps above also contain validations. For example, you want to validate 
 
 E2E tests usually take longer to run and offer feedback so you want to have them running later in the process. You also don't want to have too many of these tests. Try to capture most of the issues outlined by E2E tests in your unit tests. This way, you will have fast feedback and you will increase your confidence in the test harness.
 
-They also tend to be flaky. I've worked with [Selenium](http://www.seleniumhq.org) based E2E testing tools and it has a tendency to be a bit inconsistent. One strategy I picked up from a blog post I can't remember right now is to have a specific failure tolerance for E2E tests. For example, you run the E2E suite three times. If it fails all three times, you then alert the developer / team about the issue. 
+They also tend to be flaky. I've worked with [Selenium](http://www.seleniumhq.org) based E2E testing tools and it has a tendency to be a bit inconsistent. One strategy I picked up from a blog post I can't remember right now is to have a specific failure tolerance for E2E tests. For example, you run the E2E suite three times. If it fails all three times, you then alert the developer / team about the issue.
 
 A node might fail, or worse, it might hang. This is not necessarily a problem with your application or tests, but still, your tests will fail. You need to have a mechanism in place to kick the process off a couple of times and observe the behavior.
 
@@ -181,17 +181,17 @@ As described earlier, Load/Stress Tests come into play whenever you have service
 - To establish or push the baseline by benchmarking the application after a major technical decision has been implemented, refactoring work and so on.
 - To be able to perform a responsible resource dimensioning. Using real-life application metrics and the ones resulting from load/stress tests teams can make more informed decisions about the number of machines, CPUs, amount of RAM to use for a certain software application ecosystem.
 
-With the right amount of tooling, you are able to properly assess how your application will behave under a specific load. This, along with the metrics you collect while your application is running in production, will give you a clear view of how and when to scale and up to what point. 
+With the right amount of tooling, you are able to properly assess how your application will behave under a specific load. This, along with the metrics you collect while your application is running in production, will give you a clear view of how and when to scale and up to what point.
 
 ### Environments
 
-Not everyone owns a datacenter; nor do they need to. With the rise of companies such as Amazon, Microsoft, Digital Ocean or Linode in the cloud "industry" most of the businesses I've worked with would be insane to self-host their applications. 
+Not everyone owns a datacenter; nor do they need to. With the rise of companies such as Amazon, Microsoft, Digital Ocean or Linode in the cloud "industry" most of the businesses I've worked with would be insane to self-host their applications.
 
-I do agree that you don't want to go wild with environments. For a good separation of responsibilities, you need at least two environments except development and production: `BUILD` and `UAT`. 
+I do agree that you don't want to go wild with environments. For a good separation of responsibilities, you need at least two environments except development and production: `BUILD` and `UAT`.
 
-Take a look at the flow diagram below. I placed each step of the pipeline in its respective environment. See how E2E and L/ST can also run in `UAT` and `PROD`? The mix of tests that run in production are called Smoke Tests. These tests are a mix between End-to-End, Load/Stress Tests and a bit of manual tests (hopefully a very small bit). 
+Take a look at the flow diagram below. I placed each step of the pipeline in its respective environment. See how E2E and L/ST can also run in `UAT` and `PROD`? The mix of tests that run in production are called Smoke Tests. These tests are a mix between End-to-End, Load/Stress Tests and a bit of manual tests (hopefully a very small bit).
 
-You want to validate that whatever you are pushing into production doesn't just "pass" the tests but that it also passes the human interaction phase. If there's no difference between your environment configuration --- `UAT` vs. `PROD` --- you shouldn't have anything to worry about. 
+You want to validate that whatever you are pushing into production doesn't just "pass" the tests but that it also passes the human interaction phase. If there's no difference between your environment configuration --- `UAT` vs. `PROD` --- you shouldn't have anything to worry about.
 
 ### Extras
 
@@ -201,7 +201,7 @@ You might ask: "How can I run E2E and L/S T in production? Wouldn't that affect 
 
 You just push your build into production but you don't direct traffic to the appilcation. You can then run the proper test suites on that build, directly in production. Once everything passes, you are free to update the load balancer rules and direct traffic to the new version of your app.
 
-Unit tests can also be optimised to fail faster. Remember, we are optimizing for faster feedback. Failure falls into that category. 
+Unit tests can also be optimised to fail faster. Remember, we are optimizing for faster feedback. Failure falls into that category.
 
 You can have different suites of tests running in parallel. This way, if any of the suites fails, everything fails. You don't have to wait for them to run in sequence. Take a look at the updated flow diagram below.
 
@@ -211,7 +211,7 @@ You can do the same with E2E tests, as well. If you have your flows separated pr
 
 ## Putting it all together
 
-It is very important to know that we should refrain from optimizing for the best case. It is always better to optimize for failure, expect it, embrace it. 
+It is very important to know that we should refrain from optimizing for the best case. It is always better to optimize for failure, expect it, embrace it.
 
 Feedback is very important but if it comes slow, or after you pushed to production, it has no preventative value. It only serves as a lesson learned. Having feedback from the early beginnings of a project, and receiving it fast, is the cornerstone to Continuous Delivery / Deployment. It allows you to optimize ahead of time, with little to no impact on your users. It is better to delay a feature release for two days, than to deploy a non-working version.
 

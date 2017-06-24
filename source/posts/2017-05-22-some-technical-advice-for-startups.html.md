@@ -9,7 +9,7 @@ tags:
   - startups
 published: true
 author: "Adrian Oprea"
-twitter: "@opreaadrian"
+twitter: "@oprearocks"
 keywords: startups, tech, fintech, architecture
 image: /images/posts/some-technical-advice-for-startups/post.jpg
 ---

@@ -12,8 +12,8 @@ tags:
   - mobile
 published: true
 author: "Adrian Oprea"
-twitter: "@opreaadrian"
-keywords: javascript, jsx, ecmascript, react-native, reactjs, react, mobile development, development 
+twitter: "@oprearocks"
+keywords: javascript, jsx, ecmascript, react-native, reactjs, react, mobile development, development
 image: /images/posts/react-native-navigator-ios/post.png
 ---
 
