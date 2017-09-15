@@ -24,10 +24,19 @@ If you found this video useful, share it, subscribe to the channel, follow me on
 READMORE
 
 ## The video
+
 <br>
 <iframe width="100%" height="400" src="https://www.youtube.com/embed/zph3gV15__I" frameborder="0" allowfullscreen></iframe>
 <br>
 
+## Follow-up video - Fix all errors
+
+This update comes after I started some refactoring work on a personal project. It was then, when I saw that the plugin is also able
+to fix multiple style errors. Check it out!
+
+<br>
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/qYOw2z6Og8I" frameborder="0" allowfullscreen></iframe>
+<br>
 > Photo credits:
 >
 > [Mitch Barrie](https://www.flickr.com/photos/simonov/) &mdash; [Automation](https://flic.kr/p/4M6c9A)
