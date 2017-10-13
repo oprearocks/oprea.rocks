@@ -1,9 +1,9 @@
 ---
 layout: article
 title: "A simple trick to make your Node.js code easier to read"
-date_created_on: 2016-06-06 4:00 PM
-date_published_on: 2016-06-06 4:00 PM
-date_modified_on: 2016-06-06 4:00 PM
+date_created_on: 2017-06-06 4:00 PM
+date_published_on: 2017-06-06 4:00 PM
+date_modified_on: 2017-06-06 4:00 PM
 tags:
   - javascript
   - nodejs

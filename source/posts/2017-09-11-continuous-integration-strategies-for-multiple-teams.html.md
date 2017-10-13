@@ -1,9 +1,9 @@
 ---
 layout: article
 title: "Centralized vs. decentralized CI / CD strategies for multiple teams"
-date_created_on: 2016-09-11 02:00 PM
-date_published_on: 2016-09-11 02:00 PM
-date_modified_on: 2016-09-11 02:00 PM
+date_created_on: 2017-09-11 02:00 PM
+date_published_on: 2017-09-11 02:00 PM
+date_modified_on: 2017-09-11 02:00 PM
 tags:
   - architecture
   - continuous-integration

@@ -1,9 +1,9 @@
 ---
 layout: article
 title: "Working with Vue.js after React and Angular"
-date_created_on: 2016-05-04 1:50 PM
-date_published_on: 2016-05-04 3:30 PM
-date_modified_on: 2016-05-04 3:30 PM
+date_created_on: 2017-05-04 1:50 PM
+date_published_on: 2017-05-04 3:30 PM
+date_modified_on: 2017-05-04 3:30 PM
 tags:
   - javascript
   - angular

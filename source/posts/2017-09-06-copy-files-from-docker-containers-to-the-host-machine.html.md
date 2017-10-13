@@ -1,9 +1,9 @@
 ---
 layout: article
 title: "[VIDEO] How to copy a file from a Docker container to the host machine"
-date_created_on: 2016-09-06 6:00 PM
-date_published_on: 2016-09-06 6:00 PM
-date_modified_on: 2016-09-06 6:00 PM
+date_created_on: 2017-09-06 6:00 PM
+date_published_on: 2017-09-06 6:00 PM
+date_modified_on: 2017-09-06 6:00 PM
 tags:
   - docker
   - devops

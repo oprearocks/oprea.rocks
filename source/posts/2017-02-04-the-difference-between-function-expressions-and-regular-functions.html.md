@@ -1,9 +1,9 @@
 ---
 layout: article
 title: "How are regular functions and function expressions different in JavaScript?"
-date_created_on: 2016-02-04 1:50 PM
-date_published_on: 2016-02-06 11:30 AM
-date_modified_on: 2016-02-06 11:30 AM
+date_created_on: 2017-02-04 1:50 PM
+date_published_on: 2017-02-06 11:30 AM
+date_modified_on: 2017-02-06 11:30 AM
 tags:
   - ecmascript
 published: true

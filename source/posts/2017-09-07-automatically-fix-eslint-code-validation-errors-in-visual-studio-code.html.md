@@ -1,9 +1,9 @@
 ---
 layout: article
 title: "[VIDEO] Automatically fix ESLint code validation errors in Visual Studio Code"
-date_created_on: 2016-09-07 3:00 PM
-date_published_on: 2016-09-07 3:00 PM
-date_modified_on: 2016-09-07 3:00 PM
+date_created_on: 2017-09-07 3:00 PM
+date_published_on: 2017-09-07 3:00 PM
+date_modified_on: 2017-09-07 3:00 PM
 tags:
   - javascript
 published: true

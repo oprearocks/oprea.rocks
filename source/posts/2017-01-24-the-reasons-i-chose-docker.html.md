@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "The reasons I chose Docker"
-date_created_on: 2016-01-20 10:00 AM
+date_created_on: 2017-01-20 10:00 AM
 date_published_on: 2017-01-24 2:00 PM
 date_modified_on: 2017-01-24 2:00 PM
 campaign: docker

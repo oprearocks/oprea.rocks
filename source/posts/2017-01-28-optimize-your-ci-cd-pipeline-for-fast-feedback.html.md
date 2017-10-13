@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Optimize your CI/CD pipeline for fast feedback"
-date_created_on: 2016-01-28 10:00 PM
+date_created_on: 2017-01-28 10:00 PM
 date_published_on: 2017-01-30 12:00 PM
 date_modified_on: 2017-02-02 3:30 PM
 campaign: docker

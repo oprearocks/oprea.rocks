@@ -1,9 +1,9 @@
 ---
 layout: article
 title: "jQuery, Babel, React Native and the importance of making mistakes"
-date_created_on: 2016-05-19 1:50 PM
-date_published_on: 2016-05-19 3:30 PM
-date_modified_on: 2016-05-19 3:30 PM
+date_created_on: 2017-05-19 1:50 PM
+date_published_on: 2017-05-19 3:30 PM
+date_modified_on: 2017-05-19 3:30 PM
 tags:
   - javascript
   - jquery

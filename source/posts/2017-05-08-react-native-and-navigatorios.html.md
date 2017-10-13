@@ -1,9 +1,9 @@
 ---
 layout: article
 title: "React Native + NavigatorIOS + Bad Habits = 2 wasted hours"
-date_created_on: 2016-05-08 1:50 PM
-date_published_on: 2016-05-08 3:30 PM
-date_modified_on: 2016-05-08 3:30 PM
+date_created_on: 2017-05-08 1:50 PM
+date_published_on: 2017-05-08 3:30 PM
+date_modified_on: 2017-05-08 3:30 PM
 tags:
   - javascript
   - reactjs

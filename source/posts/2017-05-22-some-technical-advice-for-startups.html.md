@@ -1,9 +1,9 @@
 ---
 layout: article
 title: "Some technical advice for startups"
-date_created_on: 2016-05-23 4:00 PM
-date_published_on: 2016-05-23 4:00 PM
-date_modified_on: 2016-05-23 4:00 PM
+date_created_on: 2017-05-23 4:00 PM
+date_published_on: 2017-05-23 4:00 PM
+date_modified_on: 2017-05-23 4:00 PM
 tags:
   - architecture
   - startups

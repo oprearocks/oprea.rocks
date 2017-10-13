@@ -1,9 +1,9 @@
 ---
 layout: article
 title: "X in a box - containers for developers video series?"
-date_created_on: 2016-05-17 1:50 PM
-date_published_on: 2016-05-17 3:30 PM
-date_modified_on: 2016-05-17 3:30 PM
+date_created_on: 2017-05-17 1:50 PM
+date_published_on: 2017-05-17 3:30 PM
+date_modified_on: 2017-05-17 3:30 PM
 tags:
   - javascript
   - angular
@@ -27,7 +27,7 @@ READMORE
 
 Looking back, I now understand why developers find containers a bit daunting. In fact, it may seem like they have to take on a whole different set of skills, totally unrelated to their daily job. It’s not like they’re ever going to transition to a full Sysadmin / Operations / DevOps position.
 
-If you’re a JavaScript developer, that’s even worse, as you also have to deal with the [JavaScript fatigue](https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f) and having to learn new libraries and frameworks each year, to stay competitive.
+If you’re a JavaScript developer, that’s even worse, as you also have to deal with the [JavaScript fatigue](https://hackernoon.com/how-it-feels-to-learn-javascript-in-2017-d3a717dd577f) and having to learn new libraries and frameworks each year, to stay competitive.
 
 Lucky for you, containers are not such a big deal, and with a bit of help, you could start using them with little effort. In fact, the concept is so simple, that even my 4-year old daughter, sitting along with me as I write this text could understand it with a bit of effort. She just has to learn how to identify an application’s runtime dependencies install them using Docker (give her a bit more time) 😎.
 
@@ -128,7 +128,7 @@ Below is a pretty close-to-final structure of the whole course. There are some t
 
 **For the people who aren’t aware what JS fatigue is, read on.**
 
-* [**How it feels to learn JavaScript in 2016**](https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f)
+* [**How it feels to learn JavaScript in 2016**](https://hackernoon.com/how-it-feels-to-learn-javascript-in-2017-d3a717dd577f)
 * [**JavaScript Fatigue Fatigue**](https://medium.freecodecamp.com/javascript-fatigue-fatigue-66ffb619f6ce)
 * [**How to Manage JavaScript Fatigue - DZone Web Dev**](https://dzone.com/articles/how-to-manage-javascript-fatigue)
 * [**JavaScript Fatigue: An Alternative Perspective**](https://medium.com/@joshburgess/javascript-fatigue-an-alternative-perspective-b6ae411e89ac)

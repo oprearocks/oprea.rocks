@@ -1,9 +1,9 @@
 ---
 layout: article
 title: "Go from Node.js app to microservices with MONOLITHSPL/T"
-date_created_on: 2016-02-07 1:50 PM
-date_published_on: 2016-02-09 3:30 PM
-date_modified_on: 2016-02-09 3:30 PM
+date_created_on: 2017-02-07 1:50 PM
+date_published_on: 2017-02-09 3:30 PM
+date_modified_on: 2017-02-09 3:30 PM
 campaign: monolithsplit
 tags:
   - architecture
