@@ -17,6 +17,10 @@ image: /images/posts/enable-json-web-token-authentication-for-wordpress-rest-api
 
 This video shows you how to enable JWT authentication for the Wordpress REST API. You will first create a kickass Wordpress development using the official MySQL and Wordpress images from the Docker hub and then go through the whole plugin setup and testing process.
 
+<br>
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/Mp7T7x1oxDk" frameborder="0" allowfullscreen></iframe>
+<br>
+
 READMORE
 
 ## Below are the links to everything used in this video
@@ -46,9 +50,7 @@ READMORE
 
 Feel free to ask questions and I will try to answer them to the best of my knowledge!
 As I said, I’m @oprearocks on everything. Get in touch!
-
 <br>
-<iframe width="100%" height="400" src="https://www.youtube.com/embed/Mp7T7x1oxDk" frameborder="0" allowfullscreen></iframe>
 <br>
 > Photo credits:
 >
