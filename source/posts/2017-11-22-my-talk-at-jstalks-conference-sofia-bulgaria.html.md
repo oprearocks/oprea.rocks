@@ -14,9 +14,9 @@ keywords: javascript, javascript tools fatigue, fatigue, jstalks sofia, bulgaria
 image: /images/posts/my-talk-at-jstalks-conference-sofia-bulgaria/post.png
 ---
 
-# The JSTalks Sofia experience
-
 This weekend I gave a talk in Sofia, the capital of Bulgaria. I can tell you from the get-go that it was an awesome experience. I met a bunch of wonderful people, got to network with industry experts ranging from Microsoft MVPs to consultants with interests into WebAssembly and other topics that usually make my head explode. 
+
+READMORE
 
 ## The gist 
 
@@ -29,9 +29,10 @@ I never gave this talk before, so it was a first for me too. As far as I could t
 
 ## The slides
 
-Below is an embed of the presentation slides. I also had a friend film the whole talk so I will be adding that to the article very soon.
+Below is a link to the presentation slides. I also had a friend film the whole talk so I will be adding that to the article very soon.
 
-<object data="/resources/if-you-dont-use-it-stop-learning-it.pdf" type="application/pdf" width="100%" height="100%"></object>
+
+<a target="_blank" href="/resources/if-you-dont-use-it-stop-learning-it.pdf" title="If you don't use it, stop learning it! - presentation slides">If you don't use it, stop learning it!</a>
 
 ## The famous "Bottom line"
 
