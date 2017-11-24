@@ -38,4 +38,5 @@ Below is a link to the presentation slides. I also had a friend film the whole t
 
 I'd like to thank the organisers for having me there, it was a pleasure. I would also like to thank the people I met for the great conversations. Whiskey is always a great conversation opener.
 
-So, in no particular order, thank you [Mihail Mateev], [Jordan Jambazov], [Radoslav Gatev], [Sendil Kumar Nellaiyapen]
+So, in no particular order, thank you [Mihail Mateev](https://www.linkedin.com/in/mmateev/) for organising this great conference and [Jordan Jambazov](https://www.linkedin.com/in/jordanjambazov/), [Radoslav Gatev](https://www.linkedin.com/in/radoslavgatev/), [Sendil Kumar Nellaiyapen](https://www.linkedin.com/in/sendilkumarn/), [Petar Lalov], [Radu Matei](https://www.linkedin.com/in/mateiradu/), [Wekoslav Stefanovski](https://www.linkedin.com/in/swekster/), [Anton Boyko](https://www.linkedin.com/in/boykoant/), [Yordan Petrov](https://www.linkedin.com/in/yordan-petrov-b5b35877/) and [Ivan Vlaevski](https://www.linkedin.com/in/ivanvlaevski/) for the great conversations.
+
