@@ -121,3 +121,6 @@ But I want to help people figure out what they are doing wrong and also how they
 
 It's easy to point out problems in others, it's harder to identify them in yourself and also provide solutions.
 
+> Photo credits:
+>
+> [Michael Coghlan](https://www.flickr.com/photos/mikecogh/) &mdash; [Tangles](https://flic.kr/p/dPrHvF)
