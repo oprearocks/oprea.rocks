@@ -6,10 +6,11 @@ date_published_on: 2017-09-07 3:00 PM
 date_modified_on: 2017-09-07 3:00 PM
 tags:
   - javascript
+  - videos
 published: true
 author: "Adrian Oprea"
 twitter: "@oprearocks"
-keywords: javascript, es6, eslint, coding standards, stlye guide, airbnb javascript style guide, ecmascript
+keywords: visual studio code, vscode, javascript, es6, eslint, coding standards, stlye guide, airbnb javascript style guide, ecmascript
 image: /images/posts/automatically-fix-eslint-code-validation-errors-in-visual-studio-code/post.jpg
 ---
 

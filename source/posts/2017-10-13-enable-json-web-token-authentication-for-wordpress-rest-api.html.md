@@ -8,6 +8,7 @@ tags:
   - wordpress
   - docker
   - devops
+  - videos
 published: true
 author: "Adrian Oprea"
 twitter: "@oprearocks"

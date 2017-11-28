@@ -7,6 +7,7 @@ date_modified_on: 2017-09-06 6:00 PM
 tags:
   - docker
   - devops
+  - videos
 published: true
 author: "Adrian Oprea"
 twitter: "@oprearocks"
