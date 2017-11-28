@@ -1,6 +1,6 @@
 ---
 layout: article
-title: "[VIDEO] Enable JWT authentication for the Wordpress REST API"
+title: "Enable JWT authentication for the Wordpress REST API"
 date_created_on: 2017-10-13 3:00 PM
 date_published_on: 2017-10-13 3:00 PM
 date_modified_on: 2017-10-13 3:00 PM
