@@ -33,4 +33,4 @@ READMORE
 
 > Photo credits:
 >
-> [Michael Coghlan](https://www.flickr.com/photos/mikecogh/) &mdash; [Tangles](https://flic.kr/p/dPrHvF)
+> [d.c. caudle](https://www.flickr.com/photos/darincaudle/) &mdash; [Magician](https://flic.kr/p/cQgJ7m)
