@@ -20,11 +20,13 @@ If you're curious, stick with me until the end to find out what's so different a
 Make sure to subscribe if you haven't done so already and share this video if you liked it. 
 Let me know in the comments section if you lived through a similar situation at work.
 
+READMORE
+
+## The Video
+
 <br>
 <iframe width="100%" height="400" src="https://www.youtube.com/embed/TVLg3clyfGQ" frameborder="0" allowfullscreen></iframe>
 <br>
-
-READMORE
 
 ## Video credits
 

@@ -17,11 +17,13 @@ image: /images/posts/why-its-important-to-follow-a-process/post.jpg
 
 Let me show you how important it is to follow a process. I will run you through examples from cinematography, painting and automotive and prove to you that even the "industries" most dominated by randomness and hazard rely on pretty strong processes and practices.
 
+READMORE
+
+## The Video
+
 <br>
 <iframe width="100%" height="400" src="https://www.youtube.com/embed/P7sYR7d_T5k" frameborder="0" allowfullscreen></iframe>
 <br>
-
-READMORE
 
 ## 🔗 Links for the lazy people 🍹☀️
 

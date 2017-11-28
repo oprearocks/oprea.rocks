@@ -19,11 +19,13 @@ Here's a trick I use to render a default page when a parameterized Express.js ro
 
 You will learn how to set default values when using the destructuring assignment with objects. The destructuring assignment is used to unpack values from arrays or properties from objects, as you will see in this video.
 
+READMORE
+
+## The Video
+
 <br>
 <iframe width="100%" height="400" src="https://www.youtube.com/embed/16iZHeJpyJM" frameborder="0" allowfullscreen></iframe>
 <br>
-
-READMORE
 
 ## Useful links
 

@@ -22,10 +22,13 @@ Check it out: [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeu
 
 If you found this video useful, share it, subscribe to the channel, follow me on [Twitter](https://twitter.com/@oprearocks) and [Medium](https://medium.com/@oprearocks).
 
+READMORE
+
+## The Video
+
+<br>
 <iframe width="100%" height="400" src="https://www.youtube.com/embed/zph3gV15__I" frameborder="0" allowfullscreen></iframe>
 <br>
-<br>
-READMORE
 
 ## Update: Follow-up video - Fix all errors
 
