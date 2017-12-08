@@ -2,21 +2,21 @@ import React, { Component } from 'react'
 import * as PropTypes from 'prop-types';
 import Img from 'gatsby-image'
 import Link from 'gatsby-link'
-import Post from '../components/post'
+import Recommendation from '../components/recommendation'
 
 const propTypes = {
   data: PropTypes.object.isRequired,
 }
 
-class IndexPage extends Component {
+class RecommendationsPage extends Component {
   render() {
-    const postEdges = this.props.data.posts.edges;
+    const recommendationEdges = this.props.data.recommendations.edges;
     return (
       <div>
         <p>Welcome to the blog of Adrian Oprea</p>
         {
-          postEdges.map(({ node }) => (
-            <Post node={node} key={node.id} />
+          recommendationEdges.map(({ node }) => (
+            <Recommendation node={node} key={node.id} />
           ))
         }
       </div>
@@ -25,31 +25,29 @@ class IndexPage extends Component {
 }
 
 
-IndexPage.propTypes = propTypes
+RecommendationsPage.propTypes = propTypes
 
-export default IndexPage
+export default RecommendationsPage
 
 export const pageQuery = graphql`
-  query IndexPageQuery {
-    posts: allContentfulBlogPost(
+  query ReccomendationsPageQuery {
+    recommendations: allContentfulRecommendation(
       limit: 5
-      sort: { fields: [ publishedOn ], order: DESC }
     ) {
       edges {
         node {
           id
           title
-          publishedOn
-          updatedOn
+          url
           permalink
-          content {
+          description {
             childMarkdownRemark {
               excerpt(pruneLength: 300)
               timeToRead
             }
           }
-          postVideo
-          postImage {
+
+          image {
             resolutions(width: 500) {
               ...GatsbyContentfulResolutions
             }

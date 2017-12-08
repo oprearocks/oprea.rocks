@@ -8,7 +8,7 @@ const propTypes = {
   data: PropTypes.object.isRequired,
 }
 
-class IndexPage extends Component {
+class BlogPage extends Component {
   render() {
     const postEdges = this.props.data.posts.edges;
     return (
@@ -25,14 +25,13 @@ class IndexPage extends Component {
 }
 
 
-IndexPage.propTypes = propTypes
+BlogPage.propTypes = propTypes
 
-export default IndexPage
+export default BlogPage
 
 export const pageQuery = graphql`
-  query IndexPageQuery {
+  query BlogPageQuery {
     posts: allContentfulBlogPost(
-      limit: 5
       sort: { fields: [ publishedOn ], order: DESC }
     ) {
       edges {

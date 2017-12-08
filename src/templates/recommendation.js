@@ -8,66 +8,61 @@ const propTypes = {
   data: PropTypes.object.isRequired,
 }
 
-class PostTemplate extends Component {
+class ReviewTemplate extends Component {
   render() {
-    const post = this.props.data.contentfulBlogPost
+    const recommendation = this.props.data.contentfulRecommendation
     const {
       title,
       keywords,
-      content,
-      postImage,
-      postVideo
-    } = post
+      description,
+      image,
+      url
+    } = recommendation
     return (
       <article>
 
         <Helmet
           title={`${title} | The blog of Adrian Oprea | Full Stack JavaScript Consultant`}
           meta={[
-            { name: 'description', content: content.childMarkdownRemark.excerpt },
+            { name: 'description', content: description.childMarkdownRemark.excerpt },
             { name: 'keywords', content: keywords },
           ]}
         />
 
         <header>
           <h1>{title}</h1>
-          {
-            postVideo ?
-            <iframe width="100%" height="400" src={postVideo} frameBorder="0" allowFullScreen></iframe>
-            :
-            <img src={postImage.resolutions.src} />
-          }
+          <img src={image.resolutions.src} />
         </header>
         <main>
           <div
             dangerouslySetInnerHTML={{
-              __html: content.childMarkdownRemark.html,
+              __html: description.childMarkdownRemark.html,
             }}
           />
         </main>
-        <footer>Article footer</footer>
+        <footer>Review footer</footer>
       </article>
     )
   }
 }
 
-PostTemplate.propTypes = propTypes
+ReviewTemplate.propTypes = propTypes
 
-export default PostTemplate
+export default ReviewTemplate
 
 export const pageQuery = graphql`
-  query postQuery($id: String!) {
-    contentfulBlogPost(id: { eq: $id }) {
+  query recommendationQuery($id: String!) {
+    contentfulRecommendation(id: { eq: $id }) {
       title
       keywords
-      content {
+      description {
         childMarkdownRemark {
           html
           excerpt(pruneLength: 300)
         }
       }
-      postVideo
-      postImage {
+      url
+      image {
         resolutions(width: 500) {
           ...GatsbyContentfulResolutions
         }

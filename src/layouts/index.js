@@ -1,17 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
+import Header from './header'
+import Footer from './footer'
 
 import './index.css'
-
-const Header = () => (
-  <header>
-    <h1>
-      <Link to="/">oprea.rocks</Link>
-    </h1>
-  </header>
-)
 
 const TemplateWrapper = ({ children }) => (
   <div>
@@ -26,6 +19,7 @@ const TemplateWrapper = ({ children }) => (
     <section role="main">
       {children()}
     </section>
+    <Footer />
   </div>
 )
 

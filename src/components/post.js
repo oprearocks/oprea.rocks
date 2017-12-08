@@ -9,7 +9,7 @@ const propTypes = {
 const Post = ({node}) => (
   <article>
     <header>
-      <Link to={`/${node.permalink}`}>
+      <Link to={`/blog/${node.permalink}`}>
         <h1>
           {node.title}
         </h1>
@@ -26,7 +26,7 @@ const Post = ({node}) => (
     </header>
     <main>
       <p>{node.content.childMarkdownRemark.excerpt}</p>
-      <Link to={`/${node.permalink}`}>Read more</Link>
+      <Link to={`/blog/${node.permalink}`}>Read more</Link>
     </main>
     <footer>Article footer</footer>
   </article>
