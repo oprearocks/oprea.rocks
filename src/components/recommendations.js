@@ -2,7 +2,7 @@ import React from 'react'
 import * as PropTypes from 'prop-types';
 import Link from 'gatsby-link'
 
-const propTypes = {
+const itemPropTypes = {
   node: PropTypes.object.isRequired,
 }
 
@@ -18,15 +18,32 @@ const Recommendation = ({node}) => (
         <img src={node.image.resolutions.src} />
       </div>
     </header>
-    <main>
+    <section>
       <p>{node.description.childMarkdownRemark.excerpt}</p>
       <Link to={`/recommendations/${node.permalink}`}>Full review</Link>
       <a href={node.url}>I want this!</a>
-    </main>
+    </section>
     <footer>Recommendation footer</footer>
   </article>
 )
 
-Recommendation.propTypes = propTypes
+Recommendation.propTypes = itemPropTypes
 
-export default Recommendation
+const listPropTypes = {
+  recommendations: PropTypes.array.isRequired,
+}
+
+const Recommendations = ({ recommendations }) => (
+  <section>
+    <h2>Recommendations</h2>
+    {
+      recommendations.map(({ node }) => (
+        <Recommendation node={node} key={node.id} />
+      ))
+    }
+  </section>
+)
+
+Recommendations.propTypes = listPropTypes
+
+export default Recommendations

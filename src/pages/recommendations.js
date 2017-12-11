@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import * as PropTypes from 'prop-types';
 import Img from 'gatsby-image'
 import Link from 'gatsby-link'
-import Recommendation from '../components/recommendation'
+import Recommendations from '../components/recommendations'
 
 const propTypes = {
   data: PropTypes.object.isRequired,
@@ -12,14 +12,7 @@ class RecommendationsPage extends Component {
   render() {
     const recommendationEdges = this.props.data.recommendations.edges;
     return (
-      <div>
-        <p>Welcome to the blog of Adrian Oprea</p>
-        {
-          recommendationEdges.map(({ node }) => (
-            <Recommendation node={node} key={node.id} />
-          ))
-        }
-      </div>
+      <Recommendations recommendations={recommendationEdges} />
     )
   }
 }

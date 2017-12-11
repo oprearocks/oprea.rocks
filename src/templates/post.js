@@ -38,13 +38,13 @@ class PostTemplate extends Component {
             <img src={postImage.resolutions.src} />
           }
         </header>
-        <main>
+        <section>
           <div
             dangerouslySetInnerHTML={{
               __html: content.childMarkdownRemark.html,
             }}
           />
-        </main>
+        </section>
         <footer>Article footer</footer>
       </article>
     )

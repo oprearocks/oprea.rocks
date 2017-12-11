@@ -24,10 +24,10 @@ const Post = ({node}) => (
         }
       </div>
     </header>
-    <main>
+    <section>
       <p>{node.content.childMarkdownRemark.excerpt}</p>
       <Link to={`/blog/${node.permalink}`}>Read more</Link>
-    </main>
+    </section>
     <footer>Article footer</footer>
   </article>
 )

@@ -33,13 +33,13 @@ class ReviewTemplate extends Component {
           <h1>{title}</h1>
           <img src={image.resolutions.src} />
         </header>
-        <main>
+        <section>
           <div
             dangerouslySetInnerHTML={{
               __html: description.childMarkdownRemark.html,
             }}
           />
-        </main>
+        </section>
         <footer>Review footer</footer>
       </article>
     )
