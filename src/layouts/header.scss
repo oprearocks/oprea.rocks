@@ -1,0 +1,21 @@
+.c-header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+
+  &__navList {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    a {
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: #585858;
+    }
+  }
+}

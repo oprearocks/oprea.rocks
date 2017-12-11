@@ -1,0 +1,45 @@
+@import '../utils/_mixins.scss';
+
+.c-home {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  @include breakpoint(lg) {
+    flex-direction: row;
+    width: 1080px;
+  }
+}
+
+.c-latestArticles {
+  @include breakpoint(lg) {
+    flex: 3;
+    width: 70%;
+  }
+}
+
+.c-sidebar {
+  @include breakpoint(lg) {
+    width: 25%;
+    margin: 0 3rem;
+    flex: 1;
+  }
+
+  &__section {
+    border: 1px solid #ccc;
+    margin-top: 3rem;
+    padding: 0 1rem 1rem;
+    img {
+      max-width: 100%;
+    }
+
+    .c-section__heading {
+      top: -1rem;
+      background-color: black;
+      color: white;
+      display: inline-block;
+      padding: .5rem 1rem;
+      margin: 0;
+      position: relative;
+    }
+  }
+}

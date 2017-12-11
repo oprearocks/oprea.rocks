@@ -1,0 +1,13 @@
+.c-article {
+  width: 100%;
+  header {
+    a {
+      text-decoration: none;
+      color: #202B30;
+    }
+  }
+
+  &__image {
+    max-width: 100%;
+  }
+}

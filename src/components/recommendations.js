@@ -2,28 +2,32 @@ import React from 'react'
 import * as PropTypes from 'prop-types';
 import Link from 'gatsby-link'
 
+import './recommendations.scss'
+
 const itemPropTypes = {
-  node: PropTypes.object.isRequired,
+  recommendation: PropTypes.object.isRequired,
 }
 
-const Recommendation = ({node}) => (
-  <article>
+const Recommendation = ({recommendation}) => (
+  <article className="c-recommendation">
     <header>
-      <Link to={`/recommendations/${node.permalink}`}>
         <h1>
-          {node.title}
+          <Link to={`/recommendations/${recommendation.permalink}`}>
+            {recommendation.title}
+          </Link>
         </h1>
-      </Link>
-      <div>
-        <img src={node.image.resolutions.src} />
-      </div>
+        <span className="c-recommendation__kind">Type: {recommendation.type}</span>
     </header>
     <section>
-      <p>{node.description.childMarkdownRemark.excerpt}</p>
-      <Link to={`/recommendations/${node.permalink}`}>Full review</Link>
-      <a href={node.url}>I want this!</a>
+      <div>
+        <img src={recommendation.image.resolutions.src} />
+      </div>
+      <p>{recommendation.description.childMarkdownRemark.excerpt}</p>
     </section>
-    <footer>Recommendation footer</footer>
+    <footer>
+      <Link to={`/recommendations/${recommendation.permalink}`}>Read review</Link>
+      <a href={recommendation.url}>I want this!</a>
+    </footer>
   </article>
 )
 
@@ -33,14 +37,20 @@ const listPropTypes = {
   recommendations: PropTypes.array.isRequired,
 }
 
-const Recommendations = ({ recommendations }) => (
-  <section>
-    <h2>Recommendations</h2>
-    {
-      recommendations.map(({ node }) => (
-        <Recommendation node={node} key={node.id} />
-      ))
-    }
+const Recommendations = ({ recommendations, className }) => (
+  <section className={`c-recommendations ${className}`}>
+    <h2 className="c-section__heading">Recommendations</h2>
+
+    <section>
+      {
+        recommendations.map(({ node }) => (
+          <Recommendation recommendation={node} key={node.id} />
+        ))
+      }
+    </section>
+    <footer>
+      <Link to="/recommendations">View all</Link>
+    </footer>
   </section>
 )
 

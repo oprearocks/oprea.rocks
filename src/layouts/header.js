@@ -1,21 +1,26 @@
 import React from 'react';
 import Link from 'gatsby-link'
+import './header.scss';
 
 const Header = () => (
-  <header>
-    <h1>
-      <Link to="/">oprea.rocks</Link>
+  <header className="c-header">
+    <h1 className="c-header__logo">
+      <Link className="c-header__logo-image" to="/">
+        oprea.rocks
+        <span className="c-header__logo-tagLine">
+        </span>
+      </Link>
     </h1>
-    <nav>
-      <ul>
+    <nav className="c-header__nav">
+      <ul className="c-header__navList">
         <li>
           <Link to="/blog/">Articles</Link>
         </li>
         <li>
-          <Link to="/reading">Reading List</Link>
+          <Link to="/recommendations/">Recommendations</Link>
         </li>
         <li>
-          <Link to="/recommendations/">Recommendations</Link>
+          <Link to="/reading">Reading List</Link>
         </li>
       </ul>
     </nav>

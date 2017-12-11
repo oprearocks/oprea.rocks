@@ -9,8 +9,10 @@
     "gatsby-image": "^1.0.27",
     "gatsby-link": "^1.6.28",
     "gatsby-plugin-react-helmet": "^1.0.8",
+    "gatsby-plugin-sass": "^1.0.15",
     "gatsby-source-contentful": "^1.3.28",
-    "gatsby-transformer-remark": "^1.7.22"
+    "gatsby-transformer-remark": "^1.7.22",
+    "normalize.css": "^7.0.0"
   },
   "keywords": [
     "gatsby",
