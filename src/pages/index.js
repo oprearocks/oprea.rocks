@@ -19,7 +19,7 @@ class IndexPage extends Component {
     const author = this.props.data.author;
 
     return (
-      <main className="c-home">
+      <section className="c-main">
         <section className="c-latestArticles">
           <h2 className="c-section__heading">Latest articles</h2>
           {
@@ -33,7 +33,7 @@ class IndexPage extends Component {
 
           <Recommendations className="c-sidebar__section" recommendations={recommendationEdges} />
         </aside>
-      </main>
+      </section>
     )
   }
 }

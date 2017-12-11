@@ -4,6 +4,8 @@ import * as PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 // import Img from 'gatsby-image'
 
+import '../components/post.scss'
+
 const propTypes = {
   data: PropTypes.object.isRequired,
 }
@@ -19,34 +21,36 @@ class PostTemplate extends Component {
       postVideo
     } = post
     return (
-      <article>
+      <section className="c-main">
+        <article className="c-article">
 
-        <Helmet
-          title={`${title} | The blog of Adrian Oprea | Full Stack JavaScript Consultant`}
-          meta={[
-            { name: 'description', content: content.childMarkdownRemark.excerpt },
-            { name: 'keywords', content: keywords },
-          ]}
-        />
+          <Helmet
+            title={`${title} | The blog of Adrian Oprea | Full Stack JavaScript Consultant`}
+            meta={[
+              { name: 'description', content: content.childMarkdownRemark.excerpt },
+              { name: 'keywords', content: keywords },
+            ]}
+            />
 
-        <header>
-          <h1>{title}</h1>
-          {
-            postVideo ?
-            <iframe width="100%" height="400" src={postVideo} frameBorder="0" allowFullScreen></iframe>
-            :
-            <img src={postImage.resolutions.src} />
-          }
-        </header>
-        <section>
-          <div
-            dangerouslySetInnerHTML={{
-              __html: content.childMarkdownRemark.html,
-            }}
-          />
-        </section>
-        <footer>Article footer</footer>
-      </article>
+          <header>
+            <h1>{title}</h1>
+            {
+              postVideo ?
+              <iframe width="100%" height="400" src={postVideo} frameBorder="0" allowFullScreen></iframe>
+              :
+              <img className="c-article__image" src={postImage.resolutions.src} />
+            }
+          </header>
+          <section>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: content.childMarkdownRemark.html,
+              }}
+              />
+          </section>
+          <footer>Article footer</footer>
+        </article>
+      </section>
     )
   }
 }

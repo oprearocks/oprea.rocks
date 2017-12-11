@@ -12,14 +12,16 @@ class BlogPage extends Component {
   render() {
     const postEdges = this.props.data.posts.edges;
     return (
-      <div>
-        <p>Welcome to the blog of Adrian Oprea</p>
-        {
-          postEdges.map(({ node }) => (
-            <Post node={node} key={node.id} />
-          ))
-        }
-      </div>
+      <section className="c-main">
+        <div>
+          <p>Welcome to the blog of Adrian Oprea</p>
+          {
+            postEdges.map(({ node }) => (
+              <Post node={node} key={node.id} />
+            ))
+          }
+        </div>
+      </section>
     )
   }
 }

@@ -1,3 +1,5 @@
+@import '../utils/_mixins.scss';
+
 body {
   padding: 1rem;
   font-family: 'Source Sans Pro', sans-serif;
@@ -19,3 +21,14 @@ h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
   }
 }
+
+.c-main {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  @include breakpoint(lg) {
+    flex-direction: row;
+    width: 1080px;
+  }
+}
+

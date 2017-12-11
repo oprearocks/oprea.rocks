@@ -1,15 +1,5 @@
 @import '../utils/_mixins.scss';
 
-.c-home {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  @include breakpoint(lg) {
-    flex-direction: row;
-    width: 1080px;
-  }
-}
-
 .c-latestArticles {
   @include breakpoint(lg) {
     flex: 3;
@@ -18,9 +8,10 @@
 }
 
 .c-sidebar {
+  width: 100%;
   @include breakpoint(lg) {
-    width: 25%;
-    margin: 0 3rem;
+    width: 30%;
+    margin: 0 0 0 4rem;
     flex: 1;
   }
 

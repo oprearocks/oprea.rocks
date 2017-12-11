@@ -11,11 +11,11 @@ const itemPropTypes = {
 const Recommendation = ({recommendation}) => (
   <article className="c-recommendation">
     <header>
-        <h1>
+        <h3>
           <Link to={`/recommendations/${recommendation.permalink}`}>
             {recommendation.title}
           </Link>
-        </h1>
+        </h3>
         <span className="c-recommendation__kind">Type: {recommendation.type}</span>
     </header>
     <section>

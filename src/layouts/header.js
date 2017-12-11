@@ -7,9 +7,10 @@ const Header = () => (
     <h1 className="c-header__logo">
       <Link className="c-header__logo-image" to="/">
         oprea.rocks
-        <span className="c-header__logo-tagLine">
-        </span>
       </Link>
+      <span className="c-header__logo-tagLine">
+        Life between pen, paper and computer
+      </span>
     </h1>
     <nav className="c-header__nav">
       <ul className="c-header__navList">

@@ -20,9 +20,9 @@ const TemplateWrapper = ({ children }) => (
       ]}
     />
     <Header />
-    <section role="main">
+    <main role="main">
       {children()}
-    </section>
+    </main>
     <Footer />
   </div>
 )
