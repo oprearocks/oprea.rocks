@@ -5,7 +5,7 @@ date_created_on: 2017-12-12 09:30 AM
 date_published_on: 2017-12-12 09:30 AM
 date_modified_on: 2017-12-12 09:30 AM
 tags:
-  - productivity
+  - opinion
 published: true
 author: "Adrian Oprea"
 twitter: "@oprearocks"
