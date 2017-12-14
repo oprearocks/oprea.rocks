@@ -4,8 +4,6 @@ import * as PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 // import Img from 'gatsby-image'
 
-import '../components/post.scss'
-
 const propTypes = {
   data: PropTypes.object.isRequired,
 }
@@ -21,8 +19,8 @@ class PostTemplate extends Component {
       postVideo
     } = post
     return (
-      <section className="c-main">
-        <article className="c-article">
+      <section>
+        <article>
 
           <Helmet
             title={`${title} | The blog of Adrian Oprea | Full Stack JavaScript Consultant`}
@@ -38,7 +36,7 @@ class PostTemplate extends Component {
               postVideo ?
               <iframe width="100%" height="400" src={postVideo} frameBorder="0" allowFullScreen></iframe>
               :
-              <img className="c-article__image" src={postImage.resolutions.src} />
+              <img src={postImage.resolutions.src} />
             }
           </header>
           <section>
@@ -70,7 +68,10 @@ export const pageQuery = graphql`
           excerpt(pruneLength: 300)
         }
       }
-      postVideo
+      categories {
+        title
+        permalink
+      }
       postImage {
         resolutions(width: 500) {
           ...GatsbyContentfulResolutions

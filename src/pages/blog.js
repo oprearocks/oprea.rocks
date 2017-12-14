@@ -12,7 +12,7 @@ class BlogPage extends Component {
   render() {
     const postEdges = this.props.data.posts.edges;
     return (
-      <section className="c-main">
+      <section>
         <div>
           <p>Welcome to the blog of Adrian Oprea</p>
           {
@@ -41,6 +41,10 @@ export const pageQuery = graphql`
           id
           title
           publishedOn
+          categories {
+            title
+            permalink
+          }
           updatedOn
           permalink
           content {

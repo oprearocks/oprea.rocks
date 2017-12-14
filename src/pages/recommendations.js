@@ -12,7 +12,7 @@ class RecommendationsPage extends Component {
   render() {
     const recommendationEdges = this.props.data.recommendations.edges;
     return (
-      <section className="c-main">
+      <section>
         <Recommendations recommendations={recommendationEdges} />
       </section>
     )

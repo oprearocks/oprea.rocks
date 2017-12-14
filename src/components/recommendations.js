@@ -2,21 +2,19 @@ import React from 'react'
 import * as PropTypes from 'prop-types';
 import Link from 'gatsby-link'
 
-import './recommendations.scss'
-
 const itemPropTypes = {
   recommendation: PropTypes.object.isRequired,
 }
 
-const Recommendation = ({recommendation}) => (
-  <article className="c-recommendation">
+const Recommendation = ({ recommendation }) => (
+  <article>
     <header>
         <h3>
           <Link to={`/recommendations/${recommendation.permalink}`}>
             {recommendation.title}
           </Link>
         </h3>
-        <span className="c-recommendation__kind">Type: {recommendation.type}</span>
+        <span>Type: {recommendation.type}</span>
     </header>
     <section>
       <div>
@@ -37,9 +35,9 @@ const listPropTypes = {
   recommendations: PropTypes.array.isRequired,
 }
 
-const Recommendations = ({ recommendations, className }) => (
-  <section className={`c-recommendations ${className}`}>
-    <h2 className="c-section__heading">Recommendations</h2>
+const Recommendations = ({ recommendations }) => (
+  <section>
+    <h2>Recommendations</h2>
 
     <section>
       {

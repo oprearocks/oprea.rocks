@@ -6,8 +6,6 @@ import Post from '../components/post'
 import Recommendations from '../components/recommendations'
 import About from '../components/about'
 
-import './index.scss'
-
 const propTypes = {
   data: PropTypes.object.isRequired,
 }
@@ -19,19 +17,18 @@ class IndexPage extends Component {
     const author = this.props.data.author;
 
     return (
-      <section className="c-main">
-        <section className="c-latestArticles">
-          <h2 className="c-section__heading">Latest articles</h2>
+      <section>
+        <section>
+          <h2>Latest articles</h2>
           {
             postEdges.map(({ node }) => (
               <Post node={node} key={node.id} />
             ))
           }
         </section>
-        <aside className="c-sidebar">
-          <About className="c-sidebar__section" author={author}/>
-
-          <Recommendations className="c-sidebar__section" recommendations={recommendationEdges} />
+        <aside>
+          <About author={author}/>
+          <Recommendations recommendations={recommendationEdges} />
         </aside>
       </section>
     )
@@ -56,6 +53,10 @@ export const pageQuery = graphql`
           publishedOn
           updatedOn
           permalink
+          categories {
+            title
+            permalink
+          }
           content {
             childMarkdownRemark {
               excerpt(pruneLength: 300)

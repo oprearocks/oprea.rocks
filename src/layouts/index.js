@@ -5,8 +5,6 @@ import 'normalize.css'
 import Header from './header'
 import Footer from './footer'
 
-import './index.scss';
-
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet
@@ -16,7 +14,7 @@ const TemplateWrapper = ({ children }) => (
         { name: 'keywords', content: 'full stack javascript, javascript consultant, node.js consultant, nodejs, docker, devops, rabbitmq, continuous deployment' },
       ]}
       link={[
-        { rel: 'stylesheet', href: '//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Playfair+Display:400,700' }
+        { rel: 'stylesheet', href: '//fonts.googleapis.com/css?family=Lora:400,700|Open Sans:400,700' }
       ]}
     />
     <Header />

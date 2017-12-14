@@ -2,29 +2,28 @@ import React from 'react'
 import * as PropTypes from 'prop-types';
 import Link from 'gatsby-link'
 
-import './post.scss';
-
 const propTypes = {
   node: PropTypes.object.isRequired,
 }
 
-const Post = ({node}) => (
-  <article className="c-article">
+const Category = ({ title, permalink }) => (
+  <Link to={`/blog/${permalink}`}>{title},&nbsp;</Link>
+)
+
+const Post = ({ node }) => (
+  <article>
     <header>
       <h1>
         <Link to={`/blog/${node.permalink}`}>
           {node.title}
         </Link>
       </h1>
-      <span>Total Reading Time: {node.content.childMarkdownRemark.timeToRead} minute(s)</span>
+
       <div>
-        {
-          node.postVideo ?
-          <iframe width="100%" height="400" src={node.postVideo} frameBorder="0" allowFullScreen></iframe>
-          :
-          <img className="c-article__image" src={node.postImage.resolutions.src} />
-        }
+        <span>Published under {node.categories && node.categories.map(c => <Category title={c.title} permalink={node.permalink} />)}</span>
       </div>
+
+      { node.postImage && <img src={node.postImage.resolutions.src} /> }
     </header>
     <section>
       <p>{node.content.childMarkdownRemark.excerpt}</p>

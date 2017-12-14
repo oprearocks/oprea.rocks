@@ -6,10 +6,10 @@ const listPropTypes = {
   recommendations: PropTypes.array.isRequired,
 }
 
-const Categories = ({ categories, className }) => (
-  <section className={className}>
+const Categories = ({ categories }) => (
+  <section>
     <header>
-      <h2 className={className ? `${className}__heading'` : ''}>Categories</h2>
+      <h2>Categories</h2>
     </header>
     <section>
       <ul>

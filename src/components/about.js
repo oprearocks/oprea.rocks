@@ -6,9 +6,9 @@ const propTypes = {
   author: PropTypes.object.isRequired,
 }
 
-const About = ({ author, className = '' }) => (
-  <section className={`c-section ${className}`}>
-    <h2 className="c-section__heading">About</h2>
+const About = ({ author }) => (
+  <section>
+    <h2>About</h2>
     <article>
       <header>
         <h2>
