@@ -1,0 +1,47 @@
+body {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  vertical-align: baseline;
+  color: #636262;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6, {
+  font-family: Montserrat, Helvetica, Arial, sans-serif;
+}
+
+$accent-color: #ecba46;
+
+.accent-color {
+  color: $accent-color;
+}
+
+.accent-hover {
+  color: inherit;
+  &:hover {
+    color: $accent-color;
+  }
+}
+
+.accent-bg {
+  background-color: $accent-color;
+}
+
+.accent-border {
+  border-color: $accent-color;
+}
+
+.button {
+  padding: .625rem 1.5rem;
+  margin: 0 .625rem .625rem 0;
+  display: inline-block;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+}

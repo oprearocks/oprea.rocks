@@ -1,0 +1,55 @@
+$color-dark: #292828;
+$color-light: #8a8989;
+
+.article {
+  &-title {
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+    letter-spacing: 2px;
+    font-style: normal;
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+
+  &-url {
+    text-decoration: none;
+    color: $color-dark;
+    transition: all .2s ease-in-out;
+  }
+
+  &-meta {
+    color: $color-light;
+
+    a {
+      color: $color-light;
+      text-decoration: none;
+
+      &:hover {
+        color: $color-dark;
+      }
+    }
+  }
+
+  &-readmore {
+    font-family: Montserrat, Helvetica, Arial, sans-serif;
+    background-color: $color-dark;
+    color: white;
+    border: 2px solid $color-dark;
+    text-decoration: none;
+
+    &:hover {
+      background-color: transparent;
+      color: $color-dark;
+      border: 2px solid $color-dark;
+    }
+  }
+
+  &-readmore,
+  &-meta {
+    font-size: .875rem;
+    line-height: 1.5rem;
+    letter-spacing: 2px;
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+}

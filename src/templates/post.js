@@ -35,8 +35,7 @@ class PostTemplate extends Component {
             {
               postVideo ?
               <iframe width="100%" height="400" src={postVideo} frameBorder="0" allowFullScreen></iframe>
-              :
-              <img src={postImage.resolutions.src} />
+              : postImage ? <img src={postImage.resolutions.src} /> : null
             }
           </header>
           <section>
