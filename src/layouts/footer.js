@@ -1,10 +1,11 @@
 import React from 'react';
 import Link from 'gatsby-link'
 
+import './footer.scss'
+
 const Footer = () => (
-  <footer>
-    <nav>
-      <ul>
+  <footer className="footer">
+      <ul className="footer-links">
         <li>
           <Link to="/">About</Link>
         </li>
@@ -15,7 +16,6 @@ const Footer = () => (
           <Link to="/">Archive</Link>
         </li>
       </ul>
-    </nav>
   </footer>
 )
 
