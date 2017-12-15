@@ -9,7 +9,7 @@ const propTypes = {
 }
 
 const Category = ({ title, permalink }) => (
-  <Link to={`/blog/${permalink}`}>{title},&nbsp;</Link>
+  <Link to={`/categories/${permalink}`}>&nbsp;{title}</Link>
 )
 
 const Post = ({ node }) => (
@@ -24,10 +24,8 @@ const Post = ({ node }) => (
       <div className="article-meta">
         <span>
           December 15 2017
-          <span className="accent-color">/</span>
-          {node.categories && node.categories.map(c => <Category title={c.title} permalink={node.permalink} />)}
-          <span className="accent-color">/</span>
-          5 comments
+          <span className="accent-color"> /</span>
+          {node.categories && node.categories.map(c => <Category title={c.title} permalink={c.permalink} />)}
         </span>
       </div>
 
@@ -37,7 +35,7 @@ const Post = ({ node }) => (
       <p>{node.content.childMarkdownRemark.excerpt}</p>
     </section>
     <footer>
-      <Link className="article-readmore button" to={`/blog/${node.permalink}`}>Read more</Link>
+      <Link className="article-readmore button" to={`/blog/${node.permalink}`}>Continue reading</Link>
     </footer>
   </article>
 )
