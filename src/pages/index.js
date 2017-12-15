@@ -3,9 +3,9 @@ import * as PropTypes from 'prop-types'
 import Img from 'gatsby-image'
 import Link from 'gatsby-link'
 import Post from '../components/post'
-import Recommendations from '../components/recommendations'
-import About from '../components/about'
-import ReadingList from '../components/readingList'
+import Sidebar from '../components/sidebar'
+
+import './index.scss'
 
 const propTypes = {
   data: PropTypes.object.isRequired,
@@ -19,8 +19,8 @@ class IndexPage extends Component {
     const author = this.props.data.author
 
     return (
-      <section>
-        <section>
+      <section className="page-index cf">
+        <section className="featured-articles">
           <header>
             <h2>Latest articles</h2>
           </header>
@@ -34,11 +34,11 @@ class IndexPage extends Component {
             <Link className="button full-width text-center" to="/blog">Go to the blog</Link>
           </footer>
         </section>
-        <aside className="sidebar">
-          <About author={author}/>
-          <Recommendations recommendations={recommendationEdges} />
-          <ReadingList issues={issueEdges} />
-        </aside>
+        <Sidebar
+          author={author}
+          recommendations={recommendationEdges}
+          issues={issueEdges}
+        />
       </section>
     )
   }

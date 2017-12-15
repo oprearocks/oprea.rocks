@@ -1,0 +1,18 @@
+@import '../utils/_mixins.scss';
+
+.page-index {
+  @include breakpoint(lg) {
+    .featured-articles {
+      float: left;
+      box-sizing: border-box;
+      width: 64%;
+    }
+
+    .sidebar {
+      float: right;
+      box-sizing: border-box;
+      width: 36%;
+      padding-left: 2rem;
+    }
+  }
+}
