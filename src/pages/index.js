@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
-import * as PropTypes from 'prop-types';
+import * as PropTypes from 'prop-types'
 import Img from 'gatsby-image'
 import Link from 'gatsby-link'
 import Post from '../components/post'
 import Recommendations from '../components/recommendations'
 import About from '../components/about'
+import ReadingList from '../components/readingList'
 
 const propTypes = {
   data: PropTypes.object.isRequired,
@@ -12,9 +13,10 @@ const propTypes = {
 
 class IndexPage extends Component {
   render() {
-    const postEdges = this.props.data.posts.edges;
-    const recommendationEdges = this.props.data.recommendations.edges;
-    const author = this.props.data.author;
+    const postEdges = this.props.data.posts.edges
+    const recommendationEdges = this.props.data.recommendations.edges
+    const issueEdges = this.props.data.issues.edges
+    const author = this.props.data.author
 
     return (
       <section>
@@ -35,6 +37,7 @@ class IndexPage extends Component {
         <aside className="sidebar">
           <About author={author}/>
           <Recommendations recommendations={recommendationEdges} />
+          <ReadingList issues={issueEdges} />
         </aside>
       </section>
     )
@@ -108,6 +111,22 @@ export const pageQuery = graphql`
       about {
         childMarkdownRemark {
           html
+        }
+      }
+    }
+
+    issues: allContentfulIssue(
+      limit: 5
+    ) {
+      edges {
+        node {
+          title
+          permalink
+          content {
+            childMarkdownRemark {
+              html
+            }
+          }
         }
       }
     }
