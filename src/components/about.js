@@ -9,7 +9,7 @@ const propTypes = {
 }
 
 const About = ({ author }) => (
-  <section className="about">
+  <section className="sidebar-section about">
     <h2 className="section-title">About {author.name}</h2>
     <article className="section-content">
       <section
