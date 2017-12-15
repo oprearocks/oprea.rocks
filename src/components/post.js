@@ -35,9 +35,10 @@ const Post = ({ node }) => (
     </header>
     <section>
       <p>{node.content.childMarkdownRemark.excerpt}</p>
-      <Link className="article-readmore button" to={`/blog/${node.permalink}`}>Read more</Link>
     </section>
-    <footer>Article footer</footer>
+    <footer>
+      <Link className="article-readmore button" to={`/blog/${node.permalink}`}>Read more</Link>
+    </footer>
   </article>
 )
 

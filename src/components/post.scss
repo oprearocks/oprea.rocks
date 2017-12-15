@@ -1,5 +1,4 @@
-$color-dark: #292828;
-$color-light: #8a8989;
+@import '../utils/_theme.scss';
 
 .article {
   &-title {
@@ -27,20 +26,6 @@ $color-light: #8a8989;
       &:hover {
         color: $color-dark;
       }
-    }
-  }
-
-  &-readmore {
-    font-family: Montserrat, Helvetica, Arial, sans-serif;
-    background-color: $color-dark;
-    color: white;
-    border: 2px solid $color-dark;
-    text-decoration: none;
-
-    &:hover {
-      background-color: transparent;
-      color: $color-dark;
-      border: 2px solid $color-dark;
     }
   }
 
