@@ -10,7 +10,7 @@ const itemPropTypes = {
 
 const Issue = ({ issue }) => (
   <li>
-    <Link className="issue" to={`/reading-list/${issue.permalink}`}>
+    <Link className="issue" to={`/reading/${issue.permalink}`}>
       {issue.title}
     </Link>
   </li>
@@ -34,7 +34,7 @@ const ReadingList = ({ issues }) => (
       }
     </ol>
     <footer>
-      <Link className="button full-width text-center" to="/reading-list">All issues</Link>
+      <Link className="button full-width text-center" to="/reading">All issues</Link>
     </footer>
   </section>
 )

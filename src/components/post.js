@@ -15,12 +15,6 @@ const Category = ({ title, permalink }) => (
 const Post = ({ node }) => (
   <article className="article">
     <header>
-      <h1 className="article-title">
-        <Link className="article-url accent-hover" to={`/blog/${node.permalink}`}>
-          {node.title}
-        </Link>
-      </h1>
-
       <div className="article-meta">
         <span>
           December 15 2017
@@ -28,7 +22,11 @@ const Post = ({ node }) => (
           {node.categories && node.categories.map(c => <Category title={c.title} permalink={c.permalink} />)}
         </span>
       </div>
-
+      <h1 className="article-title">
+        <Link className="article-url accent-hover" to={`/blog/${node.permalink}`}>
+          {node.title}
+        </Link>
+      </h1>
       { node.postImage && <img src={node.postImage.resolutions.src} /> }
     </header>
     <section>

@@ -21,9 +21,6 @@ class IndexPage extends Component {
     return (
       <section className="page-index cf">
         <section className="featured-articles">
-          <header>
-            <h2>Latest articles</h2>
-          </header>
           {
             postEdges.map(({ node }) => (
               <Post node={node} key={node.id} />

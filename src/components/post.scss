@@ -1,6 +1,7 @@
 @import '../utils/_theme.scss';
 
 .article {
+  margin-bottom: 3rem;
   &-title {
     font-size: 1.125rem;
     line-height: 1.875rem;
@@ -8,6 +9,7 @@
     font-style: normal;
     font-weight: normal;
     text-transform: uppercase;
+    margin-top: 0;
   }
 
   &-url {

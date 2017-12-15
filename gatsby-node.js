@@ -34,6 +34,15 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
               }
             }
           }
+
+          allContentfulIssue(limit: 1000) {
+            edges {
+              node {
+                id
+                permalink
+              }
+            }
+          }
         }
       `
     )
@@ -80,6 +89,28 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             // can query data specific to each page.
             path: `/recommendations/${edge.node.permalink}/`,
             component: slash(recommendationTemplate),
+            context: {
+              id: edge.node.id,
+            },
+          })
+        })
+
+        // Create Product pages
+        const issueTemplate = path.resolve('./src/templates/issue.js')
+        // We want to create a detailed page for each
+        // product node. We'll just use the Contentful id for the slug.
+        console.log(result.data.allContentfulIssue.edges);
+        _.each(result.data.allContentfulIssue.edges, edge => {
+          // Gatsby uses Redux to manage its internal state.
+          // Plugins and sites can use functions like "createPage"
+          // to interact with Gatsby.
+          createPage({
+            // Each page is required to have a `path` as well
+            // as a template component. The `context` is
+            // optional but is often necessary so the template
+            // can query data specific to each page.
+            path: `/reading/${edge.node.permalink}/`,
+            component: slash(issueTemplate),
             context: {
               id: edge.node.id,
             },
