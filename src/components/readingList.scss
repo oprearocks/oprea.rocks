@@ -1,0 +1,29 @@
+@import '../utils/_theme.scss';
+
+.reading-list {
+  .issue {
+    transition: all .2s ease-in-out;
+    text-decoration: none;
+    color: $color-light;
+
+    &:hover {
+      color: $color-accent;
+    }
+  }
+
+  &-content {
+    list-style: none;
+    margin: 0 0 1rem 0;
+    padding: 0;
+
+    li {
+      margin-bottom: 1rem;
+      border-bottom: 1px solid $color-light;
+      padding: 0.625rem 0;
+      &:last-child {
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+    }
+  }
+}

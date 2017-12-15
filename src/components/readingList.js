@@ -2,18 +2,18 @@ import React from 'react'
 import * as PropTypes from 'prop-types';
 import Link from 'gatsby-link'
 
-// import './readingList.scss'
+import './readingList.scss'
 
 const itemPropTypes = {
   issue: PropTypes.object.isRequired,
 }
 
 const Issue = ({ issue }) => (
-  <article className="issue">
-    <Link to={`/reading-list/${issue.permalink}`}>
+  <li>
+    <Link className="issue" to={`/reading-list/${issue.permalink}`}>
       {issue.title}
     </Link>
-  </article>
+  </li>
 )
 
 Issue.propTypes = itemPropTypes
@@ -23,18 +23,18 @@ const listPropTypes = {
 }
 
 const ReadingList = ({ issues }) => (
-  <section className="reading-list">
+  <section className="sidebar-section reading-list">
     <h2 className="section-title">Reading List</h2>
 
-    <section>
+    <ol className="reading-list-content">
       {
         issues.map(({ node }) => (
           <Issue issue={node} key={node.id} />
         ))
       }
-    </section>
+    </ol>
     <footer>
-      <Link className="button full-width"to="/reading-list">View all issues</Link>
+      <Link className="button full-width text-center" to="/reading-list">All issues</Link>
     </footer>
   </section>
 )
