@@ -2,25 +2,25 @@ import React from 'react'
 import * as PropTypes from 'prop-types';
 import Link from 'gatsby-link'
 
+import './about.scss'
+
 const propTypes = {
   author: PropTypes.object.isRequired,
 }
 
 const About = ({ author }) => (
-  <section>
-    <h2>About</h2>
-    <article>
-      <header>
-        <h2>
-          {author.name}
-        </h2>
-      </header>
+  <section className="about">
+    <h2 className="section-title">About {author.name}</h2>
+    <article className="section-content">
       <section
+        className="author-description"
         dangerouslySetInnerHTML={{
           __html: author.about.childMarkdownRemark.html
         }}
       />
-      <footer>Article footer</footer>
+      <footer>
+        <Link className="button">Read more</Link>
+      </footer>
     </article>
   </section>
 )
