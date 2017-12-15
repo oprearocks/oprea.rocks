@@ -28,8 +28,9 @@ const Recommendation = ({ recommendation }) => (
         </div>
     </header>
     <footer className="article-footer">
-      <Link className="button" to={`/recommendations/${recommendation.permalink}`}>Read full review</Link>
-      <a className="button" href={recommendation.url}>Get it</a>
+      <Link className="recommendation-link" to={`/recommendations/${recommendation.permalink}`}>Read full review</Link>
+      <span className="accent-color"> / </span>
+      <a className="recommendation-link" href={recommendation.url}>Get it</a>
     </footer>
   </article>
 )
@@ -41,7 +42,7 @@ const listPropTypes = {
 }
 
 const Recommendations = ({ recommendations }) => (
-  <section className="recommendations">
+  <section className="sidebar-section recommendations">
     <h2 className="section-title">Recommendations</h2>
 
     <section>
@@ -52,7 +53,7 @@ const Recommendations = ({ recommendations }) => (
       }
     </section>
     <footer>
-      <Link className="button full-width"to="/recommendations">View all</Link>
+      <Link className="button full-width text-center" to="/recommendations">All recommendations</Link>
     </footer>
   </section>
 )

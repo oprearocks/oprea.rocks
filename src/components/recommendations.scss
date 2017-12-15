@@ -40,6 +40,15 @@
   }
 
   .article-footer {
-    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  &-link {
+    transition: all .2s ease-in-out;
+    color: $color-light;
+    text-decoration: none;
+    &:hover {
+      color: $color-accent;
+    }
   }
 }
