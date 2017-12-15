@@ -20,7 +20,7 @@ const TemplateWrapper = ({ children }) => (
       ]}
     />
     <Header />
-    <main role="main">
+    <main role="main" className="main">
       {children()}
     </main>
     <Footer />

@@ -1,4 +1,5 @@
 @import '../utils/_theme.scss';
+@import '../utils/_mixins.scss';
 
 body {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
@@ -17,6 +18,14 @@ h4,
 h5,
 h6, {
   font-family: Montserrat, Helvetica, Arial, sans-serif;
+}
+
+.main {
+  padding: 1rem;
+  @include breakpoint(md) {
+    width: 60rem;
+    margin: 0 auto;
+  }
 }
 
 .accent-color {
@@ -63,6 +72,8 @@ h6, {
 }
 
 .full-width {
+  display: block;
+  box-sizing: border-box;
   width: 100% !important;
 }
 
