@@ -1,3 +1,5 @@
+@import '../utils/_theme.scss';
+
 body {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-style: normal;
@@ -17,31 +19,84 @@ h6, {
   font-family: Montserrat, Helvetica, Arial, sans-serif;
 }
 
-$accent-color: #ecba46;
-
 .accent-color {
-  color: $accent-color;
+  color: $color-accent;
 }
 
 .accent-hover {
   color: inherit;
   &:hover {
-    color: $accent-color;
+    color: $color-accent;
   }
 }
 
 .accent-bg {
-  background-color: $accent-color;
+  background-color: $color-accent;
 }
 
 .accent-border {
-  border-color: $accent-color;
+  border-color: $color-accent;
 }
 
 .button {
+  font-size: .875rem;
+  line-height: 1.5rem;
+  letter-spacing: 2px;
+  font-weight: normal;
+  text-transform: uppercase;
   padding: .625rem 1.5rem;
   margin: 0 .625rem .625rem 0;
   display: inline-block;
   cursor: pointer;
   transition: all .2s ease-in-out;
+  font-family: Montserrat, Helvetica, Arial, sans-serif;
+  background-color: $color-dark;
+  color: white;
+  border: 2px solid $color-dark;
+  text-decoration: none;
+
+  &:hover {
+    background-color: transparent;
+    color: $color-dark;
+    border: 2px solid $color-dark;
+  }
 }
+
+.full-width {
+  width: 100% !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.flex {
+  display: flex;
+}
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+ .cf:before,
+ .cf:after {
+     content: " "; /* 1 */
+     display: table; /* 2 */
+ }
+
+ .cf:after {
+     clear: both;
+ }
+
+ /**
+  * For IE 6/7 only
+  * Include this rule to trigger hasLayout and contain floats.
+  */
+ .cf {
+     *zoom: 1;
+ }

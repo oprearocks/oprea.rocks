@@ -19,14 +19,20 @@ class IndexPage extends Component {
     return (
       <section>
         <section>
-          <h2>Latest articles</h2>
+          <header>
+            <h2>Latest articles</h2>
+          </header>
           {
             postEdges.map(({ node }) => (
               <Post node={node} key={node.id} />
             ))
           }
+          <footer>
+            <p>Want to read more ?</p>
+            <Link className="button full-width text-center" to="/blog">Go to the blog</Link>
+          </footer>
         </section>
-        <aside>
+        <aside className="sidebar">
           <About author={author}/>
           <Recommendations recommendations={recommendationEdges} />
         </aside>
