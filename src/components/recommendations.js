@@ -2,29 +2,34 @@ import React from 'react'
 import * as PropTypes from 'prop-types';
 import Link from 'gatsby-link'
 
+import './recommendations.scss'
+
 const itemPropTypes = {
   recommendation: PropTypes.object.isRequired,
 }
 
 const Recommendation = ({ recommendation }) => (
-  <article>
+  <article className="recommendation">
     <header>
-        <h3>
-          <Link to={`/recommendations/${recommendation.permalink}`}>
-            {recommendation.title}
-          </Link>
-        </h3>
-        <span>Type: {recommendation.type}</span>
+        <div className="recommendation-details cf">
+          <img className="article-image" src={recommendation.image.resolutions.src} />
+          <div className="article-meta">
+          <span>
+            December 15 2017
+            <span className="accent-color"> / </span>
+            <span>Type: {recommendation.type}</span>
+          </span>
+        </div>
+          <h3 className="article-title">
+            <Link to={`/recommendations/${recommendation.permalink}`}>
+              {recommendation.title}
+            </Link>
+          </h3>
+        </div>
     </header>
-    <section>
-      <div>
-        <img src={recommendation.image.resolutions.src} />
-      </div>
-      <p>{recommendation.description.childMarkdownRemark.excerpt}</p>
-    </section>
-    <footer>
-      <Link to={`/recommendations/${recommendation.permalink}`}>Read review</Link>
-      <a href={recommendation.url}>I want this!</a>
+    <footer className="article-footer">
+      <Link className="button" to={`/recommendations/${recommendation.permalink}`}>Read full review</Link>
+      <a className="button" href={recommendation.url}>Get it</a>
     </footer>
   </article>
 )
@@ -36,8 +41,8 @@ const listPropTypes = {
 }
 
 const Recommendations = ({ recommendations }) => (
-  <section>
-    <h2>Recommendations</h2>
+  <section className="recommendations">
+    <h2 className="section-title">Recommendations</h2>
 
     <section>
       {
@@ -47,7 +52,7 @@ const Recommendations = ({ recommendations }) => (
       }
     </section>
     <footer>
-      <Link to="/recommendations">View all</Link>
+      <Link className="button full-width"to="/recommendations">View all</Link>
     </footer>
   </section>
 )

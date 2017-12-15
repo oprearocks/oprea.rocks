@@ -1,0 +1,45 @@
+@import '../utils/_theme.scss';
+@import '../utils/_mixins.scss';
+
+.recommendations {
+  .section-title {
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+    letter-spacing: 2px;
+    font-style: normal;
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+}
+
+.recommendation {
+  .article-title {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    letter-spacing: 2px;
+    font-style: normal;
+    font-weight: normal;
+    text-transform: uppercase;
+
+    a {
+      color: $color-dark;
+      text-decoration: none;
+    }
+  }
+
+  .article-meta {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+
+  .article-image {
+    width: 6.25rem;
+    height: 6.25rem;
+    float: left;
+    margin-right: 1rem;
+  }
+
+  .article-footer {
+    margin-top: 1rem;
+  }
+}
