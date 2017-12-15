@@ -1,0 +1,13 @@
+.sidebar {
+  &-section {
+    margin-bottom: 2rem;
+    .section-title {
+      font-size: 1.125rem;
+      line-height: 1.875rem;
+      letter-spacing: 2px;
+      font-style: normal;
+      font-weight: normal;
+      text-transform: uppercase;
+    }
+  }
+}
