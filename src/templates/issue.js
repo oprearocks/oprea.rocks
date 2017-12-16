@@ -14,25 +14,34 @@ class IssueTemplate extends Component {
     const {
       title,
       content,
+      shortDescription,
+      keywords
     } = issue
     return (
       <article>
         <Helmet
           title={`${title} | The blog of Adrian Oprea | Full Stack JavaScript Consultant`}
           meta={[
-            { name: 'description', content: content.childMarkdownRemark.excerpt },
-            // { name: 'keywords', content: keywords },
+            { name: 'description', content: shortDescription.childMarkdownRemark.html },
+            { name: 'keywords', content: keywords },
           ]}
-          />
+        />
 
         <header>
           <h1>{title}</h1>
         </header>
-        <section
-          dangerouslySetInnerHTML={{
-            __html: content.childMarkdownRemark.html,
-          }}
-        />
+        <section className="issue-intro">
+          <div
+            dangerouslySetInnerHTML={{
+              __html: shortDescription.childMarkdownRemark.html,
+            }}
+          />
+          <div
+            dangerouslySetInnerHTML={{
+              __html: content.childMarkdownRemark.html,
+            }}
+          />
+        </section>
       </article>
     )
   }
@@ -46,10 +55,15 @@ export const pageQuery = graphql`
   query issueQuery($id: String!) {
     contentfulIssue(id: { eq: $id }) {
       title
+      keywords
       content {
         childMarkdownRemark {
           html
-          excerpt(pruneLength: 300)
+        }
+      }
+      shortDescription {
+        childMarkdownRemark {
+          html
         }
       }
     }

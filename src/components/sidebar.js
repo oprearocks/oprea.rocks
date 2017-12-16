@@ -7,16 +7,16 @@ import ReadingList from '../components/readingList'
 import './sidebar.scss'
 
 const propTypes = {
-  author: PropTypes.object.isRequired,
-  recommendations: PropTypes.object.isRequired,
-  issues: PropTypes.object.isRequired,
+  author: PropTypes.object,
+  recommendations: PropTypes.object,
+  issues: PropTypes.object,
 }
 
 const Sidebar = ({ author, recommendations, issues }) => (
   <aside className="sidebar">
-    <About author={author}/>
-    <Recommendations recommendations={recommendations} />
-    <ReadingList issues={issues} />
+    {author && <About author={author}/>}
+    {recommendations && <Recommendations recommendations={recommendations} />}
+    {issues && <ReadingList issues={issues} />}
   </aside>
 )
 

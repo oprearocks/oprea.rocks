@@ -47,6 +47,22 @@ h6, {
   border-color: $color-accent;
 }
 
+.custom-link {
+  font-size: 0.875rem;
+  color: $color-accent;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: Montserrat, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.arrow-after {
+  &:after {
+    content: " \2192";
+  }
+}
+
 .button {
   font-size: .875rem;
   line-height: 1.5rem;
@@ -81,9 +97,32 @@ h6, {
   text-align: center !important;
 }
 
+.text-bold {
+  font-weight: 600;
+}
+
 .flex {
   display: flex;
 }
+
+.page {
+  @include breakpoint(lg) {
+    .main-content {
+      float: left;
+      box-sizing: border-box;
+      width: 64%;
+      margin-top: 1rem;
+    }
+
+    .sidebar {
+      float: right;
+      box-sizing: border-box;
+      width: 36%;
+      padding-left: 2rem;
+    }
+  }
+}
+
 
 /**
  * For modern browsers

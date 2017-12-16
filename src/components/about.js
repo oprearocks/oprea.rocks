@@ -18,9 +18,9 @@ const About = ({ author }) => (
           __html: author.about.childMarkdownRemark.html
         }}
       />
-      <footer>
-        <Link className="button">Read more</Link>
-      </footer>
+      {/* <footer>
+        <Link to="/about" className="button">Read more</Link>
+      </footer> */}
     </article>
   </section>
 )

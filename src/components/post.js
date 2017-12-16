@@ -19,7 +19,7 @@ const Post = ({ node }) => (
         <span>
           December 15 2017
           <span className="accent-color"> /</span>
-          {node.categories && node.categories.map(c => <Category title={c.title} permalink={c.permalink} />)}
+          {node.categories && node.categories.map(c => <Category title={c.title} permalink={c.permalink} key={c.id} />)}
         </span>
       </div>
       <h1 className="article-title">

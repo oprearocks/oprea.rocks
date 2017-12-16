@@ -19,8 +19,8 @@ class IndexPage extends Component {
     const author = this.props.data.author
 
     return (
-      <section className="page-index cf">
-        <section className="featured-articles">
+      <section className="page cf">
+        <section className="main-content">
           {
             postEdges.map(({ node }) => (
               <Post node={node} key={node.id} />
@@ -60,6 +60,7 @@ export const pageQuery = graphql`
           updatedOn
           permalink
           categories {
+            id
             title
             permalink
           }
@@ -117,6 +118,7 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
+          id
           title
           permalink
           content {
