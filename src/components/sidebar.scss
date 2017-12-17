@@ -1,13 +1,27 @@
+@import '../utils/_theme.scss';
+
 .sidebar {
   &-section {
     margin-bottom: 2rem;
     .section-title {
+      color: $color-dark;
+      position: relative;
       font-size: 1.125rem;
       line-height: 1.875rem;
       letter-spacing: 2px;
       font-style: normal;
       font-weight: normal;
       text-transform: uppercase;
+      &:after {
+        content: "";
+        position: absolute;
+        display: block;
+        bottom: -0.25rem;
+        width: 2.125rem;
+        height: 0.25rem;
+        border-bottom: 1px solid $color-accent;
+        border-top: 1px solid $color-accent;
+      }
     }
   }
 }
