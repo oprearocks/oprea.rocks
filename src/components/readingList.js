@@ -11,7 +11,7 @@ const listPropTypes = {
 
 const ReadingList = ({ issues }) => (
   <section className="sidebar-section reading-list">
-    <h2 className="section-title">Reading List</h2>
+    <h2 className="section-title separator-below">Reading List</h2>
 
     <ol className="reading-list-content">
       {
@@ -23,7 +23,7 @@ const ReadingList = ({ issues }) => (
       }
     </ol>
     <footer>
-      <Link className="custom-link arrow-after" to="/reading">All issues</Link>
+      <Link className="custom-link accent-color arrow-after" to="/reading">All issues</Link>
     </footer>
   </section>
 )

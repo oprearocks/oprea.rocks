@@ -11,7 +11,7 @@ const listPropTypes = {
 
 const Recommendations = ({ recommendations }) => (
   <section className="sidebar-section recommendations">
-    <h2 className="section-title">Recommendations</h2>
+    <h2 className="section-title separator-below">Recommendations</h2>
 
     <section>
       {
@@ -21,7 +21,7 @@ const Recommendations = ({ recommendations }) => (
       }
     </section>
     <footer>
-      <Link className="custom-link arrow-after" to="/recommendations">More recommendations</Link>
+      <Link className="custom-link accent-color arrow-after" to="/recommendations">More recommendations</Link>
     </footer>
   </section>
 )

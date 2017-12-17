@@ -10,7 +10,7 @@ const propTypes = {
 
 const About = ({ author }) => (
   <section className="sidebar-section about">
-    <h2 className="section-title">About {author.name}</h2>
+    <h2 className="section-title separator-below">About {author.name}</h2>
     <article className="section-content">
       <section
         className="author-description"
@@ -18,9 +18,9 @@ const About = ({ author }) => (
           __html: author.about.childMarkdownRemark.html
         }}
       />
-      {/* <footer>
-        <Link to="/about" className="button">Read more</Link>
-      </footer> */}
+      <footer>
+        <Link to="/hire" className="custom-link accent-color arrow-after">Hire me</Link>
+      </footer>
     </article>
   </section>
 )

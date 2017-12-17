@@ -12,16 +12,6 @@
       font-style: normal;
       font-weight: normal;
       text-transform: uppercase;
-      &:after {
-        content: "";
-        position: absolute;
-        display: block;
-        bottom: -0.25rem;
-        width: 2.125rem;
-        height: 0.25rem;
-        border-bottom: 1px solid $color-accent;
-        border-top: 1px solid $color-accent;
-      }
     }
   }
 }

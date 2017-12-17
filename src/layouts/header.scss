@@ -29,9 +29,11 @@
         font-size: 0.875rem;
         color: $color-dark;
 
+        &.active,
         &:hover {
           border-color: $color-accent;
         }
+
       }
     }
 
