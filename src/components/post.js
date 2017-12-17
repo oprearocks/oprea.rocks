@@ -27,7 +27,7 @@ const Post = ({ node }) => (
           {node.title}
         </Link>
       </h1>
-      { node.postImage && <img src={node.postImage.resolutions.src} /> }
+      { node.postImage && <img src={node.postImage.responsiveResolution.src} /> }
     </header>
     <section>
       <p>{node.content.childMarkdownRemark.excerpt}</p>

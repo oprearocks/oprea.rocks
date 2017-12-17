@@ -9,21 +9,31 @@ const propTypes = {
   data: PropTypes.object.isRequired,
 }
 
+const PaginationLink = ({ test, url, text, className = '' }) => {
+  if (!test) {
+    return <Link className="button" to={url}>{text}</Link>
+  }
+  return <span className="button disabled" disabled>{text}</span>
+}
+
 class BlogPage extends Component {
   render() {
-    const postEdges = this.props.data.posts.edges;
+    const pathContext = this.props.pathContext;
     const recommendationEdges = this.props.data.recommendations.edges
     const issueEdges = this.props.data.issues.edges
     const author = this.props.data.author
-
     return (
       <section className="page cf">
         <section className="main-content">
             {
-              postEdges.map(({ node }) => (
+              pathContext.group.map(({ node }) => (
                 <Post node={node} key={node.id} />
               ))
             }
+          <div className="blog-pagination">
+            <PaginationLink test={pathContext.first} url={`/blog/${pathContext.index - 1 == 1 ? '' : pathContext.index -1}`} text="&larr; Previous Page"/>
+            <PaginationLink test={pathContext.last} url={`/blog/${pathContext.index + 1}`} text="Next Page &rarr;"/>
+          </div>
         </section>
         <Sidebar
           author={author}
@@ -42,36 +52,36 @@ export default BlogPage
 
 export const pageQuery = graphql`
   query BlogPageQuery {
-    posts: allContentfulBlogPost(
-      sort: { fields: [ publishedOn ], order: DESC }
-    ) {
-      edges {
-        node {
-          id
-          title
-          publishedOn
-          categories {
-            id
-            title
-            permalink
-          }
-          updatedOn
-          permalink
-          content {
-            childMarkdownRemark {
-              excerpt(pruneLength: 300)
-              timeToRead
-            }
-          }
-          postVideo
-          postImage {
-            resolutions(width: 500) {
-              ...GatsbyContentfulResolutions
-            }
-          }
-        }
-      }
-    }
+    # posts: allContentfulBlogPost(
+    #   sort: { fields: [ publishedOn ], order: DESC }
+    # ) {
+    #   edges {
+    #     node {
+    #       id
+    #       title
+    #       publishedOn
+    #       categories {
+    #         id
+    #         title
+    #         permalink
+    #       }
+    #       updatedOn
+    #       permalink
+    #       content {
+    #         childMarkdownRemark {
+    #           excerpt(pruneLength: 300)
+    #           timeToRead
+    #         }
+    #       }
+    #       postVideo
+    #       postImage {
+    #         resolutions(width: 500) {
+    #           ...GatsbyContentfulResolutions
+    #         }
+    #       }
+    #     }
+    #   }
+    # }
 
     recommendations: allContentfulRecommendation(
       limit: 5

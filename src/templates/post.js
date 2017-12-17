@@ -45,7 +45,9 @@ class PostTemplate extends Component {
               }}
               />
           </section>
-          <footer>Article footer</footer>
+          <footer>
+            Article footer
+          </footer>
         </article>
       </section>
     )

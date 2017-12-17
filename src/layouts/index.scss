@@ -110,6 +110,13 @@ h6, {
     color: $color-dark;
     border: 2px solid $color-dark;
   }
+
+  &.disabled {
+    border-color: $color-light;
+    color: $color-light;
+    background-color: white;
+    cursor: not-allowed;
+  }
 }
 
 .full-width {

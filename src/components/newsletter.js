@@ -4,10 +4,6 @@ import Link from 'gatsby-link'
 
 import './about.scss'
 
-const propTypes = {
-  author: PropTypes.object.isRequired,
-}
-
 const Newsletter = () => (
   <section className="sidebar-section about">
     <h2 className="section-title separator-below">Newsletter</h2>
@@ -22,7 +18,5 @@ const Newsletter = () => (
     </section>
   </section>
 )
-
-Newsletter.propTypes = propTypes
 
 export default Newsletter

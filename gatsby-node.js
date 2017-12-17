@@ -1,8 +1,8 @@
-const _ = require(`lodash`)
-const Promise = require(`bluebird`)
-const path = require(`path`)
-const slash = require(`slash`)
-
+const _ = require('lodash')
+const Promise = require('bluebird')
+const path = require('path')
+const slash = require('slash')
+const createPaginatedPages = require('gatsby-paginate')
 // Implement the Gatsby API “createPages”. This is
 // called after the Gatsby bootstrap is finished so you have
 // access to any information necessary to programmatically
@@ -21,7 +21,30 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             edges {
               node {
                 id
+                title
+                publishedOn
+                categories {
+                  id
+                  title
+                  permalink
+                }
+                updatedOn
                 permalink
+                content {
+                  childMarkdownRemark {
+                    excerpt(pruneLength: 300)
+                    timeToRead
+                  }
+                }
+                postVideo
+                postImage {
+                  responsiveResolution(width: 500) {
+                    width
+                    height
+                    src
+                    srcSet
+                  }
+                }
               }
             }
           }
@@ -51,11 +74,18 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           reject(result.errors)
         }
 
+        createPaginatedPages({
+          edges: result.data.allContentfulBlogPost.edges,
+          createPage: createPage,
+          pageTemplate: './src/templates/blog.js',
+          pageLength: 5,
+          pathPrefix: 'blog',
+        })
+
         // Create Product pages
         const postTemplate = path.resolve('./src/templates/post.js')
         // We want to create a detailed page for each
         // product node. We'll just use the Contentful id for the slug.
-        console.log(result.data.allContentfulBlogPost.edges);
         _.each(result.data.allContentfulBlogPost.edges, edge => {
           // Gatsby uses Redux to manage its internal state.
           // Plugins and sites can use functions like "createPage"
@@ -77,7 +107,6 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         const recommendationTemplate = path.resolve('./src/templates/recommendation.js')
         // We want to create a detailed page for each
         // product node. We'll just use the Contentful id for the slug.
-        console.log(result.data.allContentfulRecommendation.edges);
         _.each(result.data.allContentfulRecommendation.edges, edge => {
           // Gatsby uses Redux to manage its internal state.
           // Plugins and sites can use functions like "createPage"
@@ -99,7 +128,6 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         const issueTemplate = path.resolve('./src/templates/issue.js')
         // We want to create a detailed page for each
         // product node. We'll just use the Contentful id for the slug.
-        console.log(result.data.allContentfulIssue.edges);
         _.each(result.data.allContentfulIssue.edges, edge => {
           // Gatsby uses Redux to manage its internal state.
           // Plugins and sites can use functions like "createPage"
