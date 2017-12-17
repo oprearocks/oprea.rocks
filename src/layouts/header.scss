@@ -5,6 +5,17 @@
 .header {
   width: 100%;
   text-align: center;
+  &-tagline {
+    display: block;
+    font-family: Montserrat, Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-style: normal;
+    color: $color-light;
+    font-size: 0.625rem;
+    letter-spacing: 2px;
+    padding: 0.75rem;
+  }
   &-nav {
     padding: .625rem 0;
     ul {

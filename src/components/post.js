@@ -17,7 +17,7 @@ const Post = ({ node }) => (
     <header>
       <div className="article-meta">
         <span>
-          December 15 2017
+          {node.publishedOn}
           <span className="accent-color"> /</span>
           {node.categories && node.categories.map(c => <Category title={c.title} permalink={c.permalink} key={c.id} />)}
         </span>

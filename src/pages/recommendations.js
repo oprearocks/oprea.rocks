@@ -55,6 +55,7 @@ export const pageQuery = graphql`
         node {
           id
           title
+          type
           url
           permalink
           description {
