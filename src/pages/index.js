@@ -72,8 +72,12 @@ export const pageQuery = graphql`
           }
           postVideo
           postImage {
+            title
             resolutions(width: 500) {
-              ...GatsbyContentfulResolutions
+              width
+              height
+              src
+              srcSet
             }
           }
         }
@@ -96,7 +100,7 @@ export const pageQuery = graphql`
           }
           url
           image {
-            resolutions(width: 500) {
+            resolutions(width: 100) {
               ...GatsbyContentfulResolutions
             }
           }

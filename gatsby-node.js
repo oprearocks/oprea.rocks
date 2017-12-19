@@ -38,7 +38,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
                 }
                 postVideo
                 postImage {
-                  responsiveResolution(width: 500) {
+                  resolutions(width: 500) {
                     width
                     height
                     src

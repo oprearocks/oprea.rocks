@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Link from 'gatsby-link'
 import * as PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-// import Img from 'gatsby-image'
+import Img from 'gatsby-image'
 
 const propTypes = {
   data: PropTypes.object.isRequired,
@@ -13,6 +13,7 @@ class ReviewTemplate extends Component {
     const recommendation = this.props.data.contentfulRecommendation
     const {
       title,
+      type,
       keywords,
       description,
       image,
@@ -31,7 +32,11 @@ class ReviewTemplate extends Component {
 
         <header>
           <h1>{title}</h1>
-          <img src={image.resolutions.src} />
+          <Img
+            resolutions={image.resolutions}
+            title={`Image of ${title} ${type}`}
+            alt={`${title} ${type}`}
+          />
         </header>
         <section>
           <div

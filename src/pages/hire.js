@@ -13,7 +13,7 @@ class HireMePage extends Component {
   render() {
     const recommendationEdges = this.props.data.recommendations.edges
     const issueEdges = this.props.data.issues.edges
-    const author = this.props.data.author
+    const pageContents = this.props.data.pageContents
     return (
       <section className="page cf">
         <Helmet
@@ -24,10 +24,30 @@ class HireMePage extends Component {
           ]}
         />
         <section className="main-content">
-          Hire Me
+          <h1>{pageContents.title}</h1>
+          <div dangerouslySetInnerHTML={{
+            __html: pageContents.content.childMarkdownRemark.html
+          }}/>
+          <article>
+            <header>
+              <h2>About {pageContents.author.name}</h2>
+            </header>
+
+            <section dangerouslySetInnerHTML={{
+              __html: pageContents.author.about.childMarkdownRemark.html
+            }}/>
+            <footer>
+              <ul>
+                <li><a target="_blank" title={`Link to ${pageContents.author.name}'s Twitter account`} href={pageContents.author.twitter}>Twitter</a></li>
+                <li><a target="_blank" title={`Link to ${pageContents.author.name}'s Medium account`} href={pageContents.author.medium}>Medium</a></li>
+                <li><a target="_blank" title={`Link to ${pageContents.author.name}'s GitHub account`} href={pageContents.author.github}>GitHub</a></li>
+                <li><a target="_blank" title={`Link to ${pageContents.author.name}'s YouTube Channel`} href={pageContents.author.youtube}>YouTube Channel</a></li>
+              </ul>
+              <a className="button full-width text-center" href="mailto:adrian@oprea.rocks">Click to hire me</a>
+            </footer>
+          </article>
         </section>
         <Sidebar
-          author={author}
           recommendations={recommendationEdges}
           issues={issueEdges}
         />
@@ -43,6 +63,27 @@ export default HireMePage
 
 export const pageQuery = graphql`
   query HireMePageQuery {
+    pageContents: contentfulHireMe {
+      title
+      content {
+        childMarkdownRemark {
+          html
+        }
+      }
+      author {
+        name
+        about {
+          childMarkdownRemark {
+            html
+          }
+        }
+        twitter
+        medium
+        github
+        youtube
+      }
+    }
+
     issues: allContentfulIssue {
       edges {
         node {
@@ -79,19 +120,10 @@ export const pageQuery = graphql`
           }
           url
           image {
-            resolutions(width: 500) {
+            resolutions(width: 100) {
               ...GatsbyContentfulResolutions
             }
           }
-        }
-      }
-    }
-
-    author: contentfulAuthor {
-      name
-      about {
-        childMarkdownRemark {
-          html
         }
       }
     }

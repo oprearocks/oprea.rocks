@@ -1,6 +1,7 @@
 import React from 'react'
 import * as PropTypes from 'prop-types';
 import Link from 'gatsby-link'
+import Img from 'gatsby-image'
 
 const itemPropTypes = {
   recommendation: PropTypes.object.isRequired,
@@ -10,7 +11,11 @@ const Recommendation = ({ recommendation }) => (
   <article className="recommendation">
     <header>
         <div className="recommendation-details cf">
-          <img className="article-image" src={recommendation.image.resolutions.src} />
+          <Img
+            className="article-image" resolutions={recommendation.image.resolutions}
+            title={`Image of ${recommendation.title} ${recommendation.type}`}
+            alt={`${recommendation.title} ${recommendation.type}`}
+          />
           <div className="article-meta">
           <span>
             December 15 2017

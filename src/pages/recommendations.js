@@ -66,7 +66,7 @@ export const pageQuery = graphql`
           }
 
           image {
-            resolutions(width: 500) {
+            resolutions(width: 100) {
               ...GatsbyContentfulResolutions
             }
           }

@@ -52,37 +52,6 @@ export default BlogPage
 
 export const pageQuery = graphql`
   query BlogPageQuery {
-    # posts: allContentfulBlogPost(
-    #   sort: { fields: [ publishedOn ], order: DESC }
-    # ) {
-    #   edges {
-    #     node {
-    #       id
-    #       title
-    #       publishedOn
-    #       categories {
-    #         id
-    #         title
-    #         permalink
-    #       }
-    #       updatedOn
-    #       permalink
-    #       content {
-    #         childMarkdownRemark {
-    #           excerpt(pruneLength: 300)
-    #           timeToRead
-    #         }
-    #       }
-    #       postVideo
-    #       postImage {
-    #         resolutions(width: 500) {
-    #           ...GatsbyContentfulResolutions
-    #         }
-    #       }
-    #     }
-    #   }
-    # }
-
     recommendations: allContentfulRecommendation(
       limit: 5
     ) {
@@ -100,7 +69,7 @@ export const pageQuery = graphql`
           }
           url
           image {
-            resolutions(width: 500) {
+            resolutions(width: 100) {
               ...GatsbyContentfulResolutions
             }
           }

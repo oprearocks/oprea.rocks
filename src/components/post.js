@@ -1,6 +1,7 @@
 import React from 'react'
 import * as PropTypes from 'prop-types';
 import Link from 'gatsby-link'
+import Img from 'gatsby-image'
 
 import './post.scss'
 
@@ -27,7 +28,14 @@ const Post = ({ node }) => (
           {node.title}
         </Link>
       </h1>
-      { node.postImage && <img src={node.postImage.responsiveResolution.src} /> }
+      {
+        node.postImage &&
+        <Img
+          resolutions={node.postImage.resolutions}
+          title={node.postImage.title}
+          alt={node.postImage.title}
+        />
+      }
     </header>
     <section>
       <p>{node.content.childMarkdownRemark.excerpt}</p>

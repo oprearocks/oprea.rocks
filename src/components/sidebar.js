@@ -13,7 +13,7 @@ const propTypes = {
   issues: PropTypes.object,
 }
 
-const Sidebar = ({ author, recommendations, issues }) => (
+const Sidebar = ({ author = null, recommendations = null, issues = null }) => (
   <aside className="sidebar">
     <Newsletter />
     {author && <About author={author}/>}

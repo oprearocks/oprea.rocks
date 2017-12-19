@@ -2,6 +2,9 @@
 
 .article {
   margin-bottom: 3rem;
+  h2 {
+    font-size: 1.5rem;
+  }
   &-title {
     color: $color-dark;
     font-size: 1.5rem;
@@ -39,5 +42,12 @@
     letter-spacing: 2px;
     font-weight: normal;
     text-transform: uppercase;
+  }
+
+  &-content {
+    img {
+      max-width: 100%;
+      width: auto;
+    }
   }
 }
