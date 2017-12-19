@@ -33,7 +33,7 @@ const Recommendation = ({ recommendation }) => (
     <footer className="article-footer">
       <Link className="recommendation-link" to={`/recommendations/${recommendation.permalink}`}>Read full review</Link>
       <span className="accent-color text-bold"> / </span>
-      <a className="recommendation-link" href={recommendation.url}>Get it</a>
+      <a className="recommendation-link" href={recommendation.url} target="_blank">Get it</a>
     </footer>
   </article>
 )

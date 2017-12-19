@@ -5,6 +5,9 @@ const dotenv = require('dotenv').config({
 module.exports = {
   siteMetadata: {
     title: `oprea.rocks`,
+    siteUrl: `https://oprea.rocks`,
+    description: `Adrian Oprea | Software development consultant`,
+    author: `Adrian Oprea`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -49,5 +52,17 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-plugin-sitemap`
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-32468134-5",
+        // Setting this parameter is optional
+        anonymize: true,
+      },
+    },
+
   ],
 }

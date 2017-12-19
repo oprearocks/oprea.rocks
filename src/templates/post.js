@@ -2,8 +2,9 @@ import React, { Component } from 'react'
 import Link from 'gatsby-link'
 import * as PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import Sidebar from '../components/sidebar'
 import Img from 'gatsby-image'
+import Sidebar from '../components/sidebar'
+import SocialButtons from '../components/sharebuttons'
 
 const Category = ({ title, permalink }) => (
   <Link to={`/categories/${permalink}`}>&nbsp;{title}</Link>
@@ -25,6 +26,7 @@ class PostTemplate extends Component {
       content,
       postImage,
       postVideo,
+      permalink,
       publishedOn,
       categories,
     } = post
@@ -74,7 +76,11 @@ class PostTemplate extends Component {
                 />
             </section>
             <footer>
-              Article footer
+            <SocialButtons
+              url={`https://oprea.rocks/blog/${permalink}`}
+              title={title}
+              description={content.childMarkdownRemark.excerpt}
+            />
             </footer>
           </article>
         </section>
@@ -97,7 +103,8 @@ export const pageQuery = graphql`
     post: contentfulBlogPost(id: { eq: $id }) {
       title
       keywords
-      publishedOn
+      publishedOn(formatString: "MMMM DD, YY")
+      permalink
       content {
         childMarkdownRemark {
           html

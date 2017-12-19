@@ -2,6 +2,7 @@ import React from 'react'
 import * as PropTypes from 'prop-types';
 import Link from 'gatsby-link'
 import Img from 'gatsby-image'
+import SocialButtons from './sharebuttons'
 
 import './post.scss'
 
@@ -31,6 +32,7 @@ const Post = ({ node }) => (
       {
         node.postImage &&
         <Img
+          className="article-image"
           resolutions={node.postImage.resolutions}
           title={node.postImage.title}
           alt={node.postImage.title}
@@ -41,6 +43,11 @@ const Post = ({ node }) => (
       <p>{node.content.childMarkdownRemark.excerpt}</p>
     </section>
     <footer>
+      <SocialButtons
+        url={`https://oprea.rocks/blog/${node.permalink}`}
+        title={node.title}
+        description={node.content.childMarkdownRemark.excerpt}
+      />
       <Link className="article-readmore button" to={`/blog/${node.permalink}`}>Continue reading</Link>
     </footer>
   </article>

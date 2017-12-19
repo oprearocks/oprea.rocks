@@ -5,6 +5,7 @@
     transition: color .2s ease-in-out;
     text-decoration: none;
     color: $color-light;
+    border: none;
 
     &:hover {
       color: $color-accent;

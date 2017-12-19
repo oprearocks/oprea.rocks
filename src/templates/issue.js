@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Link from 'gatsby-link'
 import * as PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-// import Img from 'gatsby-image'
+import SocialButtons from '../components/sharebuttons'
 
 const propTypes = {
   data: PropTypes.object.isRequired,
@@ -15,6 +15,8 @@ class IssueTemplate extends Component {
       title,
       content,
       shortDescription,
+      permalink,
+      excerpt,
       keywords
     } = issue
     return (
@@ -43,6 +45,13 @@ class IssueTemplate extends Component {
               }}
             />
           </section>
+          <footer>
+            <SocialButtons
+              url={`https://oprea.rocks/reading/${permalink}`}
+              title={`Just read the Oprea.Rocks Newsletter — ${title}`}
+              description={content.childMarkdownRemark.excerpt}
+            />
+          </footer>
         </article>
       </section>
     )
@@ -58,9 +67,11 @@ export const pageQuery = graphql`
     contentfulIssue(id: { eq: $id }) {
       title
       keywords
+      permalink
       content {
         childMarkdownRemark {
           html
+          excerpt(pruneLength: 300)
         }
       }
       shortDescription {
