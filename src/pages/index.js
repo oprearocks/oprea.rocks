@@ -56,7 +56,7 @@ export const pageQuery = graphql`
         node {
           id
           title
-          publishedOn(formatString: "MMMM DD, YY")
+          publishedOn(formatString: "MMMM DD, YYYY")
           permalink
           categories {
             id
