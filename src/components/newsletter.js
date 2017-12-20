@@ -6,14 +6,14 @@ import './about.scss'
 
 const Newsletter = () => (
   <section className="sidebar-section about">
-    <h2 className="section-title separator-below">Newsletter</h2>
+    <h2 data-drip-attribute="headline" className="section-title separator-below">Newsletter</h2>
     <section className="section-content">
-      <p>Get the latest things I'm interested in, directly to your inbox.</p>
-      <form>
+      <p data-drip-attribute="description">Join my newsletter to get the latest things I'm reading or learning about, directly to your inbox.</p>
+      <form data-drip-embedded-form="92273073" method="post" action="https://www.getdrip.com/forms/92273073/submissions">
         <div>
-          <input placeholder="adrian@oprea.rocks" className="form-field full-width" type="email" />
+          <input type="email" name="fields[email]" placeholder="email@example.com" className="form-field full-width" type="email" />
         </div>
-        <button className="button">Join</button>
+        <button className="button" data-drip-attribute="sign-up-button">Join</button>
       </form>
     </section>
   </section>
