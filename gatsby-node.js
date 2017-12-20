@@ -17,18 +17,20 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
     graphql(
       `
         {
-          allContentfulBlogPost(limit: 1000) {
+          allContentfulBlogPost(
+            limit: 1000
+            sort: { fields: [ publishedOn ], order: DESC }
+          ) {
             edges {
               node {
                 id
                 title
-                publishedOn
+                publishedOn(formatString: "MMMM DD, YYYY")
                 categories {
                   id
                   title
                   permalink
                 }
-                updatedOn
                 permalink
                 content {
                   childMarkdownRemark {
