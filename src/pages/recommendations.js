@@ -15,14 +15,15 @@ class RecommendationsPage extends Component {
     const recommendationEdges = this.props.data.recommendations.edges;
     const issueEdges = this.props.data.issues.edges
     const author = this.props.data.author
+    const pageContents = this.props.data.pageContents
 
     return (
       <section className="page cf">
         <Helmet
-          title="Recommended books, courses, audiobooks and tutorials | The blog of Adrian Oprea | Full Stack JavaScript Consultant"
+          title={pageContents.title}
           meta={[
-            { name: 'description', content: "Get a list of resources personally reviewed by me. Audiobooks from my Audible account, books I read as well as various online courses I watched in order to develop myself as a softwrae development consultant." },
-            { name: 'keywords', content: "book recommendations, online course reviews, audiobook reviews, recommended study material, software development book reviews, software development course recommendations" },
+            { name: 'description', content: pageContents.description },
+            { name: 'keywords', content: pageContents.keywords },
           ]}
         />
         <section className="main-content">
@@ -48,6 +49,30 @@ export default RecommendationsPage
 
 export const pageQuery = graphql`
   query ReccomendationsPageQuery {
+    pageContents: contentfulPage(
+      identifier: { eq: "recommendations" }
+    ) {
+      title
+      description
+      keywords
+      content {
+        childMarkdownRemark {
+          html
+        }
+      }
+      author {
+        name
+        about {
+          childMarkdownRemark {
+            html
+          }
+        }
+        twitter
+        medium
+        github
+        youtube
+      }
+    }
     recommendations: allContentfulRecommendation(
       limit: 5
     ) {
@@ -83,18 +108,15 @@ export const pageQuery = graphql`
     }
 
     issues: allContentfulIssue(
-      limit: 5
+      limit: 4
+      sort: { fields: [ publishedOn ], order: DESC }
     ) {
       edges {
         node {
           id
           title
           permalink
-          content {
-            childMarkdownRemark {
-              html
-            }
-          }
+          publishedOn(formatString: "MMMM DD, YYYY")
         }
       }
     }

@@ -17,10 +17,10 @@ class HireMePage extends Component {
     return (
       <section className="page cf">
         <Helmet
-          title="Reading List - New links added every week | The blog of Adrian Oprea | Full Stack JavaScript Consultant"
+          title={pageContents.title}
           meta={[
-            { name: 'description', content: 'Find out what I read each week. This is an archive of my weekly reading lists.' },
-            { name: 'keywords', content: 'reading list, newsletter, technical articles, curated reading list, interesting articles, javascript, docker, agile, devops, docker, node.js, golang' },
+            { name: 'description', content: pageContents.description },
+            { name: 'keywords', content: pageContents.keywords },
           ]}
         />
         <section className="main-content">
@@ -63,8 +63,12 @@ export default HireMePage
 
 export const pageQuery = graphql`
   query HireMePageQuery {
-    pageContents: contentfulHireMe {
+    pageContents: contentfulPage(
+      identifier: { eq: "hire-me" }
+    ) {
       title
+      description
+      keywords
       content {
         childMarkdownRemark {
           html
@@ -84,25 +88,20 @@ export const pageQuery = graphql`
       }
     }
 
-    issues: allContentfulIssue {
+    issues: allContentfulIssue(
+      limit: 4
+      sort: { fields: [ publishedOn ], order: DESC }
+    ) {
       edges {
         node {
           id
           title
           permalink
-          shortDescription {
-            childMarkdownRemark {
-              html
-            }
-          }
-          content {
-            childMarkdownRemark {
-              html
-            }
-          }
+          publishedOn(formatString: "MMMM DD, YYYY")
         }
       }
     }
+
     recommendations: allContentfulRecommendation(
       limit: 5
     ) {

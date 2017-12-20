@@ -16,7 +16,7 @@ const Issue = ({ node }) => (
     <header>
       <div className="article-meta">
         <span>
-          December 15 2017
+          {node.publishedOn}
         </span>
       </div>
       <h1 className="article-title">
@@ -47,13 +47,14 @@ class ReadingListPage extends Component {
     const recommendationEdges = this.props.data.recommendations.edges
     const issueEdges = this.props.data.issues.edges
     const author = this.props.data.author
+    const pageContents = this.props.data.pageContents
     return (
       <section className="page cf">
         <Helmet
-          title="Reading List - New links added every week | The blog of Adrian Oprea | Full Stack JavaScript Consultant"
+          title={pageContents.title}
           meta={[
-            { name: 'description', content: 'Find out what I read each week. This is an archive of my weekly reading lists.' },
-            { name: 'keywords', content: 'reading list, newsletter, technical articles, curated reading list, interesting articles, javascript, docker, agile, devops, docker, node.js, golang' },
+            { name: 'description', content: pageContents.description },
+            { name: 'keywords', content: pageContents.keywords },
           ]}
         />
         <section className="main-content">
@@ -79,12 +80,40 @@ export default ReadingListPage
 
 export const pageQuery = graphql`
   query ReadingListPageQuery {
-    issues: allContentfulIssue {
+    pageContents: contentfulPage(
+      identifier: { eq: "reading-list" }
+    ) {
+      title
+      description
+      keywords
+      content {
+        childMarkdownRemark {
+          html
+        }
+      }
+      author {
+        name
+        about {
+          childMarkdownRemark {
+            html
+          }
+        }
+        twitter
+        medium
+        github
+        youtube
+      }
+    }
+
+    issues: allContentfulIssue(
+      sort: { fields: [ publishedOn ], order: DESC }
+    ){
       edges {
         node {
           id
           title
           permalink
+          publishedOn(formatString: "MMMM DD, YYYY")
           shortDescription {
             childMarkdownRemark {
               html

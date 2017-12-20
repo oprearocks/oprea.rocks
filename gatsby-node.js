@@ -60,11 +60,15 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             }
           }
 
-          allContentfulIssue(limit: 1000) {
+          allContentfulIssue(
+            limit: 1000
+            sort: { fields: [ publishedOn ], order: DESC }
+          ) {
             edges {
               node {
                 id
                 permalink
+                publishedOn(formatString: "MMMM DD, YYYY")
               }
             }
           }

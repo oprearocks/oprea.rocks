@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import * as PropTypes from 'prop-types'
 import Img from 'gatsby-image'
 import Link from 'gatsby-link'
+import Helmet from 'react-helmet'
 import Post from '../components/post'
 import Sidebar from '../components/sidebar'
 
@@ -22,8 +23,16 @@ class BlogPage extends Component {
     const recommendationEdges = this.props.data.recommendations.edges
     const issueEdges = this.props.data.issues.edges
     const author = this.props.data.author
+    const pageContents = this.props.data.pageContents
     return (
       <section className="page cf">
+        <Helmet
+            title={pageContents.title}
+            meta={[
+              { name: 'description', content: pageContents.description },
+              { name: 'keywords', content: pageContents.keywords },
+            ]}
+          />
         <section className="main-content">
             {
               pathContext.group.map(({ node }) => (
@@ -52,6 +61,31 @@ export default BlogPage
 
 export const pageQuery = graphql`
   query BlogPageQuery {
+    pageContents: contentfulPage(
+      identifier: { eq: "blog" }
+    ) {
+      title
+      description
+      keywords
+      content {
+        childMarkdownRemark {
+          html
+        }
+      }
+      author {
+        name
+        about {
+          childMarkdownRemark {
+            html
+          }
+        }
+        twitter
+        medium
+        github
+        youtube
+      }
+    }
+
     recommendations: allContentfulRecommendation(
       limit: 5
     ) {
@@ -87,18 +121,15 @@ export const pageQuery = graphql`
     }
 
     issues: allContentfulIssue(
-      limit: 5
+      limit: 4
+      sort: { fields: [ publishedOn ], order: DESC }
     ) {
       edges {
         node {
           id
           title
           permalink
-          content {
-            childMarkdownRemark {
-              html
-            }
-          }
+          publishedOn(formatString: "MMMM DD, YYYY")
         }
       }
     }

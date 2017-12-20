@@ -17,7 +17,8 @@ class IssueTemplate extends Component {
       shortDescription,
       permalink,
       excerpt,
-      keywords
+      keywords,
+      description,
     } = issue
     return (
       <section className="page">
@@ -25,7 +26,7 @@ class IssueTemplate extends Component {
           <Helmet
             title={`${title} | The blog of Adrian Oprea | Full Stack JavaScript Consultant`}
             meta={[
-              { name: 'description', content: shortDescription.childMarkdownRemark.html },
+              { name: 'description', content: description || shortDescription.childMarkdownRemark.html },
               { name: 'keywords', content: keywords },
             ]}
           />
@@ -68,6 +69,7 @@ export const pageQuery = graphql`
       title
       keywords
       permalink
+      publishedOn(formatString: "MMMM DD, YYYY")
       content {
         childMarkdownRemark {
           html

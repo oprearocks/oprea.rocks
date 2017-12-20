@@ -110,18 +110,15 @@ export const pageQuery = graphql`
     }
 
     issues: allContentfulIssue(
-      limit: 5
+      limit: 4
+      sort: { fields: [ publishedOn ], order: DESC }
     ) {
       edges {
         node {
           id
           title
           permalink
-          content {
-            childMarkdownRemark {
-              html
-            }
-          }
+          publishedOn(formatString: "MMMM DD, YYYY")
         }
       }
     }
