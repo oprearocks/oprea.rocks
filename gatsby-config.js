@@ -63,6 +63,6 @@ module.exports = {
         anonymize: true,
       },
     },
-
+    `gatsby-plugin-netlify`,
   ],
 }
