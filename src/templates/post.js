@@ -5,6 +5,7 @@ import Helmet from 'react-helmet'
 import Img from 'gatsby-image'
 import Sidebar from '../components/sidebar'
 import SocialButtons from '../components/sharebuttons'
+import DisqusComments from '../components/disquscomments'
 
 const Category = ({ title, permalink }) => (
   <Link to={`/categories/${permalink}`}>&nbsp;{title}</Link>
@@ -21,6 +22,7 @@ class PostTemplate extends Component {
     const author = this.props.data.author
     const post = this.props.data.post
     const {
+      id,
       title,
       keywords,
       content,
@@ -29,6 +31,7 @@ class PostTemplate extends Component {
       permalink,
       publishedOn,
       categories,
+      description,
     } = post
     return (
       <section className="page cf">
@@ -38,7 +41,7 @@ class PostTemplate extends Component {
             <Helmet
               title={`${title} | The blog of Adrian Oprea | Full Stack JavaScript Consultant`}
               meta={[
-                { name: 'description', content: content.childMarkdownRemark.excerpt },
+                { name: 'description', content: description || content.childMarkdownRemark.excerpt },
                 { name: 'keywords', content: keywords },
               ]}
               />
@@ -55,6 +58,7 @@ class PostTemplate extends Component {
               {
                 postImage &&
                 <Img
+                  className="article-image"
                   resolutions={postImage.resolutions}
                   title={postImage.title}
                   alt={postImage.title}
@@ -81,6 +85,7 @@ class PostTemplate extends Component {
               title={title}
               description={content.childMarkdownRemark.excerpt}
             />
+            <DisqusComments title={title} id={`${id}-${permalink}`} url={`https://oprea.rocks/blog/${permalink}`}/>
             </footer>
           </article>
         </section>
@@ -101,10 +106,12 @@ export default PostTemplate
 export const pageQuery = graphql`
   query postQuery($id: String!) {
     post: contentfulBlogPost(id: { eq: $id }) {
+      id
       title
       keywords
-      publishedOn(formatString: "MMMM DD, YY")
+      publishedOn(formatString: "MMMM DD, YYYY")
       permalink
+      description
       content {
         childMarkdownRemark {
           html
