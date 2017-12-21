@@ -12,6 +12,13 @@
   }
 }
 
+.page .recommendation {
+  text-align: center;
+}
+
+.sidebar .recommendation {
+  text-align: left;
+}
 .recommendation {
   text-align: center;
   .article-title {
@@ -61,6 +68,7 @@
   &-image {
     text-align: center;
   }
+
   @include breakpoint(md) {
     text-align: left;
     &-image {

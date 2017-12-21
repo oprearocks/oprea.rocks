@@ -31,6 +31,7 @@ h6, {
   color: $color-dark;
 }
 
+.header,
 .main {
   padding: 1rem;
   @include breakpoint(md) {
