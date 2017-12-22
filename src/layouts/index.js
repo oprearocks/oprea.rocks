@@ -2,6 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import 'normalize.css'
+import 'prismjs/themes/prism.css'
+
 import Header from './header'
 import Footer from './footer'
 
