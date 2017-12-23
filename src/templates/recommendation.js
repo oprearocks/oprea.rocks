@@ -28,7 +28,7 @@ class ReviewTemplate extends Component {
     return (
       <section className="page cf">
         <section className="main-content">
-          <article className="recommendation">
+          <article className="recommendation" itemprop="blogPost" itemscope itemtype="https://schema.org/Review">
 
             <Helmet
               title={`${title} | The blog of Adrian Oprea | Full Stack JavaScript Consultant`}
@@ -59,6 +59,7 @@ class ReviewTemplate extends Component {
             {
               description ?
                 <section
+                  itemprop="reviewBody"
                   dangerouslySetInnerHTML={{
                     __html: description.childMarkdownRemark.html,
                   }}

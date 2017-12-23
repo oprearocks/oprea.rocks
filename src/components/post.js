@@ -15,7 +15,7 @@ const Category = ({ title, permalink }) => (
 )
 
 const Post = ({ node }) => (
-  <article className="article">
+  <article className="article" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
     <header>
       <div className="article-meta">
         <span>
@@ -24,7 +24,7 @@ const Post = ({ node }) => (
           {node.categories && node.categories.map(c => <Category title={c.title} permalink={c.permalink} key={c.id} />)}
         </span>
       </div>
-      <h1 className="article-title">
+      <h1 className="article-title" itemprop="headline">
         <Link className="article-url accent-hover" to={`/blog/${node.permalink}`}>
           {node.title}
         </Link>
@@ -39,7 +39,7 @@ const Post = ({ node }) => (
         />
       }
     </header>
-    <section>
+    <section itemprop="articleBody">
       <p>{node.content.childMarkdownRemark.excerpt}</p>
     </section>
     <footer>

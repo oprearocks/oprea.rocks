@@ -36,7 +36,7 @@ class PostTemplate extends Component {
     return (
       <section className="page cf">
         <section className="main-content">
-          <article className="article">
+          <article className="article" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
 
             <Helmet
               title={`${title} | The blog of Adrian Oprea | Full Stack JavaScript Consultant`}
@@ -54,7 +54,7 @@ class PostTemplate extends Component {
                   {categories && categories.map(c => <Category title={c.title} permalink={c.permalink} key={c.id} />)}
                 </span>
               </div>
-              <h1 className="article-title">{title}</h1>
+              <h1 className="article-title" itemprop="headline">{title}</h1>
               {
                 postImage &&
                 <Img
@@ -65,7 +65,7 @@ class PostTemplate extends Component {
                 />
               }
             </header>
-            <section>
+            <section itemprop="articleBody">
               {
                 postVideo &&
                 <blockquote>

@@ -8,7 +8,7 @@ const itemPropTypes = {
 }
 
 const Recommendation = ({ recommendation }) => (
-  <article className="recommendation">
+  <article className="recommendation" itemprop="blogPost" itemscope itemtype="https://schema.org/Review">
     <header>
         <div className="recommendation-details cf">
           <Img
@@ -23,7 +23,7 @@ const Recommendation = ({ recommendation }) => (
             <span>Type: {recommendation.type}</span>
           </span>
         </div>
-          <h3 className="article-title">
+          <h3 className="article-title" itemprop="reviewBody">
             <Link to={`/recommendations/${recommendation.permalink}`}>
               {recommendation.title}
             </Link>
