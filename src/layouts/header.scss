@@ -6,6 +6,11 @@
   box-sizing: border-box;
   width: 100%;
   text-align: center;
+
+  &-logo-link {
+    display: block;
+  }
+
   &-tagline {
     display: block;
     font-family: Montserrat, Helvetica, Arial, sans-serif;
