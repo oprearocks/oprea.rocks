@@ -8,7 +8,7 @@ import SocialButtons from '../components/sharebuttons'
 import DisqusComments from '../components/disquscomments'
 
 const Category = ({ title, permalink }) => (
-  <Link to={`/categories/${permalink}`}>&nbsp;{title}</Link>
+  <Link to={`/blog/${permalink}`}>&nbsp;{title}</Link>
 )
 
 const propTypes = {

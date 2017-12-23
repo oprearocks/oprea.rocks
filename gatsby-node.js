@@ -51,6 +51,16 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             }
           }
 
+          allContentfulCategory(limit: 1000) {
+            edges {
+              node {
+                id
+                title
+                permalink
+              }
+            }
+          }
+
           allContentfulRecommendation(limit: 1000) {
             edges {
               node {
@@ -107,6 +117,17 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
               id: edge.node.id,
             },
           })
+        })
+// Categories
+        result.data.allContentfulCategory.edges.forEach(({ node: c }) => {
+            const edges = result.data.allContentfulBlogPost.edges.filter(({ node }) => node.categories.some(category => category.permalink === c.permalink))
+            createPaginatedPages({
+              edges,
+              createPage,
+              pageTemplate: './src/templates/category.js',
+              pageLength: 5,
+              pathPrefix: `blog/${c.permalink}`,
+            })
         })
 
         // Create Product pages

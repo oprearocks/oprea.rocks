@@ -16,7 +16,7 @@ const Categories = ({ categories }) => (
         {
           categories.map(({ category }) => (
             <li key={category.id}>
-              <Link to={`/categories/${category.permalink}`}>
+              <Link to={`/blog/${category.permalink}`}>
                 {category.title}
               </Link>
             </li>

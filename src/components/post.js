@@ -11,7 +11,7 @@ const propTypes = {
 }
 
 const Category = ({ title, permalink }) => (
-  <Link to={`/categories/${permalink}`}>&nbsp;{title}</Link>
+  <Link to={`/blog/${permalink}`}>&nbsp;{title}</Link>
 )
 
 const Post = ({ node }) => (
