@@ -36,7 +36,7 @@ const SocialButtons = ({ url, description = '', title }) => (
     <LinkedinShareButton url={url} description={description} title={title}>
       <LinkedinIcon size={32} round/>
     </LinkedinShareButton>
-    <TwitterShareButton url={url} via="@oprearocks" title={title}>
+    <TwitterShareButton url={url} via="oprearocks" title={title}>
       <TwitterIcon size={32} round/>
     </TwitterShareButton>
     <WhatsappShareButton url={url} title={title} separator=" / ">

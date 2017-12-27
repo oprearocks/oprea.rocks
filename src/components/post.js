@@ -15,7 +15,7 @@ const Category = ({ title, permalink }) => (
 )
 
 const Post = ({ node }) => (
-  <article className="article" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <article className="article" itemprop="blogPost" itemScope itemType="https://schema.org/BlogPosting">
     <header>
       <div className="article-meta">
         <span>

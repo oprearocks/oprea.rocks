@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import Link from 'gatsby-link'
 import * as PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
 import Img from 'gatsby-image'
+import PostMeta from '../components/postMeta'
 import Sidebar from '../components/sidebar'
 import SocialButtons from '../components/sharebuttons'
 import DisqusComments from '../components/disquscomments'
@@ -35,17 +35,9 @@ class PostTemplate extends Component {
     } = post
     return (
       <section className="page cf">
+        <PostMeta post={post}/>
         <section className="main-content">
-          <article className="article" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-
-            <Helmet
-              title={`${title} | The blog of Adrian Oprea | Full Stack JavaScript Consultant`}
-              meta={[
-                { name: 'description', content: description || content.childMarkdownRemark.excerpt },
-                { name: 'keywords', content: keywords },
-              ]}
-              />
-
+          <article className="article" itemProp="blogPost" itemScope itemType="https://schema.org/BlogPosting">
             <header>
               <div className="article-meta">
                 <span>
@@ -54,7 +46,7 @@ class PostTemplate extends Component {
                   {categories && categories.map(c => <Category title={c.title} permalink={c.permalink} key={c.id} />)}
                 </span>
               </div>
-              <h1 className="article-title" itemprop="headline">{title}</h1>
+              <h1 className="article-title" itemProp="headline">{title}</h1>
               {
                 postImage &&
                 <Img
@@ -65,7 +57,7 @@ class PostTemplate extends Component {
                 />
               }
             </header>
-            <section itemprop="articleBody">
+            <section itemProp="articleBody">
               {
                 postVideo &&
                 <blockquote>
@@ -133,6 +125,10 @@ export const pageQuery = graphql`
           height
           width
         }
+      }
+      author {
+        name
+        twitter
       }
     }
     recommendations: allContentfulRecommendation(
