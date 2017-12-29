@@ -8,7 +8,7 @@ const createPaginatedPages = require('gatsby-paginate')
 // access to any information necessary to programmatically
 // create pages.
 exports.createPages = ({ graphql, boundActionCreators }) => {
-  const { createPage } = boundActionCreators
+  const { createPage, createRedirect } = boundActionCreators
   return new Promise((resolve, reject) => {
     // The “graphql” function allows us to run arbitrary
     // queries against the local Contentful graphql schema. Think of
@@ -89,6 +89,13 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         if (result.errors) {
           reject(result.errors)
         }
+
+        createRedirect({
+          fromPath: `/contact`,
+          toPath: `/hire`,
+          isPermanent: true,
+          redirectInBrowser: true,
+        });
 
         createPaginatedPages({
           edges: result.data.allContentfulBlogPost.edges,

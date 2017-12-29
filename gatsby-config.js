@@ -56,6 +56,60 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allContentfulBlogPost } }) => {
+              return allContentfulBlogPost.edges.map(edge => {
+                return {
+                  description: edge.node.content.childMarkdownRemark.excerpt,
+                  url: site.siteMetadata.siteUrl + edge.node.permalink,
+                  guid: site.siteMetadata.siteUrl + edge.node.permalink,
+                  custom_elements: [{ "content:encoded": edge.node.content.childMarkdownRemark.html }],
+                };
+              });
+            },
+            query: `
+              {
+                allContentfulBlogPost(
+                  limit: 1000,
+                  sort: { order: DESC, fields: [publishedOn] }
+                ) {
+                  edges {
+                    node {
+                      title
+                      publishedOn
+                      permalink
+                      content {
+                        childMarkdownRemark {
+                          excerpt(pruneLength: 300)
+                          html
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+            output: "/rss.xml",
+          },
+        ],
+      },
+    },
+    {
       resolve: `gatsby-plugin-sitemap`
     },
     {
