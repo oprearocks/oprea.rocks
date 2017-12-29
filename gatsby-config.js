@@ -5,7 +5,7 @@ const dotenv = require('dotenv').config({
 module.exports = {
   siteMetadata: {
     title: `oprea.rocks`,
-    siteUrl: `https://oprea.rocks`,
+    siteUrl: `https://oprea.rocks/`,
     description: `Adrian Oprea | Software development consultant`,
     author: `Adrian Oprea`
   },
@@ -76,8 +76,8 @@ module.exports = {
               return allContentfulBlogPost.edges.map(edge => {
                 return {
                   description: edge.node.content.childMarkdownRemark.excerpt,
-                  url: site.siteMetadata.siteUrl + edge.node.permalink,
-                  guid: site.siteMetadata.siteUrl + edge.node.permalink,
+                  url: `${site.siteMetadata.siteUrl}/blog/${edge.node.permalink}`,
+                  guid: `${site.siteMetadata.siteUrl}/blog/${edge.node.permalink}`,
                   custom_elements: [{ "content:encoded": edge.node.content.childMarkdownRemark.html }],
                 };
               });
