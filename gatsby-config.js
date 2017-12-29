@@ -5,7 +5,7 @@ const dotenv = require('dotenv').config({
 module.exports = {
   siteMetadata: {
     title: `oprea.rocks`,
-    siteUrl: `https://oprea.rocks/`,
+    siteUrl: `https://oprea.rocks`,
     description: `Adrian Oprea | Software development consultant`,
     author: `Adrian Oprea`
   },
@@ -72,19 +72,41 @@ module.exports = {
         `,
         feeds: [
           {
-            serialize: ({ query: { site, allContentfulBlogPost } }) => {
-              return allContentfulBlogPost.edges.map(edge => {
-                return {
+            serialize: ({ query: { site, posts, issues, recommendations } }) => {
+              const postEdges = posts.edges.map(edge => ({
+                  title: edge.node.title,
                   description: edge.node.content.childMarkdownRemark.excerpt,
                   url: `${site.siteMetadata.siteUrl}/blog/${edge.node.permalink}`,
                   guid: `${site.siteMetadata.siteUrl}/blog/${edge.node.permalink}`,
                   custom_elements: [{ "content:encoded": edge.node.content.childMarkdownRemark.html }],
-                };
-              });
+                }));
+
+              const recommendationEdges = recommendations.edges.map(edge => ({
+                title: `${edge.node.type} recommendation: ${edge.node.title}`,
+                description: edge.node.description.childMarkdownRemark.excerpt,
+                url: `${site.siteMetadata.siteUrl}/recommendations/${edge.node.permalink}`,
+                guid: `${site.siteMetadata.siteUrl}/recommendations/${edge.node.permalink}`,
+                custom_elements: [{ "content:encoded": edge.node.description.childMarkdownRemark.html }],
+              }));
+
+              const issueEdges = issues.edges.map(edge => ({
+                title: `Reading list: ${edge.node.title}`,
+                description: edge.node.content.childMarkdownRemark.excerpt,
+                url: `${site.siteMetadata.siteUrl}/reading/${edge.node.permalink}`,
+                guid: `${site.siteMetadata.siteUrl}/reading/${edge.node.permalink}`,
+                custom_elements: [{ "content:encoded": edge.node.content.childMarkdownRemark.html }],
+              }));
+
+              return [
+                ...postEdges,
+                ...issueEdges,
+                ...recommendationEdges,
+              ];
             },
+
             query: `
-              {
-                allContentfulBlogPost(
+            query feedQuery {
+                posts: allContentfulBlogPost(
                   limit: 1000,
                   sort: { order: DESC, fields: [publishedOn] }
                 ) {
@@ -102,9 +124,47 @@ module.exports = {
                     }
                   }
                 }
+                issues: allContentfulIssue(
+                  limit: 1000,
+                  sort: { order: DESC, fields: [publishedOn] }
+                ) {
+                  edges {
+                    node {
+                      title
+                      permalink
+                      publishedOn
+                      content {
+                        childMarkdownRemark {
+                          html
+                        }
+                      }
+                      shortDescription {
+                        childMarkdownRemark {
+                          excerpt(pruneLength: 300)
+                        }
+                      }
+                    }
+                  }
+                }
+                recommendations: allContentfulRecommendation(
+                  limit: 1000
+                ) {
+                  edges {
+                    node {
+                      title
+                      permalink
+                      type
+                      description {
+                        childMarkdownRemark {
+                          html
+                        }
+                      }
+                    }
+                  }
+                }
               }
             `,
-            output: "/rss.xml",
+            output: "/feed.xml",
           },
         ],
       },
