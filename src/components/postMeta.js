@@ -30,12 +30,12 @@ const PostMeta = ({ post }) => (
       { name: 'twitter:description', content: post.description || post.content.childMarkdownRemark.excerpt },
       { name: 'twitter:image', content: post.postImage && post.postImage.resolutions.src },
 
-      { itemprop: 'dateCreated', content: post.publishedOn },
-      { itemprop: 'datePublished', content: post.publishedOn },
-      { itemprop: 'dateModified', content: post.updatedOn },
-      { itemprop: 'keywords', content: post.keywords },
-      { itemprop: 'publisher', content: post.author.name },
-      { itemprop: 'inLanguage', content: 'en_US' },
+      { itemProp: 'dateCreated', content: post.publishedOn },
+      { itemProp: 'datePublished', content: post.publishedOn },
+      { itemProp: 'dateModified', content: post.updatedOn },
+      { itemProp: 'keywords', content: post.keywords },
+      { itemProp: 'publisher', content: post.author.name },
+      { itemProp: 'inLanguage', content: 'en_US' },
     ]}
   />
 )

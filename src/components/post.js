@@ -15,7 +15,7 @@ const Category = ({ title, permalink }) => (
 )
 
 const Post = ({ node }) => (
-  <article className="article" itemprop="blogPost" itemScope itemType="https://schema.org/BlogPosting">
+  <article className="article" itemProp="blogPost" itemScope itemType="https://schema.org/BlogPosting">
     <header>
       <div className="article-meta">
         <span>
@@ -24,7 +24,7 @@ const Post = ({ node }) => (
           {node.categories && node.categories.map(c => <Category title={c.title} permalink={c.permalink} key={c.id} />)}
         </span>
       </div>
-      <h1 className="article-title" itemprop="headline">
+      <h1 className="article-title" itemProp="headline">
         <Link className="article-url accent-hover" to={`/blog/${node.permalink}`}>
           {node.title}
         </Link>
@@ -39,9 +39,12 @@ const Post = ({ node }) => (
         />
       }
     </header>
-    <section itemprop="articleBody">
-      <p>{node.content.childMarkdownRemark.excerpt}</p>
-    </section>
+    <section
+      itemProp="articleBody"
+      dangerouslySetInnerHTML={{
+        __html: node.content.childMarkdownRemark.excerpt,
+      }}
+    />
     <footer>
       <SocialButtons
         url={`https://oprea.rocks/blog/${node.permalink}`}

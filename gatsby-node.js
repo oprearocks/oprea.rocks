@@ -118,7 +118,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             // as a template component. The `context` is
             // optional but is often necessary so the template
             // can query data specific to each page.
-            path: `/blog/${edge.node.permalink}/`,
+            path: `/blog/${edge.node.permalink}`,
             component: slash(postTemplate),
             context: {
               id: edge.node.id,
@@ -150,7 +150,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             // as a template component. The `context` is
             // optional but is often necessary so the template
             // can query data specific to each page.
-            path: `/recommendations/${edge.node.permalink}/`,
+            path: `/recommendations/${edge.node.permalink}`,
             component: slash(recommendationTemplate),
             context: {
               id: edge.node.id,
@@ -171,7 +171,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             // as a template component. The `context` is
             // optional but is often necessary so the template
             // can query data specific to each page.
-            path: `/reading/${edge.node.permalink}/`,
+            path: `/reading/${edge.node.permalink}`,
             component: slash(issueTemplate),
             context: {
               id: edge.node.id,
