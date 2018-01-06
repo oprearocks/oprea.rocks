@@ -1,0 +1,113 @@
+<mjml>
+  <mj-head>
+        <mj-font name="Montserrat " href="https://fonts.googleapis.com/css?family=Montserrat " />
+        <mj-font name="Open Sans " href="https://fonts.googleapis.com/css?family=Open Sans " />
+    <mj-attributes>
+      <mj-class name="heading" font-family="Montserrat  , Helvetica, Arial, sans-serif" font-size="24px" />
+      <mj-class name="heading-large" font-size="32px"/>
+      <mj-text font-size="14px"/>
+      <mj-all font-family="Arial" />
+      <mj-class name="link" color="#ff1d25"/>
+      <mj-text font-size="14px" font-family="Open Sans , Helvetica, Arial, sans-serif"/>
+    </mj-attributes>
+    <mj-style>
+      a {
+        color: #ff1d25;
+      }
+
+    </mj-style>
+  </mj-head>
+  <mj-body>
+    <mj-container>
+      <mj-section>
+        <mj-column>
+          <mj-image width="400" src="https://images.contentful.com/tbm09fdrtoi5/5OkWXQKr3UgYU886kmSIUS/ede7d6885f5240d252d44c72491a0609/logo.png"></mj-image>
+          <mj-text font-size="10px" text-transform="uppercase" letter-spacing="2px" align="center" color="#8a8989">
+            Life between pen, paper and computer
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-section>
+        <mj-column>
+          <mj-text mj-class="heading heading-large" align="center">Issue #1</mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-section background-color="#f3f3f3">
+        <mj-column>
+          <mj-image width="170" src="http://i.imgur.com/nwNZ0TW.png"></mj-image>
+        </mj-column>
+
+        <mj-column>
+          <mj-text font-weight="bold" align="left" font-size="24px" color="#000" font-family="helvetica">Why am I receiving this?</mj-text>
+          <mj-text align="left" font-size="15px" color="#000" font-family="helvetica">A while back you subscribed to a newsletter on <a href="https://codesi.nz">https://codesi.nz</a>. I gave up on that domain / website and merged the email list with the one at <a href="https://oprea.rocks">https://oprea.rocks</a>. If you don't
+            want to be here, although I feel bad for it, feel free to click unsubscribe, at the bottom of this email.</mj-text>
+        </mj-column>
+      </mj-section>
+
+      <mj-section>
+        <mj-column>
+          <mj-text>Since it's the beginning of the story, I'm not sure about the format. So here's a list of articles I went through for some GraphQL research I did for a client.</mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-section>
+        <mj-column>
+          <mj-text mj-class="heading">How to build a GraphQL API in Rails
+          </mj-text>
+          <mj-text>Here's a very good explanation on how to build a GraphQL api in Rails published on Medium by Wayne Chu. Although it is a bit more than I needed for my research, I got a lot of value from reading this series of posts</mj-text>
+          <mj-text>
+            <a href="https://medium.com/@DrawandCode/building-a-graphql-api-in-rails-part-1-a40aaf7e165f">Building a GraphQL API in Rails — Part 1</a>
+            <br />
+            <a href="https://medium.com/@DrawandCode/building-a-graphql-api-in-rails-part-start-coding-8b1de6d75041">Building a GraphQL API in Rails — Part 2</a>
+            <br />
+            <a href="https://medium.com/@DrawandCode/building-a-graphql-api-in-rails-part-3-best-practice-8e4a655463d4">Building a GraphQL API in Rails — Part 3</a>
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+      <mj-section>
+        <mj-column>
+          <mj-text mj-class="heading">More on GraphQL and rails</mj-text>
+          <mj-text>An very detailed wrap-up of the topic by <a href="https://medium.com/@gauravtiwari/">Gaurav Tiwari</a>. Again, a bit more than I needed in terms of the level of detail, but very helpful if you want to understand the end-to-end implications of
+            using GraphQL.</mj-text>
+          <mj-text>
+            <a href="https://medium.com/statuscode/graphql-and-relay-on-rails-getting-started-955a49d251de">GraphQL and Relay on Rails — Getting Started</a>
+            <br />
+            <a href="https://medium.com/@gauravtiwari/graphql-and-relay-on-rails-creating-types-and-schema-b3f9b232ccfc">GraphQL and Relay on Rails — Creating types and Schema</a>
+            <br />
+            <a href="https://medium.com/@gauravtiwari/graphql-and-relay-on-rails-first-relay-powered-react-component-cb3f9ee95eca">GraphQL and Relay on Rails — First relay powered react component</a>
+            <br />
+            <a href="https://medium.com/@gauravtiwari/graphql-and-relay-on-rails-dynamic-component-rendering-2be4e208ef92">GraphQL and Relay on Rails — dynamic component rendering</a>
+            <br />
+            <a href="https://medium.com/@gauravtiwari/graphql-and-relay-on-rails-authentication-and-authorisation-f7c07ebb47b3">GraphQL and Relay on Rails — Authentication and Mutations</a>
+            <br/>
+            <a href="https://medium.com/@gauravtiwari/graphql-and-relay-on-rails-moving-to-webpack-9c6a420b4eea">GraphQL and Relay on Rails — Moving to Webpack</a>
+            <br />
+            <a href="https://medium.com/@gauravtiwari/graphql-and-relay-on-rails-wrap-up-500c67522cd2">GraphQL and Relay on Rails — Wrap Up</a>
+          </mj-text>
+          <mj-text>
+            And some example code, right here: <a href="https://github.com/gauravtiwari/graphql-server-examples/tree/master/ruby/rails_graphql">https://github.com/gauravtiwari/graphql-server-examples/tree/master/ruby/rails_graphql</a>
+          </mj-text>
+          <mj-text>
+            And an extra post from the same author: <a href="https://medium.com/@gauravtiwari/zero-to-graphql-building-graphql-servers-in-popular-web-frameworks-24ae705306c4">Zero to GraphQL — Building GraphQL servers in popular web frameworks</a>
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+      <mj-section>
+        <mj-column>
+          <mj-text mj-class="heading">The long tail</mj-text>
+          <mj-text>These are the articles I skimmed through, except for Phil Sturgeon's article which has been recommended to me, which I read in its entirety.</mj-text>
+          <mj-text>
+            <a href="https://philsturgeon.uk/api/2017/01/24/graphql-vs-rest-overview/">GraphQL vs REST: Overview — Phil Sturgeon</a>
+            <br />
+            <a href="https://blog.codeship.com/how-to-implement-a-graphql-api-in-rails/">How to Implement a GraphQL API in Rails — Codeship Blog</a>
+            <br />
+            <a href="https://www.sitepoint.com/building-apis-ruby-rails-graphql/">Building APIs with Ruby on Rails and GraphQL — SitePoint</a>
+            <br />
+            <a href="http://www.mot.la/2016-05-07-getting-started-with-rails-graphql.html">Getting Started With Rails: Installing GraphQL — Scott Motte</a>
+          </mj-text>
+        </mj-column>
+      </mj-section>
+    </mj-container>
+  </mj-body>
+</mjml>

@@ -1,0 +1,58 @@
+<mjml>
+  <mj-head>
+        <mj-font name="Montserrat " href="https://fonts.googleapis.com/css?family=Montserrat " />
+        <mj-font name="Open Sans " href="https://fonts.googleapis.com/css?family=Open Sans " />
+    <mj-attributes>
+      <mj-class name="heading" font-family="Montserrat  , Helvetica, Arial, sans-serif" font-size="24px" />
+      <mj-class name="heading-large" font-size="32px"/>
+      <mj-text font-size="14px"/>
+      <mj-all font-family="Arial" />
+      <mj-class name="link" color="#ff1d25"/>
+      <mj-text font-size="14px" font-family="Open Sans , Helvetica, Arial, sans-serif"/>
+    </mj-attributes>
+    <mj-style>
+      a {
+        color: #ff1d25;
+      }
+
+    </mj-style>
+  </mj-head>
+  <mj-body>
+    <mj-container>
+      <mj-section>
+        <mj-column>
+          <mj-image width="400" src="https://images.contentful.com/tbm09fdrtoi5/5OkWXQKr3UgYU886kmSIUS/ede7d6885f5240d252d44c72491a0609/logo.png"></mj-image>
+          <mj-text font-size="10px" text-transform="uppercase" letter-spacing="2px" align="center" color="#8a8989">
+            Life between pen, paper and computer
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-section>
+        <mj-column>
+          <mj-text mj-class="heading heading-large" align="center">Issue #1</mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-section background-color="#f3f3f3">
+        <mj-column>
+          <mj-image width="170" src="http://i.imgur.com/nwNZ0TW.png"></mj-image>
+        </mj-column>
+
+        <mj-column>
+          <mj-text font-weight="bold" align="left" font-size="24px" color="#000" font-family="helvetica">Why am I receiving this?</mj-text>
+          <mj-text align="left" font-size="15px" color="#000" font-family="helvetica">A while back you subscribed to a newsletter on <a href="https://codesi.nz">https://codesi.nz</a>. I gave up on that domain / website and merged the email list with the one at <a href="https://oprea.rocks">https://oprea.rocks</a>. If you don't
+            want to be here, although I feel bad for it, feel free to click unsubscribe, at the bottom of this email.</mj-text>
+        </mj-column>
+      </mj-section>
+
+      <mj-section>
+        <mj-column>
+          <mj-text mj-class="heading">Heading</mj-text>
+          <mj-text>Intro text</mj-text>
+          <mj-text>
+            <a href="https://oprea.rocks">Visible text</a>
+          </mj-text>
+        </mj-column>
+      </mj-section>
+    </mj-container>
+  </mj-body>
+</mjml>
