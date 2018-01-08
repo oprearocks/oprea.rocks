@@ -121,8 +121,12 @@ h6, {
   border: 2px solid $color-dark;
   text-decoration: none;
 
+  &.accent-bg {
+    border: 2px solid $color-accent;
+  }
+
   &:hover {
-    background-color: transparent;
+    background-color: transparent !important;
     color: $color-accent;
     border: 2px solid $color-accent;
   }

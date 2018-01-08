@@ -6,6 +6,7 @@ import PostMeta from '../components/postMeta'
 import Sidebar from '../components/sidebar'
 import SocialButtons from '../components/sharebuttons'
 import DisqusComments from '../components/disquscomments'
+import Newsletter from '../components/newsletter'
 
 const Category = ({ title, permalink }) => (
   <Link to={`/blog/${permalink}`}>&nbsp;{title}</Link>
@@ -72,12 +73,13 @@ class PostTemplate extends Component {
                 />
             </section>
             <footer>
-            <SocialButtons
-              url={`https://oprea.rocks/blog/${permalink}`}
-              title={title}
-              description={content.childMarkdownRemark.excerpt}
-            />
-            <DisqusComments title={title} id={`${id}-${permalink}`} url={`https://oprea.rocks/blog/${permalink}`}/>
+              <Newsletter />
+              <SocialButtons
+                url={`https://oprea.rocks/blog/${permalink}`}
+                title={title}
+                description={content.childMarkdownRemark.excerpt}
+              />
+              <DisqusComments title={title} id={`${id}-${permalink}`} url={`https://oprea.rocks/blog/${permalink}`}/>
             </footer>
           </article>
         </section>
