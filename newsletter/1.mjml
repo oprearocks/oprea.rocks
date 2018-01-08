@@ -3,7 +3,7 @@
         <mj-font name="Montserrat " href="https://fonts.googleapis.com/css?family=Montserrat " />
         <mj-font name="Open Sans " href="https://fonts.googleapis.com/css?family=Open Sans " />
     <mj-attributes>
-      <mj-class name="heading" font-family="Montserrat  , Helvetica, Arial, sans-serif" font-size="24px" />
+      <mj-class name="heading" font-family="Montserrat  , Helvetica, Arial, sans-serif" font-size="24px" line-height="1"/>
       <mj-class name="heading-large" font-size="32px"/>
       <mj-text font-size="14px"/>
       <mj-all font-family="Arial" />
@@ -12,7 +12,7 @@
     </mj-attributes>
     <mj-style>
       a {
-        color: #ff1d25;
+        color: #ff1d25 !important;
       }
 
     </mj-style>
@@ -32,23 +32,23 @@
           <mj-text mj-class="heading heading-large" align="center">Issue #1</mj-text>
         </mj-column>
       </mj-section>
+            <mj-section>
+        <mj-column>
+          <mj-text>Since it's the beginning of the story, I'm not sure about the format. So here's a list of articles I went through for some GraphQL research I did for a client.</mj-text>
+        </mj-column>
+      </mj-section>
       <mj-section background-color="#f3f3f3">
         <mj-column>
           <mj-image width="170" src="http://i.imgur.com/nwNZ0TW.png"></mj-image>
         </mj-column>
 
         <mj-column>
-          <mj-text font-weight="bold" align="left" font-size="24px" color="#000" font-family="helvetica">Why am I receiving this?</mj-text>
-          <mj-text align="left" font-size="15px" color="#000" font-family="helvetica">A while back you subscribed to a newsletter on <a href="https://codesi.nz">https://codesi.nz</a>. I gave up on that domain / website and merged the email list with the one at <a href="https://oprea.rocks">https://oprea.rocks</a>. If you don't
+          <mj-text font-weight="bold" align="left" mj-class="heading">Why am I receiving this?</mj-text>
+          <mj-text align="left">A while back you subscribed to a newsletter on <a href="https://codesi.nz">https://codesi.nz</a>. I gave up on that domain / website and merged the email list with the one at <a href="https://oprea.rocks">https://oprea.rocks</a>. If you don't
             want to be here, although I feel bad for it, feel free to click unsubscribe, at the bottom of this email.</mj-text>
         </mj-column>
       </mj-section>
 
-      <mj-section>
-        <mj-column>
-          <mj-text>Since it's the beginning of the story, I'm not sure about the format. So here's a list of articles I went through for some GraphQL research I did for a client.</mj-text>
-        </mj-column>
-      </mj-section>
       <mj-section>
         <mj-column>
           <mj-text mj-class="heading">How to build a GraphQL API in Rails
