@@ -180,6 +180,14 @@ module.exports = {
         anonymize: true,
       },
     },
+    `gatsby-plugin-remove-trailing-slashes`,
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        color: `tomato`,
+        showSpinner: false,
+      },
+    },
     `gatsby-plugin-netlify`,
     `gatsby-plugin-manifest`,
     `gatsby-plugin-offline`,
