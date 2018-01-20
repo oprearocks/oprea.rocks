@@ -1,0 +1,126 @@
+<mjml>
+  <mj-head>
+    <mj-font name="Montserrat " href="https://fonts.googleapis.com/css?family=Montserrat " />
+    <mj-font name="Open Sans " href="https://fonts.googleapis.com/css?family=Open Sans " />
+    <mj-attributes>
+      <mj-class name="heading" font-family="Montserrat, Helvetica, Arial, sans-serif" font-size="24px" line-height="1" />
+      <mj-class name="heading-large" font-size="32px" />
+      <mj-text font-size="14px" />
+      <mj-all font-family="Arial" />
+      <mj-class name="link" color="#ff1d25" />
+      <mj-text font-size="14px" font-family="Open Sans , Helvetica, Arial, sans-serif" />
+    </mj-attributes>
+    <mj-style>
+      a { color: #ff1d25 !important; }
+
+    </mj-style>
+  </mj-head>
+  <mj-body>
+    <mj-container>
+      <mj-section>
+        <mj-column>
+          <mj-image width="400" src="https://images.contentful.com/tbm09fdrtoi5/5OkWXQKr3UgYU886kmSIUS/ede7d6885f5240d252d44c72491a0609/logo.png"></mj-image>
+          <mj-text font-size="10px" text-transform="uppercase" letter-spacing="2px" align="center" color="#8a8989">
+            Life between pen, paper and computer
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-section>
+        <mj-column>
+          <mj-text mj-class="heading heading-large" align="center">Issue #2</mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-section>
+        <mj-column>
+          <mj-text>Had a pretty nasty bummer this Christmas. Apple sent over an update that <a href="https://oprea.rocks/blog/high-sierra-update-messed-up-my-computer">my laptop was not able to swallow whole</a>. Not only that but the "R" key on my keyboard failed.
+            Good thing I still had my old 2013 MacBook Air lying around. Anyway, this issue is all about backups. From the importance of having a backup, to backup strategies, all the way to software you might want to use, it's all here. Everything I
+            went through, is right below.
+          <p>Enjoy!</p>
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-section>
+        <mj-column>
+          <mj-text>
+            <p><a href="https://www.pcworld.com/article/170688/7_backup_strategies.html">PCWorld — 7 Backup Strategies for Your Data, Multimedia, and System Files</a></p>
+
+            <p>Older article but with valuable information. It is mostly geared towards Windows users, in terms of tooling. Goes on to talk about types of backups and what are they suitable for. If you need a detailed overview of which files go well with
+              which type of backup, give it a read.</p>
+          </mj-text>
+
+          <mj-text>
+            <p><a href="https://www.backblaze.com/blog/the-3-2-1-backup-strategy/">Backblaze — The 3-2-1 Backup Strategy</a></p>
+
+            <p>Short, to the point description of the 3-2-1 backup technique. For the lazy individual, 3-2-1 stands for having 3 backups, 2 of which are local but on different mediums and at least 1 copy offsite. This ensures that you have immediate access
+              to your data (the local copies) and it also prevents serious data loss. The only data you lose when applying this technique is the data you were working on that is not currently backed up. But if you have an online backup solution, chances
+              are even smaller because such a backup tool constantly scans and backs up your important files.</p>
+          </mj-text>
+
+          <mj-text>
+            <p><a href="https://www.us-cert.gov/sites/default/files/publications/data_backup_options.pdf">US-CERT Data Backup Options</a></p>
+
+            <p>Some recommendations from the US Government. 3-2-1 is mentioned there, as well. I'd take these with a grain of salt, knowing the heavy surveillance the US Govt allows 👀.</p>
+          </mj-text>
+
+          <mj-text>
+            <p><a href="https://www.backblaze.com/mac-backup.html">Backblaze — How to Backup Your Mac</a></p>
+
+            <p>This is a macOS specific backup article. Not very in-depth, barely mentions Time Machine, but gives some information on how Time Machine keeps backups. Goes on to talk about disk-image cloning tools and why having a bootable image of your
+              entire system is good. Useful but not very impressive.</p>
+
+            <p>You might say I'm favouring BackBlaze but I'm not. It was the first tool that was recommended to me, for backup, and until I find a better option — I have a few but still need to investigate — I'm using it and trying to learn more about it.
+              Read the article on my <a href="/article-url">Debug Yourself Through® approach, applied to data backups</a>.</p>
+          </mj-text>
+
+          <mj-text>
+            <p><a href="https://support.apple.com/mac-backup">Apple Support — Back up your Mac</a></p>
+
+            <p>Something from the company, itself. This is not an article about backups, though. It's more of an entry-point to a larger span of articles. You can find links to information about iCloud and Time Machine backups.</p>
+          </mj-text>
+
+          <mj-text>
+            <p><a href="https://www.macworld.co.uk/feature/mac-software/how-back-up-mac-3584440/">Macworld — How to back up Mac</a></p>
+
+            <p>Loved this article! It doesn't list facts about backups, it tells you a story. It begins by talking SSDs vs HDDs and the difficulties of recovering data if your SSD fails. Then the author moves on to tell their short failure / win backup story
+              and then he moves on to talk about the types of backups and their use.</p>
+          </mj-text>
+
+          <mj-text>
+            <p><a href="https://www.imore.com/how-to-back-up-your-mac">iMore — How to back up your Mac</a></p>
+
+            <p>Not an in-depth article but contains a lot of links in the footer on how to back up your all iDevices.</p>
+          </mj-text>
+
+          <mj-text>
+            <p><a href="https://www.macworld.com/article/3026333/macs/the-complete-easy-guide-to-backing-up-your-mac.html">Macworld — The complete, easy guide to backing up your Mac</a></p>
+
+            <p>I really liked this article! It has useful information but written for dummies like me. The article follows a "do this, it's good because, but be aware that" structure. Really digging that!</p>
+          </mj-text>
+
+
+          <mj-text mj-class="heading">
+            The long tail
+          </mj-text>
+
+          <mj-text>
+            <p>Barely skimmed the surface on these articles hoping I would find something valuable. I'm still adding them here, maybe there's something specific you might want to know.</p>
+          </mj-text>
+
+          <mj-text>
+            <p><a href="https://www.cnet.com/how-to/how-to-back-up-your-mac/">cnet — How to back up your Mac</a></p>
+
+            <p><a href="https://www.wikihow.com/Back-Up-a-Mac">wikiHow — How to Back Up a Mac</a></p>
+
+            <p><a href="https://www.digitaltrends.com/computing/back-mac-external-hard-drive/">DIGITAL TRENDS — Apple fans, is your data safe? How to back up your Mac to an external hard drive</a></p>
+
+            <p><a href="https://www.seagate.com/gb/en/do-more/how-to-back-up-with-time-machine-master-dm/">SEAGATE — How to Back Up With Time Machine</a></p>
+
+            <p><a href="https://technet.microsoft.com/en-us/library/cc938511.aspx">Microsoft TechNet — Backup Strategies</a></p>
+
+            <p><a href="https://www.computerworld.com/article/2554469/data-center/backup-strategies.html">COMPUTERWORLD — Backup Strategies</a></p>
+          </mj-text>
+        </mj-column>
+      </mj-section>
+    </mj-container>
+  </mj-body>
+</mjml>
