@@ -3,7 +3,6 @@ import { PlayButton, Timer, VolumeControl, Progress } from 'react-soundplayer/co
 import { withCustomAudio } from 'react-soundplayer/addons'
 
 import './podcast.scss'
-import './overrides.scss'
 
 const Podcast = withCustomAudio(props => {
   const { trackTitle } = props
