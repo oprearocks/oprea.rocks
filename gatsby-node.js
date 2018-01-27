@@ -3,10 +3,8 @@ const Promise = require('bluebird')
 const path = require('path')
 const slash = require('slash')
 const createPaginatedPages = require('gatsby-paginate')
-// Implement the Gatsby API “createPages”. This is
-// called after the Gatsby bootstrap is finished so you have
-// access to any information necessary to programmatically
-// create pages.
+const podcastFeed = require('./podcastFeed')
+
 exports.createPages = ({ graphql, boundActionCreators }) => {
   const { createPage, createRedirect } = boundActionCreators
   return new Promise((resolve, reject) => {
@@ -79,6 +77,27 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
                 id
                 permalink
                 publishedOn(formatString: "MMMM DD, YYYY")
+              }
+            }
+          }
+
+          allContentfulPodcast(
+            limit: 1000
+          ) {
+            edges {
+              node {
+                title
+                url
+                description {
+                  childMarkdownRemark {
+                    html
+                  }
+                }
+                publishedOn
+                keywords
+                subtitle
+                duration
+                explicit
               }
             }
           }
@@ -178,6 +197,8 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             },
           })
         })
+
+        podcastFeed(result.data.allContentfulPodcast.edges)
 
         resolve()
       })

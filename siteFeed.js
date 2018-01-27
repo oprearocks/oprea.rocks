@@ -33,14 +33,6 @@ module.exports = {
 
   query: `
   query siteFeedQuery {
-    site {
-      siteMetadata {
-        title
-        description
-        siteUrl
-        site_url: siteUrl
-      }
-    }
     posts: allContentfulBlogPost(
       limit: 1000,
       sort: { order: DESC, fields: [publishedOn] }
