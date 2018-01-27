@@ -46,7 +46,7 @@ module.exports = function podcastFeed(podcasts) {
     itunesExplicit: node.explicit || false
   }))
 
-  const xml = feed.buildXML();
+  const xml = feed.buildXml();
 
   fs.writeFileSync(__dirname + '/public/podcast.xml', xml);
 }
