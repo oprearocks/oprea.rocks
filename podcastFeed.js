@@ -43,7 +43,12 @@ module.exports = function podcastFeed(podcasts) {
     itunesSubtitle: node.subtitle,
     itunesSummary: node.description.childMarkdownRemark.html,
     itunesDuration: node.duration,
-    itunesExplicit: node.explicit || false
+    itunesExplicit: node.explicit || false,
+    enclosure: {
+      url: node.url,
+      type: 'audio/mp3',
+      lengths: node.duration,
+    },
   }))
 
   const xml = feed.buildXml();
