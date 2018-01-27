@@ -1,0 +1,26 @@
+@import '~react-soundplayer/styles/buttons.css';
+@import '~react-soundplayer/styles/cover.css';
+@import '~react-soundplayer/styles/icons.css';
+@import '~react-soundplayer/styles/progress.css';
+@import '~react-soundplayer/styles/volume.css';
+@import '~basscss/css/basscss.min.css';
+@import '../../utils/_theme.scss';
+
+.flex-center {
+  align-items: center;
+}
+
+.podcast-container {
+  background-color: green;
+  &.white {
+    * {
+      color: white;
+    }
+  }
+
+  .button:hover {
+    background-color: $color-dark !important;
+    color: white;
+    border: 2px solid $color-dark;
+  }
+}

@@ -7,6 +7,7 @@ import Sidebar from '../components/sidebar'
 import SocialButtons from '../components/sharebuttons'
 import DisqusComments from '../components/disquscomments'
 import Newsletter from '../components/newsletter'
+import Podcast from '../components/podcast'
 
 const Category = ({ title, permalink }) => (
   <Link to={`/blog/${permalink}`}>&nbsp;{title}</Link>
@@ -29,6 +30,7 @@ class PostTemplate extends Component {
       content,
       postImage,
       postVideo,
+      podcast,
       permalink,
       publishedOn,
       categories,
@@ -65,6 +67,9 @@ class PostTemplate extends Component {
                   <p>Watch the video here: <a href={postVideo}>{postVideo}</a></p>
                 </blockquote>
               }
+              {
+                podcast && <Podcast streamUrl={podcast.url} trackTitle={podcast.title} preloadType="metadata" />
+              }
               <div
                 className="article-content"
                 dangerouslySetInnerHTML={{
@@ -73,7 +78,7 @@ class PostTemplate extends Component {
                 />
             </section>
             <footer>
-              <Newsletter />
+              <Newsletter anchorId="articleNewsletter" />
               <SocialButtons
                 url={`https://oprea.rocks/blog/${permalink}`}
                 title={title}
@@ -131,6 +136,10 @@ export const pageQuery = graphql`
       author {
         name
         twitter
+      }
+      podcast {
+        title
+        url
       }
     }
     recommendations: allContentfulRecommendation(

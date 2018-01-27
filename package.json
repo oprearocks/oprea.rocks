@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "Adrian Oprea<adrian@oprea.rocks",
   "dependencies": {
+    "basscss": "^8.0.3",
     "dotenv": "^4.0.0",
     "gatsby": "^1.9.119",
     "gatsby-cli": "^1.1.28",
@@ -28,7 +29,8 @@
     "gatsby-transformer-remark": "^1.7.22",
     "normalize.css": "^7.0.0",
     "react-disqus-comments": "^1.1.1",
-    "react-share": "^1.18.0"
+    "react-share": "^1.18.0",
+    "react-soundplayer": "^1.0.4"
   },
   "keywords": [
     "gatsby",

@@ -2,8 +2,8 @@ import React from 'react'
 import * as PropTypes from 'prop-types';
 import Link from 'gatsby-link'
 
-const Newsletter = () => (
-  <section className="sidebar-section">
+const Newsletter = ({ anchorId = 'newsletter' }) => (
+  <section id={anchorId} className="sidebar-section">
     <h2 data-drip-attribute="headline" className="section-title separator-below">Newsletter</h2>
     <section className="section-content">
       <p data-drip-attribute="description">
