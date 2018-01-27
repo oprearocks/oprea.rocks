@@ -7,7 +7,7 @@ module.exports = function podcastFeed(podcasts) {
     description: 'Full Stack Software Developer Adrian Oprea shares his thoughts on software development, tooling, entrepreneurship and product development. From the nitty-gritty of JavaScript development, with or without frameworks, to DevOps, tooling and automation, all the way to entrepreneurship and product development, this podcast is focused specifically on software development professionals.',
     feed_url: 'https://oprea.rocks/podcast.xml',
     site_url: 'https://oprea.rocks',
-    image_url: 'https://s3.eu-west-2.amazonaws.com/dev-time-stories-podcast/podcast-artwork.png',
+    image_url: 'http://s3.eu-west-2.amazonaws.com/dev-time-stories-podcast/podcast-artwork.png',
     author: 'Adrian Oprea ',
     managingEditor: 'Adrian Oprea',
     webMaster: 'Adrian Oprea',
@@ -31,7 +31,7 @@ module.exports = function podcastFeed(podcasts) {
           }
         ]
     },
-    itunesImage: 'https://s3.eu-west-2.amazonaws.com/dev-time-stories-podcast/podcast-artwork.png'
+    itunesImage: 'http://s3.eu-west-2.amazonaws.com/dev-time-stories-podcast/podcast-artwork.png'
   });
 
   podcasts.forEach(({ node }) => feed.addItem({
