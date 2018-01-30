@@ -1,0 +1,131 @@
+<mjml>
+  <mj-head>
+    <mj-font name="Montserrat " href="https://fonts.googleapis.com/css?family=Montserrat " />
+    <mj-font name="Open Sans " href="https://fonts.googleapis.com/css?family=Open Sans " />
+    <mj-attributes>
+      <mj-class name="heading" font-family="Montserrat  , Helvetica, Arial, sans-serif" font-size="24px" line-height="1" />
+      <mj-class name="heading-large" font-size="32px" />
+      <mj-text font-size="14px" />
+      <mj-all font-family="Arial" />
+      <mj-class name="link" color="#ff1d25" />
+      <mj-text font-size="14px" font-family="Open Sans , Helvetica, Arial, sans-serif" />
+    </mj-attributes>
+    <mj-style>
+      a { color: #ff1d25 !important; }
+
+    </mj-style>
+  </mj-head>
+  <mj-body>
+    <mj-container>
+      <mj-section>
+        <mj-column>
+          <mj-image width="400" src="https://images.contentful.com/tbm09fdrtoi5/5OkWXQKr3UgYU886kmSIUS/ede7d6885f5240d252d44c72491a0609/logo.png"></mj-image>
+          <mj-text font-size="10px" text-transform="uppercase" letter-spacing="2px" align="center" color="#8a8989">
+            Life between pen, paper and computer
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-section>
+        <mj-column>
+          <mj-text mj-class="heading heading-large" align="center">Issue #3</mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-section>
+        <mj-column>
+          <mj-text>
+            Our industry has a problem. It's a trend problem. Whenever you hear two developers talking libraries you'll hear a heated debate between personal preferences. There's no objective discussion. Nobody talks about contributor count, who are the project maintainers,
+            pending issues, release frequency or availability of training material. You do hear discussions about GitHub stars, hacker news and reddit. Unfortunately, it's the same with higher-level architectural patterns like microservices. Honestly,
+            this is how I started getting into microservices. Yes, I did read some books, went through some video tutorials, but I did it after I started advocating and using the concept. The trigger was adding Docker to my technology stack. It was the
+            gateway drug towards microservices.
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-section background-color="#f3f3f3">
+        <mj-column width="50%">
+          <mj-image width="300" src="http://s3.eu-west-2.amazonaws.com/dev-time-stories-podcast/podcast-artwork.png"></mj-image>
+        </mj-column>
+
+        <mj-column width="50%">
+          <mj-text font-weight="bold" align="left" mj-class="heading">I started a podcast!</mj-text>
+          <mj-text align="left">
+            This weekend I launched the first episode of the <b>Dev Time Stories</b> podcast. The goal of the podcast is to talk to developers who have their own products, running their own business and get them to share their own experiences in the product
+            world.
+            <br/>
+            <a href="https://oprea.rocks/blog/i-started-my-own-podcast-dev-time-stories">Read the launch article</a>
+          </mj-text>
+        </mj-column>
+        <mj-column width="100%">
+          <mj-text>
+            Available on <a href="https://www.stitcher.com/podcast/adrian-oprea/dev-time-stories">Stitcher</a> | <a href="https://overcast.fm/p766951-otTPz1">Overcast</a>. iTunes and TuneIn are coming soon.
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-section>
+        <mj-column>
+          <mj-text>
+            Now, to circle back to the articles in this issue, I had a couple of discussions during the past two weeks about the usefulness of microservices, and how they compare to monoliths. Personally, I don't think they're better, at least not for every problem
+            out there. So I went to the Internets and asked it to tell me what should one choose and in what situation. I ended up with the articles below. Enjoy!
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-section>
+        <mj-column>
+          <mj-text mj-class="heading">The list</mj-text>
+          <mj-text>
+            <p><a href="https://www.mulesoft.com/resources/api/microservices-vs-monolithic">Microservices vs Monolithic Architecture</a></p>
+            <p>This article talks mostly about the benefits of using microservices. I think it's because they're focused on cloud, and you know that when you pair "cloud" with "distributed" and "scalable" you get a recipe that gets even the most conservative business people wet. It's interesting if you want to learn more about the perspective businesses who use cloud extensively have on microservices. It's also a great vocabulary builder, if you want to go down the cloud migration, decoupling part with your professional services</p>
+          </mj-text>
+          <mj-text>
+            <p><a href="https://dzone.com/articles/microservices-basics">Why Microservices?</a></p>
+            <p>Aah, DZone. I love this blog. I find myself looking up stuff on this website all the time. Although in the beginning, the author states that they will compare and list benefits and drawbacks of both approaches, the article is still structured into: here's why monoliths are bad and here's why microservices are good. In any case, I find the way the information is structured very easy to digest and make sense of.</p>
+          </mj-text>
+          <mj-text>
+            <p><a href="http://basho.com/posts/technical/microservices-please-dont/">Microservices – Please, don’t</a></p>
+            <p>Loved it. It is written in a way I can relate to very easily. I love that style of writing that starts with controversy, and ends with moderation. The author makes a compelling case for monoliths and warns against the adoption of microservices just because they're in-fashion. I highly recommend you read it thoroughly. I also found this quote to be exceptionally true: “You don’t need to introduce a network boundary as an excuse to write better code”.</p>
+          </mj-text>
+          <mj-text>
+            <p><a href="https://smartbear.com/learn/api-design/what-are-microservices/">What is Microservices Architecture?</a></p>
+            <p>A really smart article. It walks you through the ins and outs of microservices based architectures, and most importantly, it makes the distinction between SOA and microservices. Not only does the author make the distinction but also tries to point out in which aspects is MSA different from SOA.</p>
+          </mj-text>
+          <mj-text>
+            <p><a href="https://stackoverflow.com/questions/33041733/microservices-vs-monolithic-architecture">Microservices vs Monolithic Architecture</a></p>
+            <p>Good ole' StackOverflow! I specifically the <a href="https://stackoverflow.com/a/33662057/2423398">second answer</a> due to the concise, bullet-point based structure. If you read this, you can look inside your pockets and figure out for yourself if microservices are worth the investment.</p>
+          </mj-text>
+          <mj-text>
+            <p><a href="https://stackify.com/what-are-microservices/">What are Microservices? Code Examples, Best Practices, Tutorials and More</a></p>
+            <p>Oh, I hate "... and More" like the plague! If you've known me well enough, you also know I hate Java. So why would I put this article here? It's about microservices in Java, and it also mentions that microservices are a kind of SOA. Well, aren't we coding in Java Script? Doesn't it make sense that we should know how our big brothers think? Ok, irony aside, although this article looks more like a filler, to cover this topic and to get some more SEO, it lists a couple of Java tools and frameworks for microservices. I actually did front-end work on projects that were using either Spring Boot or Jersey, so that made me decide to include the article here.</p>
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-section>
+        <mj-column>
+          <mj-text mj-class="heading">The Martin Fowler series</mj-text>
+          <mj-text>I've been following Martin Fowler for over 5 years and I always found his articles and presentations very useful. These articles make no difference. I won't do a review as I would probably oversimplify. You'll have to read and understand for yourself. </mj-text>
+          <mj-text>
+            <p><a href="https://martinfowler.com/bliki/MonolithFirst.html">MonolithFirst</a></p>
+                        <p><a href="https://martinfowler.com/microservices/">Microservices Resource Guide</a></p>
+                        <p><a href="https://martinfowler.com/articles/microservice-trade-offs.html">Microservice Trade-Offs</a></p>
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-section>
+        <mj-column>
+          <mj-text mj-class="heading">No long tail?</mj-text>
+          <mj-text>
+            <p>I also published an article, earlier in January tangential to the topic — <a href="https://oprea.rocks/blog/microservices-are-bad-so-are-monoliths">CLICKBAIT: MICROSERVICES ARE BAD! SO ARE MONOLITHS</a> — why not go ahead and read it?</p>
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-section>
+        <mj-column>
+          <mj-text mj-class="heading">Closing thoughts</mj-text>
+          <mj-text>
+            <p>Did I mention I launched <a href="https://oprea.rocks/blog/i-started-my-own-podcast-dev-time-stories">my very own podcast</a>? Well I did. It's currently available on these services. 
+You can also listen to the episodes on my website, by clicking <a href="https://oprea.rocks/blog/podcast">this link</a>.</p>
+            <p></p>
+          </mj-text>
+        </mj-column>
+      </mj-section>
+    </mj-container>
+  </mj-body>
+</mjml>
