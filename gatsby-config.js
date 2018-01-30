@@ -99,6 +99,6 @@ module.exports = {
     },
     `gatsby-plugin-netlify`,
     `gatsby-plugin-manifest`,
-    `gatsby-plugin-offline`,
+    // `gatsby-plugin-offline`,
   ],
 }
