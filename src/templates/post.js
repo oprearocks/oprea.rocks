@@ -7,7 +7,7 @@ import Sidebar from '../components/sidebar'
 import SocialButtons from '../components/sharebuttons'
 import DisqusComments from '../components/disquscomments'
 import Newsletter from '../components/newsletter'
-import Podcast from '../components/podcast'
+import { Player } from '../components/podcast'
 
 const Category = ({ title, permalink }) => (
   <Link to={`/blog/${permalink}`}>&nbsp;{title}</Link>
@@ -68,7 +68,7 @@ class PostTemplate extends Component {
                 </blockquote>
               }
               {
-                podcast && <Podcast streamUrl={podcast.url} trackTitle={podcast.title} preloadType="metadata" />
+                podcast && <Player streamUrl={podcast.url} trackTitle={podcast.title} preloadType="metadata" />
               }
               <div
                 className="article-content"
