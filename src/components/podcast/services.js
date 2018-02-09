@@ -6,6 +6,7 @@ import soundcloud from './assets/soundcloud.png'
 import itunes from './assets/itunes.png'
 import overcast from './assets/overcast.png'
 import stitcher from './assets/stitcher.png'
+import tunein from './assets/tunein.png'
 
 import './podcast.scss'
 
@@ -29,6 +30,11 @@ const providers = [
     name: 'Stitcher',
     logo: stitcher,
     url: 'https://www.stitcher.com/podcast/dev-time-stories',
+  },
+  {
+    name: 'TuneIn',
+    logo: tunein,
+    url: 'https://tunein.com/radio/Dev-Time-Stories-p1093888/',
   },
 ];
 
