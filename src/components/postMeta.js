@@ -16,7 +16,7 @@ const PostMeta = ({ post }) => (
       { property: 'og:type', content: 'article' },
       { property: 'og:title', content: post.title },
       { property: 'og:description', content: post.description || post.content.childMarkdownRemark.excerpt },
-      { property: 'og:image', content: post.postImage && post.postImage.resolutions.src },
+      { property: 'og:image', content: post.postImage && `https:${post.postImage.resolutions.src}` },
       { property: 'og:url', content: `https://oprea.rocks/blog/${post.permalink}` },
       { property: 'og:locale', content: 'en_US' },
 
