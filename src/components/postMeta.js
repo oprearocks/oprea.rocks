@@ -28,7 +28,7 @@ const PostMeta = ({ post }) => (
       { name: 'twitter:url', content: `https://oprea.rocks/blog/${post.permalink}` },
       { name: 'twitter:title', content: post.title },
       { name: 'twitter:description', content: post.description || post.content.childMarkdownRemark.excerpt },
-      { name: 'twitter:image', content: post.postImage && post.postImage.resolutions.src },
+      { name: 'twitter:image', content: post.postImage && `https:${post.postImage.resolutions.src}` },
 
       { itemProp: 'dateCreated', content: post.publishedOn },
       { itemProp: 'datePublished', content: post.publishedOn },
