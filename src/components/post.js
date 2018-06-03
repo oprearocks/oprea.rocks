@@ -30,7 +30,7 @@ const Post = ({ node }) => (
         </Link>
       </h1>
       {
-        node.postImage &&
+        node.postImage && node.postImage.resolutions &&
         <Img
           className="article-image"
           resolutions={node.postImage.resolutions}
