@@ -1,6 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import * as PropTypes from 'prop-types'
+import logo from '../assets/logo.png'
 
 const propTypes = {
   post: PropTypes.object.isRequired,
@@ -16,7 +17,7 @@ const PostMeta = ({ post }) => (
       { property: 'og:type', content: 'article' },
       { property: 'og:title', content: post.title },
       { property: 'og:description', content: post.description || post.content.childMarkdownRemark.excerpt },
-      { property: 'og:image', content: post.postImage && `https:${post.postImage.resolutions.src}` },
+      { property: 'og:image', content: post.postImage && `https:${post.postImage.resolutions.src}` || logo},
       { property: 'og:url', content: `https://oprea.rocks/blog/${post.permalink}` },
       { property: 'og:locale', content: 'en_US' },
 
@@ -28,7 +29,7 @@ const PostMeta = ({ post }) => (
       { name: 'twitter:url', content: `https://oprea.rocks/blog/${post.permalink}` },
       { name: 'twitter:title', content: post.title },
       { name: 'twitter:description', content: post.description || post.content.childMarkdownRemark.excerpt },
-      { name: 'twitter:image', content: post.postImage && `https:${post.postImage.resolutions.src}` },
+      { name: 'twitter:image', content: post.postImage && `https:${post.postImage.resolutions.src}` || logo},
 
       { itemProp: 'dateCreated', content: post.publishedOn },
       { itemProp: 'datePublished', content: post.publishedOn },
