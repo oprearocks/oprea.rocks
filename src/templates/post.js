@@ -62,10 +62,10 @@ class PostTemplate extends Component {
             </header>
             <section itemProp="articleBody">
               {
-                postVideo &&
-                <blockquote>
-                  <p>Watch the video here: <a href={postVideo}>{postVideo}</a></p>
-                </blockquote>
+                // <blockquote>
+                //   <p>Watch the video here: <a href={postVideo}>{postVideo}</a></p>
+                // </blockquote>
+                postVideo && <iframe width="100%" height="400" src={postVideo} frameBorder="0" allowFullScreen></iframe>
               }
               {
                 podcast && <Player streamUrl={podcast.url} trackTitle={podcast.title} preloadType="metadata" />
