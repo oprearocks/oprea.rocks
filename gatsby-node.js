@@ -8,7 +8,6 @@ const socialMediaProfiles = require('./socialmedia.json')
 
 exports.createPages = ({ graphql, boundActionCreators }) => {
   const { createPage, createRedirect } = boundActionCreators
-  console.log(createRedirect.toString())
   return new Promise((resolve, reject) => {
     // The “graphql” function allows us to run arbitrary
     // queries against the local Contentful graphql schema. Think of
@@ -134,6 +133,40 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           pathPrefix: 'blog',
         })
 
+        const sortByDateDescending = (a, b) => {
+          const aPubDateInMS = (new Date(a.publishedOn)).getTime();
+          const bPubDateInMS = (new Date(b.publishedOn)).getTime();
+
+          if (aPubDateInMS > bPubDateInMS) {
+            return 1
+          }
+
+          if (aPubDateInMS < bPubDateInMS) {
+            return -1
+          }
+
+          return 0
+        }
+
+        const getRelatedArticles = (currentArticle, articles) => {
+          const MINIMUM_CATEGORIES_IN_COMMON = 1
+
+          const hasAtLeastOneCategoryInCommon = ({ node }) => {
+            // stop working if we're looking at the same article
+            if (currentArticle.id === node.id) {
+              return false
+            }
+            const commonCategories = _.intersectionBy(currentArticle.categories, node.categories, (category) => category.permalink)
+            return commonCategories.length >= MINIMUM_CATEGORIES_IN_COMMON
+          }
+
+          const filteredResults = articles.filter(hasAtLeastOneCategoryInCommon)
+          if (filteredResults.length > 5) {
+            return filteredResults.sort(sortByDateDescending).slice(0, 5)
+          }
+          return filteredResults
+        }
+
         // Create Product pages
         const postTemplate = path.resolve('./src/templates/post.js')
         // We want to create a detailed page for each
@@ -151,12 +184,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             component: slash(postTemplate),
             context: {
               id: edge.node.id,
-              relatedArticles: result.data.allContentfulBlogPost.edges.filter(
-                ({ node }) => _.intersectionBy(
-                  edge.node.categories,
-                  node.categories,
-                  (category) => category.permalink).length > 1 && edge.node.id !== node.id
-              ),
+              relatedArticles: getRelatedArticles(edge.node, result.data.allContentfulBlogPost.edges),
             },
           })
         })
