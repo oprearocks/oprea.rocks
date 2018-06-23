@@ -12,7 +12,7 @@ const RelatedArticles = ({ articles }) => (
         Here are a couple of related articles you might enjoy reading.
       </p>
       {/* <ul> */}
-        {articles.map(({ node }) => <p key={node.id}><a className="custom-link" href={node.permalink}>{node.title}</a></p>)}
+        {articles.map(({ node }) => <p key={node.id}><Link className="custom-link" to={`/blog/${node.permalink}`}>{node.title}</Link></p>)}
       {/* </ul> */}
     </section>
   </section>
