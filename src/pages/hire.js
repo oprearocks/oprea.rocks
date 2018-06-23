@@ -43,7 +43,7 @@ class HireMePage extends Component {
                 <li><a target="_blank" title={`Link to ${pageContents.author.name}'s GitHub account`} href={pageContents.author.github}>GitHub</a></li>
                 <li><a target="_blank" title={`Link to ${pageContents.author.name}'s YouTube Channel`} href={pageContents.author.youtube}>YouTube Channel</a></li>
               </ul>
-              <a className="button full-width text-center" href="mailto:adrian@oprea.rocks">Click to hire me</a>
+              <a className="button full-width text-center" href="mailto:adrian@oprea.rocks">Get in touch</a>
             </footer>
           </article>
         </section>

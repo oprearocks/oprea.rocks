@@ -19,8 +19,8 @@ const Sidebar = ({ author = null, recommendations = null, issues = null }) => (
     <Services />
     <Newsletter />
     {author && <About author={author}/>}
-    {recommendations && <Recommendations recommendations={recommendations} />}
-    {issues && <ReadingList issues={issues} />}
+    {/* {recommendations && <Recommendations recommendations={recommendations} />} */}
+    {/* {issues && <ReadingList issues={issues} />} */}
   </aside>
 )
 

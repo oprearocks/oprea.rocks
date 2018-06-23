@@ -1,0 +1,11 @@
+@import '../utils/_theme.scss';
+
+.related-articles {
+  background-color: #f7f7f7;
+  padding: 1rem;
+  border-top: 4px solid $color-accent;
+  border-bottom: 4px solid $color-accent;
+  .section-title {
+    font-weight: bold;
+  }
+}

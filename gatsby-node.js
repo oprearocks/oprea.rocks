@@ -4,9 +4,11 @@ const path = require('path')
 const slash = require('slash')
 const createPaginatedPages = require('gatsby-paginate')
 const podcastFeed = require('./podcastFeed')
+const socialMediaProfiles = require('./socialmedia.json')
 
 exports.createPages = ({ graphql, boundActionCreators }) => {
   const { createPage, createRedirect } = boundActionCreators
+  console.log(createRedirect.toString())
   return new Promise((resolve, reject) => {
     // The “graphql” function allows us to run arbitrary
     // queries against the local Contentful graphql schema. Think of
@@ -114,7 +116,15 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           toPath: `/hire`,
           isPermanent: true,
           redirectInBrowser: true,
+
         });
+
+        socialMediaProfiles.forEach(account => createRedirect({
+          fromPath: account.path,
+          toPath: account.profileURL,
+          isPermanent: true,
+          redirectInBrowser: true,
+        }));
 
         createPaginatedPages({
           edges: result.data.allContentfulBlogPost.edges,
@@ -141,6 +151,12 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             component: slash(postTemplate),
             context: {
               id: edge.node.id,
+              relatedArticles: result.data.allContentfulBlogPost.edges.filter(
+                ({ node }) => _.intersectionBy(
+                  edge.node.categories,
+                  node.categories,
+                  (category) => category.permalink).length > 1 && edge.node.id !== node.id
+              ),
             },
           })
         })

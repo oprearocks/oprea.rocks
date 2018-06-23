@@ -38,7 +38,7 @@ const Header = () => (
           <Link activeClassName="active" to="/reading">Reading List</Link>
         </li>
         <li>
-          <Link activeClassName="active" to="/hire">Hire me!</Link>
+          <Link activeClassName="active" className="hire accent-bg" to="/hire">Hire me!</Link>
         </li>
       </ul>
     </nav>

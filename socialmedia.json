@@ -1,0 +1,37 @@
+[
+  {
+    "profileName": "Twitter",
+    "path": "/twitter",
+    "profileURL": "https://twitter.com/@oprearocks"
+  },
+  {
+    "profileName": "Quora",
+    "path": "/quora",
+    "profileURL": "https://www.quora.com/profile/Adrian-Oprea"
+  },
+  {
+    "profileName": "Medium",
+    "path": "/medium",
+    "profileURL": "http://medium.com/@oprearocks"
+  },
+  {
+    "profileName": "YouTube",
+    "path": "/youtube",
+    "profileURL": "https://www.youtube.com/user/opreaadriangeorge"
+  },
+  {
+    "profileName": "Reddit",
+    "path": "/reddit",
+    "profileURL": "https://www.reddit.com/user/oprearocks"
+  },
+  {
+    "profileName": "Instagram",
+    "path": "/instagram",
+    "profileURL": "https://www.instagram.com/oprearocks/"
+  },
+  {
+    "profileName": "Facebook",
+    "path": "/facebook",
+    "profileURL": "https://www.facebook.com/oprearocks"
+  }
+]

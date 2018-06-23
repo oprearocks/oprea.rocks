@@ -8,6 +8,7 @@ import SocialButtons from '../components/sharebuttons'
 import DisqusComments from '../components/disquscomments'
 import Newsletter from '../components/newsletter'
 import { Player } from '../components/podcast'
+import RelatedArticles from '../components/relatedarticles'
 
 const Category = ({ title, permalink }) => (
   <Link to={`/blog/${permalink}`}>&nbsp;{title}</Link>
@@ -36,6 +37,8 @@ class PostTemplate extends Component {
       categories,
       description,
     } = post
+    const { relatedArticles } = this.props.pathContext
+
     return (
       <section className="page cf">
         <PostMeta post={post}/>
@@ -78,12 +81,13 @@ class PostTemplate extends Component {
                 />
             </section>
             <footer>
-              <Newsletter anchorId="articleNewsletter" />
               <SocialButtons
                 url={`https://oprea.rocks/blog/${permalink}`}
                 title={title}
                 description={content.childMarkdownRemark.excerpt}
               />
+              {relatedArticles.length && <RelatedArticles articles={relatedArticles} /> || null }
+              <Newsletter anchorId="articleNewsletter" />
               <DisqusComments title={title} id={`${id}-${permalink}`} url={`https://oprea.rocks/blog/${permalink}`}/>
             </footer>
           </article>
