@@ -50,6 +50,7 @@ const Post = ({ node }) => (
         url={`https://oprea.rocks/blog/${node.permalink}`}
         title={node.title}
         description={node.content.childMarkdownRemark.excerpt}
+        tags={node.categories.map(c => c.title)}
       />
       {/* <Link className="article-readmore" to={`/blog/${node.permalink}`}>Continue reading</Link> */}
     </footer>
