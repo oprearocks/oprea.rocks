@@ -6,9 +6,9 @@ import './relatedarticles.scss'
 
 const RelatedArticles = ({ articles }) => (
   <section className="sidebar-section related-articles">
-    <h2 data-drip-attribute="headline" className="section-title separator-below">Related articles</h2>
+    <h2 className="section-title separator-below">Related articles</h2>
     <section className="section-content">
-      <p data-drip-attribute="description">
+      <p>
         Here are a couple of related articles you might enjoy reading.
       </p>
       {/* <ul> */}
