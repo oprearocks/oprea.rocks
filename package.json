@@ -1,6 +1,6 @@
 {
-  "name": "oprea.rocks-new",
-  "description": "Oprea.Rocks website built with GatsbyJS",
+  "name": "oprea.rocks",
+  "description": "The official website of Adrian Oprea — Fullstack developer — https://oprea.rocks",
   "version": "1.0.0",
   "author": "Adrian Oprea<adrian@oprea.rocks",
   "dependencies": {
@@ -30,7 +30,7 @@
     "normalize.css": "^7.0.0",
     "podcast": "^1.1.0",
     "react-disqus-comments": "^1.1.1",
-    "react-share": "^1.18.0",
+    "react-share": "^2.2.0",
     "react-soundplayer": "^1.0.4"
   },
   "keywords": [
@@ -48,5 +48,7 @@
   },
   "devDependencies": {
     "prettier": "^1.8.2"
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/oprearocks/oprea.rocks"
 }
