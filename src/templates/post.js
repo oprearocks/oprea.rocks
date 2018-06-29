@@ -113,6 +113,7 @@ export const pageQuery = graphql`
       title
       keywords
       publishedOn(formatString: "MMMM DD, YYYY")
+      updatedOn(formatString: "MMMM DD, YYYY")
       permalink
       description
       content {
