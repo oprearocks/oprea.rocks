@@ -5,6 +5,7 @@ import About from '../components/about'
 import ReadingList from '../components/readingList'
 import Newsletter from '../components/newsletter'
 import { Services } from '../components/podcast'
+import CategoriesList from './categories-list';
 
 import './sidebar.scss'
 
@@ -14,8 +15,9 @@ const propTypes = {
   issues: PropTypes.object,
 }
 
-const Sidebar = ({ author = null, recommendations = null, issues = null }) => (
+const Sidebar = ({ author = null, categories = null, recommendations = null, issues = null }) => (
   <aside className="sidebar">
+    {categories && <CategoriesList categories={categories} />}
     <Services />
     <Newsletter />
     {author && <About author={author}/>}

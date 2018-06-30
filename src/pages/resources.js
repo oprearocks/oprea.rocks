@@ -10,7 +10,7 @@ const propTypes = {
   data: PropTypes.object.isRequired,
 }
 
-class RecommendationsPage extends Component {
+class ResourcesPage extends Component {
   render() {
     const recommendationEdges = this.props.data.recommendations.edges;
     const issueEdges = this.props.data.issues.edges
@@ -43,9 +43,9 @@ class RecommendationsPage extends Component {
 }
 
 
-RecommendationsPage.propTypes = propTypes
+ResourcesPage.propTypes = propTypes
 
-export default RecommendationsPage
+export default ResourcesPage
 
 export const pageQuery = graphql`
   query ReccomendationsPageQuery {

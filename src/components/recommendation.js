@@ -24,14 +24,14 @@ const Recommendation = ({ recommendation }) => (
           </span>
         </div>
           <h3 className="article-title" itemProp="reviewBody">
-            <Link to={`/recommendations/${recommendation.permalink}`}>
+            <Link to={`/resources/${recommendation.permalink}`}>
               {recommendation.title}
             </Link>
           </h3>
         </div>
     </header>
     <footer className="article-footer">
-      <Link className="recommendation-link" to={`/recommendations/${recommendation.permalink}`}>Read full review</Link>
+      <Link className="recommendation-link" to={`/resources/${recommendation.permalink}`}>Read full review</Link>
       <span className="accent-color text-bold"> / </span>
       <a className="recommendation-link" href={recommendation.url} target="_blank">Get it</a>
     </footer>

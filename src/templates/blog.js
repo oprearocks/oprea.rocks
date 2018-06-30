@@ -22,6 +22,7 @@ class BlogPage extends Component {
     const pathContext = this.props.pathContext;
     const recommendationEdges = this.props.data.recommendations.edges
     const issueEdges = this.props.data.issues.edges
+    const categoryEdges = this.props.data.categories.edges
     const author = this.props.data.author
     const pageContents = this.props.data.pageContents
     return (
@@ -45,9 +46,10 @@ class BlogPage extends Component {
           </div>
         </section>
         <Sidebar
-          author={author}
+          // author={author}
           recommendations={recommendationEdges}
-          issues={issueEdges}
+          // issues={issueEdges}
+          categories={categoryEdges}
         />
       </section>
     )
@@ -85,7 +87,15 @@ export const pageQuery = graphql`
         youtube
       }
     }
-
+    categories: allContentfulCategory {
+      edges {
+        node {
+          id
+          title
+          permalink
+        }
+      }
+    }
     recommendations: allContentfulRecommendation(
       limit: 5
     ) {

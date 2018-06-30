@@ -13,6 +13,7 @@ const propTypes = {
 
 class IndexPage extends Component {
   render() {
+    const categoryEdges = this.props.data.categories.edges
     const postEdges = this.props.data.posts.edges
     const recommendationEdges = this.props.data.recommendations.edges
     const issueEdges = this.props.data.issues.edges
@@ -35,6 +36,7 @@ class IndexPage extends Component {
           author={author}
           recommendations={recommendationEdges}
           issues={issueEdges}
+          categories={categoryEdges}
         />
       </section>
     )
@@ -48,6 +50,15 @@ export default IndexPage
 
 export const pageQuery = graphql`
   query IndexPageQuery {
+    categories: allContentfulCategory {
+      edges {
+        node {
+          id
+          title
+          permalink
+        }
+      }
+    }
     posts: allContentfulBlogPost(
       limit: 5
       sort: { fields: [ publishedOn ], order: DESC }

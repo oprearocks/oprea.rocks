@@ -22,6 +22,7 @@ class PostTemplate extends Component {
   render() {
     const recommendationEdges = this.props.data.recommendations.edges
     const issueEdges = this.props.data.issues.edges
+    const categoryEdges = this.props.data.categories.edges
     const author = this.props.data.author
     const post = this.props.data.post
     const {
@@ -44,6 +45,14 @@ class PostTemplate extends Component {
         <PostMeta post={post}/>
         <section className="main-content">
           <article className="article" itemProp="blogPost" itemScope itemType="https://schema.org/BlogPosting">
+            <meta itemProp="dateCreated" content={post.publishedOn} />
+            <meta itemProp="datePublished" content={post.publishedOn} />
+            <meta itemProp="dateModified" content={post.updatedOn} />
+            <meta itemProp="keywords" content={post.keywords} />
+            <meta itemProp="author" itemType="https://schema.org/Person" content={post.author.name} />
+            <meta itemProp="publisher" itemType="https://schema.org/Person" content={post.author.name} />
+            {post.postImage && <meta itemProp="image" content={`https:${post.postImage.resolutions.src}`} /> }
+            <meta itemProp="inLanguage" content="en_US" />
             <header>
               <div className="article-meta">
                 <span>
@@ -93,6 +102,7 @@ class PostTemplate extends Component {
           </article>
         </section>
         <Sidebar
+          categories={categoryEdges}
           author={author}
           recommendations={recommendationEdges}
           issues={issueEdges}
@@ -145,6 +155,15 @@ export const pageQuery = graphql`
       podcast {
         title
         url
+      }
+    }
+    categories: allContentfulCategory {
+      edges {
+        node {
+          id
+          title
+          permalink
+        }
       }
     }
     recommendations: allContentfulRecommendation(

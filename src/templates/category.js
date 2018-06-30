@@ -22,6 +22,7 @@ class CategoryPage extends Component {
     const pathContext = this.props.pathContext;
     const recommendationEdges = this.props.data.recommendations.edges
     const issueEdges = this.props.data.issues.edges
+    const categoryEdges = this.props.data.categories.edges
     const author = this.props.data.author
     const pageContents = this.props.data.pageContents
 
@@ -41,11 +42,12 @@ class CategoryPage extends Component {
               ))
             }
           <div className="blog-pagination">
-            <PaginationLink test={pathContext.first} url={`${pathContext.pathPrefix}/${pathContext.index - 1 == 1 ? '' : pathContext.index -1}`} text="&larr; Previous Page"/>
-            <PaginationLink test={pathContext.last} url={`${pathContext.pathPrefix}/${pathContext.index + 1}`} text="Next Page &rarr;"/>
+            <PaginationLink test={pathContext.first} url={`/${pathContext.pathPrefix}/${pathContext.index - 1 == 1 ? '' : pathContext.index -1}`} text="&larr; Previous Page"/>
+            <PaginationLink test={pathContext.last} url={`/${pathContext.pathPrefix}/${pathContext.index + 1}`} text="Next Page &rarr;"/>
           </div>
         </section>
         <Sidebar
+          categories={categoryEdges}
           author={author}
           recommendations={recommendationEdges}
           issues={issueEdges}
@@ -62,6 +64,15 @@ export default CategoryPage
 
 export const pageQuery = graphql`
   query CategoryPageQuery {
+    categories: allContentfulCategory {
+      edges {
+        node {
+          id
+          title
+          permalink
+        }
+      }
+    }
     pageContents: contentfulPage(
       identifier: { eq: "blog" }
     ) {

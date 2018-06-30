@@ -110,12 +110,22 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           reject(result.errors)
         }
 
+        // == Redirect pages
+        // contact
         createRedirect({
           fromPath: `/contact`,
           toPath: `/hire`,
           isPermanent: true,
           redirectInBrowser: true,
 
+        });
+
+        // recommendations
+        createRedirect({
+          fromPath: `/recommendations`,
+          toPath: `/resources`,
+          isPermanent: true,
+          redirectInBrowser: true,
         });
 
         socialMediaProfiles.forEach(account => createRedirect({
@@ -199,7 +209,6 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
               pathPrefix: `blog/${c.permalink}`,
             })
         })
-
         // Create Product pages
         const recommendationTemplate = path.resolve('./src/templates/recommendation.js')
         // We want to create a detailed page for each
@@ -213,7 +222,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             // as a template component. The `context` is
             // optional but is often necessary so the template
             // can query data specific to each page.
-            path: `/recommendations/${edge.node.permalink}`,
+            path: `/resources/${edge.node.permalink}`,
             component: slash(recommendationTemplate),
             context: {
               id: edge.node.id,
