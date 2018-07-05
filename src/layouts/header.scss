@@ -6,10 +6,26 @@
   box-sizing: border-box;
   width: 100%;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  background-color: white;
+  border-bottom: 1px solid #ccc;
+  // position: fixed;
+  // top: 0;
+  // left: 0;
+  // z-index: 9;
+
+  @include breakpoint(md) {
+    flex-direction: row;
+  }
 
   &-logo-link {
     display: block;
-    max-width: 350px;
+    max-width: 200px;
+    width: 200px;
     margin: 0 auto;
   }
 
@@ -22,7 +38,7 @@
     color: $color-light;
     font-size: 0.625rem;
     letter-spacing: 2px;
-    padding: 0.75rem;
+    padding: 0.3125rem;
   }
   &-nav {
     padding: .625rem 0;
@@ -59,7 +75,7 @@
     .hire {
       color: white;
       padding: 0.5rem;
-      animation: shake infinite 1s cubic-bezier(.36,.07,.19,.97) both;
+      // animation: shake infinite 1s cubic-bezier(.36,.07,.19,.97) both;
       transform: translate3d(0, 0, 0);
       backface-visibility: hidden;
 
@@ -87,6 +103,7 @@
     }
 
     @include breakpoint(sm) {
+
       li {
         display: inline;
 

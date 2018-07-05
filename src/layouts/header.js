@@ -22,9 +22,9 @@ const Header = () => (
           </g>
         </svg>
       </Link>
-      <span className="header-tagline">
+      {/* <span className="header-tagline">
         Life between pen, paper and computer
-      </span>
+      </span> */}
     </h1>
     <nav className="header-nav">
       <ul>

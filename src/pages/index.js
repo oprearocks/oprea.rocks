@@ -80,6 +80,10 @@ export const pageQuery = graphql`
               timeToRead
             }
           }
+          author {
+            name
+            twitter
+          }
           postVideo
           postImage {
             title

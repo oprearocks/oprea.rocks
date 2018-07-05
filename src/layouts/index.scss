@@ -18,9 +18,16 @@ body {
   line-height: 1.875rem;
   vertical-align: baseline;
   color: $color-body;
+  background-color: #f5f5f5;
+  // padding-top: 12.5rem;
+
+  // @include breakpoint(sm) {
+  //   padding-top: 9.375rem;
+  // }
 
   @include breakpoint(md) {
     line-height: 1.5rem;
+    // padding-top: 6.25rem;
   }
 }
 
@@ -35,12 +42,18 @@ h6, {
   color: $color-dark;
 }
 
-.header,
 .main {
   padding: 1rem;
+  margin: 0 auto;
+
   @include breakpoint(md) {
+    padding: 2rem;
     width: 60rem;
-    margin: 0 auto;
+  }
+
+  @include breakpoint(lg) {
+    padding: 2rem;
+    width: 75rem;
   }
 }
 
@@ -158,12 +171,18 @@ h6, {
 }
 
 .page {
+  .main-content {
+    background-color: white;
+    padding: 1rem;
+  }
+
   @include breakpoint(lg) {
     .main-content {
       float: left;
       box-sizing: border-box;
       width: 64%;
       margin-top: 1rem;
+      padding: 3rem;
     }
 
     .sidebar {
