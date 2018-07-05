@@ -59,7 +59,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    posts: allContentfulBlogPost(
+    posts: allContentfulArticle(
       limit: 5
       sort: { fields: [ publishedOn ], order: DESC }
     ) {
@@ -93,7 +93,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    recommendations: allContentfulRecommendation(
+    recommendations: allContentfulResource(
       limit: 5
     ) {
       edges {

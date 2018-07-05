@@ -16,7 +16,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
     graphql(
       `
         {
-          allContentfulBlogPost(
+          allContentfulArticle(
             limit: 1000
             sort: { fields: [ publishedOn ], order: DESC }
           ) {
@@ -36,6 +36,10 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
                     excerpt(pruneLength: 300)
                     timeToRead
                   }
+                }
+                author {
+                  name
+                  twitter
                 }
                 postVideo
                 postImage {
@@ -60,7 +64,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             }
           }
 
-          allContentfulRecommendation(limit: 1000) {
+          allContentfulResource(limit: 1000) {
             edges {
               node {
                 id
@@ -136,7 +140,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         }));
 
         createPaginatedPages({
-          edges: result.data.allContentfulBlogPost.edges,
+          edges: result.data.allContentfulArticle.edges,
           createPage: createPage,
           pageTemplate: './src/templates/blog.js',
           pageLength: 5,
@@ -181,7 +185,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         const postTemplate = path.resolve('./src/templates/post.js')
         // We want to create a detailed page for each
         // product node. We'll just use the Contentful id for the slug.
-        _.each(result.data.allContentfulBlogPost.edges, edge => {
+        _.each(result.data.allContentfulArticle.edges, edge => {
           // Gatsby uses Redux to manage its internal state.
           // Plugins and sites can use functions like "createPage"
           // to interact with Gatsby.
@@ -194,13 +198,13 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             component: slash(postTemplate),
             context: {
               id: edge.node.id,
-              relatedArticles: getRelatedArticles(edge.node, result.data.allContentfulBlogPost.edges),
+              relatedArticles: getRelatedArticles(edge.node, result.data.allContentfulArticle.edges),
             },
           })
         })
 // Categories
         result.data.allContentfulCategory.edges.forEach(({ node: c }) => {
-            const edges = result.data.allContentfulBlogPost.edges.filter(({ node }) => node.categories.some(category => category.permalink === c.permalink))
+            const edges = result.data.allContentfulArticle.edges.filter(({ node }) => node.categories.some(category => category.permalink === c.permalink))
             createPaginatedPages({
               edges,
               createPage,
@@ -213,7 +217,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         const recommendationTemplate = path.resolve('./src/templates/recommendation.js')
         // We want to create a detailed page for each
         // product node. We'll just use the Contentful id for the slug.
-        _.each(result.data.allContentfulRecommendation.edges, edge => {
+        _.each(result.data.allContentfulResource.edges, edge => {
           // Gatsby uses Redux to manage its internal state.
           // Plugins and sites can use functions like "createPage"
           // to interact with Gatsby.

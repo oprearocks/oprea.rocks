@@ -127,7 +127,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    recommendations: allContentfulRecommendation(
+    recommendations: allContentfulResource(
       limit: 5
     ) {
       edges {

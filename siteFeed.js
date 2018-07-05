@@ -33,7 +33,7 @@ module.exports = {
 
   query: `
   query siteFeedQuery {
-    posts: allContentfulBlogPost(
+    posts: allContentfulArticle(
       limit: 1000,
       sort: { order: DESC, fields: [publishedOn] }
     ) {
@@ -73,7 +73,7 @@ module.exports = {
         }
       }
     }
-    recommendations: allContentfulRecommendation(
+    recommendations: allContentfulResource(
       limit: 1000
     ) {
       edges {

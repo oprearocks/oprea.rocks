@@ -11,7 +11,7 @@ import { Player } from '../components/podcast'
 import RelatedArticles from '../components/relatedarticles'
 
 const Category = ({ title, permalink }) => (
-  <Link to={`/blog/${permalink}`}>&nbsp;{title}</Link>
+  <span><Link className="accent-color" to={`/blog/${permalink}`}>{title}</Link>&nbsp;&nbsp;</span>
 )
 
 const propTypes = {
@@ -56,8 +56,8 @@ class PostTemplate extends Component {
             <header>
               <div className="article-meta">
                 <span>
-                  {publishedOn}
-                  <span className="accent-color"> /</span>
+                  <i>by</i>&nbsp;{author.name}
+                  <b className="accent-color">&nbsp;in&nbsp;</b>
                   {categories && categories.map(c => <Category title={c.title} permalink={c.permalink} key={c.id} />)}
                 </span>
               </div>
@@ -118,7 +118,7 @@ export default PostTemplate
 
 export const pageQuery = graphql`
   query postQuery($id: String!) {
-    post: contentfulBlogPost(id: { eq: $id }) {
+    post: contentfulArticle(id: { eq: $id }) {
       id
       title
       keywords
@@ -166,7 +166,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    recommendations: allContentfulRecommendation(
+    recommendations: allContentfulResource(
       limit: 5
     ) {
       edges {

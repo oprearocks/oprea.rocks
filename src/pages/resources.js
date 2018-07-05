@@ -73,7 +73,7 @@ export const pageQuery = graphql`
         youtube
       }
     }
-    recommendations: allContentfulRecommendation(
+    recommendations: allContentfulResource(
       limit: 5
     ) {
       edges {

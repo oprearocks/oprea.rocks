@@ -11,7 +11,7 @@ const propTypes = {
 }
 
 const Category = ({ title, permalink }) => (
-  <Link to={`/blog/${permalink}`}>&nbsp;{title}</Link>
+  <span><Link className="accent-color" to={`/blog/${permalink}`}>{title}</Link>&nbsp;&nbsp;</span>
 )
 
 const Post = ({ node }) => (
@@ -19,8 +19,8 @@ const Post = ({ node }) => (
     <header>
       <div className="article-meta">
         <span>
-          {node.publishedOn}
-          <span className="accent-color"> /</span>
+          <i>by</i>&nbsp;{node.author.name}
+          <b className="accent-color">&nbsp;in&nbsp;</b>
           {node.categories && node.categories.map(c => <Category title={c.title} permalink={c.permalink} key={c.id} />)}
         </span>
       </div>

@@ -83,7 +83,7 @@ export default ReviewTemplate
 
 export const pageQuery = graphql`
   query recommendationQuery($id: String!) {
-    recommendation: contentfulRecommendation(id: { eq: $id }) {
+    recommendation: contentfulResource(id: { eq: $id }) {
       title
       keywords
       type

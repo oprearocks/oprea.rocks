@@ -28,20 +28,18 @@
     a {
       color: $color-light;
       text-decoration: none;
-
-      &:hover {
-        color: $color-dark;
-      }
+      padding-bottom: 1px;
+      border-bottom: 1px solid green;
     }
   }
 
   &-readmore,
   &-meta {
-    font-size: .875rem;
+    font-size: 1rem;
     line-height: 1.5rem;
-    letter-spacing: 2px;
+    // letter-spacing: 2px;
     font-weight: normal;
-    text-transform: uppercase;
+    // text-transform: uppercase;
   }
 
   &-content {
