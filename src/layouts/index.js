@@ -20,7 +20,8 @@ const TemplateWrapper = ({ children }) => (
         { property: 'og:image', content: logo},
       ]}
       link={[
-        { rel: 'stylesheet', href: '//fonts.googleapis.com/css?family=Montserrat:400,700|Open Sans:400,700' }
+        { rel: 'stylesheet', href: '//fonts.googleapis.com/css?family=Montserrat:400,700|Open Sans:400,700' },
+        { rel: 'stylesheet', href: '//fonts.googleapis.com/css?family=Lora:400,700|Open Sans:400,700' }
       ]}
     />
     <Header />

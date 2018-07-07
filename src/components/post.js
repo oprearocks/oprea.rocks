@@ -39,12 +39,14 @@ const Post = ({ node }) => (
         />
       }
     </header>
-    <section
-      itemProp="articleBody"
-      dangerouslySetInnerHTML={{
-        __html: node.content.childMarkdownRemark.excerpt,
-      }}
-    />
+    <section itemProp="articleBody">
+      <div
+        className="article-content"
+        dangerouslySetInnerHTML={{
+          __html: node.content.childMarkdownRemark.excerpt,
+        }}
+      />
+    </section>
     <footer>
       <SocialButtons
         url={`https://oprea.rocks/blog/${node.permalink}`}

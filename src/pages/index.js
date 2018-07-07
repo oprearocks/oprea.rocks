@@ -87,7 +87,7 @@ export const pageQuery = graphql`
           postVideo
           postImage {
             title
-            resolutions(width: 500) {
+            resolutions {
               width
               height
               src
