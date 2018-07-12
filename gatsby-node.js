@@ -30,6 +30,11 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
                   title
                   permalink
                 }
+                recommendedArticles {
+                  id
+                  title
+                  permalink
+                }
                 permalink
                 content {
                   childMarkdownRemark {
@@ -163,6 +168,10 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         }
 
         const getRelatedArticles = (currentArticle, articles) => {
+          if (Array.isArray(currentArticle.recommendedArticles) && currentArticle.recommendedArticles.length > 0) {
+            return currentArticle.recommendedArticles;
+          }
+
           const MINIMUM_CATEGORIES_IN_COMMON = 1
 
           const hasAtLeastOneCategoryInCommon = ({ node }) => {
