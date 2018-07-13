@@ -220,6 +220,9 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
               pageTemplate: './src/templates/category.js',
               pageLength: 5,
               pathPrefix: `blog/${c.permalink}`,
+              context: {
+                category: c,
+              },
             })
         })
         // Create Product pages

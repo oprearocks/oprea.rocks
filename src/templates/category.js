@@ -25,17 +25,19 @@ class CategoryPage extends Component {
     const categoryEdges = this.props.data.categories.edges
     const author = this.props.data.author
     const pageContents = this.props.data.pageContents
+    const { category } = this.props.pathContext.additionalContext
 
     return (
       <section className="page cf">
         <Helmet
-            title={pageContents.title}
+            title={`oprea.rocks | Articles published under ${category.title}`}
             meta={[
-              { name: 'description', content: pageContents.description },
+              { name: 'description', content: `This is the archive page containing all the articles published under ${category.title} category.` },
               { name: 'keywords', content: pageContents.keywords },
             ]}
           />
         <section className="main-content">
+            <h2>Articles published under the <Link className="accent-color" to={`/blog/${category.permalink}`}>{category.title}</Link> category</h2>
             {
               pathContext.group.map(({ node }) => (
                 <Post node={node} key={node.id} />
