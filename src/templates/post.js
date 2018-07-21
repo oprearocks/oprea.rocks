@@ -95,7 +95,7 @@ class PostTemplate extends Component {
                 title={title}
                 description={content.childMarkdownRemark.excerpt}
               />
-              {relatedArticles.length && <RelatedArticles articles={relatedArticles} /> || null }
+              {/* {relatedArticles.length && <RelatedArticles articles={relatedArticles} /> || null } */}
               <Newsletter anchorId="articleNewsletter" />
               <DisqusComments title={title} id={`${id}-${permalink}`} url={`https://oprea.rocks/blog/${permalink}`}/>
             </footer>
@@ -103,6 +103,7 @@ class PostTemplate extends Component {
         </section>
         <Sidebar
           categories={categoryEdges}
+          relatedArticles={relatedArticles}
           author={author}
           recommendations={recommendationEdges}
           issues={issueEdges}

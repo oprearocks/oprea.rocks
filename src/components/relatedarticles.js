@@ -5,7 +5,7 @@ import Link from 'gatsby-link'
 import './relatedarticles.scss'
 
 const RelatedArticles = ({ articles }) => (
-  <section className="sidebar-section related-articles">
+  <section className="sidebar-section">
     <h2 className="section-title separator-below">Read next</h2>
     <section className="section-content">
       <p>
