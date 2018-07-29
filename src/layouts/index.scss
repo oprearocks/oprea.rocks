@@ -117,41 +117,6 @@ h6, {
   border: 2px solid $color-light;
 }
 
-.button {
-  font-size: .875rem;
-  line-height: 1.5rem;
-  letter-spacing: 2px;
-  font-weight: normal;
-  text-transform: uppercase;
-  padding: .625rem 1.5rem;
-  margin: 0 .625rem .625rem 0;
-  display: inline-block;
-  cursor: pointer;
-  transition: all .2s ease-in-out;
-  font-family: Montserrat, Helvetica, Arial, sans-serif;
-  background-color: $color-dark;
-  color: white;
-  border: 2px solid $color-dark;
-  text-decoration: none;
-
-  &.accent-bg {
-    border: 2px solid $color-accent;
-  }
-
-  &:hover {
-    background-color: transparent !important;
-    color: $color-accent;
-    border: 2px solid $color-accent;
-  }
-
-  &.disabled {
-    border-color: $color-light;
-    color: $color-light;
-    background-color: white;
-    cursor: not-allowed;
-  }
-}
-
 .full-width {
   display: block;
   box-sizing: border-box;

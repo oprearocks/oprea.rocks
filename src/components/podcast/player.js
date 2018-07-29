@@ -1,7 +1,9 @@
 import React from 'react'
 import { PlayButton, Timer, VolumeControl, Progress } from 'react-soundplayer/components'
 import { withCustomAudio } from 'react-soundplayer/addons'
-
+import { Button, Icon } from 'semantic-ui-react'
+import 'semantic-ui-css/components/button.css'
+import 'semantic-ui-css/components/icon.css'
 import './podcast.scss'
 
 const Player = withCustomAudio(props => {
@@ -22,7 +24,7 @@ const Player = withCustomAudio(props => {
           </div>
         </div>
       </div>
-      <a className="button full-width text-center no-hover" href="#articleNewsletter">Join the newsletter</a>
+      <Button color="green" size="huge" attached="bottom" as="a" href="#articleNewsletter">Join the newsletter</Button>
     </div>
   )
 })

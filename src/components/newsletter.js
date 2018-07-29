@@ -1,6 +1,9 @@
 import React from 'react'
 import * as PropTypes from 'prop-types';
 import Link from 'gatsby-link'
+import { Button } from 'semantic-ui-react'
+
+import 'semantic-ui-css/components/button.css'
 
 const Newsletter = ({ anchorId = 'newsletter' }) => (
   <section id={anchorId} className="sidebar-section">
@@ -13,7 +16,7 @@ const Newsletter = ({ anchorId = 'newsletter' }) => (
         <div>
           <input type="email" name="fields[email]" placeholder="your email" className="form-field full-width" type="email" />
         </div>
-        <button className="button accent-bg" data-drip-attribute="sign-up-button">I want to learn</button>
+        <Button size="large" color="green" data-drip-attribute="sign-up-button">I want to learn</Button>
       </form>
     </section>
   </section>

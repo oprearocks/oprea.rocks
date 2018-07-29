@@ -5,6 +5,7 @@
 @import '~react-soundplayer/styles/volume.css';
 @import '~basscss/css/basscss.min.css';
 @import '../../utils/_theme.scss';
+@import './button.scss';
 
 .flex-center {
   align-items: center;
@@ -18,11 +19,16 @@
     }
   }
 
-  .button:hover {
-    background-color: $color-dark !important;
-    color: white;
-    border: 2px solid $color-dark;
+  .newsletter-button {
+    @extend .base-button;
+
+    &:hover {
+      background-color: $color-dark !important;
+      color: white;
+      border: 2px solid $color-dark;
+    }
   }
+
 }
 
 .provider-logo {

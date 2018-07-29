@@ -1,20 +1,13 @@
 import React, { Component } from 'react'
 import * as PropTypes from 'prop-types'
 import Img from 'gatsby-image'
-import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 import Post from '../components/post'
 import Sidebar from '../components/sidebar'
+import PaginationLink from '../components/paginationLink'
 
 const propTypes = {
   data: PropTypes.object.isRequired,
-}
-
-const PaginationLink = ({ test, url, text, className = '' }) => {
-  if (!test) {
-    return <Link className="button" to={url}>{text}</Link>
-  }
-  return <span className="button disabled" disabled>{text}</span>
 }
 
 class BlogPage extends Component {
@@ -41,8 +34,14 @@ class BlogPage extends Component {
               ))
             }
           <div className="blog-pagination">
-            <PaginationLink test={pathContext.first} url={`/blog/${pathContext.index - 1 == 1 ? '' : pathContext.index -1}`} text="&larr; Previous Page"/>
-            <PaginationLink test={pathContext.last} url={`/blog/${pathContext.index + 1}`} text="Next Page &rarr;"/>
+            <PaginationLink
+              test={pathContext.first}
+              url={`/blog/${pathContext.index - 1 == 1 ? '' : pathContext.index -1}`}
+              text="&larr; Previous Page"/>
+            <PaginationLink
+              test={pathContext.last}
+              url={`/blog/${pathContext.index + 1}`}
+              text="Next Page &rarr;"/>
           </div>
         </section>
         <Sidebar

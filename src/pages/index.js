@@ -2,8 +2,12 @@ import React, { Component } from 'react'
 import * as PropTypes from 'prop-types'
 import Img from 'gatsby-image'
 import Link from 'gatsby-link'
+import { Button, Icon } from 'semantic-ui-react'
 import Post from '../components/post'
 import Sidebar from '../components/sidebar'
+
+import 'semantic-ui-css/components/button.css'
+import 'semantic-ui-css/components/icon.css'
 
 import './index.scss'
 
@@ -28,8 +32,13 @@ class IndexPage extends Component {
             ))
           }
           <footer>
-            <p>Want to read more ?</p>
-            <Link className="button full-width text-center" to="/blog">Go to the blog</Link>
+            <Button
+              as={Link}
+              size="huge"
+              color="green"
+              to="/blog">
+              <Icon name="book"/> Read more on the blog
+            </Button>
           </footer>
         </section>
         <Sidebar

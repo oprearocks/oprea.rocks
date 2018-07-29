@@ -1,5 +1,8 @@
 import React from 'react';
 import Link from 'gatsby-link'
+import { Button, Icon } from 'semantic-ui-react'
+import 'semantic-ui-css/components/button.css'
+import 'semantic-ui-css/components/icon.css'
 
 import './header.scss'
 
@@ -29,16 +32,26 @@ const Header = () => (
     <nav className="header-nav">
       <ul>
         <li>
-          <Link activeClassName="active" to="/blog">Articles</Link>
+          <Link className="nav-link" activeClassName="active" to="/blog">Articles</Link>
         </li>
         <li>
-          <Link activeClassName="active" to="/resources">Resources</Link>
+          <Link className="nav-link" activeClassName="active" to="/resources">Resources</Link>
         </li>
         <li>
-          <Link activeClassName="active" to="/reading">Reading List</Link>
+          <Link className="nav-link" activeClassName="active" to="/reading">Reading List</Link>
         </li>
         <li>
-          <Link activeClassName="active" className="hire accent-bg" to="/hire">Hire me!</Link>
+          <Link className="nav-link" activeClassName="active" to="/hire">About</Link>
+        </li>
+        <li>
+          <Button
+            primary
+            size="large"
+            as="a"
+            target="_blank"
+            href="https://m.me/oprearocks">
+            <Icon name="facebook messenger" /> Contact me!
+          </Button>
         </li>
       </ul>
     </nav>

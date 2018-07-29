@@ -4,6 +4,9 @@ import Img from 'gatsby-image'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 import Sidebar from '../components/sidebar'
+import { Button, Icon } from 'semantic-ui-react'
+import 'semantic-ui-css/components/button.css'
+import 'semantic-ui-css/components/icon.css'
 
 const propTypes = {
   data: PropTypes.object.isRequired,
@@ -24,13 +27,9 @@ class HireMePage extends Component {
           ]}
         />
         <section className="main-content">
-          <h1>{pageContents.title}</h1>
-          <div dangerouslySetInnerHTML={{
-            __html: pageContents.content.childMarkdownRemark.html
-          }}/>
           <article>
             <header>
-              <h2>About {pageContents.author.name}</h2>
+              <h1>About {pageContents.author.name}</h1>
             </header>
 
             <section dangerouslySetInnerHTML={{
@@ -43,9 +42,28 @@ class HireMePage extends Component {
                 <li><a target="_blank" title={`Link to ${pageContents.author.name}'s GitHub account`} href={pageContents.author.github}>GitHub</a></li>
                 <li><a target="_blank" title={`Link to ${pageContents.author.name}'s YouTube Channel`} href={pageContents.author.youtube}>YouTube Channel</a></li>
               </ul>
-              <a className="button full-width text-center" href="mailto:adrian@oprea.rocks">Get in touch</a>
+              {/* <a className="button full-width text-center" href="https://m.me/">Get in touch</a> */}
+              <Button
+                primary
+                size="huge"
+                as="a"
+                target="_blank"
+                href="https://m.me/oprearocks">
+                <Icon size="large" name="facebook messenger" /> Say hello!
+              </Button>
             </footer>
           </article>
+          <div dangerouslySetInnerHTML={{
+            __html: pageContents.content.childMarkdownRemark.html
+          }}/>
+          <Button
+            primary
+            size="huge"
+            as="a"
+            target="_blank"
+            href="https://m.me/oprearocks">
+            <Icon size="large" name="facebook messenger" /> Let's talk projects
+          </Button>
         </section>
         <Sidebar
           recommendations={recommendationEdges}

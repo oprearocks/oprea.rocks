@@ -5,16 +5,10 @@ import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 import Post from '../components/post'
 import Sidebar from '../components/sidebar'
+import PaginationLink from '../components/paginationLink'
 
 const propTypes = {
   data: PropTypes.object.isRequired,
-}
-
-const PaginationLink = ({ test, url, text, className = '' }) => {
-  if (!test) {
-    return <Link className="button" to={url}>{text}</Link>
-  }
-  return <span className="button disabled" disabled>{text}</span>
 }
 
 class CategoryPage extends Component {
