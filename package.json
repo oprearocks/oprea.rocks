@@ -1,8 +1,8 @@
 {
   "name": "oprea.rocks",
-  "description": "The official website of Adrian Oprea — Fullstack developer — https://oprea.rocks",
+  "description": "The official website of Adrian Oprea — Fullstack JavaScript developer — https://oprea.rocks",
   "version": "1.0.0",
-  "author": "Adrian Oprea<adrian@oprea.rocks",
+  "author": "Adrian Oprea <adrian@oprea.rocks> (https://oprea.rocks)",
   "dependencies": {
     "basscss": "^8.0.3",
     "dotenv": "^4.0.0",
@@ -29,7 +29,6 @@
     "gatsby-source-contentful": "^1.3.28",
     "gatsby-transformer-remark": "^1.7.22",
     "normalize.css": "^7.0.0",
-    "podcast": "^1.1.0",
     "react-disqus-comments": "^1.1.1",
     "react-share": "^2.2.0",
     "react-soundplayer": "^1.0.4",
