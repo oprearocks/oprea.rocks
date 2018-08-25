@@ -3,7 +3,6 @@ const Promise = require('bluebird')
 const path = require('path')
 const slash = require('slash')
 const createPaginatedPages = require('gatsby-paginate')
-const podcastFeed = require('./podcastFeed')
 const socialMediaProfiles = require('./socialmedia.json')
 
 exports.createPages = ({ graphql, boundActionCreators }) => {
@@ -87,27 +86,6 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
                 id
                 permalink
                 publishedOn(formatString: "MMMM DD, YYYY")
-              }
-            }
-          }
-
-          allContentfulPodcast(
-            limit: 1000
-          ) {
-            edges {
-              node {
-                title
-                url
-                description {
-                  childMarkdownRemark {
-                    html
-                  }
-                }
-                publishedOn
-                keywords
-                subtitle
-                duration
-                explicit
               }
             }
           }
@@ -266,9 +244,6 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             },
           })
         })
-
-        podcastFeed(result.data.allContentfulPodcast.edges)
-
         resolve()
       })
   })
