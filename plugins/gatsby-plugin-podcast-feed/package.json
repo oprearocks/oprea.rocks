@@ -1,0 +1,23 @@
+{
+  "name": "gatsby-plugin-podcast-feed",
+  "version": "1.0.0",
+  "description": "A Gatsby.js plugin that automatically generates a feed for your podcast.",
+  "main": "index.js",
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "rss",
+    "feed",
+    "podcast",
+    "xml",
+    "itunes",
+    "podcast feed"
+  ],
+  "author": "Adrian Oprea <adrian@oprea.rocks> (https://oprea.rocks)",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "pify": "^4.0.0",
+    "podcast": "^1.1.0"
+  }
+}
