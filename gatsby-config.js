@@ -3,7 +3,6 @@ const dotenv = require('dotenv').config({
 })
 
 const siteFeed = require('./siteFeed')
-const podcastFeed = require('./podcastFeed')
 
 module.exports = {
   siteMetadata: {
@@ -54,41 +53,41 @@ module.exports = {
           {
             resolve: `gatsby-remark-prismjs`,
           },
-          {
-            resolve: `gatsby-plugin-podcast-feed`,
-            options: {
-              title: 'Dev Time Stories',
-              description: 'Full Stack Software Developer Adrian Oprea shares his thoughts on software development, tooling, entrepreneurship and product development. From the nitty-gritty of JavaScript development, with or without frameworks, to DevOps, tooling and automation, all the way to entrepreneurship and product development, this podcast is focused specifically on software development professionals.',
-              feed_url: 'https://oprea.rocks/podcast.xml',
-              site_url: 'https://oprea.rocks',
-              image_url: 'http://s3.eu-west-2.amazonaws.com/dev-time-stories-podcast/podcast-artwork.png',
-              author: 'Adrian Oprea ',
-              managingEditor: 'Adrian Oprea',
-              webMaster: 'Adrian Oprea',
-              copyright: `${(new Date()).getFullYear()} Adrian Oprea`,
-              language: 'en',
-              categories: ['Software development', 'Entrepreneurship', 'Technology'],
-              ttl: '1',
-              itunesAuthor: 'Adrian Oprea',
-              itunesSubtitle: 'Adrian Oprea — Full Stack JavaScript Consultant',
-              itunesSummary: 'Full Stack Software Developer Adrian Oprea shares his thoughts on software development, tooling, entrepreneurship and product development. From the nitty-gritty of JavaScript development, with or without frameworks, to DevOps, tooling and automation, all the way to entrepreneurship and product development, this podcast is focused specifically on software development professionals.',
-              itunesOwner: { name: 'Adrian Oprea', email:'adrian@oprea.rocks' },
-              itunesExplicit: false,
-              itunesCategory: {
-                  'text': 'Technology',
-                  'subcats': [
-                    {
-                      'text': 'Tech News'
-                    },
-                    {
-                      'text': 'Software How-To'
-                    }
-                  ]
-              },
-              itunesImage: 'http://s3.eu-west-2.amazonaws.com/dev-time-stories-podcast/podcast-artwork.png'
-            },
-          }
         ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-podcast-feed`,
+      options: {
+        title: 'Dev Time Stories',
+        description: 'Full Stack Software Developer Adrian Oprea shares his thoughts on software development, tooling, entrepreneurship and product development. From the nitty-gritty of JavaScript development, with or without frameworks, to DevOps, tooling and automation, all the way to entrepreneurship and product development, this podcast is focused specifically on software development professionals.',
+        feed_url: 'https://oprea.rocks/podcast.xml',
+        site_url: 'https://oprea.rocks',
+        image_url: 'http://s3.eu-west-2.amazonaws.com/dev-time-stories-podcast/podcast-artwork.png',
+        author: 'Adrian Oprea ',
+        managingEditor: 'Adrian Oprea',
+        webMaster: 'Adrian Oprea',
+        copyright: `${(new Date()).getFullYear()} Adrian Oprea`,
+        language: 'en',
+        categories: ['Software development', 'Entrepreneurship', 'Technology'],
+        ttl: '1',
+        itunesAuthor: 'Adrian Oprea',
+        itunesSubtitle: 'Adrian Oprea — Full Stack JavaScript Consultant',
+        itunesSummary: 'Full Stack Software Developer Adrian Oprea shares his thoughts on software development, tooling, entrepreneurship and product development. From the nitty-gritty of JavaScript development, with or without frameworks, to DevOps, tooling and automation, all the way to entrepreneurship and product development, this podcast is focused specifically on software development professionals.',
+        itunesOwner: { name: 'Adrian Oprea', email:'adrian@oprea.rocks' },
+        itunesExplicit: false,
+        itunesCategory: {
+            'text': 'Technology',
+            'subcats': [
+              {
+                'text': 'Tech News'
+              },
+              {
+                'text': 'Software How-To'
+              }
+            ]
+        },
+        itunesImage: 'http://s3.eu-west-2.amazonaws.com/dev-time-stories-podcast/podcast-artwork.png'
       },
     },
     {

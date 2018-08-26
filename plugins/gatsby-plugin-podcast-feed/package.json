@@ -1,6 +1,5 @@
 {
   "name": "gatsby-plugin-podcast-feed",
-  "version": "1.0.0",
   "description": "A Gatsby.js plugin that automatically generates a feed for your podcast.",
   "main": "index.js",
   "keywords": [
@@ -17,7 +16,26 @@
   "license": "MIT",
   "private": false,
   "dependencies": {
+    "@babel/runtime": "^7.0.0-rc.3",
     "pify": "^4.0.0",
     "podcast": "^1.1.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "cross-env": "^5.2.0"
+  },
+  "peerDependencies": {
+    "gatsby": ">2.0.0-alpha"
+  },
+  "scripts": {
+    "build": "babel src --out-dir . --ignore **/__tests__",
+    "prepare": "cross-env NODE_ENV=production npm run build",
+    "watch": "babel -w src --out-dir . --ignore **/__tests__"
   }
 }

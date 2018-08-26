@@ -1,12 +1,9 @@
 import fs from 'fs'
 import pify from 'pify'
 
-const withoutTrailingSlash = path =>
-  path === `/` ? path : path.replace(/\/$/, ``)
-
 export const writeFile = pify(fs.writeFile)
 
-export const runQuery = (handler, query, category) =>
+export const runQuery = (handler, query) =>
   handler(query).then(r => {
     if (r.errors) {
       throw new Error(r.errors.join(`, `))
@@ -44,7 +41,7 @@ export const defaultOptions = {
         }
       }
   }`,
-  output: `podcast.xml`,
+  output: `/podcast.xml`,
   createLinkInHead: false,
   serialize: ({ site, allContentfulPodcast }) =>
     allContentfulPodcast.edges.map(({ node }) => ({
