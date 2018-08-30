@@ -11,7 +11,11 @@ import { Player } from '../components/podcast'
 import RelatedArticles from '../components/relatedarticles'
 
 const Category = ({ title, permalink }) => (
-  <span><Link className="accent-color" to={`/blog/${permalink}`}>{title}</Link>&nbsp;&nbsp;</span>
+  <span>
+    <Link className="accent-color" to={`/blog/${permalink}`}>
+      {title}
+    </Link>&nbsp;&nbsp;
+  </span>
 )
 
 const propTypes = {
@@ -42,52 +46,88 @@ class PostTemplate extends Component {
 
     return (
       <section className="page cf">
-        <PostMeta post={post}/>
+        <PostMeta post={post} />
         <section className="main-content">
-          <article className="article" itemProp="blogPost" itemScope itemType="https://schema.org/BlogPosting">
+          <article
+            className="article"
+            itemProp="blogPost"
+            itemScope
+            itemType="https://schema.org/BlogPosting"
+          >
             <meta itemProp="dateCreated" content={post.publishedOn} />
             <meta itemProp="datePublished" content={post.publishedOn} />
             <meta itemProp="dateModified" content={post.updatedOn} />
             <meta itemProp="keywords" content={post.keywords} />
-            <meta itemProp="author" itemType="https://schema.org/Person" content={post.author.name} />
-            <meta itemProp="publisher" itemType="https://schema.org/Person" content={post.author.name} />
-            {post.postImage && <meta itemProp="image" content={`https:${post.postImage.resolutions.src}`} /> }
+            <meta
+              itemProp="author"
+              itemType="https://schema.org/Person"
+              content={post.author.name}
+            />
+            <meta
+              itemProp="publisher"
+              itemType="https://schema.org/Person"
+              content={post.author.name}
+            />
+            {post.postImage && (
+              <meta
+                itemProp="image"
+                content={`https:${post.postImage.resolutions.src}`}
+              />
+            )}
             <meta itemProp="inLanguage" content="en_US" />
             <header>
               <div className="article-meta">
                 <span>
                   <i>by</i>&nbsp;{author.name}
                   <b className="accent-color">&nbsp;in&nbsp;</b>
-                  {categories && categories.map(c => <Category title={c.title} permalink={c.permalink} key={c.id} />)}
+                  {categories &&
+                    categories.map(c => (
+                      <Category
+                        title={c.title}
+                        permalink={c.permalink}
+                        key={c.id}
+                      />
+                    ))}
                 </span>
               </div>
-              <h1 className="article-title" itemProp="headline">{title}</h1>
-              {
-                postImage &&
+              <h1 className="article-title" itemProp="headline">
+                {title}
+              </h1>
+              {postImage && (
                 <Img
                   className="article-image"
                   resolutions={postImage.resolutions}
                   title={postImage.title}
                   alt={postImage.title}
                 />
-              }
+              )}
             </header>
             <section itemProp="articleBody">
-              {
-                // <blockquote>
-                //   <p>Watch the video here: <a href={postVideo}>{postVideo}</a></p>
-                // </blockquote>
-                postVideo && <iframe width="100%" height="400" src={postVideo} frameBorder="0" allowFullScreen></iframe>
-              }
-              {
-                podcast && <Player streamUrl={podcast.url} trackTitle={podcast.title} preloadType="metadata" />
-              }
+              {// <blockquote>
+              //   <p>Watch the video here: <a href={postVideo}>{postVideo}</a></p>
+              // </blockquote>
+              postVideo && (
+                <iframe
+                  width="100%"
+                  height="400"
+                  src={postVideo}
+                  frameBorder="0"
+                  allowFullScreen
+                />
+              )}
+              {podcast && (
+                <Player
+                  streamUrl={podcast.url}
+                  trackTitle={podcast.title}
+                  preloadType="metadata"
+                />
+              )}
               <div
                 className="article-content"
                 dangerouslySetInnerHTML={{
                   __html: content.childMarkdownRemark.html,
                 }}
-                />
+              />
             </section>
             <footer>
               <SocialButtons
@@ -97,7 +137,11 @@ class PostTemplate extends Component {
               />
               {/* {relatedArticles.length && <RelatedArticles articles={relatedArticles} /> || null } */}
               <Newsletter anchorId="articleNewsletter" />
-              <DisqusComments title={title} id={`${id}-${permalink}`} url={`https://oprea.rocks/blog/${permalink}`}/>
+              <DisqusComments
+                title={title}
+                id={`${id}-${permalink}`}
+                url={`https://oprea.rocks/blog/${permalink}`}
+              />
             </footer>
           </article>
         </section>
@@ -167,9 +211,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    recommendations: allContentfulResource(
-      limit: 5
-    ) {
+    recommendations: allContentfulResource(limit: 5) {
       edges {
         node {
           id
@@ -203,7 +245,7 @@ export const pageQuery = graphql`
 
     issues: allContentfulIssue(
       limit: 4
-      sort: { fields: [ publishedOn ], order: DESC }
+      sort: { fields: [publishedOn], order: DESC }
     ) {
       edges {
         node {

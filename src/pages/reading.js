@@ -15,23 +15,29 @@ const Issue = ({ node }) => (
   <article className="article">
     <header>
       <div className="article-meta">
-        <span>
-          {node.publishedOn}
-        </span>
+        <span>{node.publishedOn}</span>
       </div>
       <h1 className="article-title">
-        <Link className="article-url accent-hover" to={`/reading/${node.permalink}`}>
+        <Link
+          className="article-url accent-hover"
+          to={`/reading/${node.permalink}`}
+        >
           {node.title}
         </Link>
       </h1>
     </header>
     <section
       dangerouslySetInnerHTML={{
-        __html: node.shortDescription.childMarkdownRemark.html
+        __html: node.shortDescription.childMarkdownRemark.html,
       }}
     />
     <footer>
-      <Link className="article-readmore button" to={`/reading/${node.permalink}`}>Read</Link>
+      <Link
+        className="article-readmore button"
+        to={`/reading/${node.permalink}`}
+      >
+        Read
+      </Link>
     </footer>
   </article>
 )
@@ -58,21 +64,13 @@ class ReadingListPage extends Component {
           ]}
         />
         <section className="main-content">
-          {
-            issueEdges.map(({ node }) => (
-              <Issue node={node} key={node.id} />
-            ))
-          }
+          {issueEdges.map(({ node }) => <Issue node={node} key={node.id} />)}
         </section>
-        <Sidebar
-          author={author}
-          recommendations={recommendationEdges}
-        />
+        <Sidebar author={author} recommendations={recommendationEdges} />
       </section>
     )
   }
 }
-
 
 ReadingListPage.propTypes = propTypes
 
@@ -80,9 +78,7 @@ export default ReadingListPage
 
 export const pageQuery = graphql`
   query ReadingListPageQuery {
-    pageContents: contentfulPage(
-      identifier: { eq: "reading-list" }
-    ) {
+    pageContents: contentfulPage(identifier: { eq: "reading-list" }) {
       title
       description
       keywords
@@ -105,9 +101,7 @@ export const pageQuery = graphql`
       }
     }
 
-    issues: allContentfulIssue(
-      sort: { fields: [ publishedOn ], order: DESC }
-    ){
+    issues: allContentfulIssue(sort: { fields: [publishedOn], order: DESC }) {
       edges {
         node {
           id
@@ -127,9 +121,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    recommendations: allContentfulResource(
-      limit: 5
-    ) {
+    recommendations: allContentfulResource(limit: 5) {
       edges {
         node {
           id

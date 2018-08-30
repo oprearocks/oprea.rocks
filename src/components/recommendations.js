@@ -1,5 +1,5 @@
 import React from 'react'
-import * as PropTypes from 'prop-types';
+import * as PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import Recommendation from './recommendation'
 
@@ -14,14 +14,17 @@ const Recommendations = ({ recommendations }) => (
     <h2 className="section-title separator-below">Recommendations</h2>
 
     <section>
-      {
-        recommendations.map(({ node }) => (
-          <Recommendation recommendation={node} key={node.id} />
-        ))
-      }
+      {recommendations.map(({ node }) => (
+        <Recommendation recommendation={node} key={node.id} />
+      ))}
     </section>
     <footer>
-      <Link className="custom-link accent-color arrow-after" to="/recommendations">More recommendations</Link>
+      <Link
+        className="custom-link accent-color arrow-after"
+        to="/recommendations"
+      >
+        More recommendations
+      </Link>
     </footer>
   </section>
 )

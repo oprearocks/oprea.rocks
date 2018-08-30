@@ -13,7 +13,7 @@ const propTypes = {
 
 class CategoryPage extends Component {
   render() {
-    const pathContext = this.props.pathContext;
+    const pathContext = this.props.pathContext
     const recommendationEdges = this.props.data.recommendations.edges
     const issueEdges = this.props.data.issues.edges
     const categoryEdges = this.props.data.categories.edges
@@ -24,22 +24,41 @@ class CategoryPage extends Component {
     return (
       <section className="page cf">
         <Helmet
-            title={`oprea.rocks | Articles published under ${category.title}`}
-            meta={[
-              { name: 'description', content: `This is the archive page containing all the articles published under ${category.title} category.` },
-              { name: 'keywords', content: pageContents.keywords },
-            ]}
-          />
-        <section className="main-content">
-            <h2>Articles published under the <Link className="accent-color" to={`/blog/${category.permalink}`}>{category.title}</Link> category</h2>
+          title={`oprea.rocks | Articles published under ${category.title}`}
+          meta={[
             {
-              pathContext.group.map(({ node }) => (
-                <Post node={node} key={node.id} />
-              ))
-            }
+              name: 'description',
+              content: `This is the archive page containing all the articles published under ${
+                category.title
+              } category.`,
+            },
+            { name: 'keywords', content: pageContents.keywords },
+          ]}
+        />
+        <section className="main-content">
+          <h2>
+            Articles published under the{' '}
+            <Link className="accent-color" to={`/blog/${category.permalink}`}>
+              {category.title}
+            </Link>{' '}
+            category
+          </h2>
+          {pathContext.group.map(({ node }) => (
+            <Post node={node} key={node.id} />
+          ))}
           <div className="blog-pagination">
-            <PaginationLink test={pathContext.first} url={`/${pathContext.pathPrefix}/${pathContext.index - 1 == 1 ? '' : pathContext.index -1}`} text="&larr; Previous Page"/>
-            <PaginationLink test={pathContext.last} url={`/${pathContext.pathPrefix}/${pathContext.index + 1}`} text="Next Page &rarr;"/>
+            <PaginationLink
+              test={pathContext.first}
+              url={`/${pathContext.pathPrefix}/${
+                pathContext.index - 1 == 1 ? '' : pathContext.index - 1
+              }`}
+              text="&larr; Previous Page"
+            />
+            <PaginationLink
+              test={pathContext.last}
+              url={`/${pathContext.pathPrefix}/${pathContext.index + 1}`}
+              text="Next Page &rarr;"
+            />
           </div>
         </section>
         <Sidebar
@@ -52,7 +71,6 @@ class CategoryPage extends Component {
     )
   }
 }
-
 
 CategoryPage.propTypes = propTypes
 
@@ -69,9 +87,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    pageContents: contentfulPage(
-      identifier: { eq: "blog" }
-    ) {
+    pageContents: contentfulPage(identifier: { eq: "blog" }) {
       title
       description
       keywords
@@ -94,9 +110,7 @@ export const pageQuery = graphql`
       }
     }
 
-    recommendations: allContentfulResource(
-      limit: 5
-    ) {
+    recommendations: allContentfulResource(limit: 5) {
       edges {
         node {
           id
@@ -130,7 +144,7 @@ export const pageQuery = graphql`
 
     issues: allContentfulIssue(
       limit: 4
-      sort: { fields: [ publishedOn ], order: DESC }
+      sort: { fields: [publishedOn], order: DESC }
     ) {
       edges {
         node {

@@ -1,5 +1,5 @@
 import React from 'react'
-import * as PropTypes from 'prop-types';
+import * as PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 
 const propTypes = {
@@ -13,11 +13,13 @@ const About = ({ author }) => (
       <section
         className="author-description"
         dangerouslySetInnerHTML={{
-          __html: author.about.childMarkdownRemark.html
+          __html: author.about.childMarkdownRemark.html,
         }}
       />
       <footer>
-        <Link to="/hire" className="custom-link accent-color arrow-after">Hire me</Link>
+        <Link to="/hire" className="custom-link accent-color arrow-after">
+          Hire me
+        </Link>
       </footer>
     </article>
   </section>

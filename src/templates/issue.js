@@ -26,7 +26,11 @@ class IssueTemplate extends Component {
           <Helmet
             title={`${title} | The blog of Adrian Oprea | Full Stack JavaScript Consultant`}
             meta={[
-              { name: 'description', content: description || shortDescription.childMarkdownRemark.html },
+              {
+                name: 'description',
+                content:
+                  description || shortDescription.childMarkdownRemark.html,
+              },
               { name: 'keywords', content: keywords },
             ]}
           />

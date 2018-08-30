@@ -1,5 +1,5 @@
 import React from 'react'
-import * as PropTypes from 'prop-types';
+import * as PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 
 const listPropTypes = {
@@ -13,15 +13,11 @@ const Categories = ({ categories }) => (
     </header>
     <section>
       <ul>
-        {
-          categories.map(({ category }) => (
-            <li key={category.id}>
-              <Link to={`/blog/${category.permalink}`}>
-                {category.title}
-              </Link>
-            </li>
-          ))
-        }
+        {categories.map(({ category }) => (
+          <li key={category.id}>
+            <Link to={`/blog/${category.permalink}`}>{category.title}</Link>
+          </li>
+        ))}
       </ul>
     </section>
   </section>

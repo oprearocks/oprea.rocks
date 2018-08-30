@@ -32,15 +32,57 @@ class HireMePage extends Component {
               <h1>About {pageContents.author.name}</h1>
             </header>
 
-            <section dangerouslySetInnerHTML={{
-              __html: pageContents.author.about.childMarkdownRemark.html
-            }}/>
+            <section
+              dangerouslySetInnerHTML={{
+                __html: pageContents.author.about.childMarkdownRemark.html,
+              }}
+            />
             <footer>
               <ul>
-                <li><a target="_blank" title={`Link to ${pageContents.author.name}'s Twitter account`} href={pageContents.author.twitter}>Twitter</a></li>
-                <li><a target="_blank" title={`Link to ${pageContents.author.name}'s Medium account`} href={pageContents.author.medium}>Medium</a></li>
-                <li><a target="_blank" title={`Link to ${pageContents.author.name}'s GitHub account`} href={pageContents.author.github}>GitHub</a></li>
-                <li><a target="_blank" title={`Link to ${pageContents.author.name}'s YouTube Channel`} href={pageContents.author.youtube}>YouTube Channel</a></li>
+                <li>
+                  <a
+                    target="_blank"
+                    title={`Link to ${
+                      pageContents.author.name
+                    }'s Twitter account`}
+                    href={pageContents.author.twitter}
+                  >
+                    Twitter
+                  </a>
+                </li>
+                <li>
+                  <a
+                    target="_blank"
+                    title={`Link to ${
+                      pageContents.author.name
+                    }'s Medium account`}
+                    href={pageContents.author.medium}
+                  >
+                    Medium
+                  </a>
+                </li>
+                <li>
+                  <a
+                    target="_blank"
+                    title={`Link to ${
+                      pageContents.author.name
+                    }'s GitHub account`}
+                    href={pageContents.author.github}
+                  >
+                    GitHub
+                  </a>
+                </li>
+                <li>
+                  <a
+                    target="_blank"
+                    title={`Link to ${
+                      pageContents.author.name
+                    }'s YouTube Channel`}
+                    href={pageContents.author.youtube}
+                  >
+                    YouTube Channel
+                  </a>
+                </li>
               </ul>
               {/* <a className="button full-width text-center" href="https://m.me/">Get in touch</a> */}
               <Button
@@ -48,32 +90,32 @@ class HireMePage extends Component {
                 size="huge"
                 as="a"
                 target="_blank"
-                href="https://m.me/oprearocks">
+                href="https://m.me/oprearocks"
+              >
                 <Icon size="large" name="facebook messenger" /> Say hello!
               </Button>
             </footer>
           </article>
-          <div dangerouslySetInnerHTML={{
-            __html: pageContents.content.childMarkdownRemark.html
-          }}/>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: pageContents.content.childMarkdownRemark.html,
+            }}
+          />
           <Button
             primary
             size="huge"
             as="a"
             target="_blank"
-            href="https://m.me/oprearocks">
+            href="https://m.me/oprearocks"
+          >
             <Icon size="large" name="facebook messenger" /> Let's talk projects
           </Button>
         </section>
-        <Sidebar
-          recommendations={recommendationEdges}
-          issues={issueEdges}
-        />
+        <Sidebar recommendations={recommendationEdges} issues={issueEdges} />
       </section>
     )
   }
 }
-
 
 HireMePage.propTypes = propTypes
 
@@ -81,9 +123,7 @@ export default HireMePage
 
 export const pageQuery = graphql`
   query HireMePageQuery {
-    pageContents: contentfulPage(
-      identifier: { eq: "hire-me" }
-    ) {
+    pageContents: contentfulPage(identifier: { eq: "hire-me" }) {
       title
       description
       keywords
@@ -108,7 +148,7 @@ export const pageQuery = graphql`
 
     issues: allContentfulIssue(
       limit: 4
-      sort: { fields: [ publishedOn ], order: DESC }
+      sort: { fields: [publishedOn], order: DESC }
     ) {
       edges {
         node {
@@ -120,9 +160,7 @@ export const pageQuery = graphql`
       }
     }
 
-    recommendations: allContentfulResource(
-      limit: 5
-    ) {
+    recommendations: allContentfulResource(limit: 5) {
       edges {
         node {
           id

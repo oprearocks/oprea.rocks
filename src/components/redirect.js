@@ -2,11 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const Redirect = props => {
-  window.location.href = window.location.pathname;
-};
+  window.location.href = window.location.pathname
+}
 
-Redirect.propTypes = {
+Redirect.propTypes = {}
 
-};
-
-export default Redirect;
+export default Redirect

@@ -15,12 +15,24 @@ const TemplateWrapper = ({ children }) => (
     <Helmet
       title="oprea.rocks | The Blog of Adrian Oprea | Full Stack JavaScript Consultant | Node.js Connoisseur | Solutions Architect @ NEURON01"
       meta={[
-        { name: 'description', content: 'oprea.rocks | The website of Adrian Oprea | Full Stack JavaScript Consultant | Node.js conoiseur | Solutions Architect @ NEURON01' },
-        { name: 'keywords', content: 'full stack javascript, javascript consultant, node.js consultant, nodejs, docker, devops, rabbitmq, continuous deployment' },
-        { property: 'og:image', content: logo},
+        {
+          name: 'description',
+          content:
+            'oprea.rocks | The website of Adrian Oprea | Full Stack JavaScript Consultant | Node.js conoiseur | Solutions Architect @ NEURON01',
+        },
+        {
+          name: 'keywords',
+          content:
+            'full stack javascript, javascript consultant, node.js consultant, nodejs, docker, devops, rabbitmq, continuous deployment',
+        },
+        { property: 'og:image', content: logo },
       ]}
       link={[
-        { rel: 'stylesheet', href: '//fonts.googleapis.com/css?family=Montserrat:400,700|Open Sans:400,700|Lora:400,700' }
+        {
+          rel: 'stylesheet',
+          href:
+            '//fonts.googleapis.com/css?family=Montserrat:400,700|Open Sans:400,700|Lora:400,700',
+        },
       ]}
     />
     <Header />

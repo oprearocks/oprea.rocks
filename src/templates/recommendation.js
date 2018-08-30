@@ -23,32 +23,45 @@ class ReviewTemplate extends Component {
       description,
       permalink,
       image,
-      url
+      url,
     } = recommendation
     return (
       <section className="page cf">
         <section className="main-content">
-          <article className="recommendation" itemProp="blogPost" itemScope itemType="https://schema.org/Review">
-
+          <article
+            className="recommendation"
+            itemProp="blogPost"
+            itemScope
+            itemType="https://schema.org/Review"
+          >
             <Helmet
               title={`${title} | The blog of Adrian Oprea | Full Stack JavaScript Consultant`}
               meta={[
-                { name: 'description', content: description.childMarkdownRemark.excerpt },
+                {
+                  name: 'description',
+                  content: description.childMarkdownRemark.excerpt,
+                },
                 { name: 'keywords', content: keywords },
               ]}
             />
 
             <header className="cf">
               <div className="recommendation-image">
-              <Img
-                resolutions={image.resolutions}
-                title={`Image of ${title} ${type}`}
-                alt={`${title} ${type}`}
+                <Img
+                  resolutions={image.resolutions}
+                  title={`Image of ${title} ${type}`}
+                  alt={`${title} ${type}`}
                 />
               </div>
               <div className="recommendation-title">
                 <h1>{title}</h1>
-                <a className="custom-link accent-color arrow-after" href={url} target="_blank">Get this {type}</a>
+                <a
+                  className="custom-link accent-color arrow-after"
+                  href={url}
+                  target="_blank"
+                >
+                  Get this {type}
+                </a>
                 <SocialButtons
                   url={`https://oprea.rocks/reading/${permalink}`}
                   title={`Found out about this ${type} from Adrian Oprea — ${title}`}
@@ -56,22 +69,23 @@ class ReviewTemplate extends Component {
                 />
               </div>
             </header>
-            {
-              description ?
-                <section
-                  itemProp="reviewBody"
-                  dangerouslySetInnerHTML={{
-                    __html: description.childMarkdownRemark.html,
-                  }}
-                /> :
-                <p>If you don't see anything here, it means that this {type} is still in progress. A review for this {type} is on its way, stay tuned!</p>
-            }
+            {description ? (
+              <section
+                itemProp="reviewBody"
+                dangerouslySetInnerHTML={{
+                  __html: description.childMarkdownRemark.html,
+                }}
+              />
+            ) : (
+              <p>
+                If you don't see anything here, it means that this {type} is
+                still in progress. A review for this {type} is on its way, stay
+                tuned!
+              </p>
+            )}
           </article>
         </section>
-        <Sidebar
-          author={author}
-          issues={issueEdges}
-        />
+        <Sidebar author={author} issues={issueEdges} />
       </section>
     )
   }
@@ -112,7 +126,7 @@ export const pageQuery = graphql`
 
     issues: allContentfulIssue(
       limit: 4
-      sort: { fields: [ publishedOn ], order: DESC }
+      sort: { fields: [publishedOn], order: DESC }
     ) {
       edges {
         node {
