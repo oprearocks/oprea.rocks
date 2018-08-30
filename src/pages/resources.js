@@ -12,7 +12,7 @@ const propTypes = {
 
 class ResourcesPage extends Component {
   render() {
-    const recommendationEdges = this.props.data.recommendations.edges;
+    const recommendationEdges = this.props.data.recommendations.edges
     const issueEdges = this.props.data.issues.edges
     const author = this.props.data.author
     const pageContents = this.props.data.pageContents
@@ -27,21 +27,15 @@ class ResourcesPage extends Component {
           ]}
         />
         <section className="main-content">
-          {
-            recommendationEdges.map(({ node }) => (
-              <Recommendation recommendation={node} key={node.id} />
-            ))
-          }
+          {recommendationEdges.map(({ node }) => (
+            <Recommendation recommendation={node} key={node.id} />
+          ))}
         </section>
-        <Sidebar
-          author={author}
-          issues={issueEdges}
-        />
+        <Sidebar author={author} issues={issueEdges} />
       </section>
     )
   }
 }
-
 
 ResourcesPage.propTypes = propTypes
 
@@ -49,9 +43,7 @@ export default ResourcesPage
 
 export const pageQuery = graphql`
   query ReccomendationsPageQuery {
-    pageContents: contentfulPage(
-      identifier: { eq: "recommendations" }
-    ) {
+    pageContents: contentfulPage(identifier: { eq: "recommendations" }) {
       title
       description
       keywords
@@ -73,9 +65,7 @@ export const pageQuery = graphql`
         youtube
       }
     }
-    recommendations: allContentfulResource(
-      limit: 5
-    ) {
+    recommendations: allContentfulResource(limit: 5) {
       edges {
         node {
           id
@@ -109,7 +99,7 @@ export const pageQuery = graphql`
 
     issues: allContentfulIssue(
       limit: 4
-      sort: { fields: [ publishedOn ], order: DESC }
+      sort: { fields: [publishedOn], order: DESC }
     ) {
       edges {
         node {

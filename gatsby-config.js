@@ -59,6 +59,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-podcast-feed`,
       options: {
+        createLinkInHead: true,
         title: 'Dev Time Stories',
         description: 'Full Stack Software Developer Adrian Oprea shares his thoughts on software development, tooling, entrepreneurship and product development. From the nitty-gritty of JavaScript development, with or without frameworks, to DevOps, tooling and automation, all the way to entrepreneurship and product development, this podcast is focused specifically on software development professionals.',
         feed_url: 'https://oprea.rocks/podcast.xml',
@@ -134,6 +135,12 @@ module.exports = {
       options: {
         color: `tomato`,
         showSpinner: false,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-sentry`,
+      options: {
+        dsn: `https://1b6648d0b4a549609559d5fca2e1afd1@sentry.io/1271491`,
       },
     },
     `gatsby-plugin-netlify`,

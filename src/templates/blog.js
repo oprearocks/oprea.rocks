@@ -12,7 +12,7 @@ const propTypes = {
 
 class BlogPage extends Component {
   render() {
-    const pathContext = this.props.pathContext;
+    const pathContext = this.props.pathContext
     const recommendationEdges = this.props.data.recommendations.edges
     const issueEdges = this.props.data.issues.edges
     const categoryEdges = this.props.data.categories.edges
@@ -21,27 +21,29 @@ class BlogPage extends Component {
     return (
       <section className="page cf">
         <Helmet
-            title={pageContents.title}
-            meta={[
-              { name: 'description', content: pageContents.description },
-              { name: 'keywords', content: pageContents.keywords },
-            ]}
-          />
+          title={pageContents.title}
+          meta={[
+            { name: 'description', content: pageContents.description },
+            { name: 'keywords', content: pageContents.keywords },
+          ]}
+        />
         <section className="main-content">
-            {
-              pathContext.group.map(({ node }) => (
-                <Post node={node} key={node.id} />
-              ))
-            }
+          {pathContext.group.map(({ node }) => (
+            <Post node={node} key={node.id} />
+          ))}
           <div className="blog-pagination">
             <PaginationLink
               test={pathContext.first}
-              url={`/blog/${pathContext.index - 1 == 1 ? '' : pathContext.index -1}`}
-              text="&larr; Previous Page"/>
+              url={`/blog/${
+                pathContext.index - 1 == 1 ? '' : pathContext.index - 1
+              }`}
+              text="&larr; Previous Page"
+            />
             <PaginationLink
               test={pathContext.last}
               url={`/blog/${pathContext.index + 1}`}
-              text="Next Page &rarr;"/>
+              text="Next Page &rarr;"
+            />
           </div>
         </section>
         <Sidebar
@@ -55,16 +57,13 @@ class BlogPage extends Component {
   }
 }
 
-
 BlogPage.propTypes = propTypes
 
 export default BlogPage
 
 export const pageQuery = graphql`
   query BlogPageQuery {
-    pageContents: contentfulPage(
-      identifier: { eq: "blog" }
-    ) {
+    pageContents: contentfulPage(identifier: { eq: "blog" }) {
       title
       description
       keywords
@@ -95,9 +94,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    recommendations: allContentfulResource(
-      limit: 5
-    ) {
+    recommendations: allContentfulResource(limit: 5) {
       edges {
         node {
           id
@@ -131,7 +128,7 @@ export const pageQuery = graphql`
 
     issues: allContentfulIssue(
       limit: 4
-      sort: { fields: [ publishedOn ], order: DESC }
+      sort: { fields: [publishedOn], order: DESC }
     ) {
       edges {
         node {

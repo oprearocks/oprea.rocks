@@ -1,5 +1,5 @@
 import React from 'react'
-import * as PropTypes from 'prop-types';
+import * as PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import Img from 'gatsby-image'
 
@@ -8,32 +8,49 @@ const itemPropTypes = {
 }
 
 const Recommendation = ({ recommendation }) => (
-  <article className="recommendation" itemProp="blogPost" itemScope itemType="https://schema.org/Review">
+  <article
+    className="recommendation"
+    itemProp="blogPost"
+    itemScope
+    itemType="https://schema.org/Review"
+  >
     <header>
-        <div className="recommendation-details cf">
-          <Img
-            className="article-image" resolutions={recommendation.image.resolutions}
-            title={`Image of ${recommendation.title} ${recommendation.type}`}
-            alt={`${recommendation.title} ${recommendation.type}`}
-          />
-          <div className="article-meta">
+      <div className="recommendation-details cf">
+        <Img
+          className="article-image"
+          resolutions={recommendation.image.resolutions}
+          title={`Image of ${recommendation.title} ${recommendation.type}`}
+          alt={`${recommendation.title} ${recommendation.type}`}
+        />
+        <div className="article-meta">
           <span>
             December 15 2017
             <span className="accent-color"> / </span>
             <span>Type: {recommendation.type}</span>
           </span>
         </div>
-          <h3 className="article-title" itemProp="reviewBody">
-            <Link to={`/resources/${recommendation.permalink}`}>
-              {recommendation.title}
-            </Link>
-          </h3>
-        </div>
+        <h3 className="article-title" itemProp="reviewBody">
+          <Link to={`/resources/${recommendation.permalink}`}>
+            {recommendation.title}
+          </Link>
+        </h3>
+      </div>
     </header>
     <footer className="article-footer">
-      <Link className="recommendation-link" to={`/resources/${recommendation.permalink}`}>Read full review</Link>
+      <Link
+        className="recommendation-link"
+        to={`/resources/${recommendation.permalink}`}
+      >
+        Read full review
+      </Link>
       <span className="accent-color text-bold"> / </span>
-      <a className="recommendation-link" href={recommendation.url} target="_blank">Get it</a>
+      <a
+        className="recommendation-link"
+        href={recommendation.url}
+        target="_blank"
+      >
+        Get it
+      </a>
     </footer>
   </article>
 )

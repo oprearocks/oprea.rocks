@@ -22,6 +22,7 @@
     "gatsby-plugin-react-helmet": "^1.0.8",
     "gatsby-plugin-remove-trailing-slashes": "^1.0.3",
     "gatsby-plugin-sass": "^1.0.15",
+    "gatsby-plugin-sentry": "^0.1.0",
     "gatsby-plugin-sharp": "^1.6.24",
     "gatsby-plugin-sitemap": "^1.2.9",
     "gatsby-remark-images": "^1.5.36",
@@ -48,7 +49,8 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "lite-server --baseDir=public"
   },
   "devDependencies": {
     "prettier": "^1.8.2"

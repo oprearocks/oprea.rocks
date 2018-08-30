@@ -5,7 +5,9 @@ import 'semantic-ui-css/components/button.css'
 import 'semantic-ui-css/components/icon.css'
 
 const PaginationLink = ({ test, url, text, className = '' }) => (
-  <Button as={Link} to={url} disabled={test}>{text}</Button>
+  <Button as={Link} to={url} disabled={test}>
+    {text}
+  </Button>
 )
 
 export default PaginationLink

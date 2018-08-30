@@ -1,5 +1,10 @@
 import React from 'react'
-import { PlayButton, Timer, VolumeControl, Progress } from 'react-soundplayer/components'
+import {
+  PlayButton,
+  Timer,
+  VolumeControl,
+  Progress,
+} from 'react-soundplayer/components'
 import { withCustomAudio } from 'react-soundplayer/addons'
 import { Button, Icon } from 'semantic-ui-react'
 import 'semantic-ui-css/components/button.css'
@@ -19,12 +24,21 @@ const Player = withCustomAudio(props => {
             <VolumeControl
               className="flex flex-center mr2"
               buttonClassName="flex-none h4"
-              {...props} />
+              {...props}
+            />
             <Progress className="mr2" {...props} />
           </div>
         </div>
       </div>
-      <Button color="green" size="huge" attached="bottom" as="a" href="#articleNewsletter">Join the newsletter</Button>
+      <Button
+        color="green"
+        size="huge"
+        attached="bottom"
+        as="a"
+        href="#articleNewsletter"
+      >
+        Join the newsletter
+      </Button>
     </div>
   )
 })

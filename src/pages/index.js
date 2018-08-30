@@ -26,18 +26,10 @@ class IndexPage extends Component {
     return (
       <section className="page cf">
         <section className="main-content">
-          {
-            postEdges.map(({ node }) => (
-              <Post node={node} key={node.id} />
-            ))
-          }
+          {postEdges.map(({ node }) => <Post node={node} key={node.id} />)}
           <footer>
-            <Button
-              as={Link}
-              size="huge"
-              color="green"
-              to="/blog">
-              <Icon name="book"/> Read more on the blog
+            <Button as={Link} size="huge" color="green" to="/blog">
+              <Icon name="book" /> Read more on the blog
             </Button>
           </footer>
         </section>
@@ -51,7 +43,6 @@ class IndexPage extends Component {
     )
   }
 }
-
 
 IndexPage.propTypes = propTypes
 
@@ -70,7 +61,7 @@ export const pageQuery = graphql`
     }
     posts: allContentfulArticle(
       limit: 5
-      sort: { fields: [ publishedOn ], order: DESC }
+      sort: { fields: [publishedOn], order: DESC }
     ) {
       edges {
         node {
@@ -106,9 +97,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    recommendations: allContentfulResource(
-      limit: 5
-    ) {
+    recommendations: allContentfulResource(limit: 5) {
       edges {
         node {
           id
@@ -142,7 +131,7 @@ export const pageQuery = graphql`
 
     issues: allContentfulIssue(
       limit: 4
-      sort: { fields: [ publishedOn ], order: DESC }
+      sort: { fields: [publishedOn], order: DESC }
     ) {
       edges {
         node {

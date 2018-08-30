@@ -14,16 +14,16 @@ const ReadingList = ({ issues }) => (
     <h2 className="section-title separator-below">Reading List</h2>
 
     <ol className="reading-list-content">
-      {
-        issues.map(({ node }) => (
-          <li key={node.id}>
-            <Issue issue={node} />
-          </li>
-        ))
-      }
+      {issues.map(({ node }) => (
+        <li key={node.id}>
+          <Issue issue={node} />
+        </li>
+      ))}
     </ol>
     <footer>
-      <Link className="custom-link accent-color arrow-after" to="/reading">All issues</Link>
+      <Link className="custom-link accent-color arrow-after" to="/reading">
+        All issues
+      </Link>
     </footer>
   </section>
 )
