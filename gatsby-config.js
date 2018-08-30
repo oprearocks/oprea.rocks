@@ -137,12 +137,12 @@ module.exports = {
         showSpinner: false,
       },
     },
-    {
-      resolve: `gatsby-plugin-sentry`,
-      options: {
-        dsn: `https://1b6648d0b4a549609559d5fca2e1afd1@sentry.io/1271491`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-sentry`,
+    //   options: {
+    //     dsn: `https://1b6648d0b4a549609559d5fca2e1afd1@sentry.io/1271491`,
+    //   },
+    // },
     `gatsby-plugin-netlify`,
     `gatsby-plugin-manifest`,
     // `gatsby-plugin-offline`,
