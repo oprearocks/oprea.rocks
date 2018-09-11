@@ -7,12 +7,14 @@ import Sidebar from '../components/sidebar'
 import { Button, Icon } from 'semantic-ui-react'
 import 'semantic-ui-css/components/button.css'
 import 'semantic-ui-css/components/icon.css'
+import photo1 from '../assets/press/conference-photo-1.jpg'
+import photo2 from '../assets/press/conference-photo-2.jpg'
 
 const propTypes = {
   data: PropTypes.object.isRequired,
 }
 
-class HireMePage extends Component {
+class PressPage extends Component {
   render() {
     const recommendationEdges = this.props.data.recommendations.edges
     const issueEdges = this.props.data.issues.edges
@@ -20,25 +22,31 @@ class HireMePage extends Component {
     return (
       <section className="page cf">
         <Helmet
-          title={pageContents.title}
+          title="Press info — Oprea.Rocks — Adrian Oprea"
           meta={[
-            { name: 'description', content: pageContents.description },
-            { name: 'keywords', content: pageContents.keywords },
+            { name: 'description', content: "The information on this page is provided as a copy-paste resource for conference organizers media professionals and other interested parties. Feel free to use this information as-is, without my explicit approval." },
+            { name: 'keywords', content: "conference speaker, javascript speaker, speaker press info, adrian oprea javascript developer, javascript, developer, reactjs, nodejs, gatsbyjs" },
           ]}
         />
         <section className="main-content">
           <article>
             <header>
-              <h1>About {pageContents.author.name}</h1>
+              <h1>Press info</h1>
+              <p>The information on this page is provided as a copy-paste resource for conference organizers media professionals and other interested parties.</p>
+              <p>Feel free to use this information as-is, without my explicit approval. If you require additional information, feel free to <a href="mailto:adrian@oprea.rocks?subject=Press info">email me</a> or <a href="https://m.me/oprearocks" target="_blank">contact me via messenger</a>.</p>
             </header>
 
-            <section
-              dangerouslySetInnerHTML={{
-                __html: pageContents.author.about.childMarkdownRemark.html,
-              }}
-            />
+            <section>
+              <h2>Short bio</h2>
+<p>Adrian was born to break things! With a proven track record of phylology, highschool volleyball and kinesiology, he had all the premises of becoming a software developer.</p>
+
+<p>His technical inclination eventually lured him to JavaScript in 2009 and he's been struggling to kick the addiction ever since. Adrian had the chance of making all the mistakes junior, intermediate and senior developers make. From pushing debug logs to production, to avoiding code validation and force-pushing to master, all the way up to using technologies only because he wanted them on his CV.</p>
+
+<p>He loves to share his learnings with anyone willing to listen.</p>
+            </section>
             <footer>
-            <ul>
+              <h2>Social media profiles</h2>
+              <ul>
                 <li>
                   <a
                     target="_blank"
@@ -87,23 +95,13 @@ class HireMePage extends Component {
                 </li>
                 <li><a target="_blank" href="https://itunes.apple.com/gb/podcast/dev-time-stories/id1341322168">Podcast</a></li>
               </ul>
-              {/* <a className="button full-width text-center" href="https://m.me/">Get in touch</a> */}
-              <Button
-                primary
-                size="huge"
-                as="a"
-                target="_blank"
-                href="https://m.me/oprearocks"
-              >
-                <Icon size="large" name="facebook messenger" /> Say hello!
-              </Button>
+              <h2>Photos</h2>
+              <ul>
+                <li><a href={photo1} title="Conference photo 1" target="_blank">Photo 1</a></li>
+                <li><a href={photo2} title="Conference photo 2" target="_blank">Photo 2</a></li>
+              </ul>
             </footer>
           </article>
-          <div
-            dangerouslySetInnerHTML={{
-              __html: pageContents.content.childMarkdownRemark.html,
-            }}
-          />
           <Button
             primary
             size="huge"
@@ -111,7 +109,7 @@ class HireMePage extends Component {
             target="_blank"
             href="https://m.me/oprearocks"
           >
-            <Icon size="large" name="facebook messenger" /> Let's talk projects
+            <Icon size="large" name="facebook messenger" /> I need more info
           </Button>
         </section>
         <Sidebar recommendations={recommendationEdges} issues={issueEdges} />
@@ -120,12 +118,12 @@ class HireMePage extends Component {
   }
 }
 
-HireMePage.propTypes = propTypes
+PressPage.propTypes = propTypes
 
-export default HireMePage
+export default PressPage
 
 export const pageQuery = graphql`
-  query HireMePageQuery {
+  query PressPageQuery {
     pageContents: contentfulPage(identifier: { eq: "hire-me" }) {
       title
       description
