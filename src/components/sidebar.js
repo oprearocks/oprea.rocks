@@ -26,7 +26,6 @@ const Sidebar = ({
   <aside className="sidebar">
     {relatedArticles && <RelatedArticles articles={relatedArticles} />}
     <Services />
-    <Newsletter />
     {author && <About author={author} />}
     {/* {recommendations && <Recommendations recommendations={recommendations} />} */}
     {/* {issues && <ReadingList issues={issues} />} */}

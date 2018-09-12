@@ -6,6 +6,7 @@ import 'prismjs/themes/prism.css'
 
 import Header from './header'
 import Footer from './footer'
+import NewsletterHead from '../components/NewsletterHead'
 
 import logo from '../assets/logo.png'
 import './index.scss'
@@ -36,6 +37,7 @@ const TemplateWrapper = ({ children }) => (
       ]}
     />
     <Header />
+    <NewsletterHead />
     <main role="main" className="main">
       {children()}
     </main>

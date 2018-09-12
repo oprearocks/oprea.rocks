@@ -1,14 +1,6 @@
 @import '../utils/_theme.scss';
 @import '../utils/_mixins.scss';
 
-::selection {
-  background: $color-accent; /* WebKit/Blink Browsers */
-  color: white;
-}
-::-moz-selection {
-  background: $color-accent; /* Gecko Browsers */
-  color: white;
-}
 
 body {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
@@ -18,7 +10,7 @@ body {
   line-height: 1.875rem;
   vertical-align: baseline;
   color: $color-body;
-  background-color: #f5f5f5;
+  // background-color: #f5f5f5;
   // padding-top: 12.5rem;
 
   // @include breakpoint(sm) {
