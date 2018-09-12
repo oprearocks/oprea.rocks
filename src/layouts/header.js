@@ -38,34 +38,32 @@ const Header = () => (
       <ul>
         <li>
           <Link className="nav-link" activeClassName="active" to="/blog">
-            Articles
+          <Icon size="large" name="book" />Articles
           </Link>
         </li>
         <li>
           <Link className="nav-link" activeClassName="active" to="/resources">
-            Resources
+          <Icon size="large" name="wrench" />Resources
           </Link>
         </li>
         <li>
           <Link className="nav-link" activeClassName="active" to="/reading">
-            Reading List
+          <Icon size="large" name="list" />Reading List
           </Link>
         </li>
         <li>
           <Link className="nav-link" activeClassName="active" to="/hire">
-            About
+          <Icon size="large" name="user secret" />About
           </Link>
         </li>
         <li>
-          <Button
-            primary
-            size="large"
-            as="a"
+          <a
+            className="nav-link"
             target="_blank"
             href="https://m.me/oprearocks"
           >
-            <Icon name="facebook messenger" /> Contact me!
-          </Button>
+            <Icon size="large" name="facebook messenger" />Contact
+          </a>
         </li>
       </ul>
     </nav>

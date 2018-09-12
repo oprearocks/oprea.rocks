@@ -12,11 +12,6 @@
   align-items: center;
   margin: 0 auto;
   background-color: white;
-  border-bottom: 1px solid #ccc;
-  // position: fixed;
-  // top: 0;
-  // left: 0;
-  // z-index: 9;
 
   @include breakpoint(md) {
     flex-direction: row;
@@ -50,7 +45,7 @@
 
     li {
       padding: 0 .625rem;
-
+      display: inline-block;
       .nav-link {
         display: inline-block;
         transition: all .2s ease-in-out;
@@ -66,6 +61,7 @@
 
         &.active,
         &:hover {
+          color: $color-accent;
           border-color: $color-accent;
         }
 
@@ -103,7 +99,6 @@
     }
 
     @include breakpoint(sm) {
-
       li {
         display: inline;
 
