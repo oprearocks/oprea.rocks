@@ -7,7 +7,7 @@
   width: 100%;
   text-align: center;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-around;
   align-items: center;
   margin: 0 auto;
@@ -19,7 +19,7 @@
   // z-index: 9;
 
   @include breakpoint(md) {
-    flex-direction: row;
+    // flex-direction: row;
   }
 
   &-logo-link {
@@ -40,12 +40,25 @@
     letter-spacing: 2px;
     padding: 0.3125rem;
   }
+
   &-nav {
     padding: .625rem 0;
+    position: relative;
     ul {
       list-style: none;
       margin: 0;
-      padding: 0;
+      padding: inherit;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      z-index: 1;
+      width: 200px;
+      border: 1px solid #ccc;
+      background-color: white;
+    }
+
+    &--hidden {
+      display: none;
     }
 
     li {
@@ -105,7 +118,7 @@
     @include breakpoint(sm) {
 
       li {
-        display: inline;
+        // display: inline;
 
         .nav-link {
           transition: all .2s ease-in-out;
