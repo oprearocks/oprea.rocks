@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import Link from 'gatsby-link'
 import { Button, Icon } from 'semantic-ui-react'
-import { slide as Menu } from 'react-burger-menu'
 import 'semantic-ui-css/components/button.css'
 import 'semantic-ui-css/components/icon.css'
 
@@ -54,7 +53,7 @@ class Header extends Component {
         </h1>
         <nav className="header-nav">
           <Button icon onClick={this.onHamburgerClick}>
-            <Icon color="black" name="bars" size="big" />
+            <Icon color="black" name="bars" size="large" />
           </Button>
           <ul className={this.state.isNavVisible ? '' : 'header-nav--hidden'}>
             <li>
