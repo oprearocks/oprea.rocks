@@ -92,6 +92,12 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-drip-widget`,
+      options: {
+        account: process.env.DRIP_ACCOUNT_ID,
+      },
+    },
+    {
       resolve: `gatsby-plugin-feed`,
       options: {
         query: `

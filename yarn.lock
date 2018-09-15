@@ -9,6 +9,12 @@
     core-js "^2.5.7"
     regenerator-runtime "^0.12.0"
 
+"@babel/runtime@^7.0.0-rc.3":
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.0.0.tgz#adeb78fedfc855aa05bc041640f3f6f98e85424c"
+  dependencies:
+    regenerator-runtime "^0.12.0"
+
 "@contentful/axios@^0.18.0":
   version "0.18.0"
   resolved "https://registry.yarnpkg.com/@contentful/axios/-/axios-0.18.0.tgz#576e0e6047411a66971e82d40688a8c795e62f27"
@@ -3888,6 +3894,13 @@ gatsby-paginate@^1.0.9:
   resolved "https://registry.yarnpkg.com/gatsby-paginate/-/gatsby-paginate-1.0.16.tgz#b45b92898005aa798b3b51c7abab286753e4cbe5"
   dependencies:
     path "^0.12.7"
+
+gatsby-plugin-drip-widget@^1.0.0:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-drip-widget/-/gatsby-plugin-drip-widget-1.0.1.tgz#6a7b2e9123bd5f61ae9267acfdb49cc2bbff3860"
+  dependencies:
+    "@babel/runtime" "^7.0.0-rc.3"
+    podcast "^1.1.0"
 
 gatsby-plugin-feed-generator@^1.0.5:
   version "1.0.6"
@@ -8517,8 +8530,8 @@ regenerator-runtime@^0.11.0:
   resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.11.1.tgz#be05ad7f9bf7d22e056f9726cee5017fbf19e2e9"
 
 regenerator-runtime@^0.12.0:
-  version "0.12.0"
-  resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.12.0.tgz#8052ac952d85b10f3425192cd0c53f45cf65c6cb"
+  version "0.12.1"
+  resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.12.1.tgz#fa1a71544764c036f8c49b13a08b2594c9f8a0de"
 
 regenerator-transform@^0.10.0:
   version "0.10.1"
