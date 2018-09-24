@@ -1,0 +1,36 @@
+<mjml>
+  <mj-head>
+    <mj-font name="Montserrat" href="https://fonts.googleapis.com/css?family=Montserrat" />
+    <mj-font name="Lora" href="https://fonts.googleapis.com/css?family=Lora" />
+    <mj-attributes>
+      <mj-class name="heading" font-family="Montserrat, Helvetica, Arial, sans-serif" font-size="24px" line-height="1"/>
+      <mj-class name="heading-large" font-size="32px"/>
+      <mj-text font-size="14px"/>
+      <mj-all font-family="Arial" />
+      <mj-class name="link" color="#ff1d25"/>
+      <mj-text font-size="16px" line-height="1.4" padding="10px 0" font-family="Lora, Helvetica, Arial, sans-serif"/>
+    </mj-attributes>
+    <mj-style>
+      a {
+        color: #2455c3 !important;
+      }
+
+    </mj-style>
+  </mj-head>
+  <mj-body>
+    <mj-container>
+
+      <mj-section>
+        <mj-column>
+          <mj-text>
+            Be among the first people who get my "JavaScript Junior No More" handbook. Master the most commonly used concepts in JavaScript and never allow yourself to be taken by surprise during an interview. You will learn all the essential concepts you need in order to master any JavaScript interview for a mid-level position and you will also get a ton of resources where you can dive even deeper into the JavaScript language basics.
+          </mj-text>
+
+          <mj-text>
+          After almost 10 years of working with JavaScript, what I can tell you is that there's a lot more to learn than meets the eye. I'm still learning, and going through the basics, yearly. 
+          </mj-text>
+        </mj-column>
+      </mj-section>
+    </mj-container>
+  </mj-body>
+</mjml>

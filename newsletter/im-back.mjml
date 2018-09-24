@@ -1,0 +1,48 @@
+<mjml>
+  <mj-head>
+    <mj-font name="Montserrat" href="https://fonts.googleapis.com/css?family=Montserrat" />
+    <mj-font name="Lora" href="https://fonts.googleapis.com/css?family=Lora" />
+    <mj-attributes>
+      <mj-class name="heading" font-family="Montserrat, Helvetica, Arial, sans-serif" font-size="24px" line-height="1"/>
+      <mj-class name="heading-large" font-size="32px"/>
+      <mj-text font-size="14px"/>
+      <mj-all font-family="Arial" />
+      <mj-class name="link" color="#ff1d25"/>
+      <mj-text font-size="16px" line-height="1.4" padding="10px 0" font-family="Lora, Helvetica, Arial, sans-serif"/>
+    </mj-attributes>
+    <mj-style>
+      a {
+        color: #2455c3 !important;
+      }
+
+    </mj-style>
+  </mj-head>
+  <mj-body>
+    <mj-container>
+
+      <mj-section>
+        <mj-column>
+          <mj-text>Look, I wanted to share the things I read/publish/work on, on a weekly basis, with you, the people who are actually interested in that. I also wanted to <a href="https://oprea.rocks/blog/podcast">host a podcast</a> and started to do that. Also started <a href="https://www.youtube.com/user/opreaadriangeorge">a YouTube channel</a>. Guess what?! It's harder than it seems. </mj-text>
+          <mj-text>I kind of messed up with this email thing, mostly because I let myself get swamped with projects and work kept piling up. I'm not going to do that anymore. I'm working to automate the process a bit, so that I don't have to "work" that much on this newsletter. I will still be the one reading, reviewing and vetting those articles and links, before they get to you. So don't be afraid, you'll never get BS articles.</mj-text>
+          <mj-text>I'm letting you know because I haven't spoken to you in a while, and I don't want you to believe I started sending "newsletter" emails, out of the blue.</mj-text>
+          <mj-text>
+            Meanwhile, if you can forgive my inconsistency, let me get you started with three of my latest articles. I'd love to hear your thoughts on them, so when you have the time, go ahead and read the one you find most appealing. Or all three of them, for all I care. The more the merry!
+          </mj-text>
+          <mj-text>
+            <a href="https://oprea.rocks/blog/using-one-javascript-framework/">Here’s Why We Just Can't Agree on One JavaScript Framework</a>
+          </mj-text>
+          <mj-text>
+            <a href="https://oprea.rocks/blog/six-things-that-tell-youre-still-a-junior/">Six Things About JavaScript Which If You Don't Know, Signal to Others That You Are Still A Beginner</a>
+          </mj-text>
+          <mj-text>
+            <a href="https://oprea.rocks/blog/what-are-static-site-generators-and-why-you-need-to-use-one/">What are static site generators and why you need to use one</a>
+          </mj-text>
+          
+          <mj-text>🙏 Thanks a lot subscribing,<br>
+          Adrian.</mj-text>
+          <mj-text>P.S. If you have any questions you feel I could answer, go ahead and reply to this email. I'll do my best to answer them.</mj-text>
+        </mj-column>
+      </mj-section>
+    </mj-container>
+  </mj-body>
+</mjml>
