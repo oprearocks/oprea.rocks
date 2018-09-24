@@ -3,8 +3,9 @@ import * as PropTypes from 'prop-types'
 import Img from 'gatsby-image'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
+import { Input, Button, Icon } from 'semantic-ui-react'
 import Sidebar from '../components/sidebar'
-import { Button, Icon } from 'semantic-ui-react'
+import Newsletter from '../components/newsletter'
 import 'semantic-ui-css/components/button.css'
 import 'semantic-ui-css/components/icon.css'
 
@@ -12,7 +13,7 @@ const propTypes = {
   data: PropTypes.object.isRequired,
 }
 
-class ThankYou extends Component {
+class JSJuniorNoMore extends Component {
   render() {
     const recommendationEdges = this.props.data.recommendations.edges
     const issueEdges = this.props.data.issues.edges
@@ -20,14 +21,33 @@ class ThankYou extends Component {
     return (
       <section className="page cf">
         <Helmet
-          title="Thanks for subscribing!"
+          title="Subscribe to the JavaScript Junior No More email list to get your free copy of the handbook when it comes out."
         />
-        <section className="main-content">
+        <section>
           <article>
-            <header>
-              <h1>🎉 Thanks for joining 🎉</h1>
-            </header>
-            <p>You are one step away from getting the best out of your subscription. Head over to your email account and confirm it by by clicking on the link you received!</p>
+            <section>
+              <form action="https://www.getdrip.com/forms/804157221/submissions" method="post" data-drip-embedded-form="804157221">
+                <h2 data-drip-attribute="headline">Join the &quot;JavaScript Junior No More Handbook&quot; email list</h2>
+                <div data-drip-attribute="description">Be among the first who get a copy of my JavaScript interview hacking handbook. You'll find the basic JavaScript concepts you need to master along with a curated list of resources to go even further and deepen your core JavaScript knowledge.</div>
+                  <div>
+                  <br />
+                      <label htmlFor="drip-name">Name</label><br />
+                      <Input placeholder="Your Name" type="text" id="drip-name" name="fields[name]" />
+                  </div>
+                  <div>
+                  <br />
+                      <label htmlFor="drip-email">Your email address</label><br />
+                      <Input placeholder="you@example.com" type="email" id="drip-email" name="fields[email]" /><br />
+                  </div>
+                  <div>
+                  <br />
+                    <Button color="green" type="submit" data-drip-attribute="sign-up-button">
+                      Join
+                    </Button>
+                  </div>
+              </form>
+            </section>
+
             <footer>
             <h3>By the way...</h3>
             <p>While you're here, you could also check me out on social media.</p>
@@ -92,18 +112,18 @@ class ThankYou extends Component {
             </footer>
           </article>
         </section>
-        <Sidebar recommendations={recommendationEdges} issues={issueEdges} />
+        {/* <Sidebar recommendations={recommendationEdges} issues={issueEdges} /> */}
       </section>
     )
   }
 }
 
-ThankYou.propTypes = propTypes
+JSJuniorNoMore.propTypes = propTypes
 
-export default ThankYou
+export default JSJuniorNoMore
 
 export const pageQuery = graphql`
-  query ThankYouQuery {
+  query JSJuniorNoMoreQuery {
     pageContents: contentfulPage(identifier: { eq: "hire-me" }) {
       author {
         name
